@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+import SitePage from '../components/SitePage.astro';
+
+const pages = await getCollection('site');
+const page = pages.find((entry) => entry.data.route === '/');
+
+if (!page) {
+  throw new Error('Missing home page content at route "/"');
+}
+const rendered = await page.render();
+const Content = rendered.Content;
+
+---
+
+<MainLayout title={page.data.title} description={page.data.description} keywords={page.data.primaryKeyword}>
+  <SitePage page={page.data}>
+    <article class="content-body home-content"><Content /></article>
+  </SitePage>
+</MainLayout>

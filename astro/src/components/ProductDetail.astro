@@ -1,0 +1,48 @@
+---
+import type {Product} from '../data/products';
+interface Props{product:Product} const {product}=Astro.props;
+const specs=[['Interface',product.interface],['Power',product.power],['Data',product.dataRate],['Video',product.video],['Material',product.material],['Lengths',product.lengths]];
+const summaryFacts=product.cardFacts??specs.filter(item=>item[1]!=='Not applicable').slice(0,3).map(item=>({label:item[0],value:item[1]}));
+const quoteHref=`/get-a-quote/?program=${encodeURIComponent('Direct product sourcing')}&family=${encodeURIComponent(product.family)}&product=${encodeURIComponent(product.model)}`;
+const hasSource=Boolean(product.sourceUrl&&product.supplierClaims?.length);
+const allClaims=product.supplierClaims??[];
+const claimPriority=(label:string,index:number)=>{const value=label.toLowerCase();if(value.includes('connector')||value==='port')return 0;if(value.includes('bandwidth')||value.includes('power'))return 1;if(value.includes('resolution')||value.includes('data rate')||value==='function')return 2;if(value.includes('length'))return 3;if(value.includes('model')||value.includes('brand'))return 4;return 10+index;};
+const primaryClaims=allClaims.map((claim,index)=>({claim,index})).sort((a,b)=>claimPriority(a.claim[0],a.index)-claimPriority(b.claim[0],b.index)).slice(0,4).map(item=>item.claim);
+const secondaryClaims=allClaims.filter(claim=>!primaryClaims.includes(claim));
+const allPackagingClaims=product.packagingClaims??[];
+const packagingPriority=(label:string,index:number)=>{const value=label.toLowerCase();if(value.includes('price')||value.includes('moq'))return 0;if(value.includes('lead time'))return 1;if(value.includes('selling units'))return 2;return 10+index;};
+const primaryPackagingClaims=allPackagingClaims.map((claim,index)=>({claim,index})).sort((a,b)=>packagingPriority(a.claim[0],a.index)-packagingPriority(b.claim[0],b.index)).slice(0,2).map(item=>item.claim);
+const secondaryPackagingClaims=allPackagingClaims.filter(claim=>!primaryPackagingClaims.includes(claim));
+const galleryImages=product.variantGroups?.length?product.images?.slice(2,4):product.images?.slice(1,4);
+const finalVisual=product.images?.[product.images.length-1]??product.images?.[0];
+---
+<section class="product-detail">
+  <div class:list={['product-gallery',{'product-gallery--real':product.images?.length}]}>
+    <figure class="product-photo product-photo--main">
+      {product.images?.[0]&&<img src={product.images[0].src} alt={product.images[0].alt}/>} 
+      <figcaption class="product-photo__label"><span>{product.images?.[0]?.label??'Product view'}</span><small>Supplier image · evidence pending</small></figcaption>
+    </figure>
+    {galleryImages?.length&&<div class="product-thumbs">{galleryImages.map(image=><figure><img src={image.src} alt={image.alt} loading="lazy"/><figcaption>{image.label}</figcaption></figure>)}</div>}
+  </div>
+  <aside class="purchase-panel"><p class="eyebrow">B2B product reference</p><h2>{product.model}</h2><p>{product.bestFor}</p><div class="purchase-panel__facts">{summaryFacts.map(fact=><div><span>{fact.label}</span><strong>{fact.value}</strong></div>)}</div><div class="purchase-actions"><a class="button button-primary" href={quoteHref}>Request a Quote</a><a class="button button-secondary" href="/request-sample/">Request Sample</a></div><div class="purchase-checklist"><span>Confirm the exact model and configuration</span><span>Review branding and packaging by project</span><span>Reconfirm quantity, sample and timing</span></div><p class="purchase-panel__evidence">Claims remain subject to model-level evidence.</p></aside>
+</section>
+<section class="spec-strip" aria-label="Key product facts">{summaryFacts.map(fact=><div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</section>
+{product.variantGroups?.length&&<section class="variant-selector" aria-labelledby="variant-title">
+  <header><div><p class="section-label">Choose the exact build</p><h2 id="variant-title">One listing, five distinct formats</h2></div><p>Start with the model and connector. Performance claims are not automatically interchangeable between cables, extensions and the adapter.</p></header>
+  <div class="variant-selector__visual"><img src={product.images?.[1]?.src} alt={product.images?.[1]?.alt}/><span>Supplier model map · verify before order</span></div>
+  <div class="variant-selector__grid">{product.variantGroups.map((variant,index)=><article><span class="variant-selector__index">{String(index+1).padStart(2,'0')}</span><div><h3>{variant.model}</h3><p>{variant.format}</p></div><dl><div><dt>Connector</dt><dd>{variant.connector}</dd></div><div><dt>Length</dt><dd>{variant.length}</dd></div></dl><small>{variant.capability}</small></article>)}</div>
+</section>}
+{product.featureHighlights?.length&&<section class="performance-story" aria-labelledby="performance-title">
+  <header><p class="section-label">Supplier-listed performance</p><h2 id="performance-title">Three capabilities. Three evidence checks.</h2><p>Use these figures to shortlist the product—not as final compliance proof.</p></header>
+  <div class="performance-story__grid">{product.featureHighlights.map(feature=><article><div class="performance-story__image"><img src={feature.image} alt={feature.alt} loading="lazy"/></div><div><span>{feature.title}</span><h3>{feature.value}</h3><p>{feature.note}</p></div></article>)}</div>
+</section>}
+{hasSource&&<section class="source-spec-panel" aria-labelledby="source-spec-title">
+  <header><div><p class="section-label">Source-mapped product data</p><h2 id="source-spec-title">Supplier listing snapshot</h2></div><p>Four facts for initial review. Verify the selected SKU before quotation.</p></header>
+  <div class="source-spec-panel__facts"><p class="source-spec-panel__hint">Key listing facts</p><dl>{primaryClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl>{secondaryClaims.length>0&&<details><summary>View complete supplier attribute record <span>{secondaryClaims.length} additional fields</span></summary><dl>{secondaryClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl></details>}</div>
+  {product.packagingClaims?.length&&<div class="source-spec-panel__subsection"><div><p class="section-label">Packaging and delivery</p><h3>Two commercial checks</h3></div><div class="source-spec-panel__logistics"><dl>{primaryPackagingClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl>{secondaryPackagingClaims.length>0&&<details><summary>View complete logistics record <span>{secondaryPackagingClaims.length} additional fields</span></summary><dl>{secondaryPackagingClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl></details>}</div></div>}
+  <div class="source-spec-panel__gate"><strong>Publication gate</strong><p>Power, current, data behavior, material, compliance, MOQ, price, warranty and customization must be confirmed against the selected sample, SKU records and current quotation.</p><a href={product.sourceUrl} target="_blank" rel="noreferrer">Review original {product.sourceLabel} ↗</a></div>
+</section>}
+<section class="product-final-cta" aria-labelledby="product-final-title">
+  <div class="product-final-cta__visual">{finalVisual&&<img src={finalVisual.src} alt={finalVisual.alt} loading="lazy"/>}<span>Selected product · final specification pending</span></div>
+  <div class="product-final-cta__content"><p class="section-label">Ready for review</p><h2 id="product-final-title">Turn this product into an RFQ.</h2><ol><li><span>01</span><strong>Define the connection</strong></li><li><span>02</span><strong>Confirm the evidence</strong></li><li><span>03</span><strong>Add quantity and market</strong></li></ol><a class="button button-primary" href={quoteHref}>Prepare this RFQ</a></div>
+</section>

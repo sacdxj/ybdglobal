@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visual Brand Stress Test - Ovkera / Ovkara / Ovkaro</title>
+    <style>
+      :root {
+        --ink: #101412;
+        --deep: #121b17;
+        --moss: #265640;
+        --clay: #c8582f;
+        --signal: #d9ff4d;
+        --paper: #f5efe0;
+        --bone: #fffaf0;
+        --line: rgba(16, 20, 18, 0.16);
+        --muted: #6f6a60;
+        --shadow: 0 26px 70px rgba(16, 20, 18, 0.18);
+        --radius: 8px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Bahnschrift", "Aptos", "Segoe UI", system-ui, sans-serif;
+        line-height: 1.45;
+      }
+
+      a { color: inherit; }
+
+      .page {
+        width: min(1440px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 34px 0 70px;
+      }
+
+      .audit-hero {
+        min-height: 420px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+        gap: 18px;
+        align-items: stretch;
+        margin-bottom: 18px;
+      }
+
+      .hero-panel,
+      .score-panel,
+      .candidate,
+      .scene,
+      .final-card {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 420px;
+        padding: 34px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(8, 13, 11, 0.92), rgba(8, 13, 11, 0.54)),
+          url("../public/images/electric-dirt-bike-hero-premium.png") center / cover;
+      }
+
+      .hero-panel::before {
+        content: "Decision Brand Stress Test";
+        width: max-content;
+        max-width: 100%;
+        position: absolute;
+        inset: 28px auto auto 28px;
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 12px;
+        border: 1px solid rgba(217, 255, 77, 0.42);
+        border-radius: 999px;
+        color: var(--signal);
+        font-size: 0.74rem;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero-panel h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 7.8rem);
+        line-height: 0.88;
+        letter-spacing: 0;
+      }
+
+      .hero-panel p {
+        max-width: 640px;
+        margin: 24px 0 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.12rem;
+        font-weight: 700;
+      }
+
+      .score-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 420px;
+        padding: 28px;
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .score-panel h2 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 3.8rem);
+        line-height: 0.95;
+      }
+
+      .score-stack {
+        display: grid;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .score-row {
+        display: grid;
+        grid-template-columns: 94px 1fr 54px;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .score-row span,
+      .section-label {
+        color: var(--signal);
+        font-size: 0.75rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .bar {
+        height: 10px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.13);
+      }
+
+      .bar i {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--signal);
+      }
+
+      .score-row strong {
+        text-align: right;
+        font-size: 0.9rem;
+      }
+
+      .verdict {
+        margin-top: 26px;
+        padding: 18px;
+        border: 1px solid rgba(217, 255, 77, 0.28);
+        border-radius: var(--radius);
+        background: rgba(217, 255, 77, 0.1);
+      }
+
+      .verdict strong {
+        display: block;
+        color: var(--signal);
+        font-size: 1.24rem;
+      }
+
+      .verdict p {
+        margin: 8px 0 0;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .candidate-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .candidate {
+        overflow: hidden;
+        background: var(--bone);
+      }
+
+      .candidate__top {
+        min-height: 236px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        color: #fff;
+        background: var(--deep);
+      }
+
+      .candidate:nth-child(2) .candidate__top { background: #263820; }
+      .candidate:nth-child(3) .candidate__top { background: #1c1c1a; }
+
+      .wordmark {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .mark {
+        width: 52px;
+        height: 52px;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius);
+        background: var(--signal);
+        color: var(--ink);
+        font-weight: 950;
+      }
+
+      .wordmark strong {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .candidate__top p {
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.74);
+        font-weight: 760;
+      }
+
+      .candidate__body {
+        display: grid;
+        gap: 12px;
+        padding: 22px;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .pill {
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: #e8dcc5;
+        color: #3b382f;
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .candidate dl {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+      }
+
+      .candidate div:has(> dt) {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 12px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+
+      dt {
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      dd {
+        margin: 0;
+        color: var(--ink);
+        font-weight: 820;
+      }
+
+      .scene-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 18px;
+      }
+
+      .scene {
+        min-height: 300px;
+        overflow: hidden;
+        background: var(--bone);
+      }
+
+      .scene--wide { grid-column: span 8; }
+      .scene--small { grid-column: span 4; }
+      .scene--third { grid-column: span 4; }
+
+      .scene__head {
+        padding: 20px 22px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .scene__head h2 {
+        margin: 6px 0 0;
+        font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+        line-height: 1;
+      }
+
+      .home-split {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .mini-home {
+        min-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px;
+        border-radius: 6px;
+        background:
+          linear-gradient(180deg, rgba(16, 20, 18, 0.18), rgba(16, 20, 18, 0.88)),
+          url("../public/images/electric-dirt-bike-hero.png") center / cover;
+        color: #fff;
+      }
+
+      .mini-home strong {
+        font-size: 2.2rem;
+        line-height: 0.92;
+      }
+
+      .mini-home p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.86rem;
+        font-weight: 760;
+      }
+
+      .mini-home button,
+      .yt-badge,
+      .email-button {
+        min-height: 38px;
+        border: 0;
+        border-radius: var(--radius);
+        background: var(--clay);
+        color: #fff;
+        font-weight: 900;
+      }
+
+      .mock-toolbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .mini-mark {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        border-radius: 7px;
+        background: var(--signal);
+        color: var(--ink);
+        font-size: 0.78rem;
+        font-weight: 950;
+      }
+
+      .asset-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .asset {
+        min-height: 220px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        background: #e8dcc5;
+      }
+
+      .asset--pack {
+        display: grid;
+        place-items: center;
+        background:
+          linear-gradient(135deg, #111814 0 54%, #d9ff4d 54% 58%, #c8582f 58% 100%);
+      }
+
+      .box {
+        width: min(78%, 180px);
+        aspect-ratio: 0.78;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px;
+        border-radius: 6px;
+        background: var(--bone);
+        box-shadow: 0 24px 46px rgba(0, 0, 0, 0.24);
+      }
+
+      .box strong { font-size: 1.8rem; line-height: 0.9; }
+      .box span { color: var(--muted); font-weight: 850; }
+
+      .asset--decal {
+        display: grid;
+        place-items: center;
+        background: var(--deep);
+      }
+
+      .tube {
+        width: 86%;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: #f0f0e8;
+        transform: rotate(-8deg);
+        box-shadow: inset 0 -8px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .tube strong {
+        color: var(--ink);
+        font-size: 1.8rem;
+        letter-spacing: 0;
+      }
+
+      .asset--app {
+        display: grid;
+        place-items: center;
+        background: #151d19;
+      }
+
+      .app-icon {
+        width: 118px;
+        height: 118px;
+        display: grid;
+        place-items: center;
+        border-radius: 28px;
+        background: var(--signal);
+        color: var(--ink);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
+        font-size: 1.34rem;
+        font-weight: 950;
+      }
+
+      .youtube {
+        padding: 14px;
+      }
+
+      .yt-card {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px;
+        border-radius: 6px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(16, 20, 18, 0.92), rgba(16, 20, 18, 0.42)),
+          url("../public/images/electric-dirt-bike-hero-premium.png") center / cover;
+      }
+
+      .yt-title {
+        max-width: 420px;
+        font-size: 2.1rem;
+        font-weight: 950;
+        line-height: 0.96;
+      }
+
+      .email {
+        padding: 14px;
+      }
+
+      .email-card {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fffdf6;
+      }
+
+      .email-card h3 {
+        margin: 0;
+        font-size: 1.35rem;
+      }
+
+      .email-card p {
+        color: var(--muted);
+        font-weight: 720;
+      }
+
+      .email-button {
+        width: max-content;
+        padding: 0 14px;
+      }
+
+      .matrix {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .matrix th,
+      .matrix td {
+        padding: 12px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+      }
+
+      .matrix th {
+        color: var(--muted);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+      }
+
+      .matrix td {
+        font-weight: 820;
+      }
+
+      .winner {
+        color: var(--moss);
+      }
+
+      .final-card {
+        margin-top: 18px;
+        padding: 28px;
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .final-card h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 4.5rem);
+        line-height: 0.92;
+      }
+
+      .final-card p {
+        max-width: 920px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.05rem;
+        font-weight: 720;
+      }
+
+      @media (max-width: 980px) {
+        .audit-hero,
+        .candidate-grid,
+        .home-split,
+        .asset-row {
+          grid-template-columns: 1fr;
+        }
+
+        .scene--wide,
+        .scene--small,
+        .scene--third {
+          grid-column: 1 / -1;
+        }
+
+        .hero-panel h1 { font-size: 3.2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="audit-hero">
+        <div class="hero-panel">
+          <h1>Ovkera leads the visual stress test.</h1>
+          <p>Three exact-.com candidates are tested across decision-brand scenes. The winner should feel like a guide, not a racer, marketplace, or lifestyle-only label.</p>
+        </div>
+        <aside class="score-panel">
+          <div>
+            <p class="section-label">Final Visual Read</p>
+            <h2>Decision brand fit beats raw powersports energy.</h2>
+            <div class="score-stack">
+              <div class="score-row"><span>Ovkera</span><div class="bar"><i style="width: 88%"></i></div><strong>8.8</strong></div>
+              <div class="score-row"><span>Ovkara</span><div class="bar"><i style="width: 83%"></i></div><strong>8.3</strong></div>
+              <div class="score-row"><span>Ovkaro</span><div class="bar"><i style="width: 76%"></i></div><strong>7.6</strong></div>
+            </div>
+          </div>
+          <div class="verdict">
+            <strong>Recommendation: Ovkera</strong>
+            <p>Best balance of clarity, support, modern confidence, and future decision-tool extensibility.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="candidate-grid" aria-label="Candidate comparison">
+        <article class="candidate">
+          <div class="candidate__top">
+            <div class="wordmark"><span class="mark">OK</span><strong>Ovkera</strong></div>
+            <p>Modern guide energy. Works naturally with support, guides, fit checks, and a future decision app.</p>
+          </div>
+          <div class="candidate__body">
+            <div class="pill-row"><span class="pill">Guide</span><span class="pill">Clarity</span><span class="pill">Support</span></div>
+            <dl>
+              <div><dt>Voice</dt><dd>Calm, reliable, decision-led</dd></div>
+              <div><dt>Risk</dt><dd>Needs descriptor because abstract</dd></div>
+              <div><dt>Best Use</dt><dd>Decision Engine, support, guides</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="candidate">
+          <div class="candidate__top">
+            <div class="wordmark"><span class="mark">OA</span><strong>Ovkara</strong></div>
+            <p>Warmer and more lifestyle-ready. Strong for gear, packaging, and community, but less explicitly decision-led.</p>
+          </div>
+          <div class="candidate__body">
+            <div class="pill-row"><span class="pill">Outdoor</span><span class="pill">Gear</span><span class="pill">Community</span></div>
+            <dl>
+              <div><dt>Voice</dt><dd>Warm, consumer, approachable</dd></div>
+              <div><dt>Risk</dt><dd>Can drift lifestyle-first</dd></div>
+              <div><dt>Best Use</dt><dd>Apparel, packaging, social</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="candidate">
+          <div class="candidate__top">
+            <div class="wordmark"><span class="mark">OR</span><strong>Ovkaro</strong></div>
+            <p>Strongest mechanical powersports feel. Useful on decals and bike hardware, but harder than the Guide archetype.</p>
+          </div>
+          <div class="candidate__body">
+            <div class="pill-row"><span class="pill">Garage</span><span class="pill">Machine</span><span class="pill">Decal</span></div>
+            <dl>
+              <div><dt>Voice</dt><dd>Rugged, compact, mechanical</dd></div>
+              <div><dt>Risk</dt><dd>Less natural as a trusted guide</dd></div>
+              <div><dt>Best Use</dt><dd>Bike frame, parts, garage</dd></div>
+            </dl>
+          </div>
+        </article>
+      </section>
+
+      <section class="scene-grid">
+        <article class="scene scene--wide">
+          <div class="scene__head">
+            <p class="section-label">Homepage Hero</p>
+            <h2>Name + promise under identical layout.</h2>
+          </div>
+          <div class="home-split">
+            <div class="mini-home">
+              <div class="mock-toolbar"><span class="mini-mark">OK</span><span>Find Your Bike</span></div>
+              <div><strong>Ovkera</strong><p>We help riders buy with confidence.</p></div>
+              <button>Start the Decision</button>
+            </div>
+            <div class="mini-home">
+              <div class="mock-toolbar"><span class="mini-mark">OA</span><span>Find Your Bike</span></div>
+              <div><strong>Ovkara</strong><p>We help riders buy with confidence.</p></div>
+              <button>Start the Decision</button>
+            </div>
+            <div class="mini-home">
+              <div class="mock-toolbar"><span class="mini-mark">OR</span><span>Find Your Bike</span></div>
+              <div><strong>Ovkaro</strong><p>We help riders buy with confidence.</p></div>
+              <button>Start the Decision</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="scene scene--small">
+          <div class="scene__head">
+            <p class="section-label">YouTube Channel</p>
+            <h2>Spoken recall and thumbnail presence.</h2>
+          </div>
+          <div class="youtube">
+            <div class="yt-card">
+              <span class="yt-badge">Ovkera Guide</span>
+              <div class="yt-title">Before you buy a 72V electric dirt bike</div>
+              <span>Welcome back to Ovkera.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="scene scene--third">
+          <div class="scene__head">
+            <p class="section-label">Packaging</p>
+            <h2>Box, manual, and support-kit feel.</h2>
+          </div>
+          <div class="asset-row">
+            <div class="asset asset--pack"><div class="box"><strong>Ovkera</strong><span>Fit Guide Kit</span></div></div>
+            <div class="asset asset--pack"><div class="box"><strong>Ovkara</strong><span>Trail Gear Kit</span></div></div>
+            <div class="asset asset--pack"><div class="box"><strong>Ovkaro</strong><span>Garage Kit</span></div></div>
+          </div>
+        </article>
+
+        <article class="scene scene--third">
+          <div class="scene__head">
+            <p class="section-label">Frame Decal</p>
+            <h2>Physical bike presence.</h2>
+          </div>
+          <div class="asset-row">
+            <div class="asset asset--decal"><div class="tube"><strong>Ovkera</strong></div></div>
+            <div class="asset asset--decal"><div class="tube"><strong>Ovkara</strong></div></div>
+            <div class="asset asset--decal"><div class="tube"><strong>Ovkaro</strong></div></div>
+          </div>
+        </article>
+
+        <article class="scene scene--third">
+          <div class="scene__head">
+            <p class="section-label">App Icon</p>
+            <h2>Future Decision Engine product.</h2>
+          </div>
+          <div class="asset-row">
+            <div class="asset asset--app"><div class="app-icon">OK</div></div>
+            <div class="asset asset--app"><div class="app-icon">OA</div></div>
+            <div class="asset asset--app"><div class="app-icon">OR</div></div>
+          </div>
+        </article>
+
+        <article class="scene scene--third">
+          <div class="scene__head">
+            <p class="section-label">Support Email</p>
+            <h2>Trust after checkout.</h2>
+          </div>
+          <div class="email">
+            <div class="email-card">
+              <div>
+                <p class="section-label">Ovkera Support</p>
+                <h3>Your fit-check request is ready.</h3>
+                <p>We reviewed rider size, terrain, battery questions, and support needs before recommending a path.</p>
+              </div>
+              <button class="email-button">View Decision Path</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="scene scene--wide">
+          <div class="scene__head">
+            <p class="section-label">Visual Score Matrix</p>
+            <h2>Same scenes, strategy-weighted result.</h2>
+          </div>
+          <table class="matrix">
+            <thead>
+              <tr><th>Scene</th><th>Ovkera</th><th>Ovkara</th><th>Ovkaro</th><th>Winner</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Decision Engine</td><td>9</td><td>8</td><td>7</td><td class="winner">Ovkera</td></tr>
+              <tr><td>Support / ownership</td><td>9</td><td>8</td><td>7</td><td class="winner">Ovkera</td></tr>
+              <tr><td>YouTube recall</td><td>9</td><td>8</td><td>7</td><td class="winner">Ovkera</td></tr>
+              <tr><td>Packaging / gear</td><td>8</td><td>9</td><td>8</td><td class="winner">Ovkara</td></tr>
+              <tr><td>Bike decal</td><td>7</td><td>8</td><td>9</td><td class="winner">Ovkaro</td></tr>
+              <tr><td>Future app/tool</td><td>9</td><td>8</td><td>7</td><td class="winner">Ovkera</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="final-card">
+        <p class="section-label">Decision</p>
+        <h2>Choose Ovkera for the Decision Brand.</h2>
+        <p>Ovkara is still a strong lifestyle/gear backup. Ovkaro remains a useful defensive registration and future product-line flavor. But for the core promise, support voice, Decision Engine, and Guide / Navigator archetype, Ovkera is the most coherent master brand.</p>
+      </section>
+    </main>
+  </body>
+</html>

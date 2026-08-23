@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Connectivity Supply">
+  <rect width="64" height="64" rx="12" fill="#071015"/>
+  <path d="M10 21h18c7 0 7 11 14 11h4" fill="none" stroke="#d77a34" stroke-width="6" stroke-linecap="round"/>
+  <rect x="42" y="24" width="13" height="16" rx="3" fill="none" stroke="#d77a34" stroke-width="4"/>
+  <path d="M55 32h6M61 27v10" fill="none" stroke="#d77a34" stroke-width="4" stroke-linecap="round"/>
+  <text x="11" y="53" fill="#f4efe7" font-family="Arial,sans-serif" font-size="14" font-weight="700">CS</text>
+</svg>

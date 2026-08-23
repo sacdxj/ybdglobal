@@ -1,0 +1,7 @@
+interface:
+  display_name: "Electric Dirt Bike SEO"
+  short_description: "Build electric dirt bike SEO dashboards."
+  default_prompt: "Use $seo-skill-electric-dirt-bike to process this Electric Dirt Bike keyword workbook into an SEO architecture dashboard."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Sheet1",
+    "rowCount": 38,
+    "colCount": 4,
+    "values": [
+      [
+        null,
+        null,
+        null,
+        "=DISPIMG(\"ID_38BD60450F4642C1BA67BE7C14667F9A\",1)"
+      ],
+      [
+        "Model\n型号",
+        "X1-48-MX-1214",
+        "X1-48-MY-1417",
+        "X1-60-MY-1417"
+      ],
+      [
+        "Vehicle size\n外观尺寸（mm）",
+        "1600*730*990MM   坐宽160",
+        "1600*730*1030MM   坐宽160",
+        "1600*730*1030MM   坐宽160"
+      ],
+      [
+        "Vehicle base\n轴距（mm）",
+        "1100MM",
+        "1100MM",
+        "1100MM"
+      ],
+      [
+        "Seat cushion height\n座高（mm）",
+        "730MM",
+        "770MM",
+        "770MM"
+      ],
+      [
+        "Min. gruond clearance\n最小离地间隙（mm）",
+        "250MM",
+        "280MM",
+        "280MM"
+      ],
+      [
+        "Max. Speed\n最高时速（KM）",
+        "空转：1档：28    2档：42    3档60   落地实速：1档：25   2档38         3档：55",
+        "空转：1档：27    2档：41    3档60   落地实速：1档：22  2档37        3档：55",
+        "落地实速：3档：65"
+      ],
+      [
+        "Range\n续航里程（km）",
+        "35KM",
+        "35KM",
+        "45KM"
+      ],
+      [
+        "Climbing degree\n最大爬坡坡度 (°)",
+        "≥25°",
+        "≥25°",
+        "≥25°"
+      ],
+      [
+        "Ratedloading Capacity\n额定承载能力（kg）",
+        "80KGS",
+        "80KGS",
+        "80KGS"
+      ],
+      [
+        "Max. Loading capacity\n最大承载能力（kg）",
+        "100KGS",
+        "100KGS",
+        "100KGS"
+      ],
+      [
+        "Battery Type\n电池类型",
+        "48V20.8AH 国产锂电",
+        "48V20.8AH 国产锂电",
+        "60V25AH国产锂电"
+      ],
+      [
+        "Battery Capacity\n电池容量",
+        "1000WH",
+        "1000WH",
+        "1500WH"
+      ],
+      [
+        "Battery Life cycle\n电池寿命",
+        "充电500次剩余容量≥80%",
+        "充电500次剩余容量≥80%",
+        "充电500次剩余容量≥80%"
+      ],
+      [
+        "Motortype\n电机类型",
+        "中置电机",
+        "中置电机",
+        "中置电机"
+      ],
+      [
+        "Rated Motorpower\n额定功率（KW)",
+        "1000w",
+        "1000w",
+        "1500W"
+      ],
+      [
+        "Maximum Power\n峰值功率（KW)",
+        "2900W",
+        "2900W",
+        "4500W"
+      ],
+      [
+        "Controller\n控制器",
+        "52V-70AB",
+        "52V-70AB",
+        "52V-70AB"
+      ],
+      [
+        "Charger\n充电器",
+        "\n5A CE认证",
+        "\n5A CE认证",
+        "\n5A CE认证"
+      ],
+      [
+        "Charger Time\n充电时间",
+        "\n5h(5A充电器)",
+        "\n5h(5A充电器)",
+        "\n6h(5A充电器)"
+      ],
+      [
+        "Display\n仪表",
+        "中置仪表 LED",
+        "中置仪表 LED",
+        "中置仪表 LED"
+      ],
+      [
+        "Headlight\n前大灯/尾灯",
+        "无",
+        "无",
+        "无"
+      ],
+      [
+        "Frame\n车架",
+        "aluminum alloy\n铝合金",
+        "aluminum alloy\n铝合金",
+        "aluminum alloy\n铝合金"
+      ],
+      [
+        "Surface treatment\n车架表面处理",
+        "powder coating\n喷漆",
+        "powder coating\n喷漆",
+        "powder coating\n喷漆"
+      ],
+      [
+        "Tyre（front/rear)\n轮胎规格（前/后）",
+        "\n前90/100-14      后80/100-12",
+        "\n前70/100-17      后 90/100-14",
+        "\n前70/100-17      后 90/100-14"
+      ],
+      [
+        "Front shock aborption/length\n前减震/长度",
+        "倒置铝合金前减",
+        "倒置铝合金前减",
+        "倒置铝合金前减"
+      ],
+      [
+        "Back shock aborption/length\n后减震/长度",
+        "Domestic hydraulic shock absorber\n外置气瓶油气分离减震",
+        "Domestic hydraulic shock absorber\n外置气瓶油气分离减震",
+        "Domestic hydraulic shock absorber\n外置气瓶油气分离减震"
+      ],
+      [
+        "Brake Form\n刹车形式",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹"
+      ],
+      [
+        "Saddle\n坐垫",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵"
+      ],
+      [
+        "Export package\n出口包装",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉"
+      ],
+      [
+        "G.W./N.W\n毛重/净重",
+        "59kgs/51kgs",
+        "60kgs/52kgs",
+        "61kgs/53kgs"
+      ],
+      [
+        "Color\n颜色",
+        "Black/Red/Orange/Customization\n黑色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/橙色/各种颜色定制"
+      ],
+      [
+        "Leading Time\n交货期",
+        "30-45 Days",
+        "30-45 Days",
+        "30-45 Days"
+      ],
+      [
+        "40HQ\n40尺装柜数量",
+        "177 PCS",
+        "174 PCS",
+        "174PCS"
+      ],
+      [
+        "Packaging Dimensions\n包装尺寸(mm）",
+        "1350*350*670mm",
+        "1370*350*700mm",
+        "1370*350*700mm"
+      ],
+      [
+        "散货价格（单价）",
+        4200,
+        4300,
+        4800
+      ],
+      [
+        "整柜价格（单价）",
+        3900,
+        4000,
+        4500
+      ],
+      [
+        "40高柜",
+        "177 PCS",
+        "174 PCS",
+        "174PCS"
+      ]
+    ]
+  }
+]

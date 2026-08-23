@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output and framework caches
+dist/
+.astro/
+output/
+.cache/
+.parcel-cache/
+.vercel/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Coverage and temporary files
+coverage/
+__pycache__/
+*.py[cod]
+*.tmp
+*.temp
+*embedding_cache.jsonl
+
+# Local agent/tooling caches
+.codex_tmp/
+.pnpm-store/
+.gitnexus/
+.gitrepo/
+**/.git_nested_backup/
+
+# Local visual test assets
+hero-test.webp

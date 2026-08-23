@@ -1,0 +1,104 @@
+<section class="rfq-workbench" aria-labelledby="rfq-title" data-rfq-form>
+  <header class="rfq-workbench__intro">
+    <div>
+      <p class="section-label">Specification intake</p>
+      <h2 id="rfq-title">Build a quote-ready requirement</h2>
+      <p>Complete what you know. Unknown technical values can remain open for configuration review.</p>
+    </div>
+    <div class="rfq-status"><span>Private review</span><strong>No data is transmitted</strong><small>Receiving email or CRM approval is still pending.</small></div>
+  </header>
+
+  <form class="rfq-form" novalidate>
+    <input type="hidden" name="source" />
+    <fieldset>
+      <legend><span>01</span> Product configuration</legend>
+      <div class="rfq-grid">
+        <label>Buying program <strong aria-hidden="true">*</strong><select name="program" required><option value="">Select a program</option><option>Direct product sourcing</option><option>Wholesale assortment</option><option>Import / distribution</option><option>Private label</option><option>OEM / ODM</option><option>Evidence review</option><option>Specification support</option></select></label>
+        <label>Buying stage<select name="stage"><option value="Not specified">Not specified</option><option>Need quotation</option><option>Need samples</option><option>Comparing suppliers</option><option>Planning a future range</option></select></label>
+        <label>Product family <strong aria-hidden="true">*</strong><select name="family" required><option value="">Select a family</option><option>USB Cable</option><option>HDMI Cable</option><option>DisplayPort Cable</option><option>Hub / Dock</option><option>Charger</option></select></label>
+        <label>Reference SKU or product<input name="product" autocomplete="off" placeholder="Model, sample, or open recommendation" /></label>
+        <label class="rfq-span-2">Connector or port combination <strong aria-hidden="true">*</strong><input name="connection" required placeholder="Example: host → device, or complete port mix" /></label>
+        <label class="rfq-span-2">Required performance<input name="performance" placeholder="Charging, data, display, or compatibility task" /></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span>02</span> Construction and program</legend>
+      <div class="rfq-grid">
+        <label>Length / dimensions<input name="length" placeholder="Length, tolerance, or dimensions" /></label>
+        <label>Materials / finish<input name="materials" placeholder="Jacket, braid, housing, shell, or color" /></label>
+        <label>Initial quantity <strong aria-hidden="true">*</strong><input name="quantity" required inputmode="numeric" placeholder="Trial or first-order quantity" /></label>
+        <label>Forecast<input name="forecast" placeholder="Monthly or annual estimate" /></label>
+        <label class="rfq-span-2">Private label and packaging<textarea name="customization" rows="3" placeholder="Logo, label, barcode, insert, or pack format"></textarea></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span>03</span> Market, sample, and evidence</legend>
+      <div class="rfq-grid">
+        <label>Destination country <strong aria-hidden="true">*</strong><input name="destination" required autocomplete="country-name" /></label>
+        <label>Certification market<input name="certification" placeholder="Market or required evidence" /></label>
+        <label>Sample requirement<select name="sample"><option value="Not specified">Not specified</option><option>Required before order</option><option>Reference sample available</option><option>No sample currently required</option></select></label>
+        <label>Target date<input name="targetDate" type="date" /></label>
+        <label class="rfq-span-2">Evidence requested<textarea name="evidence" rows="3" placeholder="Model, test, certificate, material, or pack record"></textarea></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span>04</span> Buyer contact</legend>
+      <div class="rfq-grid">
+        <label>Company <strong aria-hidden="true">*</strong><input name="company" required autocomplete="organization" /></label>
+        <label>Buyer name <strong aria-hidden="true">*</strong><input name="buyer" required autocomplete="name" /></label>
+        <label>Email <strong aria-hidden="true">*</strong><input name="email" type="email" required autocomplete="email" /></label>
+        <label>Phone / messaging<input name="phone" autocomplete="tel" /></label>
+        <label class="rfq-span-2">Additional notes<textarea name="notes" rows="4" placeholder="Application, device list, approval process, shipping preference, or open questions"></textarea></label>
+      </div>
+    </fieldset>
+
+    <div class="rfq-consent">
+      <label><input name="acknowledgement" type="checkbox" required /> I understand that specifications, certification, price, MOQ, sample timing, and lead time require project confirmation.</label>
+      <p data-form-error role="alert" hidden>Please complete the required fields before preparing the RFQ.</p>
+      <button class="button button-primary" type="submit">Review My RFQ</button>
+    </div>
+  </form>
+
+  <section class="rfq-review" data-rfq-review hidden aria-live="polite">
+    <div><p class="section-label">Prepared requirement</p><h3>Review before handoff</h3><p>This summary stays in your browser. Copy it for your approved sales channel while the site submission endpoint is pending.</p></div>
+    <pre data-rfq-summary tabindex="0"></pre>
+    <div class="rfq-review__actions"><button class="button button-primary" type="button" data-copy-rfq>Copy RFQ Summary</button><button class="button button-secondary" type="button" data-edit-rfq>Edit Details</button></div>
+    <p class="rfq-copy-status" data-copy-status role="status"></p>
+  </section>
+</section>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-rfq-form]');
+    if (!root) return;
+    const form = root.querySelector('form');
+    const review = root.querySelector('[data-rfq-review]');
+    const summary = root.querySelector('[data-rfq-summary]');
+    const error = root.querySelector('[data-form-error]');
+    const copyStatus = root.querySelector('[data-copy-status]');
+    const labels = {program:'Buying program',stage:'Buying stage',family:'Product family',product:'Reference product',connection:'Connector / port combination',performance:'Required performance',length:'Length / dimensions',materials:'Materials / finish',quantity:'Initial quantity',forecast:'Forecast',customization:'Private label / packaging',destination:'Destination country',certification:'Certification market',sample:'Sample requirement',targetDate:'Target date',evidence:'Evidence requested',company:'Company',buyer:'Buyer name',email:'Email',phone:'Phone / messaging',notes:'Additional notes',source:'Source page'};
+    const params = new URLSearchParams(location.search);
+    Object.keys(labels).forEach(name => { if (name === 'buyer') return; const field = form.elements.namedItem(name); const value = params.get(name); if (field && value) field.value = value; });
+    if (params.get('family') && !form.elements.program.value) form.elements.program.value='Direct product sourcing';
+    const programAliases={'Wholesaler':'Wholesale assortment','Importer Distributor':'Import / distribution','Private Label':'Private label','Amazon Seller':'Private label','OEM ODM':'OEM / ODM','Evidence Pack':'Evidence review','Specification Support':'Specification support'};
+    const legacyProgram=params.get('buyer')||params.get('project')||params.get('request');
+    if (legacyProgram && !form.elements.program.value) form.elements.program.value=programAliases[legacyProgram]||legacyProgram;
+    const request=params.get('request'); if(request && !form.elements.evidence.value) form.elements.evidence.value=request;
+    const requirement=params.get('requirement'); if(requirement && !form.elements.performance.value) form.elements.performance.value=requirement;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.checkValidity()) { error.hidden=false; form.reportValidity(); return; }
+      error.hidden=true;
+      const data=new FormData(form); const lines=['RFQ REQUIREMENT',''];
+      Object.entries(labels).forEach(([name,label])=>{ const value=String(data.get(name)||'').trim(); if(value) lines.push(`${label}: ${value}`); });
+      lines.push('', 'Confirmation: Final specifications and commercial terms require project and evidence review.');
+      summary.textContent=lines.join('\n'); form.hidden=true; review.hidden=false; review.scrollIntoView({behavior:'smooth',block:'start'});
+      window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'rfq_review_ready',product_family:data.get('family')});
+    });
+    root.querySelector('[data-edit-rfq]').addEventListener('click',()=>{review.hidden=true;form.hidden=false;form.scrollIntoView({behavior:'smooth'});});
+    root.querySelector('[data-copy-rfq]').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.textContent);copyStatus.textContent='RFQ summary copied.';}catch{copyStatus.textContent='Copy was blocked. Select the summary and copy it manually.';}});
+  })();
+</script>

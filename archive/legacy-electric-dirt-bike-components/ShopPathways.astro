@@ -1,0 +1,44 @@
+---
+const pathways = [
+  {
+    title: 'Adult Rider Decisions',
+    href: '/adult-dirt-bikes/',
+    meta: '60V / 72V / performance',
+    copy: 'Start here for adult riders, private-property trail use, and higher-output models.',
+  },
+  {
+    title: 'Kids & Youth Fit',
+    href: '/kids-youth/',
+    meta: '24V / 48V / parent-led fit',
+    copy: 'Use rider size, supervision, protection, and control before choosing by age.',
+  },
+  {
+    title: 'Street Legal',
+    href: '/street-legal/',
+    meta: 'compliance-first research',
+    copy: 'Keep road-use claims separate until documents, equipment, and state rules support them.',
+  },
+  {
+    title: 'Compare Alternatives',
+    href: '/blog/compare/',
+    meta: 'alternatives / budget / value',
+    copy: 'Use competitor research as a decision tool, not a forced sales claim.',
+  },
+];
+---
+
+<section class="pathway-section" aria-labelledby="pathway-title">
+  <p class="section-label">Decision paths</p>
+  <h2 id="pathway-title">Start with the decision, then compare the models.</h2>
+  <div class="pathway-grid">
+    {pathways.map((item) => (
+      <a class="pathway-card" href={item.href}>
+        <span>{item.meta}</span>
+        <div>
+          <strong>{item.title}</strong>
+          <p>{item.copy}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

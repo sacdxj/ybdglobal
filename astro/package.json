@@ -1,0 +1,34 @@
+{
+  "name": "connectivity-supply-static-site",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check:decision": "node scripts/check-decision-engine.mjs",
+    "check:launch": "node scripts/check-launch-readiness.mjs",
+    "check:public-launch": "node scripts/check-public-launch-readiness.mjs",
+    "check:react": "node scripts/check-react.mjs",
+    "check:links": "node scripts/check-static-links.mjs",
+    "check:pages": "node scripts/check-page-quality.mjs",
+    "serve:dist": "node scripts/serve-dist.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  }
+}

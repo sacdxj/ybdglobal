@@ -1,0 +1,111 @@
+复制成功后，使用顺序建议这样：
+
+**1. 确认 Skill 已被 Codex 识别**
+
+在新电脑打开 Codex 后，可以直接说：
+
+```text
+使用 seo-skill-zhutova，帮我根据关键词 fornecedor chines 写一篇 SEO 文章
+```
+
+或者：
+
+```text
+用 Zhutova SEO skill，先读取文章 brief，再生成文章草稿
+```
+
+只要 skill 安装位置正确，Codex 会自动按 `seo-skill-zhutova` 的规则工作。
+
+**2. 先生成文章 brief**
+
+进入你的项目目录，比如：
+
+```powershell
+cd "D:\Zhutova\seo-kit"
+```
+
+然后运行：
+
+```powershell
+python article_brief_exporter.py --keyword "fornecedor chines"
+```
+
+成功后会生成：
+
+```text
+outputs\briefs\fornecedor-chines.md
+```
+
+这个 brief 是写文章的核心输入，里面包含关键词、URL、H1、H2/H3、SERP 证据、内链、E-E-A-T、Proof Layer、审核要求。
+
+**3. 让 Codex 根据 brief 写文章**
+
+然后对 Codex 说：
+
+```text
+使用 seo-skill-zhutova，读取 outputs\briefs\fornecedor-chines.md，生成完整 SEO 文章，输出到 outputs\articles\fornecedor-chines.md
+```
+
+更稳一点可以说：
+
+```text
+使用 seo-skill-zhutova，根据这个 brief 写文章：
+D:\Zhutova\seo-kit\outputs\briefs\fornecedor-chines.md
+
+要求：
+- 巴西葡语
+- 保留 SEO metadata
+- 包含 FAQ
+- 包含内链建议
+- 包含 Proof Layer 和 SEO Writing Supervisor Review
+- 不要编造案例、数据、审稿人或利润承诺
+```
+
+**4. 查看建设队列，可选**
+
+如果你想先看哪些文章应该优先写，运行：
+
+```powershell
+streamlit run zhutova_serp_dashboard.py
+```
+
+打开页面后看：
+
+```text
+建设队列
+SERP 复核
+内链建议
+质量监工
+对立监工
+```
+
+在“建设队列”里选一个关键词，再导出 brief。
+
+**5. 常用工作流**
+
+日常可以按这个流程：
+
+```text
+打开 Dashboard
+→ 选 Build now 关键词
+→ 运行 article_brief_exporter.py
+→ 让 Codex 用 seo-skill-zhutova 写文章
+→ 人工补充 reviewer / WhatsApp / 真实案例 / 品牌证明
+→ 再让 Codex 做 SEO Writing Supervisor Review
+→ 发布或标记 Publish as test
+```
+
+**最短启动命令**
+
+如果你已经知道关键词，直接这样：
+
+```powershell
+cd "D:\Zhutova\seo-kit"
+python article_brief_exporter.py --keyword "fornecedor chines"
+```
+
+然后对 Codex 说：
+
+```text
+用 seo-skill-zhutova 读取刚生成的 brief，写完整 SEO 文章。
+```

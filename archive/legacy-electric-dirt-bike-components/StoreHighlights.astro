@@ -1,0 +1,17 @@
+---
+const highlights = [
+  { value: '9', label: 'Decision paths' },
+  { value: '24V-72V', label: 'Power systems' },
+  { value: 'Kids-Adult', label: 'Rider classes' },
+  { value: 'Proof-first', label: 'Buying logic' },
+];
+---
+
+<section class="store-highlights" aria-label="Decision brand highlights">
+  {highlights.map((item) => (
+    <div>
+      <strong>{item.value}</strong>
+      <span>{item.label}</span>
+    </div>
+  ))}
+</section>

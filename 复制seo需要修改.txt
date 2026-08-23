@@ -1,0 +1,129 @@
+要复制到别的电脑能用，重点不是只复制一个 skill，而是复制 **Skill + 项目知识库 + 文章 brief 工具 + 工作簿数据**。否则 Codex 会知道写法，但找不到 Zhutova 资料和文章数据。
+
+**需要复制的东西**
+
+1. Skill 本体：
+   - `C:\Users\Administrator\.codex\skills\seo-skill-zhutova\`
+
+2. 如果还要保留关键词清洗/审计能力，也复制：
+   - `C:\Users\Administrator\.codex\skills\keyword-to-sitemap\`
+   - `C:\Users\Administrator\.codex\skills\keyword-sitemap-auditor\`
+
+3. 项目资料和自动写文章工具：
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\article_brief_exporter.py`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\zhutova_serp_dashboard.py`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\agent.md`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\zhutova_preflight_decisions.md`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\keyword_cleaning_preflight.md`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\outputs\*.xlsx`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\outputs\briefs\`
+   - `E:\Codex\zhutova 2清洗\zhutova 2清洗\outputs\articles\`
+
+4. 如果新电脑也有正式 Zhutova 站点资料，复制或同步：
+   - 当前 skill 默认会先找 `E:\trae\zhutova`
+   - 这个目录如果不存在，很多“品牌事实校验”会弱很多。
+
+**必须修改的地方**
+
+Skill 里写死了本机路径。新电脑路径不同的话，要改这些文件：
+
+- `seo-skill-zhutova\SKILL.md`
+- `seo-skill-zhutova\knowledge-base-config.md`
+- `seo-skill-zhutova\zhutova-seo-guide.md`
+
+重点替换这些旧路径：
+
+```text
+E:\trae\zhutova
+E:\Codex\zhutova 2清洗\zhutova 2清洗
+E:\Codex\zhutova 2娓呮礂\zhutova 2娓呮礂
+```
+
+其中 `2娓呮礂` 是编码乱码，搬家时建议统一改成新电脑上的真实路径，最好用英文路径，例如：
+
+```text
+D:\Zhutova\seo-kit
+D:\Zhutova\brand-source
+```
+
+然后把 brief 命令也改掉：
+
+```powershell
+python "D:\Zhutova\seo-kit\article_brief_exporter.py" --keyword "Primary Keyword"
+```
+
+**依赖环境**
+
+最小可用：
+
+```powershell
+pip install pandas openpyxl
+```
+
+如果要跑 Dashboard：
+
+```powershell
+pip install streamlit pandas openpyxl
+```
+
+如果还要跑旧的关键词聚类/SERP 工具，按 `seo0330\requirements.txt` 装：
+
+```powershell
+pip install streamlit pandas altair openai numpy scikit-learn openpyxl requests sentence-transformers hdbscan
+```
+
+API Key 不要写进 skill 文件。需要语义聚类或 AI 调用时，用环境变量：
+
+```powershell
+$env:OPENAI_API_KEY="..."
+$env:GEMINI_API_KEY="..."
+```
+
+**建议的搬家结构**
+
+我建议新电脑整理成这样，后面最省心：
+
+```text
+D:\Zhutova\seo-kit\
+  article_brief_exporter.py
+  zhutova_serp_dashboard.py
+  agent.md
+  zhutova_preflight_decisions.md
+  keyword_cleaning_preflight.md
+  outputs\
+    *.xlsx
+    briefs\
+    articles\
+
+D:\Zhutova\brand-source\
+  AGENT(1).md
+  existing articles
+  brand pages
+```
+
+然后把 skill 里的路径全部指向这两个目录。
+
+**测试是否成功**
+
+1. 新开 Codex，让它能识别 `seo-skill-zhutova`。
+2. 跑一次 brief：
+
+```powershell
+python "D:\Zhutova\seo-kit\article_brief_exporter.py" --keyword "fornecedor chines"
+```
+
+3. 能生成：
+
+```text
+D:\Zhutova\seo-kit\outputs\briefs\fornecedor-chines.md
+```
+
+就说明文章生产链基本搬成功了。
+
+4. 如果要看页面队列：
+
+```powershell
+streamlit run "D:\Zhutova\seo-kit\zhutova_serp_dashboard.py"
+```
+
+最容易出问题的地方就是 **硬编码路径、中文目录乱码、缺少 outputs 里的 Excel 工作簿、缺 pandas/openpyxl**。这四个处理好，复制到另一台电脑基本就能用了。

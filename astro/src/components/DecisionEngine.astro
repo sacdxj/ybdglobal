@@ -1,0 +1,52 @@
+---
+const steps = [
+  { label:'Product family', question:'What are you sourcing?', options:[
+    ['USB Cable','Power, data or display'],
+    ['HDMI Cable','Source to display'],
+    ['DisplayPort Cable','Computer to monitor'],
+    ['Hub / Dock','Multiport connectivity'],
+    ['Charger','Wired or wireless'],
+  ]},
+  { label:'Primary requirement', question:'What must the product do?', options:[
+    ['Charging power','Define current, power and protocol'],
+    ['Data bandwidth','Define transfer task and target rate'],
+    ['Display output','Define source, display and mode'],
+    ['Multiport connectivity','Define the complete port matrix'],
+    ['Private label range','Define assortment and brand program'],
+  ]},
+  { label:'Customization', question:'How far should customization go?', options:[
+    ['Standard product','Review an existing configuration'],
+    ['Custom length / color','Adjust visible product details'],
+    ['Logo and packaging','Prepare a private-label program'],
+    ['New product development','Start from a new requirement'],
+  ]},
+  { label:'Buying stage', question:'What is the next useful action?', options:[
+    ['Need quotation','Prepare commercial inputs'],
+    ['Need samples','Define the evaluation target'],
+    ['Comparing suppliers','Review product and evidence fit'],
+    ['Planning a future range','Build an early assortment brief'],
+  ]},
+];
+---
+<section class="decision-engine" id="configure" data-decision-engine>
+  <div class="decision-engine__shell">
+    <div class="decision-engine__intro">
+      <div><p class="section-label">Procurement configurator</p><h2>Build a quote-ready product brief.</h2><p>Choose the product, requirement, customization level and buying stage.</p></div>
+      <div class="decision-engine__promise"><span>What you get</span><strong>A focused brief for the next sourcing conversation.</strong></div>
+    </div>
+    <div class="decision-engine__app">
+      <div class="decision-engine__progress" aria-label="Configurator progress">{steps.map((_,index)=><span class:list={['decision-engine__dot',{'is-active':index===0}]}>{index+1}</span>)}</div>
+      <form class="decision-engine__form">
+        {steps.map((step,index)=><fieldset data-step class:list={['decision-step',{'is-active':index===0}]}>
+          <legend><span>Step {index+1} of {steps.length} · {step.label}</span>{step.question}</legend>
+          <div class="decision-options">{step.options.map(option=><label class="decision-option"><input type="radio" name={['family','requirement','customization','stage'][index]} value={option[0]}/><span><strong>{option[0]}</strong><small>{option[1]}</small></span></label>)}</div>
+        </fieldset>)}
+        <div class="decision-engine__controls"><button class="button button-secondary decision-back" type="button">Back</button><button class="button button-primary decision-next" type="button">Next</button></div>
+      </form>
+      <section class="decision-result" data-result hidden><p class="section-label">Your sourcing path</p><h3 data-result-title>Configuration ready</h3><p data-result-summary></p><div class="decision-result__actions"><a class="button button-primary" data-result-primary href="/get-a-quote/">Continue to RFQ</a><button class="button button-secondary decision-restart" type="button">Start Over</button></div></section>
+    </div>
+  </div>
+</section>
+<script is:inline>
+(()=>{document.querySelectorAll('[data-decision-engine]').forEach(engine=>{const form=engine.querySelector('form'),steps=[...engine.querySelectorAll('[data-step]')],dots=[...engine.querySelectorAll('.decision-engine__dot')],next=engine.querySelector('.decision-next'),back=engine.querySelector('.decision-back'),result=engine.querySelector('[data-result]');let current=0;const emit=(event,detail={})=>{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event,...detail})};const update=()=>{steps.forEach((s,i)=>s.classList.toggle('is-active',i===current));dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===current);dot.classList.toggle('is-complete',i<current)});back.disabled=current===0;next.textContent=current===steps.length-1?'Build My RFQ':'Next'};next.addEventListener('click',()=>{const selected=steps[current].querySelector('input:checked');if(!selected){steps[current].classList.add('needs-answer');return}steps[current].classList.remove('needs-answer');if(current<steps.length-1){current++;update();return}const a=Object.fromEntries(new FormData(form).entries());form.hidden=true;result.hidden=false;result.querySelector('[data-result-summary]').textContent=`${a.family} · ${a.requirement} · ${a.customization} · ${a.stage}`;result.querySelector('[data-result-primary]').href=`/get-a-quote/?family=${encodeURIComponent(a.family)}&requirement=${encodeURIComponent(a.requirement)}&customization=${encodeURIComponent(a.customization)}&stage=${encodeURIComponent(a.stage)}`;emit('configurator_result_view',a)});back.addEventListener('click',()=>{if(current){steps[current].classList.remove('needs-answer');current--;update()}});engine.querySelector('.decision-restart').addEventListener('click',()=>{form.reset();steps.forEach(s=>s.classList.remove('needs-answer'));current=0;form.hidden=false;result.hidden=true;update();emit('configurator_start_over')});emit('configurator_start');update()})})();
+</script>

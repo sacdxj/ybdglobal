@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Astro
+dist/
+.astro/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+
+# Production build
+output/
+
+# Deployment metadata
+.vercel/
+
+# Local visual test assets
+hero-test.webp
+
+# Temporary files
+*.tmp
+*.temp
+
+# CMS (if using local backend)
+.decap/
+
+# Cache
+.cache/
+.parcel-cache/

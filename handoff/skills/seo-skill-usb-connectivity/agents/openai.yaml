@@ -1,0 +1,4 @@
+interface:
+  display_name: "USB Connectivity SEO"
+  short_description: "Plan and audit B2B connectivity SEO content"
+  default_prompt: "Use $seo-skill-usb-connectivity to map these cable keywords into evidence-safe B2B pages."

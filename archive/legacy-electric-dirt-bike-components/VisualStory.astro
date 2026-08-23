@@ -1,0 +1,44 @@
+---
+interface Props {
+  mode?: 'shop' | 'guide' | 'legal';
+}
+
+const { mode = 'shop' } = Astro.props;
+const content = {
+  shop: {
+    label: 'Rider-led shopping',
+    title: 'Match the bike to the rider.',
+    copy: 'Compare compact youth bikes, step-up trail models, and higher-output adult options by real riding fit.',
+    chips: ['Fit first', 'Trail use', 'Power class'],
+  },
+  guide: {
+    label: 'Buying guidance',
+    title: 'Turn research into a shortlist.',
+    copy: 'Use each guide to confirm fit, terrain, ownership needs, and the models worth comparing.',
+    chips: ['Intent', 'Comparison', 'Shortlist'],
+  },
+  legal: {
+    label: 'Use case clarity',
+    title: 'Separate trail use from road use.',
+    copy: 'Check documents, equipment, and local rules before treating any model as road-ready.',
+    chips: ['Documents', 'Equipment', 'State rules'],
+  },
+}[mode];
+---
+
+<section class="visual-story">
+  <div class="visual-story__image visual-story__image--wide">
+    <img src="/images/electric-dirt-bike-hero-premium.png" alt="Electric dirt bike on rocky trail terrain" loading="lazy" />
+  </div>
+  <div class="visual-story__content">
+    <p class="section-label">{content.label}</p>
+    <h2>{content.title}</h2>
+    <p>{content.copy}</p>
+    <div class="visual-story__chips" aria-label="Decision themes">
+      {content.chips.map((chip) => <span>{chip}</span>)}
+    </div>
+  </div>
+  <div class="visual-story__image visual-story__image--detail">
+    <img src="/images/electric-dirt-bike-hero.png" alt="Close view of an electric dirt bike chassis and front wheel" loading="lazy" />
+  </div>
+</section>

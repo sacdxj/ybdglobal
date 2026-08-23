@@ -1,0 +1,63 @@
+---
+interface Props { page: any; role: string }
+const { page, role } = Astro.props;
+
+const productMedia: Record<string, {src:string;alt:string;caption?:string}> = {
+  '/products/usb-cables/': { src:'/images/products/usb4-140w-20gbps/01-main.webp', alt:'Yellow coiled USB-C cable showing both connector ends' },
+  '/products/hdmi-cables/': { src:'/images/catalog/hdmi-cable-category.webp', alt:'Generic HDMI male-to-male cable showing both connector ends', caption:'HDMI connector-family reference · configuration pending' },
+  '/products/displayport-cables/': { src:'/images/products/dp21-16k-80gbps/01-main.webp', alt:'Black braided DisplayPort cable showing both male connectors' },
+  '/products/hubs-docking/': { src:'/images/catalog/usb-c-hub-category.webp', alt:'Generic multiport USB-C hub showing a practical port mix', caption:'Hub configuration reference · port matrix pending' },
+  '/products/chargers/': { src:'/images/products/jl-p150-dual-port-charger/01-main.webp', alt:'White dual-port wall charger with USB-A and USB-C ports' },
+  '/oem-odm/': { src:'/images/editorial/oem-customization-review.webp', alt:'USB-C cable, material swatches, blank packaging dieline and revision checklist arranged for customization review', caption:'Customization-review scene · availability remains quotation-gated' },
+  '/quality-factory/': { src:'/images/editorial/product-evidence-review.webp', alt:'Cable sample, caliper and inspection record arranged for model-level evidence review', caption:'Product-evidence review scene · not a factory capability claim' },
+  '/about-us/': { src:'/images/editorial/connectivity-range-hero.webp', alt:'Generic USB-C, HDMI, DisplayPort, hub and charging products arranged as a connectivity range', caption:'Current product-family scope · exact configurations vary' },
+  '/contact/': { src:'/images/editorial/rfq-preparation-desk.webp', alt:'Cable and charger samples beside a blank specification sheet prepared for an inquiry', caption:'Inquiry-preparation scene · commercial terms require review' },
+  '/get-a-quote/': { src:'/images/editorial/rfq-preparation-desk.webp', alt:'Product samples and a blank specification sheet arranged for RFQ preparation', caption:'RFQ-preparation scene · unknown fields may remain open' },
+  '/request-sample/': { src:'/images/editorial/product-evidence-review.webp', alt:'Cable sample and measurement tools arranged for sample evaluation', caption:'Sample-evaluation scene · acceptance criteria must be defined' },
+};
+
+const productStories: Record<string, any> = {
+  '/products/usb-cables/': { label:'USB cable specification map', title:'Two endpoints. One task.', note:'Define connectors, required functions, and construction before requesting a quote.', nodes:[['01','CONNECT','Define both connector ends'],['02','PERFORM','Separate power and data'],['03','PROVE','Match claims to the SKU']] },
+  '/products/hdmi-cables/': { label:'HDMI signal path', title:'Source → cable → display.', note:'The display target, installation length, and test conditions determine what can be approved.', nodes:[['01','SOURCE','Identify the output device'],['02','INSTALL','Define route and length'],['03','DISPLAY','Lock the target behavior']] },
+  '/products/displayport-cables/': { label:'DisplayPort workload map', title:'Host, monitor, workload.', note:'Specify direction and device setup before relying on version, bandwidth, resolution, or refresh language.', nodes:[['01','HOST','GPU or source interface'],['02','WORKLOAD','Office, pro, or gaming'],['03','MONITOR','Input and display target']] },
+  '/products/hubs-docking/': { label:'Port-matrix planner', title:'Build around the desk task.', note:'Start with the host, then map displays, data, network, peripherals, and power as one system.', nodes:[['01','HOST','Device and operating system'],['02','PORTS','Complete downstream matrix'],['03','TEST','Simultaneous-use scenario']] },
+  '/products/chargers/': { label:'Charging-system map', title:'Device set before wattage.', note:'Port mix, simultaneous load, plug, bundled cable, and destination market belong in one brief.', nodes:[['01','DEVICES','Define simultaneous use'],['02','OUTPUT','Review requested profiles'],['03','MARKET','Match plug and evidence']] },
+};
+
+const routeStories: Record<string, any> = {
+  '/oem-odm/': { label:'Customization control path', title:'Reference. Sample. Lock.', note:'Keep product and brand approvals distinct.', nodes:[['01','BRIEF','Reference and differences'],['02','SAMPLE','Evaluate the configuration'],['03','LOCK','Approve product and artwork']] },
+  '/quality-factory/': { label:'Supplier evidence chain', title:'Claim → record → exact model.', note:'A factory statement becomes useful only when the legal entity, facility role, SKU, market, and date align.', nodes:[['01','IDENTITY','Supplier and facility role'],['02','CONTROL','Process and test records'],['03','SCOPE','Model, market, validity']] },
+  '/about-us/': { label:'Sourcing model', title:'Select. Define. Review.', note:'One selected configuration carries through the project.', nodes:[['01','SELECT','Choose a product family'],['02','DEFINE','Build the requirement'],['03','REVIEW','Confirm evidence and terms']] },
+  '/contact/': { label:'Inquiry router', title:'Use the shortest useful path.', note:'General questions, samples, evidence requests, and quotation projects need different information.', nodes:[['01','QUESTION','Use the contact route'],['02','SAMPLE','Define evaluation criteria'],['03','QUOTE','Submit the full requirement']] },
+  '/resources/': { label:'Research architecture', title:'Learn the task. Return to the product.', note:'Each guide will answer one verified question and route the buyer back to a commercial parent.', nodes:[['01','QUESTION','One distinct buyer task'],['02','FRAMEWORK','Evidence-safe selection'],['03','ACTION','Product or specification RFQ']] },
+  '/solutions/': { label:'Buyer-program map', title:'Three programs. Different controls.', note:'Assortment, brand, and channel teams may source similar products but prepare different evidence and approvals.', nodes:[['01','DISTRIBUTE','Range and replenishment'],['02','BRAND','Identity and sample control'],['03','RETAIL','Claims and launch timing']] },
+  '/solutions/wholesalers-distributors/': { label:'Range-building workflow', title:'Assortment before price list.', note:'Map product families, markets, quantity bands, packaging, logistics, and replenishment before quotation.', nodes:[['01','RANGE','Choose the family mix'],['02','MARKET','Define evidence and labels'],['03','REORDER','Forecast replenishment']] },
+  '/solutions/brands-private-label/': { label:'Brand-control workflow', title:'Product and artwork move together.', note:'Model-level evidence and brand-asset revisions are separate controls that must converge before production.', nodes:[['01','PRODUCT','Lock the configuration'],['02','IDENTITY','Approve every asset'],['03','GOLDEN','Retain approval reference']] },
+  '/solutions/retail-ecommerce/': { label:'Channel launch workflow', title:'Claim, package, listing, stock.', note:'The channel promise must stay aligned with the selected SKU, evidence, launch calendar, and reorder plan.', nodes:[['01','CHANNEL','Define customer task'],['02','CLAIM','Map evidence to copy'],['03','LAUNCH','Coordinate stock and assets']] },
+  '/get-a-quote/': { label:'RFQ preparation', title:'Unknown is acceptable. Vague is expensive.', note:'Record what is known, flag what is open, and keep unsupported values out of the approved specification.', nodes:[['01','PRODUCT','Interface and task'],['02','PROGRAM','Quantity, market, brand'],['03','HANDOFF','Reviewable RFQ summary']] },
+  '/request-sample/': { label:'Sample decision path', title:'Match the sample to the decision.', note:'A reference sample, configured sample, and approval sample do not validate the same thing.', nodes:[['01','REFERENCE','Early fit and direction'],['02','CONFIGURED','Project validation'],['03','APPROVED','Production reference']] },
+};
+
+const fallback = role === 'policy'
+  ? { label:'Private-review control', title:'Operational facts remain gated.', note:'Legal identity, policy owner, jurisdiction, and approved processing terms are required before launch.', nodes:[['01','DRAFT','Interim information'],['02','REVIEW','Legal and operational owner'],['03','APPROVE','Publish only after sign-off']] }
+  : null;
+const story = productStories[page.route] || routeStories[page.route] || fallback;
+const media = productMedia[page.route];
+---
+
+{story && <section class:list={['page-visual-summary', `page-visual-summary--${role}`,{'page-visual-summary--usb-cables':page.route==='/products/usb-cables/','page-visual-summary--hdmi-cables':page.route==='/products/hdmi-cables/','page-visual-summary--dp-cables':page.route==='/products/displayport-cables/','page-visual-summary--hub-docking':page.route==='/products/hubs-docking/','page-visual-summary--chargers':page.route==='/products/chargers/'}]} aria-labelledby={`visual-summary-${page.route.replaceAll('/','-') || 'home'}`}>
+  <header class="page-visual-summary__intro">
+    <p class="section-label">{story.label}</p>
+    <h2 id={`visual-summary-${page.route.replaceAll('/','-') || 'home'}`}>{story.title}</h2>
+    <p>{story.note}</p>
+  </header>
+  {media?<figure class="page-visual-summary__media"><img src={media.src} alt={media.alt} loading="lazy"/><figcaption>{media.caption??'Product-family visual · claims remain evidence-gated'}</figcaption></figure>:<div class="page-visual-summary__diagram" aria-hidden="true">
+    <span class="signal signal--one"></span><span class="signal signal--two"></span><span class="signal signal--three"></span>
+    <div class="connector connector--left"><i></i><i></i><i></i><i></i></div>
+    <div class="cable-line"><b></b></div>
+    <div class="connector connector--right"><i></i><i></i><i></i><i></i></div>
+  </div>}
+  <ol class="page-visual-summary__steps">
+    {story.nodes.map((node:any)=><li><span>{node[0]}</span><div><strong>{node[1]}</strong><p>{node[2]}</p></div></li>)}
+  </ol>
+</section>}

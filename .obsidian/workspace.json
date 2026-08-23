@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "e1beba9ffbd757c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "9039b7f3bc0029cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e92f21a20230c05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "obsidian-zhutova/21 Acessorios atacado para revender.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "21 Acessorios atacado para revender"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3fa3a093828a221f",
+    "type": "split",
+    "children": [
+      {
+        "id": "14c483b8cae0bc5b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa746724e47bfd91",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0501569984302f90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a1033440ea5c50ca",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dc26af865df61f6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "61ef715fb265ba18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d0e90b088a38677",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "zhutova 2清洗/seo0330/seo-cluster-tool/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "README 的反向链接列表"
+            }
+          },
+          {
+            "id": "090ee39a6250c9ac",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "zhutova 2清洗/seo0330/seo-cluster-tool/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "README 的出链列表"
+            }
+          },
+          {
+            "id": "6aaf4205dee4e834",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "49aa28a0582894c7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "5eddf7658f2fd470",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "zhutova 2清洗/seo0330/seo-cluster-tool/README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "README 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "6e92f21a20230c05",
+  "lastOpenFiles": [
+    "obsidian-zhutova/20 Simulador importacao custo antes de comprar.md",
+    "obsidian-zhutova/19 ICMS importacao calculo e cuidados.md",
+    "社媒/~$Zhutova_社媒运营计划_简洁版.xlsx",
+    "obsidian-zhutova/18 China atacadista para revenda.md",
+    "obsidian-zhutova/17 Fornecedores Bras para revenda.md",
+    "optimize_week6_after_review.py",
+    "add_week6_voiceovers.py",
+    "obsidian-zhutova/BLOG_NEXT_ACTION.md",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/icms-importacao.md",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/china-atacadista.md",
+    "obsidian-zhutova/16 Como funciona um importador no Brasil.md",
+    "obsidian-zhutova/15 Capinhas no atacado para revender.md",
+    "社媒/备用热点新闻.txt",
+    "社媒/新建 文本文档.txt",
+    "optimize_week5_for_short_video.py",
+    "add_news_input_sheet_and_update_week5.py",
+    "add_week5_voiceovers.py",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/fornecedores-bras.md",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/importador.md",
+    "obsidian-zhutova/14 Como escolher uma importadora para ecommerce.md",
+    "obsidian-zhutova/13 Bijuterias para revender direto da fabrica.md",
+    "obsidian-zhutova/12 Siscomex importacao para ecommerce.md",
+    "obsidian-zhutova/11 Frete CIF e FOB diferencas para importacao.md",
+    "obsidian-zhutova/10 Desembaraco aduaneiro para ecommerce.md",
+    "obsidian-zhutova/9 Importacao e exportacao para empresas.md",
+    "obsidian-zhutova/8 Imposto de importacao para produtos da China.md",
+    "obsidian-zhutova/Quanto dá para lucrar importando produtos da China, Análise com 4 exemplos reais.md",
+    "obsidian-zhutova/Importacao e exportacao para empresas.md",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/importacao-e-exportacao.md",
+    "obsidian-zhutova/Imposto de importacao para produtos da China.md",
+    "zhutova 2清洗/zhutova 2清洗/outputs/briefs/imposto-de-importacao.md",
+    "obsidian-zhutova/7Frete FOB na importacao.md",
+    "obsidian-zhutova/6 Frete CIF o que e como calcular e quando vale a pena.md",
+    "obsidian-zhutova/Fornecedor chines.md",
+    "obsidian-zhutova/como-encontrar-fornecedores-confiaveis-na-china-banner-1200x630.jpg",
+    "obsidian-zhutova/Fornecedor nacional dropshipping.md.tmp.4804.1778857022978",
+    "obsidian-zhutova/Fornecedor nacional dropshipping.md.tmp.4804.1778857008838",
+    "obsidian-zhutova/assets/frete-cif-importacao-guia-header 2.png",
+    "obsidian-zhutova/assets/ig_099d1da1956fb1ac016a071ef135b8819bba8fbc79978c6366.png",
+    "obsidian-zhutova/assets/frete-cif-importacao-guia-header.png",
+    "ins_carousel_FINAL_v5_1000x1250_noCropNoWhite/05_slide.png",
+    "ins_carousel_FINAL_v5_1000x1250_noCropNoWhite/04_slide.png",
+    "ins_carousel_FINAL_v5_1000x1250_noCropNoWhite/03_slide.png",
+    "ins_carousel_FINAL_v5_1000x1250_noCropNoWhite/02_slide.png",
+    "ins_carousel_FINAL_v5_1000x1250_noCropNoWhite/01_slide.png",
+    "ins_carousel_FINAL_v4_1000x1250_noborder/05_slide.png"
+  ]
+}

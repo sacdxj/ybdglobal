@@ -1,0 +1,313 @@
+[
+  {
+    "name": "Sheet2",
+    "rowCount": 38,
+    "colCount": 6,
+    "values": [
+      [
+        null,
+        "=DISPIMG(\"ID_7698594ED43C41DFB4C717485EDD5559\",1)",
+        "=DISPIMG(\"ID_7698594ED43C41DFB4C717485EDD5559\",1)",
+        "=DISPIMG(\"ID_5EB929FF8693456887509AE5714AE11E\",1)",
+        "=DISPIMG(\"ID_5EB929FF8693456887509AE5714AE11E\",1)",
+        "=DISPIMG(\"ID_5EB929FF8693456887509AE5714AE11E\",1)"
+      ],
+      [
+        "型号",
+        "K2-48-MY-1417",
+        "K2-60-MY-1417",
+        "K2-72-MY-1417",
+        "K2-48-MX-1214",
+        "K2-72-LZ-1719"
+      ],
+      [
+        "Vehicle size\n外观尺寸（mm）",
+        "1600*685*1010MM",
+        "1600*685*1010MM",
+        "1630*685*1120MM",
+        "1600*685*1010MM",
+        "1840*685*1120MM"
+      ],
+      [
+        "Vehicle base\n轴距（mm）",
+        "1150MM",
+        "1150MM",
+        "1150MM",
+        "1080MM",
+        "1150MM"
+      ],
+      [
+        "Seat cushion height\n座高（mm）",
+        "780MM",
+        "760MM-770MM",
+        "760MM-770MM",
+        "730MM",
+        "860MM-870MM"
+      ],
+      [
+        "Min. gruond clearance\n最小离地间隙（mm）",
+        "280MM",
+        "280MM",
+        "280MM",
+        "220MM",
+        "370MM"
+      ],
+      [
+        "Max. Speed\n最高时速（MPH）",
+        "65km/h",
+        "65km/h",
+        "1档空转：22      2档空转：32   3档空转：55                                                            落地实测速度：1档：21   2档29    3档49",
+        "60km/h",
+        "1档空转：27      2档空转：38   3档空转：65                                                          落地实测速度：1档：25   2档35    3档54"
+      ],
+      [
+        "Range\n续航里程（km）",
+        "60KM",
+        "60KM",
+        "60KM",
+        "60KM",
+        "60KM"
+      ],
+      [
+        "Climbing degree\n最大爬坡坡度 (°)",
+        "≥65°",
+        "≥65°",
+        "≥65°",
+        "≥65°",
+        "≥65°"
+      ],
+      [
+        "Ratedloading Capacity\n额定承载能力（kg）",
+        "100KGS",
+        "100KGS",
+        "100KG",
+        "80KGS",
+        "100KG"
+      ],
+      [
+        "Max. Loading capacity\n最大承载能力（kg）",
+        "150KGS",
+        "150KGS",
+        "150KG",
+        "150KGS",
+        "150KG"
+      ],
+      [
+        "Battery Type\n电池类型",
+        "48V20.8AH 国产锂电",
+        "60V22.5AH国产三元锂电",
+        "72V25AH国产三元锂电",
+        "48V20.8AH 国产锂电",
+        "72V25AH国产三元锂电"
+      ],
+      [
+        "Battery Capacity\n电池容量",
+        "1000WH",
+        "25AH",
+        "25AH",
+        "1000WH",
+        "25AH"
+      ],
+      [
+        "Battery Life cycle\n电池寿命",
+        "22000 Times",
+        "500次剩余容量≥80",
+        "500次剩余容量≥80",
+        "22000 Times",
+        "500次剩余容量≥80"
+      ],
+      [
+        "Motortype\n电机类型",
+        "中置电机",
+        "中置电机",
+        "中置电机",
+        "中置电机",
+        "中置电机"
+      ],
+      [
+        "Rated Motorpower\n额定功率（KW)",
+        "1200W",
+        "1500w",
+        "2000w",
+        "1200W",
+        "2000w"
+      ],
+      [
+        "Maximum Power\n峰值功率（KW)",
+        "3200W",
+        "4000W",
+        "6000W",
+        "3200W",
+        "6000W"
+      ],
+      [
+        "Controller\n控制器",
+        "52V-70AB",
+        "52V-80AB",
+        "52V-80AB",
+        "52V-70AB",
+        "52V-80AB"
+      ],
+      [
+        "Charger\n充电器",
+        "3A CE认证\n5A CE认证",
+        "3A CE认证\n5A CE认证",
+        "3A CE认证\n5A CE认证",
+        "3A CE认证\n5A CE认证",
+        "3A CE认证\n5A CE认证"
+      ],
+      [
+        "Charger Time\n充电时间",
+        "5h(3A充电器）\n4h(5A充电器)",
+        "9h(3A充电器）\n5.4h(5A充电器)",
+        "9h(3A充电器）\n5.4h(5A充电器)",
+        "5h(3A充电器）\n4h(5A充电器)",
+        "9h(3A充电器）\n5.4h(5A充电器)"
+      ],
+      [
+        "Display\n仪表",
+        "左置仪表 LED",
+        "左置仪表 LED",
+        "左置仪表 LED",
+        "左置仪表 LED",
+        "左置仪表 LED"
+      ],
+      [
+        "Headlight\n前大灯/尾灯",
+        "可选配",
+        "可选配",
+        "可选配",
+        "可选配",
+        "可选配"
+      ],
+      [
+        "Frame\n车架",
+        "lron Frame\n铁车架",
+        "lron Frame\n铁车架",
+        "lron Frame\n铁车架",
+        "lron Frame\n铁车架",
+        "lron Frame\n铁车架"
+      ],
+      [
+        "Surface treatment\n车架表面处理",
+        "spray paint\n喷漆",
+        "喷塑",
+        "喷塑",
+        "spray paint\n喷漆",
+        "喷塑"
+      ],
+      [
+        "Tyre（front/rear)\n轮胎规格（前/后）",
+        "front70/100-17      rear 90/100-14\n前70/100-17      后 90/100-14",
+        "front70/100-17      rear 90/100-14\n前70/100-17      后 90/100-14",
+        "\n前70/100-17      后 90/100-14",
+        "front 60/100-14    rear 80/100-12\n前60/100-14      后80/100-12",
+        "\n前70/100-19      后 70/100-17"
+      ],
+      [
+        "Front shock aborption/length\n前减震/长度(cm)",
+        "倒置铝前减",
+        "液压减震65",
+        "液压减震65",
+        "倒置铝前减",
+        "液压减震65"
+      ],
+      [
+        "Back shock aborption/length\n后减震/长度（cm）",
+        "Domestic hydraulic shock absorber\n液压不可调减震",
+        "弹簧减震25",
+        "弹簧减震25",
+        "Domestic hydraulic shock absorber\n液压不可调减震",
+        "弹簧减震25"
+      ],
+      [
+        "Brake Form\n刹车形式",
+        "2 Piston Cast Iron Disc Brakes\n2活塞压铸碟刹",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹",
+        "2 Piston Cast Iron Disc Brakes\n2活塞压铸碟刹",
+        "2 Piston Cast Iron Disc Brakes\n液压双碟刹"
+      ],
+      [
+        "Saddle\n坐垫",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵",
+        "Four- layer elastic leather + High - elasticity sponge\n四层皮革+高弹性海绵"
+      ],
+      [
+        "Export package\n出口包装",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉",
+        "Oil - film Carton+ EPE Foam\n油膜纸箱+珍珠棉"
+      ],
+      [
+        "G.W./N.W\n毛重/净重",
+        "56kgs/50kgs",
+        "56kgs/50kgs",
+        "56kgs/50kgs",
+        "66kgs/59kgs",
+        "56kgs/66.5kg"
+      ],
+      [
+        "Color\n颜色",
+        "Black/Red/Orange/Customization\n黑色/红色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/红色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/红色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/红色/橙色/各种颜色定制",
+        "Black/Red/Orange/Customization\n黑色/红色/橙色/各种颜色定制"
+      ],
+      [
+        "Leading Time\n交货期",
+        "30 Days",
+        "30 Days",
+        "30 Days",
+        "30 Days",
+        "30 Days"
+      ],
+      [
+        "40HQ\n40尺装柜数量",
+        "213 PCS",
+        "213 PCS",
+        "213 PCS",
+        "213 PCS",
+        "213 PCS"
+      ],
+      [
+        "Packaging Dimensions\n包装尺寸(mm）",
+        "1370*350*700mm",
+        "压减震带轮胎138*38.2*70CM",
+        "压减震带轮胎138*38.2*70CM",
+        "1370*350*670mm",
+        "压减震带轮胎151*38.2*76CM"
+      ],
+      [
+        "散货价格（单价）",
+        3900,
+        4300,
+        4900,
+        3800,
+        5500
+      ],
+      [
+        "整柜价格（单价）",
+        3600,
+        4000,
+        4600,
+        3500,
+        5100
+      ],
+      [
+        "40高柜",
+        174,
+        174,
+        174,
+        174,
+        159
+      ]
+    ]
+  }
+]

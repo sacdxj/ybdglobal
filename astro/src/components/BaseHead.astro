@@ -1,0 +1,8 @@
+---
+interface Props { title:string; description:string; image?:string; canonical?:string; type?:string; noindex?:boolean; keywords?:string; }
+const {title,description,image='/images/editorial/connectivity-range-hero.webp',canonical=new URL(Astro.url.pathname,Astro.site).href,type='website',noindex=false}=Astro.props;
+const siteName='Youboda Technology';
+const legalName='Dongguan Youboda Technology Development Co., Ltd.';
+const fullTitle=title.includes(siteName)||title.includes(legalName)?title:`${title} | ${siteName}`;
+---
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#172019"/><link rel="icon" href="/favicon.svg"/><title>{fullTitle}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>{noindex&&<meta name="robots" content="noindex, nofollow"/>}<meta property="og:type" content={type}/><meta property="og:url" content={canonical}/><meta property="og:title" content={fullTitle}/><meta property="og:description" content={description}/><meta property="og:image" content={new URL(image,Astro.url)}/><meta property="og:site_name" content={siteName}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={fullTitle}/><meta name="twitter:description" content={description}/><script is:inline type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@type':'WebPage',name:fullTitle,url:canonical,description,publisher:{'@type':'Organization',name:legalName,alternateName:siteName}})}/>

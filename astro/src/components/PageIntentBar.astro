@@ -1,0 +1,61 @@
+---
+interface Props { audience?:string; intent?:string; buyerStage?:string; proofStatus?:string; product?:boolean; home?:boolean; directory?:boolean; usbCollection?:boolean; hdmiCollection?:boolean; dpCollection?:boolean; hubCollection?:boolean; chargerCollection?:boolean; oem?:boolean; quality?:boolean; about?:boolean; contact?:boolean }
+const {audience,intent,buyerStage,proofStatus,product=false,home=false,directory=false,usbCollection=false,hdmiCollection=false,dpCollection=false,hubCollection=false,chargerCollection=false,oem=false,quality=false,about=false,contact=false}=Astro.props;
+const items=(product?[
+  {label:'Buyer fit',value:audience},
+  {label:'Buying task',value:intent},
+  {label:'Evidence gate',value:proofStatus},
+]:home?[
+  {label:'Product range',value:'USB, HDMI, DisplayPort, hubs and chargers'},
+  {label:'Buying workflow',value:'Specify, validate, then quote'},
+  {label:'Program fit',value:'Wholesale, distribution and private label'},
+]:directory?[
+  {label:'Choose by',value:'Interface, device and product task'},
+  {label:'Compare',value:'Five connectivity and charging families'},
+  {label:'Continue with',value:'A selected configuration or RFQ'},
+]:usbCollection?[
+  {label:'Start with',value:'The connector at each end'},
+  {label:'Define',value:'Charging, data or display task'},
+  {label:'Compare',value:'Construction, length and model fit'},
+]:hdmiCollection?[
+  {label:'Identify',value:'Source device and display'},
+  {label:'Define',value:'Display target and signal path'},
+  {label:'Confirm',value:'Length, route and selected model'},
+]:dpCollection?[
+  {label:'Identify',value:'Host interface and direction'},
+  {label:'Define',value:'Workload and display target'},
+  {label:'Confirm',value:'Length, construction and model'},
+]:hubCollection?[
+  {label:'Start with',value:'Host device and operating system'},
+  {label:'Build',value:'The complete downstream port matrix'},
+  {label:'Validate',value:'The simultaneous-use scenario'},
+]:chargerCollection?[
+  {label:'Start with',value:'The complete device set'},
+  {label:'Define',value:'Port mix and output behaviour'},
+  {label:'Confirm',value:'Plug format and destination market'},
+]:oem?[
+  {label:'Configure',value:'Product and performance'},
+  {label:'Brand',value:'Color, marking and packaging'},
+  {label:'Approve',value:'Sample and locked revision'},
+]:quality?[
+  {label:'Identify',value:'Exact model and revision'},
+  {label:'Match',value:'Record, scope and market'},
+  {label:'Keep open',value:'Missing or expired evidence'},
+]:about?[
+  {label:'Select',value:'The right product family'},
+  {label:'Define',value:'Configuration and program needs'},
+  {label:'Review',value:'Evidence before claims'},
+]:contact?[
+  {label:'Choose',value:'Quote, sample or evidence'},
+  {label:'Include',value:'Product, quantity and market'},
+  {label:'Receive',value:'A reviewable project handoff'},
+]:[
+  {label:'Built for',value:audience},
+  {label:'User task',value:intent},
+  {label:'Decision stage',value:buyerStage},
+  {label:'Evidence status',value:proofStatus},
+]).filter(item=>item.value);
+---
+{items.length>0&&<section class:list={['intent-bar',{'intent-bar--product':product,'intent-bar--home':home,'intent-bar--directory':directory,'intent-bar--usb-collection':usbCollection,'intent-bar--hdmi-collection':hdmiCollection,'intent-bar--dp-collection':dpCollection,'intent-bar--hub-collection':hubCollection,'intent-bar--charger-collection':chargerCollection,'intent-bar--oem':oem,'intent-bar--quality':quality,'intent-bar--about':about,'intent-bar--contact':contact}]} aria-label="Page audience and intent">
+  {items.map(item=><div class="intent-bar__item"><span>{item.label}</span><strong>{item.value}</strong></div>)}
+</section>}

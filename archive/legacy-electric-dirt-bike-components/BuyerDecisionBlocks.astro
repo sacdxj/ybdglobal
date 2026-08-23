@@ -1,0 +1,81 @@
+---
+interface Props {
+  mode?: 'default' | 'streetLegal';
+}
+
+const { mode = 'default' } = Astro.props;
+
+const blocks = mode === 'streetLegal' ? [
+  {
+    title: 'Documents first',
+    copy: 'Confirm classification, title/MSO details, and local rules.',
+    href: '/street-legal/registration-license/',
+    cta: 'Read registry guide',
+    image: '/images/electric-dirt-bike-hero-premium.png',
+  },
+  {
+    title: 'Equipment check',
+    copy: 'Review lights, signals, mirrors, tires, and VIN needs.',
+    href: '/street-legal/dual-sport/',
+    cta: 'View dual-sport path',
+    image: '/images/electric-dirt-bike-hero.png',
+  },
+  {
+    title: 'Ask before road use',
+    copy: 'Treat each bike as off-road until model documents verify otherwise.',
+    href: '/support/contact/',
+    cta: 'Ask support',
+    image: '/images/electric-dirt-bike-hero-premium.png',
+  },
+] : [
+  {
+    title: 'Rider fit',
+    copy: 'Match height, weight, reach, and control confidence.',
+    href: '/kids-youth/',
+    cta: 'Fit kids & youth',
+    image: '/images/electric-dirt-bike-hero.png',
+  },
+  {
+    title: 'Power class',
+    copy: 'Compare 48V, 60V, and 72V by terrain and rider skill.',
+    href: '/adult-dirt-bikes/',
+    cta: 'Compare adult bikes',
+    image: '/images/electric-dirt-bike-hero-premium.png',
+  },
+  {
+    title: 'Ownership check',
+    copy: 'Review range, charging, shipping, warranty, and parts.',
+    href: '/buying-guides/',
+    cta: 'Read guides',
+    image: '/images/electric-dirt-bike-hero.png',
+  },
+];
+
+const heading = mode === 'streetLegal'
+  ? 'Confirm before road use.'
+  : 'Pick your starting point.';
+
+const introCopy = mode === 'streetLegal'
+  ? 'Match the bike to documents, equipment, and local requirements before planning public-road riding.'
+  : 'Start with rider fit, then compare the power class and ownership details that matter at checkout.';
+---
+
+<section class="buyer-blocks" aria-labelledby="buyer-blocks-title">
+  <div class="buyer-blocks__intro">
+    <p class="section-label">How to choose</p>
+    <h2 id="buyer-blocks-title">{heading}</h2>
+    <p>{introCopy}</p>
+  </div>
+  <div class="buyer-blocks__grid">
+    {blocks.map((block, index) => (
+      <article>
+        <figure>
+          <img src={block.image} alt={`${block.title} electric dirt bike buying path`} loading={index === 0 ? 'eager' : 'lazy'} />
+        </figure>
+        <h3>{block.title}</h3>
+        <p>{block.copy}</p>
+        <a href={block.href}>{block.cta}</a>
+      </article>
+    ))}
+  </div>
+</section>

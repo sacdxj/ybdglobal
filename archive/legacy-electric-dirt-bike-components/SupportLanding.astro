@@ -1,0 +1,153 @@
+---
+interface PageData {
+  title: string;
+  description: string;
+  route: string;
+  pageType: string;
+  primaryCta?: string;
+  primaryCtaHref?: string;
+}
+
+interface Props {
+  page: PageData;
+}
+
+const { page } = Astro.props;
+const hasValidPrimaryCta = page.primaryCta && page.primaryCtaHref && !page.primaryCtaHref.startsWith('[');
+const supportMap: Record<string, { label: string; title: string; copy: string; symbol: string; cards: string[][]; action: string }> = {
+  '/support/contact/': {
+    label: 'Support desk',
+    title: 'Get the right answer by model and use case.',
+    copy: 'Send the model, rider type, state, and question so support can route the request clearly.',
+    symbol: 'ASK',
+    action: 'Start a Request',
+    cards: [
+      ['Model Questions', 'Fit, voltage, terrain, and product comparison help.'],
+      ['Order Help', 'Shipping, delivery, assembly, and documentation questions.'],
+      ['After-Sales', 'Warranty, parts, service, and troubleshooting direction.'],
+    ],
+  },
+  '/support/shipping/': {
+    label: 'Delivery',
+    title: 'Plan delivery before choosing a bike.',
+    copy: 'Electric dirt bikes are large products. Delivery should be checked by location, model, carton handling, and assembly expectations.',
+    symbol: 'SHIP',
+    action: 'Ask About Delivery',
+    cards: [
+      ['Coverage', 'Confirm service area and delivery method before purchase.'],
+      ['Receiving', 'Check carton condition, appointment needs, and unloading plan.'],
+      ['Setup', 'Review assembly, inspection, charging, and first-ride steps.'],
+    ],
+  },
+  '/support/financing/': {
+    label: 'Financing',
+    title: 'Use payments after the right model is clear.',
+    copy: 'Financing should support the correct rider fit and ownership plan, not push shoppers into the wrong class.',
+    symbol: 'PAY',
+    action: 'Review Options',
+    cards: [
+      ['Eligibility', 'Confirm provider availability and terms at checkout.'],
+      ['Total Cost', 'Compare payments with shipping, gear, parts, and support.'],
+      ['Returns', 'Understand how cancellations and refunds interact with payments.'],
+    ],
+  },
+  '/support/warranty-returns/': {
+    label: 'Warranty',
+    title: 'Know the support path before checkout.',
+    copy: 'Warranty and returns should be clear by model, component, use case, and claim process.',
+    symbol: 'CARE',
+    action: 'Contact Support',
+    cards: [
+      ['Coverage', 'Check covered components, exclusions, and required proof.'],
+      ['Claims', 'Keep photos, order details, serial/model information, and issue notes.'],
+      ['Returns', 'Confirm condition, packaging, timing, and authorization steps.'],
+    ],
+  },
+  '/support/faqs/': {
+    label: 'FAQs',
+    title: 'Answer common questions before they become purchase risk.',
+    copy: 'Use the FAQ hub to confirm model fit, ordering, shipping, warranty, street-use limits, and ownership support before checkout.',
+    symbol: 'FAQ',
+    action: 'Ask Support',
+    cards: [
+      ['Buying Fit', 'Start with rider, terrain, wheel size, voltage, and control confidence.'],
+      ['Order Risk', 'Review delivery, damage reporting, returns, and payment handling.'],
+      ['Ownership', 'Confirm charging, parts, warranty, service, and legal-use boundaries.'],
+    ],
+  },
+  '/support/repair/': {
+    label: 'Service',
+    title: 'Troubleshoot by model, symptom, and safety status.',
+    copy: 'Service requests should collect the exact bike, issue, use history, photos, and stop-use conditions.',
+    symbol: 'FIX',
+    action: 'Open Service Request',
+    cards: [
+      ['Safety First', 'Stop riding if brakes, battery, controls, or structure feel unsafe.'],
+      ['Issue Details', 'Record symptoms, timing, terrain, charging history, and photos.'],
+      ['Parts Path', 'Match parts and repairs to the exact model and configuration.'],
+    ],
+  },
+  '/support/parts-maintenance/': {
+    label: 'Maintenance',
+    title: 'Keep ownership simple after the first ride.',
+    copy: 'Parts and maintenance content should help owners care for the bike by model, terrain, and riding frequency.',
+    symbol: 'PARTS',
+    action: 'Ask About Parts',
+    cards: [
+      ['Wear Items', 'Track tires, brakes, chain/drivetrain, controls, and fasteners.'],
+      ['Battery Care', 'Follow approved charging, storage, and inspection guidance.'],
+      ['Model Fit', 'Use model-specific compatibility before ordering parts.'],
+    ],
+  },
+};
+
+const fallback = supportMap['/support/contact/'];
+const content = supportMap[page.route] || fallback;
+const supportLinks = [
+  ['Contact Us', '/support/contact/'],
+  ['Shipping & Delivery', '/support/shipping/'],
+  ['Financing Plans', '/support/financing/'],
+  ['Warranty & Returns', '/support/warranty-returns/'],
+  ['FAQs', '/support/faqs/'],
+  ['Repair & Service', '/support/repair/'],
+  ['Parts & Maintenance', '/support/parts-maintenance/'],
+];
+---
+
+<section class="guide-panel support-panel">
+  <div class="guide-panel__intro">
+    <p class="section-label">{content.label}</p>
+    <h2>{content.title}</h2>
+    <p>{content.copy}</p>
+    <div class="guide-actions">
+      <a class="button button-primary" href={hasValidPrimaryCta ? page.primaryCtaHref : '/support/contact/'}>{hasValidPrimaryCta ? page.primaryCta : content.action}</a>
+      <a class="button button-dark" href="/shop/">View Models</a>
+    </div>
+  </div>
+  <div class="guide-panel__visual bike-visual" aria-hidden="true">
+    <span>{content.symbol}</span>
+    <small>Support path</small>
+  </div>
+</section>
+
+<section class="decision-strip">
+  {content.cards.map(([title, copy]) => (
+    <article>
+      <span>{title}</span>
+      <p>{copy}</p>
+    </article>
+  ))}
+</section>
+
+<section class="compare-link-section">
+  <p class="section-label">Support center</p>
+  <h2>Choose the support path that matches the question.</h2>
+  <div class="compare-link-grid">
+    {supportLinks.map(([title, href]) => (
+      <a href={href}>
+        <strong>{title}</strong>
+        <span>Open support details</span>
+      </a>
+    ))}
+  </div>
+</section>

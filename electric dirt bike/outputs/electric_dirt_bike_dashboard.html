@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Dirt Bike SEO Dashboard</title>
+<style>
+:root { --ink:#18201b; --muted:#66736b; --line:#d9e1d5; --green:#3f6b47; --gold:#c48a35; --bg:#f7f8f3; --card:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:28px 36px 18px; background:#102017; color:#fff; }
+h1 { margin:0 0 8px; font-size:34px; letter-spacing:0; }
+header p { margin:0; color:#c7d6c8; }
+main { padding:24px 36px 50px; max-width:1440px; margin:0 auto; }
+.metrics { display:grid; grid-template-columns:repeat(6,minmax(130px,1fr)); gap:12px; margin-top:-8px; }
+.metric { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; box-shadow:0 8px 20px rgba(31,42,34,.06); }
+.metric div { font-size:28px; font-weight:800; color:var(--green); }
+.metric span { color:var(--muted); font-size:12px; text-transform:uppercase; }
+section { margin-top:24px; }
+.section-title { display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:10px; }
+h2 { margin:0; font-size:22px; }
+.grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:18px; box-shadow:0 8px 20px rgba(31,42,34,.05); overflow:auto; }
+.hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; }
+.hub-card { border:1px solid var(--line); border-radius:8px; padding:14px; background:#fbfcf8; }
+.hub-top { display:flex; justify-content:space-between; gap:10px; font-size:14px; }
+.bar { height:8px; background:#e8ece4; border-radius:99px; overflow:hidden; margin:10px 0; }
+.bar span { display:block; height:100%; background:var(--green); }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; border-bottom:1px solid var(--line); padding:11px 10px; vertical-align:top; }
+th { color:#435247; font-size:12px; text-transform:uppercase; background:#f1f4ee; }
+.pill { display:inline-block; border:1px solid #c7d8c7; background:#eef6ee; color:#285432; padding:4px 8px; border-radius:999px; font-size:12px; white-space:nowrap; }
+.muted { color:var(--muted); font-size:12px; margin-top:4px; }
+.menu { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+.menu-card { border-left:4px solid var(--gold); padding:12px 14px; background:#fbfcf8; border-radius:8px; border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.menu-card strong { display:block; margin-bottom:8px; }
+ul { margin:0; padding-left:18px; color:#39463d; }
+.jump-nav { position:sticky; top:0; z-index:5; display:flex; gap:6px; overflow:auto; padding:10px 36px; background:#fff; border-bottom:1px solid var(--line); }
+.jump-nav a { color:#294a32; text-decoration:none; white-space:nowrap; padding:7px 10px; border-radius:6px; font-size:13px; }
+.jump-nav a:hover { background:#eef3ea; }
+.model-strip { display:grid; grid-template-columns:repeat(5,minmax(130px,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.model-stat { padding:14px 16px; border-right:1px solid var(--line); }
+.model-stat:last-child { border-right:0; }
+.model-stat strong { display:block; font-size:24px; color:var(--green); }
+.model-stat span { display:block; color:var(--muted); font-size:12px; margin-top:4px; }
+.menu-zone { display:grid; grid-template-columns:1.2fr .8fr; gap:24px; }
+.menu-list { border-top:2px solid var(--ink); }
+.menu-row { display:grid; grid-template-columns:180px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
+.menu-row strong { font-size:14px; }
+.menu-row span { color:var(--muted); font-size:13px; }
+.tree-group { border-top:2px solid var(--green); padding:12px 0 4px; }
+.tree-head { display:flex; justify-content:space-between; gap:18px; margin-bottom:8px; }
+.tree-head small, .tree-list small { display:block; color:var(--muted); margin-top:3px; }
+.tree-list { list-style:none; padding:0; }
+.tree-list li { display:flex; justify-content:space-between; gap:18px; padding:9px 0 9px 18px; border-top:1px solid #e7ebe3; position:relative; }
+.tree-list li::before { content:""; position:absolute; left:3px; top:0; bottom:50%; width:9px; border-left:1px solid #a9b5a6; border-bottom:1px solid #a9b5a6; }
+.tree-meta { color:var(--muted); font-size:12px; text-align:right; white-space:nowrap; }
+.filters { display:flex; flex-wrap:wrap; gap:10px; align-items:end; margin-bottom:12px; }
+.filter { display:grid; gap:4px; }
+.filter label { color:var(--muted); font-size:11px; text-transform:uppercase; }
+.filter select { min-width:180px; border:1px solid var(--line); background:#fff; padding:8px 10px; border-radius:6px; color:var(--ink); }
+.filter-count { margin-left:auto; color:var(--muted); font-size:13px; padding-bottom:8px; }
+.level { white-space:nowrap; font-size:12px; font-weight:700; color:#315d3a; }
+.status { white-space:nowrap; font-size:12px; }
+code { font-family:Consolas, monospace; font-size:12px; color:#315d3a; white-space:nowrap; }
+.product-status { display:grid; grid-template-columns:220px 1fr; gap:24px; padding:18px 0; border-top:2px solid var(--gold); border-bottom:1px solid var(--line); }
+.product-status strong { font-size:20px; }
+.product-status p { margin:0 0 10px; color:var(--muted); }
+.facet-list { display:flex; flex-wrap:wrap; gap:7px; }
+.facet-list span { border:1px solid var(--line); padding:5px 8px; border-radius:5px; font-size:12px; background:#fff; }
+.callout { border-left:4px solid var(--gold); padding:12px 14px; background:#fffaf1; color:#554220; }
+@media (max-width: 900px) { .metrics { grid-template-columns:repeat(2,1fr); } .grid { grid-template-columns:1fr; } main, header { padding-left:18px; padding-right:18px; } }
+@media (max-width: 900px) { .jump-nav { padding-left:18px; padding-right:18px; } .model-strip { grid-template-columns:repeat(2,1fr); } .menu-zone,.product-status { grid-template-columns:1fr; } .menu-row { grid-template-columns:1fr; gap:4px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Electric Dirt Bike SEO Dashboard</h1>
+  <p>Workbook: electric_dirt_bike_keyword_architecture_serp.xlsx | Keyword architecture aligned with the approved content system and canonical URLs.</p>
+</header>
+<nav class="jump-nav" aria-label="Dashboard sections">
+  <a href="#overview">Overview</a>
+  <a href="#navigation">Menu</a>
+  <a href="#pillars">Pillars & Clusters</a>
+  <a href="#products">Products</a>
+  <a href="#content">Blog Content</a>
+  <a href="#architecture">All Pages</a>
+  <a href="#execution">Execution</a>
+  <a href="#review">Review Queue</a>
+</nav>
+<main>
+  <section id="overview">
+    <div class="metrics"><div class='metric'><div>6,761</div><span>Source Keywords</span></div><div class='metric'><div>56</div><span>Page Candidates</span></div><div class='metric'><div>14</div><span>Build Now</span></div><div class='metric'><div>7</div><span>Build Later</span></div><div class='metric'><div>9</div><span>Review</span></div><div class='metric'><div>26</div><span>Parent/FAQ</span></div></div>
+    <div class="section-title" style="margin-top:20px"><h2>Page Model</h2><span class="muted">What the 56 candidates actually are</span></div>
+    <div class="model-strip"><div class='model-stat'><strong>8</strong><span>Collection / Pillar</span></div><div class='model-stat'><strong>8</strong><span>Comparison Articles</span></div><div class='model-stat'><strong>10</strong><span>Buying Guides</span></div><div class='model-stat'><strong>26</strong><span>Merged Sections</span></div><div class='model-stat'><strong>9</strong><span>Draft Product Pages</span></div></div>
+    <div class="callout" style="margin-top:14px"><strong>Brand-first rule:</strong> Header, collection pillars and product pages sell the store's own brand only. Competitor names belong exclusively to Blog comparison content and must link readers back to the store's own collections and products. Thin price/model variants merge into L3 FAQ or supporting sections.</div>
+    <div class="callout" style="margin-top:10px"><strong>SERP evidence boundary:</strong> 56 of 56 candidates currently report <code>missing-cache</code>. Semantic decisions and the approved content map drive production; auto-generated SERP page types and heading fragments are not treated as live validation.</div>
+  </section>
+
+  <section id="navigation">
+    <div class="section-title"><h2>Navigation Menu</h2><span class="muted">Customer navigation is intentionally smaller than the SEO sitemap</span></div>
+    <div class="menu-zone">
+      <div>
+        <h3>Header Menu</h3>
+        <div class="menu-list">
+          <div class="menu-row"><strong>Shop All</strong><span>Own-brand collection pillar: Shop All Electric Dirt Bikes</span></div>
+          <div class="menu-row"><strong>Adult Dirt Bikes</strong><span>Collection pillar &gt; Performance Bikes &gt; 72V &gt; 60V; use 40+ MPH only after product proof</span></div>
+          <div class="menu-row"><strong>Kids & Youth</strong><span>Collection pillar &gt; Ages 8-12 &gt; Teens & Youth &gt; 24V vs 36V vs 48V parent guide</span></div>
+          <div class="menu-row"><strong>Street Legal</strong><span>Compliance pillar &gt; Dual-Sport &gt; Registration Guide; publish after legal and product review</span></div>
+          <div class="menu-row"><strong>Buying Guides</strong><span>Optional header resource for own-brand selection, sizing, voltage, speed and ownership education</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>Footer Menu</h3>
+        <div class="menu-list">
+          <div class="menu-row"><strong>Buying Guides</strong><span>Range, motor, charging, voltage and riding-law articles</span></div>
+          <div class="menu-row"><strong>Compare & Alternatives</strong><span>Competitor comparison Blog articles only; never a product collection or brand pillar</span></div>
+          <div class="menu-row"><strong>Parts & Support</strong><span>Parts, charger, repair and ownership support</span></div>
+          <div class="menu-row"><strong>Customer Support</strong><span>Contact, shipping, delivery and financing; operational pages, not keyword clusters</span></div>
+          <div class="menu-row"><strong>SEO Only</strong><span>Competitor comparisons, alternatives and thin price variants remain completely outside navigation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pillars">
+    <div class="section-title"><h2>Pillar & Cluster Map</h2><span class="muted">L1 parent pages, L2 clusters and L3 supporting intent</span></div>
+    
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Shop All</strong><small>Parent: Shop All Electric Dirt Bikes</small></span><span>4 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Shop All Electric Dirt Bikes</strong>
+            <small>L1 Pillar | Collection</small></span>
+            <span class="tree-meta">283,600 | Build now</span></li><li><span><strong>Best Electric Dirt Bikes</strong>
+            <small>L2 Cluster | Buying Guide</small></span>
+            <span class="tree-meta">12,750 | Build now</span></li><li><span><strong>Electric Dirt Bikes for Sale</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">8,330 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bike Price Guide</strong>
+            <small>L2 Cluster | Buying Guide</small></span>
+            <span class="tree-meta">1,290 | Build now</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Adult Dirt Bikes</strong><small>Parent: Electric Dirt Bikes for Adults</small></span><span>4 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Electric Dirt Bikes for Adults</strong>
+            <small>L1 Pillar | Collection / Pillar</small></span>
+            <span class="tree-meta">40,730 | Build now</span></li><li><span><strong>Fast Electric Dirt Bikes 40+ MPH</strong>
+            <small>L2 Cluster | Collection / Guide</small></span>
+            <span class="tree-meta">9,910 | Build now</span></li><li><span><strong>72V Electric Dirt Bikes</strong>
+            <small>L2 Cluster | Collection / Guide</small></span>
+            <span class="tree-meta">2,780 | Build now</span></li><li><span><strong>60V Electric Dirt Bikes</strong>
+            <small>L2 Cluster | Collection / Guide</small></span>
+            <span class="tree-meta">1,560 | Build now</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Kids &amp; Youth</strong><small>Parent: Electric Dirt Bikes for Kids</small></span><span>3 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Electric Dirt Bikes for Kids</strong>
+            <small>L1 Pillar | Collection / Pillar</small></span>
+            <span class="tree-meta">22,130 | Build now</span></li><li><span><strong>Electric Dirt Bikes for Teens and Youth</strong>
+            <small>L2 Cluster | Collection / Guide</small></span>
+            <span class="tree-meta">5,720 | Build later</span></li><li><span><strong>Electric Dirt Bikes for Ages 8-12</strong>
+            <small>L2 Cluster | Collection / Guide</small></span>
+            <span class="tree-meta">2,470 | Build now</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Compare &amp; Save</strong><small>Parent: Blog / Compare &amp; Alternatives</small></span><span>32 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Electric Dirt Bike vs Razor</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">24,590 | Build now</span></li><li><span><strong>Best Budget Electric Dirt Bikes</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">20,420 | Merge into parent/FAQ</span></li><li><span><strong>Stark Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">13,470 | Build now</span></li><li><span><strong>Electric Dirt Bike vs Surron</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">11,640 | Build now</span></li><li><span><strong>Ktm Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">3,770 | Build now</span></li><li><span><strong>Electric Dirt Bikes Under $500</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">2,740 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $1,000</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">2,470 | Merge into parent/FAQ</span></li><li><span><strong>Yamaha Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Research</small></span>
+            <span class="tree-meta">2,140 | Manual review before build</span></li><li><span><strong>Honda Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Research</small></span>
+            <span class="tree-meta">1,770 | Manual review before build</span></li><li><span><strong>Talaria Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">1,730 | Build now</span></li><li><span><strong>Segway Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">1,220 | Manual review before build</span></li><li><span><strong>Electric Dirt Bikes Under $2,000</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">1,040 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $450</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">480 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bike Comparison Guide</strong>
+            <small>L2 Blog Cluster | Buying Guide / Comparison</small></span>
+            <span class="tree-meta">400 | Manual review before build</span></li><li><span><strong>Electric Dirt Bikes Under $700</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">350 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $800</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">300 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $600</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">210 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $3,000</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">210 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $2,500</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">210 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $300</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">160 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $200</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">130 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $400</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">110 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $1,500</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">110 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $100</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">110 | Merge into parent/FAQ</span></li><li><span><strong>Cake Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">90 | Manual review before build</span></li><li><span><strong>Electric Dirt Bikes Under $5,000</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">70 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $250</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">70 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $350</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">70 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bikes Under $900</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">70 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bike Financing Guide</strong>
+            <small>L2 Blog Cluster | Support / Policy</small></span>
+            <span class="tree-meta">50 | Build later</span></li><li><span><strong>Electric Dirt Bikes Under $3,500</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">40 | Merge into parent/FAQ</span></li><li><span><strong>Kuberg Electric Dirt Bike Alternatives</strong>
+            <small>L2 Blog Cluster | Blog / Comparison</small></span>
+            <span class="tree-meta">40 | Manual review before build</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Buying Guides</strong><small>Parent: Electric Dirt Bike Buying Guides Hub (planned)</small></span><span>6 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>48V Electric Dirt Bike Guide</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">1,150 | Merge into parent/FAQ</span></li><li><span><strong>36V Electric Dirt Bike Guide</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">1,080 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bike Range Guide</strong>
+            <small>L2 Cluster | Technical Guide</small></span>
+            <span class="tree-meta">580 | Build later</span></li><li><span><strong>Electric Dirt Bike Motor and Power Guide</strong>
+            <small>L2 Cluster | Technical Guide</small></span>
+            <span class="tree-meta">510 | Build later</span></li><li><span><strong>24V Electric Dirt Bike Guide</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">420 | Merge into parent/FAQ</span></li><li><span><strong>Electric Dirt Bike Charging Guide</strong>
+            <small>L2 Cluster | Support Guide</small></span>
+            <span class="tree-meta">170 | Build later</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Parts And Support</strong><small>Parent: Parts &amp; Support Hub (planned)</small></span><span>3 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Parts Guide</strong>
+            <small>L2 Cluster | Support / Guide</small></span>
+            <span class="tree-meta">170 | Build later</span></li><li><span><strong>Repair Guide</strong>
+            <small>L2 Cluster | Support / Guide</small></span>
+            <span class="tree-meta">110 | Build later</span></li><li><span><strong>Fat Tire Guide</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">90 | Merge into parent/FAQ</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Safety And Rules</strong><small>Parent: Electric Dirt Bike Buying Guides Hub (planned)</small></span><span>1 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Electric Dirt Bike Laws and Riding Rules</strong>
+            <small>L3 Support / FAQ | Merged Section / FAQ</small></span>
+            <span class="tree-meta">120 | Merge into parent/FAQ</span></li></ul>
+        </div>
+        
+        <div class="tree-group">
+          <div class="tree-head"><span><strong>Street Legal</strong><small>Parent: Street Legal Electric Dirt Bikes</small></span><span>3 candidates</span></div>
+          <ul class="tree-list"><li><span><strong>Street Legal Electric Dirt Bikes</strong>
+            <small>L1 Pillar | Legal / Compliance Guide</small></span>
+            <span class="tree-meta">5,400 | Manual review before build</span></li><li><span><strong>How to Register a Street Legal Electric Dirt Bike</strong>
+            <small>L2 Cluster | Legal / How-To</small></span>
+            <span class="tree-meta">90 | Manual review before build</span></li><li><span><strong>Street Legal Dual-Sport Electric Dirt Bikes</strong>
+            <small>L2 Cluster | Legal / Product Guide</small></span>
+            <span class="tree-meta">40 | Manual review before build</span></li></ul>
+        </div>
+        
+  </section>
+
+  <section id="products">
+    <div class="section-title"><h2>Product Detail Pages</h2><span class="muted">Commerce layer status</span></div>
+    <div class="product-status">
+      <div><strong>9 SKU drafts / 0 fully verified live SKUs</strong><div class="muted">Status: product pages built; final brand and evidence pass pending</div></div>
+      <div>
+        <p>G1 24V plus the K2 and X1 product families now have separate own-brand product drafts based on the G1, K2 and X1 price/spec workbooks. Each page defines fit, purchase options, specifications, battery, speed evidence, range, chassis, delivery, assembly, warranty, support, comparison and FAQ requirements.</p>
+        <div class="facet-list"><span>Model</span><span>Audience</span><span>Voltage</span><span>Speed Method</span><span>Range</span><span>Factory Price Note</span><span>Wheel Size</span><span>Street Legal</span><span>Availability</span></div>
+        <div class="muted" style="margin-top:10px">Every page remains a draft until final brand, retail pricing, inventory, media, policies, fit guidance and public test evidence are approved.</div>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:12px"><table><thead><tr><th>Product</th><th>URL</th><th>Status</th><th>Publication gate</th></tr></thead><tbody><tr><td><strong>G1 24V Kids Electric Dirt Bike</strong></td><td><code>/products/g1-24v-kids-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-48-MX-1214 Compact Electric Dirt Bike</strong></td><td><code>/products/k2-48-mx-1214-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-48-MY-1417 48V Electric Dirt Bike</strong></td><td><code>/products/k2-48-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-60-MY-1417 60V Electric Dirt Bike</strong></td><td><code>/products/k2-60-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-72-MY-1417 72V Electric Dirt Bike</strong></td><td><code>/products/k2-72-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-72-LZ-1719 72V Full-Size Electric Dirt Bike</strong></td><td><code>/products/k2-72-lz-1719-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-48-MX-1214 48V Compact Electric Dirt Bike</strong></td><td><code>/products/x1-48-mx-1214-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-48-MY-1417 48V Electric Dirt Bike</strong></td><td><code>/products/x1-48-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-60-MY-1417 60V Electric Dirt Bike</strong></td><td><code>/products/x1-60-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr></tbody></table></div>
+  </section>
+
+  <section id="content">
+    <div class="section-title"><h2>Blog & Guide Content</h2><span class="muted">Comparison and informational pages separated from collections</span></div>
+    <div class="panel"><table><thead><tr><th>Type</th><th>Article</th><th>Parent Pillar</th><th>Volume</th><th>Decision</th></tr></thead><tbody>
+        <tr>
+          <td>Collection / Guide</td>
+          <td><strong>Electric Dirt Bikes for Teens and Youth</strong><div class="muted">electric dirt bike for teens</div></td>
+          <td>Electric Dirt Bikes for Kids</td>
+          <td>5,720</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Technical Guide</td>
+          <td><strong>Electric Dirt Bike Range Guide</strong><div class="muted">e ride pro ss 2.0 long range electric dirt bike</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>580</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Technical Guide</td>
+          <td><strong>Electric Dirt Bike Motor and Power Guide</strong><div class="muted">electric dirt bike motor</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>510</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Support Guide</td>
+          <td><strong>Electric Dirt Bike Charging Guide</strong><div class="muted">electric dirt bike charger</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>170</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Support / Guide</td>
+          <td><strong>Parts Guide</strong><div class="muted">electric dirt bike parts</div></td>
+          <td>Customer Support</td>
+          <td>170</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Support / Guide</td>
+          <td><strong>Repair Guide</strong><div class="muted">electric dirt bike repair near me</div></td>
+          <td>Customer Support</td>
+          <td>110</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Support / Policy</td>
+          <td><strong>Electric Dirt Bike Financing Guide</strong><div class="muted">electric dirt bike finance</div></td>
+          <td>Customer Support</td>
+          <td>50</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Electric Dirt Bike vs Razor</strong><div class="muted">razor electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>24,590</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Stark Electric Dirt Bike Alternatives</strong><div class="muted">stark varg electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>13,470</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Buying Guide</td>
+          <td><strong>Best Electric Dirt Bikes</strong><div class="muted">best electric dirt bikes</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>12,750</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Electric Dirt Bike vs Surron</strong><div class="muted">surron electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>11,640</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Collection / Guide</td>
+          <td><strong>Fast Electric Dirt Bikes 40+ MPH</strong><div class="muted">fastest electric dirt bike</div></td>
+          <td>Electric Dirt Bikes for Adults</td>
+          <td>9,910</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Ktm Electric Dirt Bike Alternatives</strong><div class="muted">ktm electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>3,770</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Collection / Guide</td>
+          <td><strong>72V Electric Dirt Bikes</strong><div class="muted">72v electric dirt bikes</div></td>
+          <td>Electric Dirt Bikes for Adults</td>
+          <td>2,780</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Collection / Guide</td>
+          <td><strong>Electric Dirt Bikes for Ages 8-12</strong><div class="muted">electric dirt bike for 10 year old</div></td>
+          <td>Electric Dirt Bikes for Kids</td>
+          <td>2,470</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Talaria Electric Dirt Bike Alternatives</strong><div class="muted">talaria electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>1,730</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Collection / Guide</td>
+          <td><strong>60V Electric Dirt Bikes</strong><div class="muted">60v electric dirt bike</div></td>
+          <td>Electric Dirt Bikes for Adults</td>
+          <td>1,560</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Buying Guide</td>
+          <td><strong>Electric Dirt Bike Price Guide</strong><div class="muted">electric dirt bike price</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>1,290</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td>Legal / Compliance Guide</td>
+          <td><strong>Street Legal Electric Dirt Bikes</strong><div class="muted">electric street legal dirt bike</div></td>
+          <td>Street Legal Electric Dirt Bikes</td>
+          <td>5,400</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Research</td>
+          <td><strong>Yamaha Electric Dirt Bike Alternatives</strong><div class="muted">yamaha electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>2,140</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Research</td>
+          <td><strong>Honda Electric Dirt Bike Alternatives</strong><div class="muted">honda electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>1,770</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Segway Electric Dirt Bike Alternatives</strong><div class="muted">segway electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>1,220</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Buying Guide / Comparison</td>
+          <td><strong>Electric Dirt Bike Comparison Guide</strong><div class="muted">dirt bike vs electric bike</div></td>
+          <td>Electric Dirt Bike Buying Guides</td>
+          <td>400</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Cake Electric Dirt Bike Alternatives</strong><div class="muted">cake electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>90</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Legal / Product Guide</td>
+          <td><strong>Street Legal Dual-Sport Electric Dirt Bikes</strong><div class="muted">dual sport electric dirt bike</div></td>
+          <td>Street Legal Electric Dirt Bikes</td>
+          <td>40</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td>Blog / Comparison</td>
+          <td><strong>Kuberg Electric Dirt Bike Alternatives</strong><div class="muted">kuberg electric dirt bike</div></td>
+          <td>Blog / Compare &amp; Alternatives</td>
+          <td>40</td>
+          <td>Manual review before build</td>
+        </tr>
+        </tbody></table></div>
+  </section>
+
+  <section id="supplemental">
+    <div class="section-title"><h2>Required Site Pages Added Beyond Keyword Candidates</h2><span class="muted">Navigation, trust, support and content hubs</span></div>
+    <div class="panel"><table><thead><tr><th>Page</th><th>Type</th><th>Final URL</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td><strong>Find the Right Electric Dirt Bike for Your Rider</strong></td><td>Home</td><td><code>/</code></td><td>draft-data-needed</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>Electric Dirt Bike Buying Guides</strong></td><td>Content Hub</td><td><code>/buying-guides/</code></td><td>ready-for-editorial-review</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>Electric Dirt Bike Comparisons &amp; Alternatives</strong></td><td>Blog Hub</td><td><code>/blog/compare/</code></td><td>ready-for-editorial-review</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>How Long Does an Electric Dirt Bike Battery Last?</strong></td><td>Technical Guide</td><td><code>/buying-guides/battery-life/</code></td><td>draft-review-needed</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>Shipping &amp; Delivery</strong></td><td>Support / Policy</td><td><code>/support/shipping/</code></td><td>draft-data-needed</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>Warranty &amp; Returns</strong></td><td>Support / Policy</td><td><code>/support/warranty-returns/</code></td><td>draft-data-needed</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>Contact Support</strong></td><td>Support / Contact</td><td><code>/support/contact/</code></td><td>draft-data-needed</td><td>Required ecommerce navigation, trust, support, or content-hub page</td></tr><tr><td><strong>G1 24V Kids Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/g1-24v-kids-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-48-MX-1214 Compact Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/k2-48-mx-1214-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-48-MY-1417 48V Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/k2-48-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-60-MY-1417 60V Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/k2-60-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-72-MY-1417 72V Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/k2-72-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>K2-72-LZ-1719 72V Full-Size Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/k2-72-lz-1719-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-48-MX-1214 48V Compact Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/x1-48-mx-1214-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-48-MY-1417 48V Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/x1-48-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr><tr><td><strong>X1-60-MY-1417 60V Electric Dirt Bike</strong></td><td>Product Detail Page</td><td><code>/products/x1-60-my-1417-electric-dirt-bike/</code></td><td>draft-data-needed</td><td>Product SKU draft; requires final brand, retail price, inventory, media, policies, and verified specifications</td></tr></tbody></table></div>
+  </section>
+
+  <section id="architecture">
+    <div class="section-title"><h2>Complete Page Architecture</h2><span class="muted">All 56 candidates mapped to final page type, canonical URL and content status</span></div>
+    <div class="filters">
+      <div class="filter"><label for="hubFilter">Hub</label><select id="hubFilter"><option value="">All hubs</option><option value='Adult Dirt Bikes'>Adult Dirt Bikes</option><option value='Buying Guides'>Buying Guides</option><option value='Compare &amp; Save'>Compare &amp; Save</option><option value='Kids &amp; Youth'>Kids &amp; Youth</option><option value='Parts And Support'>Parts And Support</option><option value='Safety And Rules'>Safety And Rules</option><option value='Shop All'>Shop All</option><option value='Street Legal'>Street Legal</option></select></div>
+      <div class="filter"><label for="typeFilter">Page Type</label><select id="typeFilter"><option value="">All page types</option><option value='Blog / Comparison'>Blog / Comparison</option><option value='Blog / Research'>Blog / Research</option><option value='Buying Guide'>Buying Guide</option><option value='Buying Guide / Comparison'>Buying Guide / Comparison</option><option value='Collection'>Collection</option><option value='Collection / Guide'>Collection / Guide</option><option value='Collection / Pillar'>Collection / Pillar</option><option value='Legal / Compliance Guide'>Legal / Compliance Guide</option><option value='Legal / How-To'>Legal / How-To</option><option value='Legal / Product Guide'>Legal / Product Guide</option><option value='Merged Section / FAQ'>Merged Section / FAQ</option><option value='Support / Guide'>Support / Guide</option><option value='Support / Policy'>Support / Policy</option><option value='Support Guide'>Support Guide</option><option value='Technical Guide'>Technical Guide</option></select></div>
+      <div class="filter"><label for="decisionFilter">Decision</label><select id="decisionFilter"><option value="">All decisions</option><option value='Build later'>Build later</option><option value='Build now'>Build now</option><option value='Manual review before build'>Manual review before build</option><option value='Merge into parent/FAQ'>Merge into parent/FAQ</option></select></div>
+      <div class="filter-count"><span id="visibleCount">56</span> pages shown</div>
+    </div>
+    <div class="panel"><table id="architectureTable"><thead><tr><th>Level</th><th>Menu</th><th>Page / Parent</th><th>Type</th><th>Primary Keyword</th><th>Volume</th><th>Decision</th><th>Suggested URL</th></tr></thead><tbody>
+        <tr data-hub="Adult Dirt Bikes" data-type="Collection / Pillar" data-decision="Build now">
+          <td><span class="level">L1 Pillar</span></td>
+          <td>Header Main</td>
+          <td><strong>Electric Dirt Bikes for Adults</strong><div class="muted">Candidate: Electric Dirt Bikes for Adults | Parent: Electric Dirt Bikes for Adults</div></td>
+          <td>Collection / Pillar</td>
+          <td>electric dirt bike for adults</td>
+          <td>40,730</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/adult-dirt-bikes/</code></td>
+        </tr>
+        
+        <tr data-hub="Adult Dirt Bikes" data-type="Collection / Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>Fast Electric Dirt Bikes</strong><div class="muted">Candidate: Fast Electric Dirt Bikes 40+ MPH | Parent: Electric Dirt Bikes for Adults</div></td>
+          <td>Collection / Guide</td>
+          <td>fastest electric dirt bike</td>
+          <td>9,910</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/adult-dirt-bikes/fast/</code></td>
+        </tr>
+        
+        <tr data-hub="Adult Dirt Bikes" data-type="Collection / Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>72V Electric Dirt Bikes</strong><div class="muted">Candidate: 72V Electric Dirt Bikes | Parent: Electric Dirt Bikes for Adults</div></td>
+          <td>Collection / Guide</td>
+          <td>72v electric dirt bikes</td>
+          <td>2,780</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/adult-dirt-bikes/72v/</code></td>
+        </tr>
+        
+        <tr data-hub="Adult Dirt Bikes" data-type="Collection / Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>60V Electric Dirt Bikes</strong><div class="muted">Candidate: 60V Electric Dirt Bikes | Parent: Electric Dirt Bikes for Adults</div></td>
+          <td>Collection / Guide</td>
+          <td>60v electric dirt bike</td>
+          <td>1,560</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/adult-dirt-bikes/60v/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Technical Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Electric Dirt Bike Range Guide</strong><div class="muted">Candidate: Electric Dirt Bike Range Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Technical Guide</td>
+          <td>e ride pro ss 2.0 long range electric dirt bike</td>
+          <td>580</td>
+          <td><span class="status">Build later</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/range/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Technical Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Electric Dirt Bike Motor &amp; Power Guide</strong><div class="muted">Candidate: Electric Dirt Bike Motor and Power Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Technical Guide</td>
+          <td>electric dirt bike motor</td>
+          <td>510</td>
+          <td><span class="status">Build later</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/motor-power/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Support Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Electric Dirt Bike Charging Guide</strong><div class="muted">Candidate: Electric Dirt Bike Charging Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Support Guide</td>
+          <td>electric dirt bike charger</td>
+          <td>170</td>
+          <td><span class="status">Build later</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/charging/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>24V vs 36V vs 48V Electric Dirt Bikes</strong><div class="muted">Candidate: 48V Electric Dirt Bike Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>48v electric dirt bike</td>
+          <td>1,150</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/24v-36v-48v/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>24V vs 36V vs 48V Electric Dirt Bikes</strong><div class="muted">Candidate: 36V Electric Dirt Bike Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>36v electric dirt bike</td>
+          <td>1,080</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/24v-36v-48v/</code></td>
+        </tr>
+        
+        <tr data-hub="Buying Guides" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>24V vs 36V vs 48V Electric Dirt Bikes</strong><div class="muted">Candidate: 24V Electric Dirt Bike Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>24v electric dirt bike</td>
+          <td>420</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/24v-36v-48v/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Build now">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Razor Dirt Rocket Alternatives for Kids &amp; Youth</strong><div class="muted">Candidate: Electric Dirt Bike vs Razor | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>razor electric dirt bike</td>
+          <td>24,590</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/razor-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Build now">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Stark VARG Alternatives: Start With the Performance Class</strong><div class="muted">Candidate: Stark Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>stark varg electric dirt bike</td>
+          <td>13,470</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/stark-varg-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Build now">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Surron Alternatives: Compare the Right Product Class</strong><div class="muted">Candidate: Electric Dirt Bike vs Surron | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>surron electric dirt bike</td>
+          <td>11,640</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/surron-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Build now">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>KTM Electric Dirt Bike Alternatives</strong><div class="muted">Candidate: Ktm Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>ktm electric dirt bike</td>
+          <td>3,770</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/ktm-electric-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Research" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Does Yamaha Make an Electric Dirt Bike?</strong><div class="muted">Candidate: Yamaha Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Research</td>
+          <td>yamaha electric dirt bike</td>
+          <td>2,140</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/blog/compare/yamaha-electric-dirt-bike/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Research" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Does Honda Make an Electric Dirt Bike?</strong><div class="muted">Candidate: Honda Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Research</td>
+          <td>honda electric dirt bike</td>
+          <td>1,770</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/blog/compare/honda-electric-dirt-bike/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Build now">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Talaria Alternatives: Compare the Product, Not the Name</strong><div class="muted">Candidate: Talaria Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>talaria electric dirt bike</td>
+          <td>1,730</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/talaria-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Segway Dirt eBike Alternatives</strong><div class="muted">Candidate: Segway Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>segway electric dirt bike</td>
+          <td>1,220</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/segway-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Buying Guide / Comparison" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Electric vs Gas Dirt Bikes</strong><div class="muted">Candidate: Electric Dirt Bike Comparison Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Buying Guide / Comparison</td>
+          <td>dirt bike vs electric bike</td>
+          <td>400</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-review-needed</div></td>
+          <td><code>/buying-guides/electric-vs-gas-dirt-bike/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>CAKE Electric Off-Road Alternatives</strong><div class="muted">Candidate: Cake Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>cake electric dirt bike</td>
+          <td>90</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/cake-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Support / Policy" data-decision="Build later">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Footer / Customer Support</td>
+          <td><strong>Electric Dirt Bike Financing</strong><div class="muted">Candidate: Electric Dirt Bike Financing Guide | Parent: Customer Support</div></td>
+          <td>Support / Policy</td>
+          <td>electric dirt bike finance</td>
+          <td>50</td>
+          <td><span class="status">Build later</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/support/financing/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Blog / Comparison" data-decision="Manual review before build">
+          <td><span class="level">L2 Blog Cluster</span></td>
+          <td>Blog / SEO Only</td>
+          <td><strong>Kuberg Electric Dirt Bike Alternatives</strong><div class="muted">Candidate: Kuberg Electric Dirt Bike Alternatives | Parent: Blog / Compare &amp; Alternatives</div></td>
+          <td>Blog / Comparison</td>
+          <td>kuberg electric dirt bike</td>
+          <td>40</td>
+          <td><span class="status">Manual review before build</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/blog/compare/kuberg-alternatives/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Best Budget Electric Dirt Bikes | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>budget friendly electric dirt bike</td>
+          <td>20,420</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $500 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $500</td>
+          <td>2,740</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $1,000 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike for adults under $1000</td>
+          <td>2,470</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $2,000 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $2000</td>
+          <td>1,040</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $450 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under $450</td>
+          <td>480</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $700 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $700</td>
+          <td>350</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $800 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>dirt bike electric under $800</td>
+          <td>300</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $2,500 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under $2500</td>
+          <td>210</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $3,000 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike for adults under $3000</td>
+          <td>210</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $600 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under $600</td>
+          <td>210</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $300 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under $300</td>
+          <td>160</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $200 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $200</td>
+          <td>130</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $1,500 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under 1500</td>
+          <td>110</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $100 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $100</td>
+          <td>110</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $400 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes under $400</td>
+          <td>110</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $250 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $250</td>
+          <td>70</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $350 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $350</td>
+          <td>70</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $5,000 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>best electric dirt bike under $5000</td>
+          <td>70</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $900 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike for adults under $900</td>
+          <td>70</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Compare &amp; Save" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bikes Under $3,500 | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bike under $3500</td>
+          <td>40</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Kids &amp; Youth" data-type="Collection / Pillar" data-decision="Build now">
+          <td><span class="level">L1 Pillar</span></td>
+          <td>Header Main</td>
+          <td><strong>Electric Dirt Bikes for Kids &amp; Youth</strong><div class="muted">Candidate: Electric Dirt Bikes for Kids | Parent: Electric Dirt Bikes for Kids</div></td>
+          <td>Collection / Pillar</td>
+          <td>electric dirt bike for kids</td>
+          <td>22,130</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/kids-youth/</code></td>
+        </tr>
+        
+        <tr data-hub="Kids &amp; Youth" data-type="Collection / Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>Electric Dirt Bikes for Teens &amp; Youth</strong><div class="muted">Candidate: Electric Dirt Bikes for Teens and Youth | Parent: Electric Dirt Bikes for Kids</div></td>
+          <td>Collection / Guide</td>
+          <td>electric dirt bike for teens</td>
+          <td>5,720</td>
+          <td><span class="status">Build later</span><div class="muted">hold-product-eligibility</div></td>
+          <td><code>/kids-youth/teens/</code></td>
+        </tr>
+        
+        <tr data-hub="Kids &amp; Youth" data-type="Collection / Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>Electric Dirt Bikes for Ages 8-12</strong><div class="muted">Candidate: Electric Dirt Bikes for Ages 8-12 | Parent: Electric Dirt Bikes for Kids</div></td>
+          <td>Collection / Guide</td>
+          <td>electric dirt bike for 10 year old</td>
+          <td>2,470</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/kids-youth/ages-8-12/</code></td>
+        </tr>
+        
+        <tr data-hub="Parts And Support" data-type="Support / Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Footer / Customer Support</td>
+          <td><strong>Electric Dirt Bike Parts &amp; Maintenance</strong><div class="muted">Candidate: Parts Guide | Parent: Customer Support</div></td>
+          <td>Support / Guide</td>
+          <td>electric dirt bike parts</td>
+          <td>170</td>
+          <td><span class="status">Build later</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/support/parts-maintenance/</code></td>
+        </tr>
+        
+        <tr data-hub="Parts And Support" data-type="Support / Guide" data-decision="Build later">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Footer / Customer Support</td>
+          <td><strong>Electric Dirt Bike Repair &amp; Service</strong><div class="muted">Candidate: Repair Guide | Parent: Customer Support</div></td>
+          <td>Support / Guide</td>
+          <td>electric dirt bike repair near me</td>
+          <td>110</td>
+          <td><span class="status">Build later</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/support/repair/</code></td>
+        </tr>
+        
+        <tr data-hub="Parts And Support" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Electric Dirt Bike Parts &amp; Maintenance</strong><div class="muted">Candidate: Fat Tire Guide | Parent: Parts &amp; Support Hub (planned)</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>fat tire electric dirt bike</td>
+          <td>90</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/support/parts-maintenance/</code></td>
+        </tr>
+        
+        <tr data-hub="Safety And Rules" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Are Electric Dirt Bikes Street Legal in the US?</strong><div class="muted">Candidate: Electric Dirt Bike Laws and Riding Rules | Parent: Electric Dirt Bike Buying Guides Hub (planned)</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>are electric dirt bikes legal</td>
+          <td>120</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">hold-legal-review</div></td>
+          <td><code>/street-legal/</code></td>
+        </tr>
+        
+        <tr data-hub="Shop All" data-type="Collection" data-decision="Build now">
+          <td><span class="level">L1 Pillar</span></td>
+          <td>Header Main</td>
+          <td><strong>Shop Electric Dirt Bikes</strong><div class="muted">Candidate: Shop All Electric Dirt Bikes | Parent: Shop All Electric Dirt Bikes</div></td>
+          <td>Collection</td>
+          <td>electric dirt bike</td>
+          <td>283,600</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/shop/</code></td>
+        </tr>
+        
+        <tr data-hub="Shop All" data-type="Buying Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Best Electric Dirt Bikes by Rider and Use</strong><div class="muted">Candidate: Best Electric Dirt Bikes | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Buying Guide</td>
+          <td>best electric dirt bikes</td>
+          <td>12,750</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/best-electric-dirt-bikes/</code></td>
+        </tr>
+        
+        <tr data-hub="Shop All" data-type="Buying Guide" data-decision="Build now">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Buying Guides / SEO</td>
+          <td><strong>Electric Dirt Bike Price &amp; Budget Guide</strong><div class="muted">Candidate: Electric Dirt Bike Price Guide | Parent: Electric Dirt Bike Buying Guides</div></td>
+          <td>Buying Guide</td>
+          <td>electric dirt bike price</td>
+          <td>1,290</td>
+          <td><span class="status">Build now</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/buying-guides/price/</code></td>
+        </tr>
+        
+        <tr data-hub="Shop All" data-type="Merged Section / FAQ" data-decision="Merge into parent/FAQ">
+          <td><span class="level">L3 Support / FAQ</span></td>
+          <td>SEO Section / Not Standalone</td>
+          <td><strong>Shop Electric Dirt Bikes</strong><div class="muted">Candidate: Electric Dirt Bikes for Sale | Parent: Shop All Electric Dirt Bikes</div></td>
+          <td>Merged Section / FAQ</td>
+          <td>electric dirt bikes for sale</td>
+          <td>8,330</td>
+          <td><span class="status">Merge into parent/FAQ</span><div class="muted">draft-data-needed</div></td>
+          <td><code>/shop/</code></td>
+        </tr>
+        
+        <tr data-hub="Street Legal" data-type="Legal / Compliance Guide" data-decision="Manual review before build">
+          <td><span class="level">L1 Pillar</span></td>
+          <td>Header Main</td>
+          <td><strong>Are Electric Dirt Bikes Street Legal in the US?</strong><div class="muted">Candidate: Street Legal Electric Dirt Bikes | Parent: Street Legal Electric Dirt Bikes</div></td>
+          <td>Legal / Compliance Guide</td>
+          <td>electric street legal dirt bike</td>
+          <td>5,400</td>
+          <td><span class="status">Manual review before build</span><div class="muted">hold-legal-review</div></td>
+          <td><code>/street-legal/</code></td>
+        </tr>
+        
+        <tr data-hub="Street Legal" data-type="Legal / How-To" data-decision="Manual review before build">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>How to Register an Electric Dirt Bike for Road Use</strong><div class="muted">Candidate: How to Register a Street Legal Electric Dirt Bike | Parent: Street Legal Electric Dirt Bikes</div></td>
+          <td>Legal / How-To</td>
+          <td>do you need a license for an electric dirt bike</td>
+          <td>90</td>
+          <td><span class="status">Manual review before build</span><div class="muted">hold-legal-review</div></td>
+          <td><code>/street-legal/registration-license/</code></td>
+        </tr>
+        
+        <tr data-hub="Street Legal" data-type="Legal / Product Guide" data-decision="Manual review before build">
+          <td><span class="level">L2 Cluster</span></td>
+          <td>Header Dropdown</td>
+          <td><strong>Street-Legal Dual-Sport Electric Dirt Bikes</strong><div class="muted">Candidate: Street Legal Dual-Sport Electric Dirt Bikes | Parent: Street Legal Electric Dirt Bikes</div></td>
+          <td>Legal / Product Guide</td>
+          <td>dual sport electric dirt bike</td>
+          <td>40</td>
+          <td><span class="status">Manual review before build</span><div class="muted">hold-product-eligibility</div></td>
+          <td><code>/street-legal/dual-sport/</code></td>
+        </tr>
+        </tbody></table></div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>Hub Distribution</h2><span class="muted">Volume-weighted page architecture</span></div>
+    <div class="hub-grid">
+        <div class="hub-card">
+          <div class="hub-top"><strong>Shop All</strong><span>4 pages</span></div>
+          <div class="bar"><span style="width:100%"></span></div>
+          <div class="muted">Search volume 305,970</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Compare &amp; Save</strong><span>32 pages</span></div>
+          <div class="bar"><span style="width:29%"></span></div>
+          <div class="muted">Search volume 90,280</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Adult Dirt Bikes</strong><span>4 pages</span></div>
+          <div class="bar"><span style="width:17%"></span></div>
+          <div class="muted">Search volume 54,980</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Kids &amp; Youth</strong><span>3 pages</span></div>
+          <div class="bar"><span style="width:9%"></span></div>
+          <div class="muted">Search volume 30,320</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Street Legal</strong><span>3 pages</span></div>
+          <div class="bar"><span style="width:1%"></span></div>
+          <div class="muted">Search volume 5,530</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Buying Guides</strong><span>6 pages</span></div>
+          <div class="bar"><span style="width:1%"></span></div>
+          <div class="muted">Search volume 3,910</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Parts And Support</strong><span>3 pages</span></div>
+          <div class="bar"><span style="width:0%"></span></div>
+          <div class="muted">Search volume 370</div>
+        </div>
+        
+        <div class="hub-card">
+          <div class="hub-top"><strong>Safety And Rules</strong><span>1 pages</span></div>
+          <div class="bar"><span style="width:0%"></span></div>
+          <div class="muted">Search volume 120</div>
+        </div>
+        </div>
+  </section>
+  <section id="execution">
+    <div class="section-title"><h2>Build Now Queue</h2><span class="muted">First pages to build</span></div>
+    <div class="panel"><table><thead><tr><th>Hub</th><th>Page</th><th>Volume</th><th>Topic</th><th>Batch</th></tr></thead><tbody>
+        <tr>
+          <td><span class="pill">Shop All</span></td>
+          <td><strong>Shop All Electric Dirt Bikes</strong><div class="muted">electric dirt bike</div></td>
+          <td>283,600</td>
+          <td>Shop All Electric Dirt Bikes</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Adult Dirt Bikes</span></td>
+          <td><strong>Electric Dirt Bikes for Adults</strong><div class="muted">electric dirt bike for adults</div></td>
+          <td>40,730</td>
+          <td>Adult Dirt Bikes</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Compare &amp; Save</span></td>
+          <td><strong>Electric Dirt Bike vs Razor</strong><div class="muted">razor electric dirt bike</div></td>
+          <td>24,590</td>
+          <td>Brand vs Razor</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Kids &amp; Youth</span></td>
+          <td><strong>Electric Dirt Bikes for Kids</strong><div class="muted">electric dirt bike for kids</div></td>
+          <td>22,130</td>
+          <td>Kids &amp; Youth</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Compare &amp; Save</span></td>
+          <td><strong>Stark Electric Dirt Bike Alternatives</strong><div class="muted">stark varg electric dirt bike</div></td>
+          <td>13,470</td>
+          <td>Brand Alternatives</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Shop All</span></td>
+          <td><strong>Best Electric Dirt Bikes</strong><div class="muted">best electric dirt bikes</div></td>
+          <td>12,750</td>
+          <td>Best Electric Dirt Bikes</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Compare &amp; Save</span></td>
+          <td><strong>Electric Dirt Bike vs Surron</strong><div class="muted">surron electric dirt bike</div></td>
+          <td>11,640</td>
+          <td>Brand vs Surron</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Adult Dirt Bikes</span></td>
+          <td><strong>Fast Electric Dirt Bikes 40+ MPH</strong><div class="muted">fastest electric dirt bike</div></td>
+          <td>9,910</td>
+          <td>High-Speed Electric Dirt Bikes</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Compare &amp; Save</span></td>
+          <td><strong>Ktm Electric Dirt Bike Alternatives</strong><div class="muted">ktm electric dirt bike</div></td>
+          <td>3,770</td>
+          <td>Brand Alternatives</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Adult Dirt Bikes</span></td>
+          <td><strong>72V Electric Dirt Bikes</strong><div class="muted">72v electric dirt bikes</div></td>
+          <td>2,780</td>
+          <td>72V Powerhouses</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Kids &amp; Youth</span></td>
+          <td><strong>Electric Dirt Bikes for Ages 8-12</strong><div class="muted">electric dirt bike for 10 year old</div></td>
+          <td>2,470</td>
+          <td>Ages 8-12</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Compare &amp; Save</span></td>
+          <td><strong>Talaria Electric Dirt Bike Alternatives</strong><div class="muted">talaria electric dirt bike</div></td>
+          <td>1,730</td>
+          <td>Brand Alternatives</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Adult Dirt Bikes</span></td>
+          <td><strong>60V Electric Dirt Bikes</strong><div class="muted">60v electric dirt bike</div></td>
+          <td>1,560</td>
+          <td>60V Performance</td>
+          <td>Batch 1 - Commercial/Core</td>
+        </tr>
+        
+        <tr>
+          <td><span class="pill">Shop All</span></td>
+          <td><strong>Electric Dirt Bike Price Guide</strong><div class="muted">electric dirt bike price</div></td>
+          <td>1,290</td>
+          <td>Pricing Guide</td>
+          <td>Batch 1 - SEO Articles</td>
+        </tr>
+        </tbody></table></div>
+  </section>
+  <section class="grid">
+    <div class="panel"><h2>Execution Roadmap</h2><table><thead><tr><th>Batch</th><th>Hub</th><th>Top Page</th><th>Volume</th><th>Pages</th></tr></thead><tbody><tr><td>Batch 1 - Commercial/Core</td><td>Shop All</td><td>Shop All Electric Dirt Bikes</td><td>291,930</td><td>2</td></tr><tr><td>Batch 1 - Commercial/Core</td><td>Adult Dirt Bikes</td><td>Electric Dirt Bikes for Adults</td><td>45,070</td><td>3</td></tr><tr><td>Batch 1 - Commercial/Core</td><td>Kids &amp; Youth</td><td>Electric Dirt Bikes for Kids</td><td>30,320</td><td>3</td></tr><tr><td>Batch 1 - SEO Articles</td><td>Compare &amp; Save</td><td>Electric Dirt Bike vs Razor</td><td>80,830</td><td>8</td></tr><tr><td>Batch 1 - SEO Articles</td><td>Shop All</td><td>Best Electric Dirt Bikes</td><td>14,040</td><td>2</td></tr><tr><td>Batch 1 - SEO Articles</td><td>Adult Dirt Bikes</td><td>Fast Electric Dirt Bikes 40+ MPH</td><td>9,910</td><td>1</td></tr><tr><td>Batch 2 - SEO Expansion</td><td>Buying Guides</td><td>48V Electric Dirt Bike Guide</td><td>3,910</td><td>6</td></tr><tr><td>Batch 2 - SEO Expansion</td><td>Compare &amp; Save</td><td>Electric Dirt Bikes Under $2,000</td><td>1,040</td><td>1</td></tr><tr><td>Batch 2 - SEO Expansion</td><td>Parts And Support</td><td>Parts Guide</td><td>280</td><td>2</td></tr><tr><td>Batch 2 - SEO Expansion</td><td>Safety And Rules</td><td>Electric Dirt Bike Laws and Riding Rules</td><td>120</td><td>1</td></tr><tr><td>Parent Support</td><td>Compare &amp; Save</td><td>Electric Dirt Bikes Under $450</td><td>3,150</td><td>18</td></tr><tr><td>Parent Support</td><td>Parts And Support</td><td>Fat Tire Guide</td><td>90</td><td>1</td></tr><tr><td>Review Queue</td><td>Street Legal</td><td>Street Legal Electric Dirt Bikes</td><td>5,530</td><td>3</td></tr><tr><td>Review Queue</td><td>Compare &amp; Save</td><td>Yamaha Electric Dirt Bike Alternatives</td><td>5,260</td><td>5</td></tr></tbody></table></div>
+    <div class="panel"><h2>Site Foundation</h2><table><thead><tr><th>Area</th><th>Purpose</th><th>Action</th></tr></thead><tbody><tr><td>Shop All</td><td>All electric dirt bike products and product filters.</td><td>Build now</td></tr><tr><td>Adult Dirt Bikes</td><td>Main adult performance collection; supports high-speed, 72V and 60V paths.</td><td>Build now</td></tr><tr><td>Kids &amp; Youth</td><td>Parent-friendly youth collection split by age, teen fit and low-voltage safety.</td><td>Build now</td></tr><tr><td>Street Legal</td><td>Street legal and dual-sport collection plus compliance guide content.</td><td>Build now</td></tr><tr><td>Compare &amp; Save</td><td>Blog-only acquisition cluster for competitor comparisons and alternatives; all conversion paths return to the store&#x27;s own brand.</td><td>SEO Blog only</td></tr><tr><td>Buying Guides</td><td>Footer SEO pool for battery, range, voltage, speed, safety and ownership questions.</td><td>Build after core pages</td></tr><tr><td>Parts And Support</td><td>Batteries, chargers, controllers, brakes, tires, suspension, maintenance and warranty.</td><td>Build after core pages</td></tr><tr><td>Customer Support</td><td>Contact, shipping, delivery and financing pages for conversion support.</td><td>Confirm</td></tr></tbody></table></div>
+  </section>
+
+  <section id="review">
+    <div class="section-title"><h2>Review Queue</h2><span class="muted">Legal, competitor and semantic-risk pages before publication</span></div>
+    <div class="panel"><table><thead><tr><th>Page</th><th>Risk</th><th>Semantic Status</th><th>Volume</th><th>Decision</th></tr></thead><tbody>
+        <tr>
+          <td><strong>Electric Dirt Bike vs Razor</strong><div class="muted">razor electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>24,590</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Stark Electric Dirt Bike Alternatives</strong><div class="muted">stark varg electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>13,470</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike vs Surron</strong><div class="muted">surron electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>11,640</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Street Legal Electric Dirt Bikes</strong><div class="muted">electric street legal dirt bike</div></td>
+          <td>legal-compliance-review</td>
+          <td>Semantic Pass</td>
+          <td>5,400</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Ktm Electric Dirt Bike Alternatives</strong><div class="muted">ktm electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>3,770</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>72V Electric Dirt Bikes</strong><div class="muted">72v electric dirt bikes</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>2,780</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bikes for Ages 8-12</strong><div class="muted">electric dirt bike for 10 year old</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>2,470</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Yamaha Electric Dirt Bike Alternatives</strong><div class="muted">yamaha electric dirt bike</div></td>
+          <td>competitor/navigation-review</td>
+          <td>Semantic Review</td>
+          <td>2,140</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Honda Electric Dirt Bike Alternatives</strong><div class="muted">honda electric dirt bike</div></td>
+          <td>competitor/navigation-review</td>
+          <td>Semantic Review</td>
+          <td>1,770</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Talaria Electric Dirt Bike Alternatives</strong><div class="muted">talaria electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>1,730</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>60V Electric Dirt Bikes</strong><div class="muted">60v electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>1,560</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike Price Guide</strong><div class="muted">electric dirt bike price</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>1,290</td>
+          <td>Build now</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Segway Electric Dirt Bike Alternatives</strong><div class="muted">segway electric dirt bike</div></td>
+          <td>competitor/navigation-review</td>
+          <td>Semantic Review</td>
+          <td>1,220</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>48V Electric Dirt Bike Guide</strong><div class="muted">48v electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>1,150</td>
+          <td>Merge into parent/FAQ</td>
+        </tr>
+        
+        <tr>
+          <td><strong>36V Electric Dirt Bike Guide</strong><div class="muted">36v electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>1,080</td>
+          <td>Merge into parent/FAQ</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike Range Guide</strong><div class="muted">e ride pro ss 2.0 long range electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>580</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike Motor and Power Guide</strong><div class="muted">electric dirt bike motor</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>510</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td><strong>24V Electric Dirt Bike Guide</strong><div class="muted">24v electric dirt bike</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>420</td>
+          <td>Merge into parent/FAQ</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike Comparison Guide</strong><div class="muted">dirt bike vs electric bike</div></td>
+          <td></td>
+          <td>Semantic Pass</td>
+          <td>400</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Electric Dirt Bike Charging Guide</strong><div class="muted">electric dirt bike charger</div></td>
+          <td></td>
+          <td>Semantic Review</td>
+          <td>170</td>
+          <td>Build later</td>
+        </tr>
+        
+        <tr>
+          <td><strong>How to Register a Street Legal Electric Dirt Bike</strong><div class="muted">do you need a license for an electric dirt bike</div></td>
+          <td>legal-compliance-review</td>
+          <td>Semantic Pass</td>
+          <td>90</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Cake Electric Dirt Bike Alternatives</strong><div class="muted">cake electric dirt bike</div></td>
+          <td>competitor/navigation-review</td>
+          <td>Semantic Review</td>
+          <td>90</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Street Legal Dual-Sport Electric Dirt Bikes</strong><div class="muted">dual sport electric dirt bike</div></td>
+          <td>legal-compliance-review</td>
+          <td>Semantic Review</td>
+          <td>40</td>
+          <td>Manual review before build</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Kuberg Electric Dirt Bike Alternatives</strong><div class="muted">kuberg electric dirt bike</div></td>
+          <td>competitor/navigation-review</td>
+          <td>Semantic Review</td>
+          <td>40</td>
+          <td>Manual review before build</td>
+        </tr>
+        </tbody></table></div>
+  </section>
+</main>
+<script>
+const filters = ["hubFilter", "typeFilter", "decisionFilter"];
+const rows = Array.from(document.querySelectorAll("#architectureTable tbody tr"));
+function applyFilters() {
+  const hub = document.getElementById("hubFilter").value;
+  const type = document.getElementById("typeFilter").value;
+  const decision = document.getElementById("decisionFilter").value;
+  let visible = 0;
+  rows.forEach((row) => {
+    const show = (!hub || row.dataset.hub === hub)
+      && (!type || row.dataset.type === type)
+      && (!decision || row.dataset.decision === decision);
+    row.hidden = !show;
+    if (show) visible += 1;
+  });
+  document.getElementById("visibleCount").textContent = visible;
+}
+filters.forEach((id) => document.getElementById(id).addEventListener("change", applyFilters));
+</script>
+</body>
+</html>

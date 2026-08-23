@@ -1,0 +1,589 @@
+---
+import ProductGrid from './ProductGrid.astro';
+import type { Product } from '../data/products';
+
+interface PageData {
+  title: string;
+  description: string;
+  route: string;
+  pageType: string;
+  primaryKeyword?: string;
+  audience?: string;
+  intent?: string;
+  primaryCta?: string;
+  primaryCtaHref?: string;
+}
+
+interface Props {
+  page: PageData;
+  products: Product[];
+}
+
+const { page, products } = Astro.props;
+const isCompareHub = page.route === '/blog/compare/';
+const isDualSport = page.route === '/street-legal/dual-sport/';
+const isRegistration = page.route === '/street-legal/registration-license/';
+const isPriceGuide = page.route === '/buying-guides/price/';
+const isBuyingGuide = page.route.startsWith('/buying-guides/');
+const isBuyingHub = page.route === '/buying-guides/';
+const isBestGuide = page.route === '/buying-guides/best/';
+const isRangeGuide = page.route === '/buying-guides/range/';
+const isChargingGuide = page.route === '/buying-guides/charging/';
+const isLegalGuide = isDualSport || isRegistration;
+const competitorLabels: Record<string, string> = {
+  '/blog/compare/cake-alternatives/': 'CAKE',
+  '/blog/compare/honda-electric-dirt-bike/': 'Honda',
+  '/blog/compare/ktm-electric-alternatives/': 'KTM',
+  '/blog/compare/kuberg-alternatives/': 'Kuberg',
+  '/blog/compare/razor-alternatives/': 'Razor',
+  '/blog/compare/segway-alternatives/': 'Segway',
+  '/blog/compare/stark-varg-alternatives/': 'Stark VARG',
+  '/blog/compare/surron-alternatives/': 'Surron',
+  '/blog/compare/talaria-alternatives/': 'Talaria',
+  '/blog/compare/yamaha-electric-dirt-bike/': 'Yamaha',
+};
+const competitorLabel = competitorLabels[page.route] || page.title.split(':')[0];
+const preferredProducts = isLegalGuide
+  ? products.filter((product) => product.riderClass === 'Adult' && (product.voltage === '60V' || product.voltage === '72V'))
+  : isBuyingGuide
+    ? products
+  : page.route.includes('razor') || page.route.includes('kuberg')
+    ? products.filter((product) => product.riderClass !== 'Adult')
+    : products.filter((product) => product.riderClass === 'Adult');
+
+const compareLinks = [
+  ['Surron Alternatives', '/blog/compare/surron-alternatives/', 'Adult performance benchmark shoppers'],
+  ['Talaria Alternatives', '/blog/compare/talaria-alternatives/', 'Trail riders comparing familiar classes'],
+  ['Razor Alternatives', '/blog/compare/razor-alternatives/', 'Parents shopping kids and youth bikes'],
+  ['KTM Electric Alternatives', '/blog/compare/ktm-electric-alternatives/', 'Motocross-aware adult buyers'],
+  ['Segway Alternatives', '/blog/compare/segway-alternatives/', 'Adult riders checking ownership value'],
+  ['Yamaha / Honda Research', '/blog/compare/yamaha-electric-dirt-bike/', 'Brand-name searchers verifying availability'],
+];
+
+const guideLinks = [
+  ['Best Electric Dirt Bikes', '/buying-guides/best/', 'Scenario shortlist by rider and terrain'],
+  ['Price & Budget', '/buying-guides/price/', 'Separate cheap from good value'],
+  ['Range Guide', '/buying-guides/range/', 'Plan real rides by terrain and speed'],
+  ['Charging Guide', '/buying-guides/charging/', 'Home charging and battery care basics'],
+];
+
+const guideProfiles: Record<string, { title: string; copy: string; symbol: string; cards: string[][]; productTitle: string; closeTitle: string; closeItems: string[] }> = {
+  '/buying-guides/': {
+    title: 'Use guides to choose faster, not read longer.',
+    copy: 'Start with the buying question, then move into the product path that matches rider fit, terrain, voltage, ownership, and budget.',
+    symbol: 'GO',
+    productTitle: 'Popular Model Paths',
+    closeTitle: 'Pick the next buying question.',
+    closeItems: ['Choose by rider class first.', 'Use voltage and range guides after fit is clear.', 'Move to product pages when the shortlist is practical.'],
+    cards: [
+      ['Fit', 'Adult, youth, and kids pages answer different buying problems.'],
+      ['Power', 'Voltage, motor, range, and control modes should be compared together.'],
+      ['Ownership', 'Budget, support, charging, parts, and warranty complete the decision.'],
+    ],
+  },
+  '/buying-guides/best/': {
+    title: 'Build a shortlist, not a fake winner.',
+    copy: 'Compare models by rider type, terrain, control, evidence, and support before naming a best choice.',
+    symbol: 'BEST',
+    productTitle: 'Scenario Shortlist Candidates',
+    closeTitle: 'Turn a broad search into a shortlist.',
+    closeItems: ['Choose the rider class first.', 'Match the riding surface and skill level.', 'Use support, test evidence, and price to break ties.'],
+    cards: [
+      ['Scenario', 'Start with adult trail, youth, beginner, value, or performance use.'],
+      ['Evidence', 'Do not rank a bike without comparable specs and test methods.'],
+      ['Next Step', 'Move from shortlist to the collection or product page.'],
+    ],
+  },
+  '/buying-guides/price/': {
+    title: 'Budget by rider class before price.',
+    copy: 'Separate product fit from price filters so cheap does not become a bad recommendation.',
+    symbol: '$',
+    productTitle: 'Compare by Budget and Fit',
+    closeTitle: 'Separate cheap from good value.',
+    closeItems: ['Start with kids, youth, or adult fit before filtering by budget.', 'Compare voltage, battery, chassis, wheel size, and support in the same class.', 'Use financing and shipping only after the right model shortlist is clear.'],
+    cards: [
+      ['Class', 'Adult, youth, and kids prices should not be mixed into one ranking.'],
+      ['Total Cost', 'Delivery, gear, charging, parts, warranty, and support change value.'],
+      ['Thresholds', 'Under-price searches belong in live filtered sections, not thin pages.'],
+    ],
+  },
+  '/buying-guides/battery-life/': {
+    title: 'Battery life depends on the ride.',
+    copy: 'Plan battery expectations around rider weight, terrain, speed, mode, battery size, charging habits, and support.',
+    symbol: 'BAT',
+    productTitle: 'Compare Battery Platforms',
+    closeTitle: 'Plan ownership, not just range.',
+    closeItems: ['Compare battery capacity within the same rider class.', 'Use terrain and speed assumptions.', 'Follow approved storage and charging guidance.'],
+    cards: [
+      ['Capacity', 'Voltage and amp-hours need context before they mean value.'],
+      ['Terrain', 'Hills, sand, mud, and speed change battery use quickly.'],
+      ['Care', 'Charging, storage, and inspection affect long-term ownership.'],
+    ],
+  },
+  '/buying-guides/charging/': {
+    title: 'Charging is a compatibility and safety workflow.',
+    copy: 'Confirm the exact charger, battery, location, temperature, storage routine, and stop-use process.',
+    symbol: 'CHG',
+    productTitle: 'Models by Battery System',
+    closeTitle: 'Do not treat plug fit as compatibility.',
+    closeItems: ['Match charger approval to the exact model and battery.', 'Plan charge location, temperature, and supervision.', 'Escalate damaged or abnormal batteries to support.'],
+    cards: [
+      ['Match', 'Verify battery and charger part numbers before use.'],
+      ['Place', 'Charging location and temperature matter as much as time.'],
+      ['Escalate', 'Damage, warnings, heat, or wet conditions need support review.'],
+    ],
+  },
+  '/buying-guides/motor-power/': {
+    title: 'Power only matters in the right chassis.',
+    copy: 'Compare motor output with controller behavior, battery system, gearing, brakes, tires, terrain, and rider skill.',
+    symbol: 'W',
+    productTitle: 'Compare Power Classes',
+    closeTitle: 'Do not chase one number.',
+    closeItems: ['Compare rated and peak claims carefully.', 'Match output to brakes, tires, and terrain.', 'Use rider skill to narrow the class.'],
+    cards: [
+      ['Output', 'Rated and max motor numbers need definitions.'],
+      ['Control', 'Modes, throttle response, and gearing shape the ride.'],
+      ['Chassis', 'Power needs brakes, suspension, tires, and fit to match.'],
+    ],
+  },
+  '/buying-guides/range/': {
+    title: 'Range is a ride-plan estimate.',
+    copy: 'Convert a claimed range into a usable plan by adjusting for terrain, rider load, speed, weather, tires, and reserve.',
+    symbol: 'KM',
+    productTitle: 'Compare Range by Platform',
+    closeTitle: 'Plan the ride before the number.',
+    closeItems: ['Compare range within similar terrain and speeds.', 'Leave reserve capacity.', 'Choose support and charging plan with the bike.'],
+    cards: [
+      ['Surface', 'Trail, pavement, hills, and loose terrain change consumption.'],
+      ['Mode', 'Higher speed and power modes reduce range.'],
+      ['Reserve', 'A useful plan includes return distance and battery margin.'],
+    ],
+  },
+  '/buying-guides/electric-vs-gas-dirt-bike/': {
+    title: 'Choose by ownership style.',
+    copy: 'Electric and gas bikes solve different problems in noise, maintenance, fueling, controls, terrain, and support.',
+    symbol: 'E/G',
+    productTitle: 'Electric Models to Compare',
+    closeTitle: 'Compare the actual use case.',
+    closeItems: ['Consider noise and maintenance expectations.', 'Match terrain and rider experience.', 'Compare support and parts availability.'],
+    cards: [
+      ['Noise', 'Electric bikes can simplify backyard and neighborhood-adjacent use.'],
+      ['Upkeep', 'Maintenance paths differ from gas ownership.'],
+      ['Ride Feel', 'Throttle response and control style can change confidence.'],
+    ],
+  },
+  '/buying-guides/24v-36v-48v/': {
+    title: 'Youth voltage is a safety path.',
+    copy: 'For younger riders, fit, supervision, terrain, controls, protective gear, and speed control matter before voltage.',
+    symbol: '24V',
+    productTitle: 'Youth and Step-Up Models',
+    closeTitle: 'Start with fit and supervision.',
+    closeItems: ['Do not use adult specs for youth decisions.', 'Match voltage to rider maturity and terrain.', 'Confirm protective gear and riding area.'],
+    cards: [
+      ['24V', 'Entry-level supervised riding path.'],
+      ['48V', 'Step-up platform for larger or more experienced youth.'],
+      ['Fit', 'Seat height and control reach matter more than age alone.'],
+    ],
+  },
+};
+
+const activeGuide = guideProfiles[page.route];
+const guideDetails: Record<string, { label: string; title: string; copy: string; items: string[][]; note?: string }> = {
+  '/buying-guides/': {
+    label: 'Guide map',
+    title: 'Choose the guide by the buying blocker.',
+    copy: 'This hub is a router. It should move shoppers to the right decision page instead of repeating every guide.',
+    items: [
+      ['Shortlist', 'Use Best when the buyer needs model scenarios.'],
+      ['Budget', 'Use Price when the buyer needs total cost and price bands.'],
+      ['Ride Time', 'Use Range when the buyer needs assumptions and reserve planning.'],
+      ['Charging', 'Use Charging when the buyer needs compatibility and battery safety flow.'],
+    ],
+  },
+  '/buying-guides/best/': {
+    label: 'Shortlist logic',
+    title: 'Best is a scenario matrix.',
+    copy: 'This page should help buyers narrow from a broad search into a product class and shortlist.',
+    items: [
+      ['Adult beginner', 'Fit, predictable control, braking, and manageable weight matter first.'],
+      ['Trail rider', 'Tires, suspension, range method, charging access, and parts support carry the decision.'],
+      ['Performance rider', 'Power only counts when chassis, brakes, tires, and evidence support it.'],
+      ['Parent buyer', 'Measurements, supervision, speed boundaries, and riding area come before age labels.'],
+    ],
+    note: 'Final rankings stay blocked until retail prices, fit ranges, test methods, media, and support data are approved.',
+  },
+  '/buying-guides/price/': {
+    label: 'Budget logic',
+    title: 'Price pages should not mix product classes.',
+    copy: 'This page owns under-price searches and total ownership cost, while keeping adult, youth, and kids choices separate.',
+    items: [
+      ['Live price bands', 'Show only approved current prices with product count and last-updated date.'],
+      ['Under-price filters', 'Handle under $1,000, $2,000, $3,000, and similar thresholds as filtered sections.'],
+      ['Total cost', 'Add delivery, gear, assembly, charging, maintenance, parts, warranty, and support.'],
+      ['False economy', 'Do not route an adult buyer to a youth product just because it is cheaper.'],
+    ],
+    note: 'Requires live model prices, shipping rules, financing terms, warranty, and inventory data.',
+  },
+  '/buying-guides/range/': {
+    label: 'Ride planning',
+    title: 'Range is an estimate with assumptions.',
+    copy: 'This page turns a claimed distance into a real ride plan with load, surface, speed, weather, and reserve.',
+    items: [
+      ['Route', 'Record outbound distance, return distance, elevation, surface, and bailout points.'],
+      ['Load', 'Account for rider, gear, cargo, and terrain-specific demand.'],
+      ['Conditions', 'Adjust for speed, acceleration, hills, loose terrain, temperature, and tires.'],
+      ['Reserve', 'Plan energy to return safely instead of riding to empty.'],
+    ],
+    note: 'Do not show unsupported range estimates as guarantees.',
+  },
+  '/buying-guides/charging/': {
+    label: 'Charging workflow',
+    title: 'Charging is compatibility plus stop-use rules.',
+    copy: 'This page should feel like a support workflow, not a generic battery article.',
+    items: [
+      ['Match', 'Confirm exact bike, battery label, charger part number, output, and manual revision.'],
+      ['Inspect', 'Check cable, connector, battery area, charging port, warnings, heat, moisture, and damage.'],
+      ['Place', 'Use approved charging location, temperature, ventilation, and supervision guidance.'],
+      ['Escalate', 'Contact support for damage, abnormal behavior, wet conditions, or unclear compatibility.'],
+    ],
+    note: 'Requires model manuals, approved charger records, and battery safety review.',
+  },
+};
+const activeDetail = guideDetails[page.route];
+const scenarioRows = [
+  ['Adult beginner', 'Adult collection first', 'Fit, predictable controls, braking, bike weight, and terrain confidence.', '/adult-dirt-bikes/'],
+  ['Trail and weekend rider', '48V, 60V, or 72V by terrain', 'Tires, suspension, usable range, ground clearance, transport, charging, and parts support.', '/shop/'],
+  ['Performance rider', '60V and 72V platforms', 'Chassis, brakes, tires, rider skill, thermal behavior, and disclosed test methods.', '/adult-dirt-bikes/72v/'],
+  ['Parent buyer', 'Kids & Youth path', 'Measurements, supervision, speed boundaries, protective gear, and riding area.', '/kids-youth/'],
+];
+const priceBands = [
+  ['Entry check', 'Under $1,000', 'Only show a qualifying product when the live model set has one in the correct rider class.'],
+  ['Youth / step-up', '$1,000-$3,000', 'Separate youth and compact models from adult use instead of sorting by price alone.'],
+  ['Adult performance', '$3,000-$5,000+', 'Compare voltage, chassis, battery, warranty, shipping, and support together.'],
+];
+const rangeInputs = [
+  ['Route', 'Miles out, miles back, elevation, surface, and bailout points.'],
+  ['Rider Load', 'Rider, gear, cargo, and terrain-specific load.'],
+  ['Conditions', 'Speed, acceleration, hills, loose terrain, temperature, and tires.'],
+  ['Reserve', 'Return margin and battery left for detours or support calls.'],
+];
+const chargingSteps = [
+  ['1', 'Match', 'Confirm exact bike model, battery label, charger part number, output, and manual revision.'],
+  ['2', 'Inspect', 'Check cable, connector, charging port, heat, warning indicators, moisture, and visible damage.'],
+  ['3', 'Charge', 'Use approved location, ventilation, surface, temperature, and supervision guidance.'],
+  ['4', 'Escalate', 'Contact support for abnormal behavior, damage, wet conditions, or unclear compatibility.'],
+];
+const decisionCards = isDualSport
+  ? [
+      ['Documentation', 'Ask for the exact model documents before assuming any road use.'],
+      ['Equipment', 'Check lighting, mirrors, tires, braking, VIN, and classification by model.'],
+      ['Use Case', 'Match pavement, trail, charging access, range, and rider comfort together.'],
+    ]
+  : isRegistration
+    ? [
+        ['Exact Vehicle', 'Start with the model, VIN or identifier, configuration, and intended use.'],
+        ['State Process', 'Check the official DMV or state agency path before buying for road use.'],
+        ['Support Package', 'Ask support what documents are available for the selected model.'],
+      ]
+    : activeGuide
+      ? activeGuide.cards
+    : isPriceGuide
+      ? [
+          ['Fit First', 'A low price is not useful if the bike is the wrong size or rider class.'],
+          ['Total Cost', 'Include delivery, gear, assembly, charging, maintenance, parts, and support.'],
+          ['Budget Path', 'Compare kids, youth, adult, 60V, and 72V choices without mixing product classes.'],
+        ]
+    : [
+        ['Rider Fit', 'Seat height, wheel size, bike weight, and skill level matter before brand name.'],
+        ['Power Class', 'Compare voltage, motor output, range method, terrain, and control modes together.'],
+        ['Ownership', 'Price only works when shipping, warranty, parts, and support are clear.'],
+      ];
+
+const panelLabel = isLegalGuide ? 'Street legal pathway' : isPriceGuide ? 'Budget guide' : isBuyingGuide ? 'Buying guide' : isCompareHub ? 'Compare center' : 'Alternative guide';
+const panelTitle = isRegistration
+  ? 'Check the Paperwork First'
+  : isDualSport
+    ? 'Verify Before Road Use'
+    : activeGuide
+      ? activeGuide.title
+    : isPriceGuide
+      ? 'Budget by Rider Class'
+    : isCompareHub
+      ? 'Compare by Fit'
+      : `${competitorLabel} Alternative Check`;
+const panelCopy = isRegistration
+  ? 'Select the model, then confirm documents, state rules, license, insurance, and required equipment.'
+  : isDualSport
+    ? 'Road use depends on documents, equipment, classification, state process, and the exact model.'
+    : activeGuide
+      ? activeGuide.copy
+    : isPriceGuide
+      ? 'Compare price only after rider fit, voltage, chassis, support, and total ownership cost are clear.'
+    : isCompareHub
+      ? 'Start with the brands shoppers know, then narrow by rider, terrain, power, support, and value.'
+      : `Use ${competitorLabel} as a benchmark, then compare rider fit, terrain, power, support, and value.`;
+const productTitle = isRegistration
+  ? 'Models to Discuss With Support'
+  : isDualSport
+    ? 'Ovkara Models to Verify'
+    : activeGuide
+      ? activeGuide.productTitle
+    : isPriceGuide
+      ? 'Compare by Budget and Fit'
+    : 'Ovkara Models to Compare';
+---
+
+<section class="guide-panel">
+  <div class="guide-panel__intro">
+    <p class="section-label">{panelLabel}</p>
+    <h2>{panelTitle}</h2>
+    <p>{panelCopy}</p>
+    <div class="guide-actions">
+      <a class="button button-primary" href={page.primaryCtaHref || '/shop/'}>{page.primaryCta || 'Compare Models'}</a>
+      <a class="button button-dark" href="/shop/">View All Models</a>
+    </div>
+  </div>
+  <div class="guide-panel__visual bike-visual" aria-hidden="true">
+    <span>{isDualSport ? 'DUAL' : isRegistration ? 'DMV' : activeGuide ? activeGuide.symbol : isPriceGuide ? '$' : 'VS'}</span>
+    <small>{isLegalGuide ? 'Verify first' : isPriceGuide ? 'Total value' : 'Ovkara fit'}</small>
+  </div>
+</section>
+
+<section class="decision-strip">
+  {decisionCards.map(([title, copy]) => (
+    <article>
+      <span>{title}</span>
+      <p>{copy}</p>
+    </article>
+  ))}
+</section>
+
+{isBuyingHub ? (
+  <section class="guide-directory">
+    <div class="guide-directory__intro">
+      <p class="section-label">Guide map</p>
+      <h2>Choose the guide by the buying blocker.</h2>
+      <p>This hub routes shoppers to the right decision page instead of repeating every buying answer.</p>
+    </div>
+    <div class="guide-directory__grid">
+      {guideLinks.map(([title, href, copy], index) => (
+        <a href={href}>
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <strong>{title}</strong>
+          <p>{copy}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+) : isBestGuide ? (
+  <>
+    <section class="scenario-matrix">
+      <div>
+        <p class="section-label">Scenario matrix</p>
+        <h2>Best means best for a rider and use case.</h2>
+        <p>Use the broad "best" search to narrow into a product class. Final rankings stay blocked until fit, pricing, media, and test-method proof are approved.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Buyer Scenario</th>
+            <th>Start With</th>
+            <th>Decision Proof</th>
+            <th>Path</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scenarioRows.map(([scenario, start, proof, href]) => (
+            <tr>
+              <td>{scenario}</td>
+              <td>{start}</td>
+              <td>{proof}</td>
+              <td><a class="matrix-action" href={href} aria-label={`Open ${scenario} buying path`}>&rarr;</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div class="scenario-card-list">
+        {scenarioRows.map(([scenario, start, proof, href], index) => (
+          <a class="scenario-card" href={href}>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{scenario}</strong>
+            <small>{start}</small>
+            <p>{proof}</p>
+            <em aria-hidden="true">&rarr;</em>
+          </a>
+        ))}
+      </div>
+    </section>
+    <ProductGrid products={preferredProducts} title={productTitle} />
+  </>
+) : isPriceGuide ? (
+  <>
+    <section class="price-lab">
+      <div class="price-lab__head">
+        <p class="section-label">Budget bands</p>
+        <h2>Filter by rider class before price.</h2>
+        <p>Under-price searches belong in live filtered sections, not separate thin articles.</p>
+      </div>
+      <div class="price-band-row">
+        {priceBands.map(([label, range, copy]) => (
+          <article>
+            <span>{label}</span>
+            <strong>{range}</strong>
+            <p>{copy}</p>
+          </article>
+        ))}
+      </div>
+      <div class="cost-stack">
+        {['Bike price', 'Delivery', 'Protection gear', 'Charging setup', 'Maintenance', 'Warranty and support'].map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </section>
+    <ProductGrid products={preferredProducts} title={productTitle} />
+  </>
+) : isRangeGuide ? (
+  <>
+    <section class="range-planner">
+      <div class="range-planner__map">
+        <p class="section-label">Ride planner</p>
+        <div class="range-planner__copy">
+          <h2>Plan the ride before trusting the number.</h2>
+          <p>Range should be shown with clear assumptions before it becomes a buying signal.</p>
+          <div class="range-assumptions" aria-label="Range assumptions">
+            {['Route', 'Load', 'Speed', 'Terrain', 'Weather', 'Tires', 'Battery', 'Reserve'].map((item) => (
+              <span>{item}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="range-input-grid">
+        {rangeInputs.map(([title, copy]) => (
+          <article>
+            <strong>{title}</strong>
+            <p>{copy}</p>
+          </article>
+        ))}
+      </div>
+      <div class="range-reserve">
+        <span>Reserve rule</span>
+        <p>Do not present unsupported range estimates as guarantees. Keep return margin visible.</p>
+      </div>
+    </section>
+    <ProductGrid products={preferredProducts} title={productTitle} />
+  </>
+) : isChargingGuide ? (
+  <>
+    <section class="charging-flow">
+      <div class="charging-flow__intro">
+        <p class="section-label">Support workflow</p>
+        <div class="charging-flow__copy">
+          <h2>Do not treat plug fit as compatibility.</h2>
+          <p>Charging guidance should behave like a safety and support workflow before a shopper trusts it.</p>
+          <div class="charging-workflow-tags" aria-label="Charging support checkpoints">
+            {['Connector check', 'Battery match', 'Support review'].map((item) => (
+              <span>{item}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <ol>
+        {chargingSteps.map(([step, title, copy]) => (
+          <li>
+            <span>{step}</span>
+            <div>
+              <strong>{title}</strong>
+              <p>{copy}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+    <ProductGrid products={preferredProducts} title={productTitle} />
+  </>
+) : activeDetail ? (
+  <section class="compare-link-section">
+    <p class="section-label">{activeDetail.label}</p>
+    <h2>{activeDetail.title}</h2>
+    <p>{activeDetail.copy}</p>
+    <div class="compare-link-grid">
+      {activeDetail.items.map(([title, copy], index) => (
+        <a href={page.primaryCtaHref || '/shop/'}>
+          <figure>
+            <img
+              src={index % 2 === 0 ? '/images/electric-dirt-bike-hero-premium.png' : '/images/electric-dirt-bike-hero.png'}
+              alt={`${title} electric dirt bike guide decision`}
+              loading="lazy"
+            />
+          </figure>
+          <strong>{title}</strong>
+          <span>{copy}</span>
+        </a>
+      ))}
+    </div>
+    {activeDetail.note && <p class="section-note">{activeDetail.note}</p>}
+  </section>
+) : isCompareHub ? (
+  <section class="compare-link-section">
+    <p class="section-label">Comparison paths</p>
+    <h2>Choose the comparison path.</h2>
+    <div class="compare-link-grid">
+      {compareLinks.map(([title, href, copy], index) => (
+        <a href={href}>
+          <figure>
+            <img
+              src={index % 2 === 0 ? '/images/electric-dirt-bike-hero-premium.png' : '/images/electric-dirt-bike-hero.png'}
+              alt={`${title} electric dirt bike comparison path`}
+              loading="lazy"
+            />
+          </figure>
+          <strong>{title}</strong>
+          <span>{copy}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+) : (
+  <ProductGrid products={preferredProducts} title={productTitle} />
+)}
+
+<section class="guide-checkout">
+  <div>
+    <p class="section-label">{isLegalGuide ? 'Before road use' : isPriceGuide ? 'Before comparing price' : 'Before choosing'}</p>
+    <h2>{isRegistration ? 'Confirm documents before committing.' : isDualSport ? 'Confirm the exact model path.' : activeGuide ? activeGuide.closeTitle : isPriceGuide ? 'Separate cheap from good value.' : 'Bring the search back to the rider.'}</h2>
+  </div>
+  <figure>
+    <img src="/images/electric-dirt-bike-hero.png" alt="Electric dirt bike buying checklist visual" loading="lazy" />
+  </figure>
+  <ul>
+    {isDualSport ? (
+      <>
+        <li>Verify documents, VIN, certification label, and state registration process.</li>
+        <li>Confirm equipment and insurance/licensing rules before purchase.</li>
+        <li>Use product pages for off-road fit, power, range, and support checks.</li>
+      </>
+    ) : isRegistration ? (
+      <>
+        <li>Send support the model, state, intended use, and any document questions.</li>
+        <li>Check state DMV rules for registration, license, insurance, and equipment.</li>
+        <li>Keep written confirmation before relying on road-use eligibility.</li>
+      </>
+    ) : activeGuide ? (
+      <>
+        {activeGuide.closeItems.map((item) => <li>{item}</li>)}
+      </>
+    ) : isPriceGuide ? (
+      <>
+        <li>Start with kids, youth, or adult fit before filtering by budget.</li>
+        <li>Compare voltage, battery, chassis, wheel size, and support in the same class.</li>
+        <li>Use financing and shipping only after the right model shortlist is clear.</li>
+      </>
+    ) : (
+      <>
+        <li>Choose the rider class first: kids, youth, or adult.</li>
+        <li>Pick a realistic power platform: 24V, 48V, 60V, or 72V.</li>
+        <li>Compare support, delivery, parts, and warranty before price.</li>
+      </>
+    )}
+  </ul>
+</section>

@@ -1,0 +1,19 @@
+---
+import type {Product} from '../data/products';
+interface Props{products:Product[];title?:string;sourceRoute?:string;compact?:boolean}
+const {products,title='Product Platforms',sourceRoute='/products/',compact=false}=Astro.props;
+const quoteHref=(product:Product)=>`/get-a-quote/?program=${encodeURIComponent('Direct product sourcing')}&family=${encodeURIComponent(product.family)}&product=${encodeURIComponent(product.model)}&source=${encodeURIComponent(sourceRoute)}`;
+const productHref=(product:Product)=>product.detailReady?product.slug:quoteHref(product);
+const isUsbCollection=sourceRoute==='/products/usb-cables/';
+const isChargerCollection=sourceRoute==='/products/chargers/';
+const isHdmiCollection=sourceRoute==='/products/hdmi-cables/';
+const isDisplayPortCollection=sourceRoute==='/products/displayport-cables/';
+const isHubCollection=sourceRoute==='/products/hubs-docking/';
+const isCondensedCollection=isUsbCollection||isChargerCollection||isHdmiCollection||isDisplayPortCollection||isHubCollection;
+const cardFacts=(product:Product)=>product.cardFacts??[
+  {label:'Performance',value:product.dataRate},
+  {label:'Construction',value:product.material},
+  {label:'Length',value:product.lengths},
+];
+---
+{products.length>0&&<section class:list={['product-section',{'product-section--compact':compact,'product-section--single':products.length===1,'product-section--displayport':isDisplayPortCollection,'product-section--usb':isUsbCollection,'product-section--charger':isChargerCollection,'product-section--hdmi':isHdmiCollection,'product-section--hub':isHubCollection}]}><div class="section-label">Configurable product platforms</div><h2>{title}</h2><p class="product-section__note">{compact?'Compare starting configurations, then open a product to review model-level details.':'These are configuration starting points, not evidence-approved public SKUs. Continue to RFQ to confirm the exact model and claims.'}</p><div class="product-grid">{products.map(product=><article class="product-card"><div class="product-card__visual">{product.images?.[0]&&<img src={product.images[0].src} alt={product.images[0].alt} loading="lazy"/>}<div class="product-card__badge"><span>{product.family}</span><small>{product.cardLabel??product.interface}</small></div></div><div class="product-card__body"><p class="product-card__kicker">{isCondensedCollection?(product.cardLabel??product.interface):`${product.interface} / ${product.power}`}</p><h3><a href={productHref(product)}>{product.model}</a></h3><p>{product.bestFor}</p><div class="mini-specs">{cardFacts(product).map(fact=><span><small>{fact.label}</small><b>{fact.value}</b></span>)}</div><div class="product-card__footer">{!compact&&<span>{product.proofStatus}</span>}<a href={productHref(product)}>{product.detailReady?'Review product':'Configure in RFQ'}</a></div></div></article>)}</div></section>}

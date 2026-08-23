@@ -1,0 +1,27 @@
+---
+interface Props { compact?: boolean; home?: boolean }
+const { compact=false, home=false } = Astro.props;
+const categories = [
+  { no:'01', name:'USB & USB-C Cables', href:'/products/usb-cables/', keyword:'usb c cable', task:'Define connectors, charging, data, length, construction, and branding.', fields:['Connector pair','Power / data task','Length & jacket'], image:'/images/products/usb4-140w-20gbps/01-main.webp', imageAlt:'Yellow coiled USB-C cable with USB-C connectors' },
+  { no:'02', name:'HDMI Cables', href:'/products/hdmi-cables/', keyword:'hdmi cable', task:'Match the source, display, installation, and evidence requirement.', fields:['Connector format','Display target','Installation length'], image:'/images/catalog/hdmi-cable-category.webp', imageAlt:'Generic black braided HDMI male-to-male cable with both connectors visible' },
+  { no:'03', name:'DisplayPort Cables', href:'/products/displayport-cables/', keyword:'displayport cable', task:'Specify the host, monitor, workload, direction, and test conditions.', fields:['Host & display','Performance target','Construction'], image:'/images/products/dp21-16k-80gbps/01-main.webp', imageAlt:'Black braided DisplayPort cable with male connectors' },
+  { no:'04', name:'USB-C Chargers', href:'/products/chargers/', keyword:'usb c charger', task:'Define the device set, ports, output behavior, plug, and destination market.', fields:['Port mix','Output behavior','Plug & market'], image:'/images/products/jl-p150-dual-port-charger/01-main.webp', imageAlt:'White dual-port USB wall charger' },
+  { no:'05', name:'USB Hubs & Docking', href:'/products/hubs-docking/', keyword:'usb hub', task:'Build the port matrix around the host, displays, peripherals, and power method.', fields:['Host interface','Port matrix','Compatibility'], image:'/images/catalog/usb-c-hub-category.webp', imageAlt:'Generic graphite multiport USB-C hub with HDMI, USB-A and USB-C ports' },
+];
+---
+<section class:list={['category-directory',{'category-directory--visual':compact,'category-directory--home':home,'category-directory--products':!home}]} aria-labelledby="category-directory-title">
+  <header class="category-directory__header"><div><p class="section-label">{home?'Product range':'Product-family directory'}</p><h2 id="category-directory-title">{home?'Explore five product families.':'Choose a product family.'}</h2></div><p>{home?'Start with the interface and buyer task. Confirm the exact model and commercial terms during RFQ.':'Compare interfaces and buyer tasks first, then continue to a selected configuration.'}</p></header>
+  {compact?<div class="home-family-grid">
+    {categories.map((category,index)=><a class:list={['home-family-card',{'home-family-card--wide':index===0}]} href={category.href}>
+      <img src={category.image} alt={category.imageAlt} loading={index===0?'eager':'lazy'}/>
+      <span class="home-family-card__shade"></span><span class="home-family-card__number">{category.no}</span>
+      <div><p>{category.keyword}</p><h3>{category.name}</h3><span>Explore family&nbsp; →</span></div>
+    </a>)}
+  </div>:<div class="category-directory__grid">
+    {categories.map((category,index)=><article class:list={['category-entry',{'category-entry--wide':index===0}]}>
+      <div class="category-entry__number">{category.no}</div>
+      <div class="category-entry__body"><p class="category-entry__keyword">Primary demand · {category.keyword}</p><h3><a href={category.href}>{category.name}</a></h3><p>{category.task}</p><ul>{category.fields.map(field=><li>{field}</li>)}</ul></div>
+      <a class="category-entry__action" href={category.href} aria-label={`Explore ${category.name}`}><span>Explore family</span><b aria-hidden="true">↗</b></a>
+    </article>)}
+  </div>}
+</section>
