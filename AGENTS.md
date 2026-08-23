@@ -67,3 +67,4 @@
 - 2026-08-19：Browser 插件中旧的裸 `sampleTab` 变量可能不是完整 Tab；应重新通过 `browser.tabs.selected()`、`browser.tabs.new()` 或 `browser.user.claimTab()` 获取 Tab，并使用 `tab.playwright.*` 做 DOM 验收。
 - 2026-08-19：英文网站更新中国公司主体信息时，页面主标题、站点名、导航品牌、SEO title 和版权必须使用准确英文译名；中文公司名只能作为 `Chinese legal name` 辅助说明，不得直接作为英文站主品牌展示。
 - 2026-08-19：`astro/public/styles/site.css` 是纯 CSS 文件，不支持 Sass 的父选择器 `&`；追加局部样式时必须使用完整选择器，并在构建前用 `rg` 检查残留的无效选择器。
+- 2026-08-23：Astro 生产构建会读取 `astro/.env.production` 并覆盖源码默认值；正式上线切换域名/索引状态时，必须同时检查 `astro.config.mjs`、`MainLayout.astro`、`astro/public/robots.txt` 和 `astro/.env.production`，并用 `PUBLIC_SITE_URL=https://ybdglobal.com`、`PUBLIC_NOINDEX=false` 跑 `npm.cmd run check:public-launch`。

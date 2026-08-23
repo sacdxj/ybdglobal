@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://connectivity-supply.invalid',
+  site: process.env.PUBLIC_SITE_URL || 'https://ybdglobal.com',
   integrations: [tailwind(), sitemap()],
   redirects: {
     '/products/hdmi-cables/hdmi-2-1-cable/': '/products/hdmi-cables/',

@@ -13,7 +13,7 @@ interface Props {
   keywords?: string;
 }
 
-const isPrivateReview = import.meta.env.PUBLIC_NOINDEX !== 'false';
+const isPrivateReview = import.meta.env.PUBLIC_NOINDEX === 'true';
 const { title, description, image, canonical, type, noindex = isPrivateReview, keywords } = Astro.props;
 ---
 

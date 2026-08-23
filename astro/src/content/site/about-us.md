@@ -1,6 +1,6 @@
 ---
-title: "About Youboda Technology Sourcing"
-description: "Learn how Dongguan Youboda Technology Development Co., Ltd. supports B2B buyers with product selection, customization review, evidence checks and RFQ preparation."
+title: "About YBD Global Sourcing"
+description: "Learn how YBD Global supports B2B buyers with product selection, customization review, evidence checks and RFQ preparation."
 route: "/about-us/"
 pageType: "trust-pillar"
 audience: "Procurement teams, product managers and sourcing partners evaluating the company"

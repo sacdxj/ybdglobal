@@ -1,6 +1,6 @@
 ---
-title: "Contact Youboda Technology"
-description: "Contact Youboda Technology for product quotes, samples, customization projects or model-specific evidence requests."
+title: "Contact YBD Global Sourcing"
+description: "Contact YBD Global for product quotes, samples, customization projects or model-specific evidence requests."
 route: "/contact/"
 pageType: "conversion"
 audience: "B2B buyers and project teams seeking the correct next step"

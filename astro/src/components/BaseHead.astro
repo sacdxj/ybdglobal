@@ -1,7 +1,7 @@
 ---
 interface Props { title:string; description:string; image?:string; canonical?:string; type?:string; noindex?:boolean; keywords?:string; }
 const {title,description,image='/images/editorial/connectivity-range-hero.webp',canonical=new URL(Astro.url.pathname,Astro.site).href,type='website',noindex=false}=Astro.props;
-const siteName='Youboda Technology';
+const siteName='YBD Global';
 const legalName='Dongguan Youboda Technology Development Co., Ltd.';
 const fullTitle=title.includes(siteName)||title.includes(legalName)?title:`${title} | ${siteName}`;
 ---

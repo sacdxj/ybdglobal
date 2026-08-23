@@ -8,6 +8,7 @@ walk(dist);
 
 const issues=[];
 const titles=new Map();
+const expectsNoindex=process.env.PUBLIC_NOINDEX === 'true';
 const value=(html,pattern)=>html.match(pattern)?.[1]?.trim()||'';
 for(const file of files){
   const html=fs.readFileSync(file,'utf8');
@@ -24,7 +25,9 @@ for(const file of files){
   if(!html.includes('href="#main-content"')) issues.push([rel,'missing skip link']);
   if(!html.includes('<main id="main-content"')) issues.push([rel,'missing main landmark target']);
   if(!html.includes('rel="canonical"')) issues.push([rel,'missing canonical']);
-  if(!html.includes('name="robots" content="noindex, nofollow"')) issues.push([rel,'missing private noindex']);
+  const hasNoindex=html.includes('name="robots" content="noindex, nofollow"');
+  if(expectsNoindex&&!hasNoindex) issues.push([rel,'missing private noindex']);
+  if(!expectsNoindex&&hasNoindex) issues.push([rel,'unexpected public noindex']);
   if(html.includes('name="keywords"')) issues.push([rel,'obsolete meta keywords present']);
   if(h1Count!==1) issues.push([rel,`expected one H1, found ${h1Count}`]);
   if(!title || title.length<25 || title.length>75) issues.push([rel,`title length ${title.length}`]);
