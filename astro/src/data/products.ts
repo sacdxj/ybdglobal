@@ -25,9 +25,9 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  { model:'JL-L421D USB-A to USB-C Cable', slug:'/products/usb-cables/usb-c-fast-charging-cable/', family:'USB Cable', interface:'USB-A to USB-C', power:'Supplier lists 6A / 66W; evidence pending', dataRate:'Charging + data transmission listed; data rate not stated', video:'Not positioned for display output', material:'PVC jacket, pure copper conductor, braided shielding listed', lengths:'1 m / 2 m listed', bestFor:'Mobile-device charging cable ranges, wholesale programs and private-label evaluation', customization:['White color listed','1 m / 2 m','Packaging by project','Logo / shell options require confirmation'], proofStatus:'Supplier listing captured; electrical, protocol, compliance and commercial claims require source documents', detailReady:true, cardFacts:[{label:'Power',value:'6A / 66W listed'},{label:'Build',value:'PVC · copper · braid'},{label:'Length',value:'1 m / 2 m'}],
+  { model:'YBD-L421D USB-A to USB-C Cable', slug:'/products/usb-cables/usb-c-fast-charging-cable/', family:'USB Cable', interface:'USB-A to USB-C', power:'Supplier lists 6A / 66W; evidence pending', dataRate:'Charging + data transmission listed; data rate not stated', video:'Not positioned for display output', material:'PVC jacket, pure copper conductor, braided shielding listed', lengths:'1 m / 2 m listed', bestFor:'Mobile-device charging cable ranges, wholesale programs and private-label evaluation', customization:['White color listed','1 m / 2 m','Packaging by project','Logo / shell options require confirmation'], proofStatus:'Supplier listing captured; electrical, protocol, compliance and commercial claims require source documents', detailReady:true, cardFacts:[{label:'Power',value:'6A / 66W listed'},{label:'Build',value:'PVC · copper · braid'},{label:'Length',value:'1 m / 2 m'}],
     images:[
-      {src:'/images/products/jl-l421d/01-main.webp',alt:'White USB-A to USB-C cable JL-L421D shown on a white background',label:'Product view'},
+      {src:'/images/products/jl-l421d/01-main.webp',alt:'White USB-A to USB-C cable YBD-L421D shown on a white background',label:'Product view'},
       {src:'/images/products/jl-l421d/02-feature.webp',alt:'Supplier product image showing the white USB-A to USB-C cable',label:'Cable format'},
       {src:'/images/products/jl-l421d/03-detail.webp',alt:'Supplier application image illustrating charging and data use',label:'Listed use'},
       {src:'/images/products/jl-l421d/04-cable.webp',alt:'Close-up supplier image of the USB-C connector and strain relief',label:'Connector detail'}
@@ -37,8 +37,8 @@ export const products: Product[] = [
     sourceSnapshot:'Supplier listing reviewed 15 Aug 2026. Values below reproduce the supplied listing data and are not independent verification.',
     supplierClaims:[
       ['Listing title','Good Quality 6A 66W USB Type C Cable Wire for Mobile Phone Fast Charging USB C Data Cable'],
-      ['Model number','JL-L421D'],
-      ['Brand name','Justlink'],
+      ['Model number','YBD-L421D'],
+      ['Brand name','YBD Global'],
       ['Product name','6A fast Charging cable'],
       ['USB type','Standard'],
       ['Connectors','USB 2.0 Connector; listing images show USB-A to USB-C'],
@@ -78,7 +78,7 @@ export const products: Product[] = [
     supplierClaims:[
       ['Listing title','Best Price 1m 2m PD 60W 100W USB-C to USB-C Braided Fast Charging Data Cable'],
       ['Model number','Not stated in the supplied listing fields'],
-      ['Brand name','Justlink'],
+      ['Brand name','YBD Global'],
       ['Product name','PD60W/100W Fast Charging Cable'],
       ['USB type','type-c to type-c'],
       ['Interface','Type-C Interface'],
@@ -130,7 +130,7 @@ export const products: Product[] = [
     supplierClaims:[
       ['Listing title','High Quality DP 2.1 Cable 16K 80Gbps DP to DP Male-to-Male HDR Video Audio Cable'],
       ['Model number','Not stated in the supplied listing fields'],
-      ['Brand name','Justlink'],
+      ['Brand name','YBD Global'],
       ['Connector type','DP to DP'],
       ['Gender','Male to male'],
       ['Type','DP Cable; Audio Cables; Video Data Transmission'],
@@ -159,7 +159,7 @@ export const products: Product[] = [
       ['Lead time: over 500 pieces','To be negotiated']
     ] },
   { model:'Multiport USB-C Hub', slug:'/products/hubs-docking/multiport-usb-c-hub/', family:'Hub & Dock', interface:'Confirm host and port mix', power:'Confirm requested pass-through profile', dataRate:'Confirm by port matrix', video:'Confirm requested display outputs and compatibility', material:'Confirm enclosure by selected SKU', lengths:'Confirm host-cable configuration', bestFor:'Laptop accessory and private-label programs', customization:['Port mix','Housing','Logo','Packaging'], proofStatus:'Port matrix and OS compatibility confirmed during RFQ', cardLabel:'USB-C hub', cardFacts:[{label:'Ports',value:'Define port matrix'},{label:'Power',value:'Confirm pass-through'},{label:'Host',value:'Confirm compatibility'}], images:[{src:'/images/catalog/usb-c-hub-category.webp',alt:'Generic graphite multiport USB-C hub with HDMI, USB-A and USB-C ports',label:'Port-matrix configuration reference'}] },
-  { model:'JL-P150 USB-A + USB-C Dual-Port Wall Charger', slug:'/products/chargers/jl-p150-dual-port-wall-charger/', family:'Charger', interface:'USB-A + USB-C dual-port option; USB-C-only image also listed', power:'Supplier title/images state 20W while attributes state 65W; configuration conflict requires confirmation', dataRate:'Not applicable', video:'Not applicable', material:'PC fireproof-material and ABS descriptions listed; evidence pending', lengths:'US / EU plug options listed; no cable bundle confirmed', bestFor:'Mobile-phone, tablet and private-label wall-charger sourcing programs', customization:['White color','US / EU plug','USB-C or USB-A + USB-C listing options','Packaging customization from 500 pieces listed'], proofStatus:'Supplier listing captured; port version, output map, protocol, protection, safety and compliance require model-level evidence', detailReady:true, cardLabel:'USB-A + USB-C', cardFacts:[{label:'Power',value:'20W / 65W conflict'},{label:'Ports',value:'USB-A + USB-C'},{label:'Plug',value:'US / EU listed'}],
+  { model:'YBD-P150 USB-A + USB-C Dual-Port Wall Charger', slug:'/products/chargers/jl-p150-dual-port-wall-charger/', family:'Charger', interface:'USB-A + USB-C dual-port option; USB-C-only image also listed', power:'Supplier title/images state 20W while attributes state 65W; configuration conflict requires confirmation', dataRate:'Not applicable', video:'Not applicable', material:'PC fireproof-material and ABS descriptions listed; evidence pending', lengths:'US / EU plug options listed; no cable bundle confirmed', bestFor:'Mobile-phone, tablet and private-label wall-charger sourcing programs', customization:['White color','US / EU plug','USB-C or USB-A + USB-C listing options','Packaging customization from 500 pieces listed'], proofStatus:'Supplier listing captured; port version, output map, protocol, protection, safety and compliance require model-level evidence', detailReady:true, cardLabel:'USB-A + USB-C', cardFacts:[{label:'Power',value:'20W / 65W conflict'},{label:'Ports',value:'USB-A + USB-C'},{label:'Plug',value:'US / EU listed'}],
     images:[
       {src:'/images/products/jl-p150-dual-port-charger/01-main.webp',alt:'White wall charger with USB-A and USB-C output ports and EU plug',label:'Dual-port product view'},
       {src:'/images/products/jl-p150-dual-port-charger/02-feature.webp',alt:'Supplier image showing the USB-C-only wall charger variant',label:'Listed USB-C variant'},
@@ -171,8 +171,8 @@ export const products: Product[] = [
     sourceSnapshot:'Supplier listing reviewed 15 Aug 2026. Values below reproduce the supplied listing data and are not independent verification.',
     supplierClaims:[
       ['Listing title','Dual Port Wall Charger with PD, USB Type-C and QC3.0; title states 20W'],
-      ['Model number','JL-P150'],
-      ['Brand name','Justlink'],
+      ['Model number','YBD-P150'],
+      ['Brand name','YBD Global'],
       ['Type','Power Supply Adapter; Universal Adapter; Fast Charger; Desktop Charger'],
       ['Port','1 × USB plus Type-C; page also shows a USB-C-only option'],
       ['Input','100–240V, 50–60Hz'],
@@ -200,19 +200,18 @@ export const products: Product[] = [
       ['Lead time: 1–300 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 300 pieces','To be negotiated']
     ] },
-  { model:'JL-S5 15W 3-in-1 Magnetic Wireless Charger', slug:'/products/chargers/jl-s5-3-in-1-wireless-charger/', family:'Charger', interface:'Type-C power input; three wireless charging positions listed', power:'Supplier lists phone up to 15W, watch 2.5W and earphone 5W; evidence pending', dataRate:'Not applicable', video:'Magnetic phone holder and rotating display position listed; device fit requires confirmation', material:'PC fireproof material and ABS listed; one supplier image additionally states PMMA', lengths:'Desktop charging station; 107 × 66 × 66 mm shown in supplier image', bestFor:'Mobile-accessory, desktop-charging and private-label 3-in-1 wireless-charger programs', customization:['Dark grey / gun color listing descriptions','Universal socket-standard selection','Packaging customization from 500 pieces listed','Logo and device-fit matrix require confirmation'], proofStatus:'Supplier listing captured; model identity, input, wireless output, magnetic compatibility, safety and compliance require source evidence', detailReady:true, cardLabel:'3-in-1 wireless', cardFacts:[{label:'Phone',value:'Up to 15W listed'},{label:'Devices',value:'Phone · watch · earbuds'},{label:'Input',value:'Type-C'}],
+  { model:'YBD-S5 15W 3-in-1 Magnetic Wireless Charger', slug:'/products/chargers/jl-s5-3-in-1-wireless-charger/', family:'Charger', interface:'Type-C power input; three wireless charging positions listed', power:'Supplier lists phone up to 15W, watch 2.5W and earphone 5W; evidence pending', dataRate:'Not applicable', video:'Magnetic phone holder and rotating display position listed; device fit requires confirmation', material:'PC fireproof material and ABS listed; one supplier image additionally states PMMA', lengths:'Desktop charging station; 107 × 66 × 66 mm shown in supplier image', bestFor:'Mobile-accessory, desktop-charging and private-label 3-in-1 wireless-charger programs', customization:['Dark grey / gun color listing descriptions','Universal socket-standard selection','Packaging customization from 500 pieces listed','Logo and device-fit matrix require confirmation'], proofStatus:'Supplier listing captured; model identity, input, wireless output, magnetic compatibility, safety and compliance require source evidence', detailReady:true, cardLabel:'3-in-1 wireless', cardFacts:[{label:'Phone',value:'Up to 15W listed'},{label:'Devices',value:'Phone · watch · earbuds'},{label:'Input',value:'Type-C'}],
     images:[
       {src:'/images/products/jl-s5-wireless-charger/01-main.webp',alt:'Dark grey 3-in-1 magnetic wireless charging station',label:'Product view'},
       {src:'/images/products/jl-s5-wireless-charger/03-detail.webp',alt:'Supplier image showing phone, watch and earphone charging positions',label:'Three-device layout'},
       {src:'/images/products/jl-s5-wireless-charger/04-charger.webp',alt:'Supplier illustration of foreign-object detection for the wireless charger',label:'Protection description'}
     ],
-    sourceUrl:'https://www.alibaba.com/product-detail/Justlink-15W-3-in-1-Phone_11000019709219.html',
     sourceLabel:'Alibaba product 11000019709219',
     sourceSnapshot:'Supplier listing reviewed 15 Aug 2026. Values below reproduce the supplied listing data and are not independent verification.',
     supplierClaims:[
-      ['Listing title','Justlink 15W 3-in-1 Magnetic Wireless Charger for Phone, Watch and Earphone'],
-      ['Model number','JL-S5 in attribute table; XW-10 in supplier parameter image'],
-      ['Brand name','Just-Link'],
+      ['Listing title','15W 3-in-1 Magnetic Wireless Charger for Phone, Watch and Earphone'],
+      ['Model number','YBD-S5 display model; original supplier listing includes conflicting model references'],
+      ['Brand name','YBD Global'],
       ['Product name','3 in 1 Wireless Charger'],
       ['Type','Fast Charger; Wireless Charger; 3 in 1 Wireless Charging Station'],
       ['Port','Type-C'],
@@ -233,7 +232,7 @@ export const products: Product[] = [
       ['Place of origin','Guangdong, China'],
       ['Warranty','12 months — policy pending'],
       ['Certificate listings','FCC; CE Declaration of Conformity; RoHS; CE — model scope and documents pending'],
-      ['Source inconsistency','JL-S5 vs XW-10 model and AC-input vs Type-C DC-input data require an exact SKU sheet']
+      ['Source inconsistency','Original listing model references and AC-input vs Type-C DC-input data require an exact SKU sheet']
     ],
     packagingClaims:[
       ['Listing price tiers','US$9.90 at 10–199; US$9.74 at 200–4,999; US$9.20 at 5,000–9,999; US$8.72 at 10,000+ — reconfirm'],
@@ -257,7 +256,7 @@ export const products: Product[] = [
     supplierClaims:[
       ['Listing title','PD100W USB 3.2 20Gbps Thunderbolt 3 Type-C to Type-C PVC Cable with 8K 60Hz'],
       ['Model number','Not stated in the supplied listing fields'],
-      ['Brand name','Just-link'],
+      ['Brand name','YBD Global'],
       ['USB type / interface','Type-C / USB-Type-C'],
       ['Connectors','USB 3.2 connector'],
       ['Type','type-c usb cable; Fast charging cable'],
@@ -286,7 +285,7 @@ export const products: Product[] = [
       ['Lead time: 1–500 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 500 pieces','To be negotiated']
     ] },
-  { model:'JL-YF Series 140W 20Gbps USB-C Full-Function Cable', slug:'/products/usb-cables/usb4-140w-20gbps-full-function-cable/', family:'USB Cable', interface:'USB-C male-to-male and male-to-female cable variants; JL-YF23 is a USB-A male to USB-C female adapter', power:'Cable-family content lists 28V/5A and 140W; adapter-family content lists 120W; exact model evidence pending', dataRate:'Cable-family content lists 20 Gbps; adapter-family content lists 10 Gbps; USB4 protocol compliance is not yet evidenced', video:'Cable-family content lists up to 8K at 60Hz; exact source, display, mode and model evidence pending', material:'Aluminum / aluminum-alloy / zinc-alloy housings with a supplier-described pseudo-silicone jacket', lengths:'0.2 m / 1 m / 1.8 m / 2 m, depending on model', bestFor:'High-power USB-C, dock, display, storage and extension-cable sourcing programs that require a defined model matrix', customization:['Yellow cable family','Straight or spring cable','Male-to-male or male-to-female','Customized OEM logo and packaging require quotation'], proofStatus:'Supplier listing captured; connector, model, USB4 protocol, 140W/120W, 20/10Gbps, 8K60Hz, charging-protocol and compliance evidence pending', detailReady:true, cardFacts:[{label:'Power',value:'140W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
+  { model:'YBD-YF Series 140W 20Gbps USB-C Full-Function Cable', slug:'/products/usb-cables/usb4-140w-20gbps-full-function-cable/', family:'USB Cable', interface:'USB-C male-to-male and male-to-female cable variants; YBD-YF23 is a USB-A male to USB-C female adapter', power:'Cable-family content lists 28V/5A and 140W; adapter-family content lists 120W; exact model evidence pending', dataRate:'Cable-family content lists 20 Gbps; adapter-family content lists 10 Gbps; USB4 protocol compliance is not yet evidenced', video:'Cable-family content lists up to 8K at 60Hz; exact source, display, mode and model evidence pending', material:'Aluminum / aluminum-alloy / zinc-alloy housings with a supplier-described pseudo-silicone jacket', lengths:'0.2 m / 1 m / 1.8 m / 2 m, depending on model', bestFor:'High-power USB-C, dock, display, storage and extension-cable sourcing programs that require a defined model matrix', customization:['Yellow cable family','Straight or spring cable','Male-to-male or male-to-female','Customized OEM logo and packaging require quotation'], proofStatus:'Supplier listing captured; connector, model, USB4 protocol, 140W/120W, 20/10Gbps, 8K60Hz, charging-protocol and compliance evidence pending', detailReady:true, cardFacts:[{label:'Power',value:'140W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
     images:[
       {src:'/images/products/usb4-140w-20gbps/01-main.webp',alt:'Yellow coiled USB-C male-to-male cable with 20Gbps markings on the connector housings',label:'Spring-cable product view'},
       {src:'/images/products/usb4-140w-20gbps/02-feature.webp',alt:'Supplier model matrix showing USB-C male and female straight and spring cable variants plus a USB adapter',label:'Model and connector matrix'},
@@ -295,29 +294,28 @@ export const products: Product[] = [
       {src:'/images/products/usb4-140w-20gbps/06-feature.webp',alt:'Supplier illustration of the listed 20Gbps transfer function for a USB-C cable',label:'Listed cable data function'}
     ],
     variantGroups:[
-      {model:'JL-YF21',format:'Spring cable',connector:'USB-C male to male',length:'1.8 m',capability:'Cable-family claims: 140W · 20Gbps · 8K60Hz'},
-      {model:'JL-YF21F',format:'Spring extension',connector:'USB-C male to female',length:'1.8 m',capability:'Confirm pass-through behavior by sample'},
-      {model:'JL-YF22',format:'Straight cable',connector:'USB-C male to male',length:'0.2 / 1 / 2 m',capability:'Cable-family claims: 140W · 20Gbps · 8K60Hz'},
-      {model:'JL-YF22F',format:'Straight extension',connector:'USB-C male to female',length:'0.2 / 1 m',capability:'Confirm pass-through behavior by sample'},
-      {model:'JL-YF23',format:'Compact adapter',connector:'USB-A male to USB-C female',length:'Adapter',capability:'Separately listed: 120W · 10Gbps; video unclear'}
+      {model:'YBD-YF21',format:'Spring cable',connector:'USB-C male to male',length:'1.8 m',capability:'Cable-family claims: 140W · 20Gbps · 8K60Hz'},
+      {model:'YBD-YF21F',format:'Spring extension',connector:'USB-C male to female',length:'1.8 m',capability:'Confirm pass-through behavior by sample'},
+      {model:'YBD-YF22',format:'Straight cable',connector:'USB-C male to male',length:'0.2 / 1 / 2 m',capability:'Cable-family claims: 140W · 20Gbps · 8K60Hz'},
+      {model:'YBD-YF22F',format:'Straight extension',connector:'USB-C male to female',length:'0.2 / 1 m',capability:'Confirm pass-through behavior by sample'},
+      {model:'YBD-YF23',format:'Compact adapter',connector:'USB-A male to USB-C female',length:'Adapter',capability:'Separately listed: 120W · 10Gbps; video unclear'}
     ],
     featureHighlights:[
       {title:'Power',value:'Up to 140W',note:'Cable family lists 28V/5A. Confirm E-marker, charging profile and exact model.',image:'/images/products/usb4-140w-20gbps/03-feature.webp',alt:'Supplier image showing the listed 140W cable family'},
       {title:'Data',value:'Up to 20Gbps',note:'Cable family claim only. USB4 protocol compliance and test report remain pending.',image:'/images/products/usb4-140w-20gbps/06-feature.webp',alt:'Supplier illustration of 20Gbps data transfer'},
       {title:'Display',value:'Up to 8K60Hz',note:'Confirm source, display, mode, cable length and validation record.',image:'/images/products/usb4-140w-20gbps/05-feature.webp',alt:'Supplier illustration of 8K60Hz display output'}
     ],
-    sourceUrl:'https://www.alibaba.com/product-detail/Justlink-2025-8K-UHD-Type-C_1601029516523.html',
     sourceLabel:'Alibaba product 1601029516523',
     sourceSnapshot:'Supplier listing reviewed 15 Aug 2026. Values below reproduce the current listing data and are not independent verification.',
     supplierClaims:[
-      ['Listing title','Justlink 2025 8K UHD Type-C Cable, 140W, 20Gbps, 8K 60Hz and adapter-cable family'],
-      ['Brand name','Justlink'],
-      ['Model numbers','JL-YF21; JL-YF21F; JL-YF22; JL-YF22F; JL-YF23'],
+      ['Listing title','8K UHD Type-C Cable, 140W, 20Gbps, 8K 60Hz and adapter-cable family'],
+      ['Brand name','YBD Global'],
+      ['Model numbers','YBD-YF21; YBD-YF21F; YBD-YF22; YBD-YF22F; YBD-YF23'],
       ['Product name','8K60Hz Type-C UHD cable'],
       ['USB type','Type-C to Type-C'],
       ['Connectors','USB4 connector — protocol compliance evidence pending'],
-      ['Listed cable models','JL-YF21: USB-C male-to-male spring cable, 1.8 m; JL-YF21F: USB-C male-to-female spring cable, 1.8 m; JL-YF22: USB-C male-to-male straight cable, 0.2/1/2 m; JL-YF22F: USB-C male-to-female straight cable, 0.2/1 m'],
-      ['Listed adapter model','JL-YF23: USB-A male to USB-C female adapter'],
+      ['Listed cable models','YBD-YF21: USB-C male-to-male spring cable, 1.8 m; YBD-YF21F: USB-C male-to-female spring cable, 1.8 m; YBD-YF22: USB-C male-to-male straight cable, 0.2/1/2 m; YBD-YF22F: USB-C male-to-female straight cable, 0.2/1 m'],
+      ['Listed adapter model','YBD-YF23: USB-A male to USB-C female adapter'],
       ['Cable-family function','Up to 28V/5A, 140W, 20 Gbps and 8K60Hz — model-level evidence pending'],
       ['Adapter-family function','120W and 10 Gbps are listed separately; video support is not clearly specified'],
       ['Function attribute','5A Fast Charging; 140W; 20Gbps; 8K60Hz'],

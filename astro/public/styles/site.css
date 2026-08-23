@@ -118,6 +118,15 @@
 .contact-ready li span { color:var(--lime); font-size:.68rem; font-weight:950; letter-spacing:.12em; }
 .contact-ready li strong { margin-top:22px; font-size:1rem; }
 .contact-ready li small { margin-top:9px; color:#b9bdb8; line-height:1.45; }
+.contact-direct { display:grid; grid-template-columns:minmax(290px,.8fr) minmax(0,1.2fr); gap:46px; align-items:stretch; margin-top:32px; padding:42px; border-radius:var(--radius); background:#fffdf8; box-shadow:var(--shadow); }
+.contact-direct h2 { max-width:12ch; margin:0; padding:0; border:0; font-size:clamp(2rem,2.55vw,2.75rem); line-height:1; }
+.contact-direct p { max-width:34rem; margin-top:18px; color:#5c5549; line-height:1.65; }
+.contact-direct__cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.contact-direct__cards a { min-height:172px; display:flex; flex-direction:column; justify-content:space-between; padding:28px; border:1px solid #d4c7aa; border-radius:12px; background:#f0e7d1; color:var(--black); text-decoration:none; }
+.contact-direct__cards a:hover { border-color:#af8a61; transform:translateY(-2px); }
+.contact-direct__cards span { color:var(--green); font-size:.72rem; font-weight:950; letter-spacing:.12em; text-transform:uppercase; }
+.contact-direct__cards strong { margin-top:18px; font-size:1.25rem; line-height:1.2; word-break:break-word; }
+.contact-direct__cards small { margin-top:14px; color:#6c6458; line-height:1.45; }
 .contact-boundary { display:grid; grid-template-columns:160px 1fr; gap:30px; align-items:center; margin-top:32px; padding:30px 36px; border:1px solid #d4c7aa; border-radius:var(--radius); background:#f0e7d1; }
 .contact-boundary strong { color:#0d4d3e; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; }
 .contact-boundary p { margin:0; color:#5c5549; line-height:1.6; }
@@ -157,6 +166,9 @@
   .contact-ready { grid-template-columns:1fr; padding:38px 24px; }
   .contact-ready ul { grid-template-columns:1fr; }
   .contact-ready li { min-height:122px; }
+  .contact-direct { grid-template-columns:1fr; gap:24px; padding:30px 24px; }
+  .contact-direct__cards { grid-template-columns:1fr; }
+  .contact-direct__cards a { min-height:150px; padding:24px; }
   .contact-boundary { grid-template-columns:1fr; gap:10px; padding:24px; }
 }
 

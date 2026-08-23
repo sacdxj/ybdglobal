@@ -9,7 +9,7 @@ buyerStage: "Bottom"
 status: "private-review"
 primaryCta: "Request a Quote"
 primaryCtaHref: "/get-a-quote/"
-proofStatus: "Company name and address provided; email, phone and receiving workflow pending approval"
+proofStatus: "Company name, address, WhatsApp and email contact are provided; quotations remain project-confirmed"
 ---
 
 <section class="contact-router" aria-labelledby="contact-router-title">
@@ -39,4 +39,16 @@ proofStatus: "Company name and address provided; email, phone and receiving work
   </ul>
 </section>
 
-<aside class="contact-boundary"><strong>Company details</strong><p>Dongguan Youboda Technology Development Co., Ltd. Address: Room 201, No. 96 Longping West Road, Fenggang Town, Dongguan, Guangdong, China. Email, phone and the final RFQ receiving workflow will be added after approval.</p></aside>
+<section class="contact-direct" aria-labelledby="contact-direct-title">
+  <div>
+    <p class="section-label">Direct contact</p>
+    <h2 id="contact-direct-title">Send the project brief.</h2>
+    <p>Share the product family, quantity, destination market and evidence needs so the inquiry can be reviewed against the selected configuration.</p>
+  </div>
+  <div class="contact-direct__cards">
+    <a href="https://wa.me/8613613046291" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>+86 136 1304 6291</strong><small>Fast project and sample communication</small></a>
+    <a href="mailto:kobe202101@gmail.com"><span>Email</span><strong>kobe202101@gmail.com</strong><small>Send RFQ details, files and evidence requests</small></a>
+  </div>
+</section>
+
+<aside class="contact-boundary"><strong>Company details</strong><p>Dongguan Youboda Technology Development Co., Ltd. Address: Room 201, No. 96 Longping West Road, Fenggang Town, Dongguan, Guangdong, China.</p></aside>
