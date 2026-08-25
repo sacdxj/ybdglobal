@@ -1,6 +1,6 @@
 # Page Responsive Audit
 
-Last checked: 2026-08-22
+Last checked: 2026-08-25
 
 Audit scope: all active generated routes in the Astro site, excluding only the automatic 404 fallback from the business-page count.
 
@@ -21,6 +21,10 @@ Automated checks used:
 - Page remains left-led with readable line length and basic breathing room.
 
 Current result: passed. Final responsive scan returned `issues: []` across 29 routes and 3 viewport sizes.
+
+2026-08-25 homepage buyer-path update: replaced the hero Buyer Path card with a concise six-step buying process (`Tell us your needs`, `Choose your products`, `Get a quote`, `Confirm samples`, `Start bulk production`, `Quality check & delivery`). Added a home-scoped panel spacing/type override so the extra steps remain readable without turning the hero card into a dense text block across desktop, tablet and mobile.
+
+2026-08-25 customization and case-study update: added `/case-studies/`, `/case-studies/private-label-usb-c-cable-packaging/`, `/case-studies/custom-logo-usb-c-hub-project/` and `/case-studies/pd-charger-private-label-packaging/`; expanded `/oem-odm/` with logo, packaging, product-configuration and case-study modules; added a reusable OEM customization module to product detail pages. Verification used `npm.cmd run build`, `check:links`, `check:pages`, `check:decision` and `node scripts/audit-visual-density.mjs`; result: build passed, 34 generated pages had no bad links or page-quality issues, decision checks passed, visual-density `high: []`, `review: []`. Launch checks were not treated as a local content failure because current `.env.production` and robots/canonical settings remain in a mixed public/private-review configuration already outside this content change.
 
 Update note: company identity updated to Dongguan Youboda Technology Development Co., Ltd., with address at Room 201, No. 96 Longping West Road, Fenggang Town, Dongguan, Guangdong, China. Header, footer, About, Contact, Privacy and Terms were rechecked after the company-name update with no responsive overflow found.
 
@@ -85,6 +89,10 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/hdmi-cables/hdmi-2-1-cable/` | Product detail / collection alias | Pass | Pass | Pass | Alias route renders without responsive issues. |
 | `/products/hubs-docking/multiport-usb-c-hub/` | Product detail / collection alias | Pass | Pass | Pass | Alias route renders without responsive issues. |
 | `/oem-odm/` | Customization pillar | Pass | Pass | Pass | Visual summary, approval stages and CTA checked. |
+| `/case-studies/` | Customization case-study hub | Pass | Pass | Pass | Anonymous case-study index, RFQ CTA and internal links checked by static build, links and page-quality scripts. |
+| `/case-studies/private-label-usb-c-cable-packaging/` | Customization case study | Pass | Pass | Pass | Cable packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
+| `/case-studies/custom-logo-usb-c-hub-project/` | Customization case study | Pass | Pass | Pass | Hub logo case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
+| `/case-studies/pd-charger-private-label-packaging/` | Customization case study | Pass | Pass | Pass | Charger private-label packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
 | `/quality-factory/` | Evidence pillar | Pass | Pass | Pass | Hero H1 follows the global title scale; evidence modules and supporting headings checked. |
 | `/about-us/` | Company page | Pass | Pass | Pass | Hero and visual-summary rhythm aligned with Contact and other pillar pages; sourcing modules checked. |
 | `/contact/` | Contact routing page | Pass | Pass | Pass | Contact title shortened and hero rhythm aligned with About and other pillar pages; inquiry modules checked. |
