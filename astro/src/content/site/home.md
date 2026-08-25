@@ -15,7 +15,7 @@ proofStatus: "Company name and address provided; product and factory evidence pe
 
 <section class="home-visual-brief" aria-label="Buying path overview">
   <figure>
-    <img src="/images/editorial/rfq-preparation-desk.webp" alt="RFQ preparation desk with product notes and sample review items" loading="lazy" />
+    <img src="/images/editorial/phone-charging-desk.webp" alt="Smartphone charging with a USB-C cable on a clean office desk" loading="lazy" />
     <figcaption>Start with a buying task, not a generic product name.</figcaption>
   </figure>
   <div class="home-visual-brief__copy">
