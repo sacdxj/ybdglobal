@@ -34,6 +34,33 @@ proofStatus: "Project scope and commercial terms require configuration review"
   </div>
 </section>
 
+<section class="oem-capability-board" aria-labelledby="oem-capability-title">
+  <div>
+    <p class="section-label">Customization scope</p>
+    <h2 id="oem-capability-title">Show the buyer what can change, and what must be approved.</h2>
+    <p>OEM work is handled as a controlled project scope. Product appearance, logo method and packaging files are reviewed against the selected model, destination market and evidence requirements.</p>
+  </div>
+  <div class="oem-capability-board__cards">
+    <article><span>Product</span><strong>Configuration changes</strong><small>Cable length, color, connector format, hub port mix, charger plug type and visible material finish.</small></article>
+    <article><span>Logo</span><strong>Brand application</strong><small>Silk screen, laser marking, molded mark, sleeve, label or package-only branding depending on material and tooling.</small></article>
+    <article><span>Packaging</span><strong>Retail and shipping pack</strong><small>Color box, kraft box, hang card, insert, manual, barcode, SKU label, carton mark and shipper layout.</small></article>
+    <article><span>Evidence</span><strong>Claim discipline</strong><small>Power, data, video, certification and compatibility claims remain pending until the exact SKU and sample are confirmed.</small></article>
+  </div>
+</section>
+
+<section class="oem-case-links" aria-labelledby="oem-case-links-title">
+  <header>
+    <p class="section-label">Project examples</p>
+    <h2 id="oem-case-links-title">Use case studies to make customization concrete.</h2>
+    <p>These anonymous project examples show how a buyer brief becomes a reviewed product, logo and packaging package without exposing customer identities.</p>
+  </header>
+  <div class="oem-case-links__grid">
+    <a href="/case-studies/private-label-usb-c-cable-packaging/"><span>Case 01</span><strong>Private-label USB-C cable packaging</strong><small>Retail packaging, barcode and claim list review for a cable program.</small></a>
+    <a href="/case-studies/custom-logo-usb-c-hub-project/"><span>Case 02</span><strong>Custom logo USB-C hub project</strong><small>Logo placement, housing review and packed sample approval for a hub SKU.</small></a>
+  </div>
+  <a class="button button-secondary" href="/case-studies/">View all case studies</a>
+</section>
+
 <section class="oem-approval" aria-labelledby="oem-approval-title">
   <div class="oem-approval__intro">
     <p class="section-label">Project control</p>

@@ -22,6 +22,237 @@
   background:transparent;
   box-shadow:none;
 }
+
+/* Case studies hub: project-pattern cards aligned with commercial pillar pages. */
+.content-body.case-studies-content {
+  width:min(1240px,calc(100% - 48px));
+  max-width:1240px;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.case-study-board {
+  display:grid;
+  grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);
+  min-height:620px;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:#faf6eb;
+  box-shadow:var(--shadow);
+}
+
+.case-study-board > header {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:72px 60px;
+}
+
+.case-study-board h2,
+.case-proof-system h2,
+.case-rfq-strip h2 {
+  max-width:13ch;
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:clamp(2.35rem,3.3vw,3.65rem);
+  line-height:.96;
+}
+
+.case-study-board > header > p:not(.section-label),
+.case-proof-system p:not(.section-label) {
+  max-width:32rem;
+  margin:28px 0 0;
+  color:#575044;
+  line-height:1.7;
+}
+
+.case-study-board__cards {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1px;
+  padding:44px;
+  background:var(--black);
+}
+
+.case-study-board__cards a {
+  min-height:170px;
+  display:flex;
+  flex-direction:column;
+  padding:28px;
+  background:#151a17;
+  color:#fff;
+  text-decoration:none;
+}
+
+.case-study-board__cards a:hover {
+  background:#1d261f;
+}
+
+.case-study-board__cards span,
+.case-rfq-strip li span {
+  color:var(--lime);
+  font-size:.68rem;
+  font-weight:950;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.case-study-board__cards strong {
+  max-width:18ch;
+  margin-top:auto;
+  color:#fff;
+  font-size:1.08rem;
+  line-height:1.25;
+}
+
+.case-study-board__cards small {
+  max-width:27rem;
+  margin-top:10px;
+  color:#b9bdb8;
+  line-height:1.45;
+}
+
+.case-proof-system {
+  display:grid;
+  grid-template-columns:minmax(420px,.96fr) minmax(0,1.04fr);
+  gap:0;
+  min-height:560px;
+  margin-top:72px;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:#fffdf8;
+  box-shadow:var(--shadow);
+}
+
+.case-proof-system figure {
+  position:relative;
+  min-height:0;
+  margin:0;
+  overflow:hidden;
+  background:var(--black);
+}
+
+.case-proof-system figure img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.case-proof-system figcaption {
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  left:18px;
+  padding:13px 15px;
+  border-radius:8px;
+  background:rgba(7,12,13,.84);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:850;
+  line-height:1.35;
+}
+
+.case-proof-system > div {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:58px;
+}
+
+.case-proof-system .decision-card-grid {
+  margin-top:34px;
+}
+
+.case-rfq-strip {
+  display:grid;
+  grid-template-columns:minmax(280px,.82fr) minmax(0,1.18fr);
+  gap:34px;
+  align-items:start;
+  margin-top:72px;
+  padding:56px;
+  border-radius:var(--radius);
+  background:var(--black);
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+.case-rfq-strip h2 {
+  color:#fff;
+}
+
+.case-rfq-strip ol {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  border-radius:10px;
+  background:rgba(255,255,255,.14);
+  list-style:none;
+}
+
+.case-rfq-strip li {
+  min-height:142px;
+  display:flex;
+  flex-direction:column;
+  padding:24px;
+  background:#151a17;
+}
+
+.case-rfq-strip li strong {
+  margin-top:auto;
+  color:#fff;
+  font-size:1rem;
+  line-height:1.35;
+}
+
+.case-rfq-strip > .button {
+  grid-column:2;
+  width:max-content;
+}
+
+@media (max-width:820px) {
+  .content-body.case-studies-content { width:calc(100% - 24px); }
+  .case-study-board,
+  .case-proof-system,
+  .case-rfq-strip {
+    grid-template-columns:1fr;
+  }
+
+  .case-study-board > header,
+  .case-proof-system > div,
+  .case-rfq-strip {
+    padding:38px 24px;
+  }
+
+  .case-study-board__cards {
+    padding:24px;
+  }
+
+  .case-study-board__cards a {
+    min-height:145px;
+  }
+
+  .case-proof-system figure {
+    min-height:320px;
+  }
+
+  .case-rfq-strip ol {
+    grid-template-columns:1fr;
+  }
+
+  .case-rfq-strip li {
+    min-height:112px;
+  }
+
+  .case-rfq-strip > .button {
+    grid-column:auto;
+    width:100%;
+  }
+}
 .charger-brief-visual {
   display:grid;
   grid-template-columns:minmax(390px,.84fr) minmax(0,1.16fr);
