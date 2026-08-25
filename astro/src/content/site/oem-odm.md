@@ -78,7 +78,7 @@ proofStatus: "Project scope and commercial terms require configuration review"
 
 <section class="decision-showcase decision-showcase--oem" aria-labelledby="oem-decision-title">
   <figure>
-    <img src="/images/editorial/oem-customization-review.webp" alt="OEM connectivity product customization review with swatches and packaging dieline" loading="lazy" />
+    <img src="/images/editorial/oem-odm-five-grid.webp" alt="OEM and ODM customization capability infographic" loading="lazy" />
     <figcaption>Controlled changes reduce sample and production drift.</figcaption>
   </figure>
   <div class="decision-showcase__copy">

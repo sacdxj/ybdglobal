@@ -8967,7 +8967,33 @@ body .content-body.oem-customization-content > .decision-showcase--oem {
 }
 
 body .content-body.oem-customization-content > .decision-showcase--oem {
-  grid-template-columns: minmax(340px, .72fr) minmax(0, 1.48fr);
+  grid-template-columns: minmax(470px, .95fr) minmax(0, 1.05fr);
+  align-items: stretch;
+}
+
+body .content-body.oem-customization-content > .decision-showcase--oem figure {
+  min-height: 620px;
+  background: #fff;
+}
+
+body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="oem-odm-five-grid"] {
+  object-fit: contain;
+  padding: 34px 24px 76px;
+  background: #fff;
+}
+
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"])::after {
+  inset: auto 0 0;
+  height: 118px;
+  background: linear-gradient(180deg, rgba(9, 11, 10, 0), rgba(9, 11, 10, .78));
+}
+
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"]) figcaption {
+  bottom: 20px;
+}
+
+body .content-body.oem-customization-content > .decision-showcase--oem .decision-showcase__copy {
+  padding: 64px 58px;
 }
 
 .usb-category-content > .decision-showcase--usb h2 {

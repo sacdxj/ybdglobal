@@ -32,6 +32,8 @@ Current result: passed. Final responsive scan returned `issues: []` across 29 ro
 
 2026-08-25 `/oem-odm/` reference-image update: replaced the first OEM layer product reference image with `usb-c-cable-customization-options.webp`, a white-background USB-C braided cable customization infographic. Added a route-scoped contain-fit rule for that image so the infographic remains readable inside the existing tall OEM layer card. Verification used `npm.cmd run build`, `check:links` and `check:pages`; result: build passed, bad links 0, page-quality issues 0.
 
+2026-08-25 `/oem-odm/` customization-brief image readability pass: updated the lower `Customization brief` module to use `oem-odm-five-grid.webp`, widened the image column, switched the infographic to `object-fit: contain`, added white padding around the image, and reduced the dark overlay to the bottom caption area so the five-grid content remains readable. Verification used `npm.cmd run build`, `check:links` and `check:pages`; result: build passed, bad links 0, page-quality issues 0.
+
 Update note: company identity updated to Dongguan Youboda Technology Development Co., Ltd., with address at Room 201, No. 96 Longping West Road, Fenggang Town, Dongguan, Guangdong, China. Header, footer, About, Contact, Privacy and Terms were rechecked after the company-name update with no responsive overflow found.
 
 2026-08-22 hero update: all active route hero title modules were standardized and rechecked across 29 routes x 3 viewport sizes. Result: 87 checks, 0 failures, no horizontal overflow. Final hero title font sizes: desktop 43.2px, tablet 41.472px, mobile 32px.
