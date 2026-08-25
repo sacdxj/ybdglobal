@@ -28,7 +28,7 @@ proofStatus: "Project scope and commercial terms require configuration review"
       <figcaption><span>02</span><strong>Differences</strong><small>Specify construction, color and brand assets</small></figcaption>
     </figure>
     <figure class="oem-layer oem-layer--packaging">
-      <img src="/images/editorial/oem-customization-review.webp" alt="Cable reference, material swatches, packaging dieline and approval checklist" loading="lazy" />
+      <img src="/images/editorial/oem-odm-five-grid.webp" alt="OEM and ODM customization capability infographic" loading="lazy" />
       <figcaption><span>03</span><strong>Approval</strong><small>Evaluate and lock the selected revision</small></figcaption>
     </figure>
   </div>

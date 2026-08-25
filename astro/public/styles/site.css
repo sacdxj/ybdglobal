@@ -10197,6 +10197,12 @@ body .content-body.oem-customization-content .oem-layer--product img[src*="usb-c
   background: #fff;
 }
 
+body .content-body.oem-customization-content .oem-layer--packaging img[src*="oem-odm-five-grid"] {
+  object-fit: contain;
+  padding: 14px;
+  background: #fff;
+}
+
 @media (max-width: 820px) {
   body .content-body.oem-customization-content > .oem-capability-board,
   body .content-body.oem-customization-content > .oem-case-links {
