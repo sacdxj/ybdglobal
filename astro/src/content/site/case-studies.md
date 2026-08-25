@@ -15,24 +15,21 @@ proofStatus: "Anonymous examples; final claims require project evidence and cust
 <section class="case-study-board" aria-labelledby="case-study-board-title">
   <header>
     <p class="section-label">Project examples</p>
-    <h2 id="case-study-board-title">Cases are written as buyer projects, not customer-name claims.</h2>
-    <p>Each example keeps the same approval logic: start with a product reference, define the requested change, then lock the product, logo, packaging and evidence records before final terms are treated as fixed.</p>
+    <h2 id="case-study-board-title">Three anonymous projects. One approval logic.</h2>
+    <p>Start with a product reference, define the requested change, then lock product, logo, packaging and evidence records before final terms are treated as fixed.</p>
   </header>
-  <div class="case-study-board__cards">
-    <a href="/case-studies/private-label-usb-c-cable-packaging/">
-      <span>Case 01</span>
-      <strong>Private-label USB-C cable packaging</strong>
-      <small>Cable reference, retail box, barcode, SKU label and claim-control workflow.</small>
+  <div class="case-study-board__gallery">
+    <a class="case-study-tile case-study-tile--primary" href="/case-studies/private-label-usb-c-cable-packaging/">
+      <img src="/images/products/pd60w-100w-braided/06-packaging.webp" alt="USB-C cable packaging reference for private label review" loading="lazy" />
+      <span><b>Case 01</b><strong>USB-C cable packaging</strong><small>Retail pack, barcode and claim list.</small></span>
     </a>
-    <a href="/case-studies/custom-logo-usb-c-hub-project/">
-      <span>Case 02</span>
-      <strong>Custom logo USB-C hub project</strong>
-      <small>Housing logo, package sleeve, port-claim review and packed sample approval.</small>
+    <a class="case-study-tile" href="/case-studies/custom-logo-usb-c-hub-project/">
+      <img src="/images/catalog/usb-c-hub-category.webp" alt="USB-C hub product reference for logo customization project" loading="lazy" />
+      <span><b>Case 02</b><strong>Custom logo hub</strong><small>Housing mark and packed sample.</small></span>
     </a>
-    <a href="/case-studies/pd-charger-private-label-packaging/">
-      <span>Case 03</span>
-      <strong>PD charger private-label packaging</strong>
-      <small>Charger marking, plug-market review, box artwork and safety-claim evidence.</small>
+    <a class="case-study-tile" href="/case-studies/pd-charger-private-label-packaging/">
+      <img src="/images/products/jl-p150-dual-port-charger/06-packaging.webp" alt="PD charger packaging reference for private label project" loading="lazy" />
+      <span><b>Case 03</b><strong>PD charger private label</strong><small>Plug market and package evidence.</small></span>
     </a>
   </div>
 </section>
@@ -45,7 +42,7 @@ proofStatus: "Anonymous examples; final claims require project evidence and cust
   <div>
     <p class="section-label">What the cases prove</p>
     <h2 id="case-proof-title">A good case proves process control.</h2>
-    <p>A case does not prove every future project has the same MOQ, price or timing. It proves that reference product, requested change, artwork revision, packed sample and claim list can be separated and reviewed.</p>
+    <p>A case does not prove every future project has the same MOQ, price or timing. It proves the review path is controlled.</p>
     <div class="decision-card-grid">
       <article><span>01</span><strong>Scope</strong><small>Product family, selected model and visible changes are named.</small></article>
       <article><span>02</span><strong>Approval</strong><small>Logo, packaging and packed sample are treated as separate records.</small></article>
