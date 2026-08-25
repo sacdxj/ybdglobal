@@ -25,7 +25,7 @@ proofStatus: "Company name, address, WhatsApp and email contact are provided; qu
     <a href="/get-a-quote/"><span>01 / QUOTE</span><strong>Price and project terms</strong><small>Configuration, quantity, market and target date</small></a>
     <a href="/request-sample/"><span>02 / SAMPLE</span><strong>Physical evaluation</strong><small>Define what the sample must help you decide</small></a>
     <a href="/oem-odm/"><span>03 / CUSTOM</span><strong>Brand or product changes</strong><small>Construction, color, marking and packaging</small></a>
-    <a href="/quality-factory/"><span>04 / EVIDENCE</span><strong>Records and claim review</strong><small>Exact model, scope, market and document need</small></a>
+    <a href="/quality-factory/"><span>04 / EVIDENCE</span><strong>Factory & certification</strong><small>Exact model, scope, market and document need</small></a>
   </nav>
 </section>
 
