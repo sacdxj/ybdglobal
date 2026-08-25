@@ -20,15 +20,15 @@ proofStatus: "Anonymous examples; final claims require project evidence and cust
   </header>
   <div class="case-study-board__gallery">
     <a class="case-study-tile case-study-tile--primary" href="/case-studies/private-label-usb-c-cable-packaging/">
-      <img src="/images/products/pd60w-100w-braided/06-packaging.webp" alt="USB-C cable packaging reference for private label review" loading="lazy" />
+      <img src="/images/editorial/blank-case-study.svg" alt="Blank placeholder for USB-C cable packaging case study" loading="lazy" />
       <span><b>Case 01</b><strong>USB-C cable packaging</strong><small>Retail pack, barcode and claim list.</small></span>
     </a>
     <a class="case-study-tile" href="/case-studies/custom-logo-usb-c-hub-project/">
-      <img src="/images/catalog/usb-c-hub-category.webp" alt="USB-C hub product reference for logo customization project" loading="lazy" />
+      <img src="/images/editorial/blank-case-study.svg" alt="Blank placeholder for custom logo hub case study" loading="lazy" />
       <span><b>Case 02</b><strong>Custom logo hub</strong><small>Housing mark and packed sample.</small></span>
     </a>
     <a class="case-study-tile" href="/case-studies/pd-charger-private-label-packaging/">
-      <img src="/images/products/jl-p150-dual-port-charger/06-packaging.webp" alt="PD charger packaging reference for private label project" loading="lazy" />
+      <img src="/images/editorial/blank-case-study.svg" alt="Blank placeholder for PD charger private-label case study" loading="lazy" />
       <span><b>Case 03</b><strong>PD charger private label</strong><small>Plug market and package evidence.</small></span>
     </a>
   </div>

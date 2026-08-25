@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Blank case study placeholder</title>
+  <desc id="desc">A clean blank warm-white placeholder image for case study cards.</desc>
+  <rect width="1200" height="900" fill="#faf6eb"/>
+  <rect x="1" y="1" width="1198" height="898" fill="none" stroke="#ebe1cf" stroke-width="2"/>
+</svg>
