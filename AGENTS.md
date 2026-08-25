@@ -43,6 +43,7 @@
 - 2026-08-11：页面完成度统计必须区分“构建页面数”和“内容路由数”；Astro 构建输出包含自动 404。当前基线是 25 个构建页面、24 个内容路由，不能把 404 算作待重做内容页。
 - 2026-08-11：Astro 静态 `redirects` 生成的页面使用 `robots=noindex`，不会带内容页的 `noindex, nofollow`；私有发布检查应识别 meta-refresh 重定向并按其实际 noindex 规则验证。
 - 2026-08-11：PowerShell 变量名不区分大小写，`$home` 会覆盖只读的 `$HOME` 并导致后续路径解析错误；所有审计命令必须使用任务专用变量名（如 `$homePageFile`）。
+- 2026-08-25：线上复查脚本再次误用 `$home` 触发 PowerShell 只读变量错误；以后所有页面响应变量必须使用 `$homeResp`、`$pageResp`、`$routeResp` 这类明确名称，禁止使用 `$home`。
 - 2026-08-11：内容 frontmatter、工作簿或多字段审计禁止继续使用含正则的 `python -c`；即使已有转义也容易被 PowerShell 二次解析。必须通过 `apply_patch` 创建可复用 `.py` 审计脚本后执行。
 - 2026-08-11：Windows 登录 shell 可能同时注入 `Path` 与 `PATH`，导致 `Start-Process` 报环境字典重复键；启动本地预览服务时优先使用 `login: false` 的 shell。
 - 2026-08-11：Windows 下不要把 `*.py` 等通配符直接拼进传给 `rg` 的目录路径；应传目录并使用 `-g '*.py'` 过滤，否则会触发路径语法错误。
