@@ -20,7 +20,7 @@ proofStatus: "Project scope and commercial terms require configuration review"
   </header>
   <div class="oem-layers__gallery">
     <figure class="oem-layer oem-layer--product">
-      <img src="/images/products/pd60w-100w-braided/01-main.webp" alt="Braided USB-C cable starting reference" loading="lazy" />
+      <img src="/images/editorial/usb-c-cable-customization-options.webp" alt="USB-C braided cable customization options infographic" loading="lazy" />
       <figcaption><span>01</span><strong>Reference</strong><small>Choose a product and define its task</small></figcaption>
     </figure>
     <figure class="oem-layer oem-layer--options">
