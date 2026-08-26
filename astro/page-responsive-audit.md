@@ -84,11 +84,14 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 ## Page-by-page record
 
+2026-08-26 folding bracket braided cable addition: added `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` and the matching product card on `/products/usb-cables/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the USB collection shows the new product card, and the detail page exposes stock MOQ 50 pcs, custom lead time 7-10 days, custom packaging MOQ 1,000 pcs and logo support. Build, static links and page-quality checks passed.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
 | `/products/` | Product-family directory | Pass | Pass | Pass | Product family cards, badges and directory heading checked. |
 | `/products/usb-cables/` | Product collection | Pass | Pass | Pass | Product cards, visual summary and action modules checked. |
+| `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` | Product detail | Pass | Pass | Pass | New folding bracket braided cable detail page checked across desktop, tablet and mobile. |
 | `/products/hdmi-cables/` | Product collection | Pass | Pass | Pass | Used as the visual reference standard for collection pages. |
 | `/products/displayport-cables/` | Product collection | Pass | Pass | Pass | Product card and display-workload modules checked. |
 | `/products/hubs-docking/` | Product collection | Pass | Pass | Pass | Port-matrix modules checked. |

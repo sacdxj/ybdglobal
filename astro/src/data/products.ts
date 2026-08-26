@@ -111,6 +111,49 @@ export const products: Product[] = [
       ['Lead time: 1–10,000 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 10,000 pieces','To be negotiated']
     ] },
+  { model:'Folding Bracket Braided Fast Charging Cable', slug:'/products/usb-cables/folding-bracket-braided-fast-charging-cable/', family:'USB Cable', interface:'Type-C to Type-C listed; USB-A to Type-C image variant requires SKU confirmation', power:'Supplier images show 240W and 65W variants; attribute table lists 5A fast charging; final rating requires exact SKU evidence', dataRate:'Charging + mobile-device use listed; data rate not stated', video:'Built-in foldable phone stand for watching while charging; not positioned for display output', material:'Nylon / PVC jacket, pure copper conductor and braided shielding listed', lengths:'1.5 m shown in packaging artwork; other lengths require quotation confirmation', bestFor:'Retail-ready phone charging cable programs that need a foldable stand feature and optional logo branding', customization:['Stock goods available for non-custom orders from 50 pieces','Custom logo on product supported','Custom production lead time: 7-10 days after confirmation','Custom packaging MOQ: 1,000 pieces'], proofStatus:'User-supplied product images and attribute screenshot captured; exact power variant, connector SKU, packaging artwork, compliance and current quotation require confirmation', detailReady:true, cardLabel:'Foldable stand cable', cardFacts:[{label:'Stock MOQ',value:'50 pcs'},{label:'Custom lead time',value:'7-10 days'},{label:'Packaging MOQ',value:'1,000 pcs'}],
+    images:[
+      {src:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Braided fast charging cable with foldable phone stand and retail box packaging',label:'Product and packaging'},
+      {src:'/images/products/folding-bracket-braided-cable/02-stand-use.webp',alt:'Phone supported horizontally by the cable foldable bracket while charging',label:'Foldable stand use'},
+      {src:'/images/products/folding-bracket-braided-cable/05-240w-variant.webp',alt:'Type-C to Type-C braided cable image showing a 240W foldable bracket variant',label:'240W image variant'},
+      {src:'/images/products/folding-bracket-braided-cable/03-usb-a-option.webp',alt:'USB-A to Type-C braided cable image showing a 65W foldable bracket variant',label:'USB-A option image'},
+      {src:'/images/products/folding-bracket-braided-cable/04-folding-detail.webp',alt:'Close-up of the folding bracket mechanism on the braided charging cable',label:'Bracket detail'},
+      {src:'/images/products/folding-bracket-braided-cable/06-feature.webp',alt:'Supplier feature image showing folding bracket braided data cable with phone compatibility notes',label:'Feature summary'}
+    ],
+    featureHighlights:[
+      {title:'Stock orders',value:'From 50 pcs',note:'Non-custom orders can be handled as stock goods; reconfirm available connector, color and length before order.',image:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Retail box and braided foldable bracket cable for stock order review'},
+      {title:'Customization',value:'Logo supported',note:'Custom logo on the product is supported; artwork position and marking method require sample approval.',image:'/images/products/folding-bracket-braided-cable/04-folding-detail.webp',alt:'Cable bracket detail for logo placement review'},
+      {title:'Packaging',value:'1,000 pcs MOQ',note:'Custom packaging starts from 1,000 pieces and custom delivery is listed as 7-10 days after confirmation.',image:'/images/products/folding-bracket-braided-cable/06-feature.webp',alt:'Supplier feature image for packaging and product review'}
+    ],
+    sourceSnapshot:'User-provided product parameter screenshot and images reviewed 26 Aug 2026. Values below reproduce supplied material and buyer instructions and are not independent certification evidence.',
+    supplierClaims:[
+      ['Product type','USB cable / fast charging cable with foldable phone stand'],
+      ['USB type','type-c to type-c listed in attribute screenshot'],
+      ['Image variants','240W Type-C to Type-C artwork and 65W USB-A to Type-C artwork are both supplied; exact SKU matrix required'],
+      ['Function','5A Fast Charging listed in attribute screenshot'],
+      ['Material','Nylon'],
+      ['Conductor','Pure Copper'],
+      ['Shielding','Braid'],
+      ['Jacket','Nylon, PVC'],
+      ['Connectors','USB 2.0 Connector; For Iphone listed in screenshot; connector wording requires cleanup by exact SKU'],
+      ['Use','for android, mobile phone, IOS'],
+      ['Private mold','Yes'],
+      ['Brand name','Just-Link listed in screenshot; publish brand positioning should be confirmed for YBD Global site'],
+      ['Place of origin','China'],
+      ['Length cue','1500MM shown in package artwork'],
+      ['Feature cue','Foldable phone holder / 90 degree elbow design shown in supplied product images']
+    ],
+    packagingClaims:[
+      ['Price: 1-500 pieces','US$1.35 / piece'],
+      ['Price: 500+ pieces','US$1.30 / piece'],
+      ['Stock order MOQ','50 pieces for non-custom stock goods'],
+      ['Custom lead time','7-10 days after customization confirmation'],
+      ['Custom packaging MOQ','1,000 pieces'],
+      ['Logo customization','Logo can be added on the product'],
+      ['Selling units','Single item'],
+      ['Single package size','8 × 8 × 4 cm'],
+      ['Single gross weight','0.1 kg']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
