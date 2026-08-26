@@ -15,6 +15,7 @@ const packagingPriority=(label:string,index:number)=>{const value=label.toLowerC
 const primaryPackagingClaims=allPackagingClaims.map((claim,index)=>({claim,index})).sort((a,b)=>packagingPriority(a.claim[0],a.index)-packagingPriority(b.claim[0],b.index)).slice(0,2).map(item=>item.claim);
 const secondaryPackagingClaims=allPackagingClaims.filter(claim=>!primaryPackagingClaims.includes(claim));
 const galleryImages=product.variantGroups?.length?product.images?.slice(2,4):product.images?.slice(1,4);
+const galleryThumbs=galleryImages??[];
 const finalVisual=product.images?.[product.images.length-1]??product.images?.[0];
 ---
 <section class="product-detail">
@@ -23,7 +24,7 @@ const finalVisual=product.images?.[product.images.length-1]??product.images?.[0]
       {product.images?.[0]&&<img src={product.images[0].src} alt={product.images[0].alt}/>} 
       <figcaption class="product-photo__label"><span>{product.images?.[0]?.label??'Product view'}</span><small>Supplier image · evidence pending</small></figcaption>
     </figure>
-    {galleryImages?.length&&<div class="product-thumbs">{galleryImages.map(image=><figure><img src={image.src} alt={image.alt} loading="lazy"/><figcaption>{image.label}</figcaption></figure>)}</div>}
+    {galleryThumbs.length>0&&<div class="product-thumbs">{galleryThumbs.map(image=><figure><img src={image.src} alt={image.alt} loading="lazy"/><figcaption>{image.label}</figcaption></figure>)}</div>}
   </div>
   <aside class="purchase-panel"><p class="eyebrow">B2B product reference</p><h2>{product.model}</h2><p>{product.bestFor}</p><div class="purchase-panel__facts">{summaryFacts.map(fact=><div><span>{fact.label}</span><strong>{fact.value}</strong></div>)}</div><div class="purchase-actions"><a class="button button-primary" href={quoteHref}>Request a Quote</a><a class="button button-secondary" href="/request-sample/">Request Sample</a></div><div class="purchase-checklist"><span>Confirm the exact model and configuration</span><span>Review branding and packaging by project</span><span>Reconfirm quantity, sample and timing</span></div><p class="purchase-panel__evidence">Claims remain subject to model-level evidence.</p></aside>
 </section>

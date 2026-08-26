@@ -202,6 +202,33 @@ export const products: Product[] = [
       ['Lead time: over 500 pieces','To be negotiated']
     ] },
   { model:'Multiport USB-C Hub', slug:'/products/hubs-docking/multiport-usb-c-hub/', family:'Hub & Dock', interface:'Confirm host and port mix', power:'Confirm requested pass-through profile', dataRate:'Confirm by port matrix', video:'Confirm requested display outputs and compatibility', material:'Confirm enclosure by selected SKU', lengths:'Confirm host-cable configuration', bestFor:'Laptop accessory and private-label programs', customization:['Port mix','Housing','Logo','Packaging'], proofStatus:'Port matrix and OS compatibility confirmed during RFQ', cardLabel:'USB-C hub', cardFacts:[{label:'Ports',value:'Define port matrix'},{label:'Power',value:'Confirm pass-through'},{label:'Host',value:'Confirm compatibility'}], images:[{src:'/images/catalog/usb-c-hub-category.webp',alt:'Generic graphite multiport USB-C hub with HDMI, USB-A and USB-C ports',label:'Port-matrix configuration reference'}] },
+  { model:'10-in-1 Type-C Hub Multiport Docking Adapter', slug:'/products/hubs-docking/10-in-1-type-c-hub/', family:'Hub & Dock', interface:'USB-C host input with supplier-listed HDMI, VGA, RJ45, USB, SD/TF, 3.5 mm and PD ports', power:'Supplier image lists PD charging; wattage requires exact SKU confirmation', dataRate:'USB data ports listed; USB version and transfer rate require confirmation', video:'HDMI and VGA outputs listed; resolution, refresh and single/dual display behavior require evidence', material:'Metallic hub enclosure shown; exact housing material requires confirmation', lengths:'Integrated short host cable shown; cable length requires confirmation', bestFor:'Laptop accessory, office workstation, reseller and private-label hub programs that need a compact 10-port USB-C adapter', customization:['Logo by project','Packaging by project','Port labeling / artwork by quotation','Exact port matrix locked before sample approval'], proofStatus:'Alibaba listing link and product image captured; exact port spec, PD rating, video mode, Ethernet speed, OS compatibility, compliance and current quotation require source evidence', detailReady:true, cardLabel:'10-in-1 USB-C hub', cardFacts:[{label:'Price',value:'US$13 / piece'},{label:'MOQ',value:'50 pcs'},{label:'Ports',value:'10-in-1 listed'}],
+    images:[
+      {src:'/images/products/10-in-1-type-c-hub/01-main.webp',alt:'Silver 10-in-1 Type-C hub with labeled HDMI, VGA, RJ45, USB, card reader, audio and PD ports',label:'Supplier product image'}
+    ],
+    sourceUrl:'https://www.alibaba.com/product-detail/10-in-1-Type-C-Hub_60702593500.html',
+    sourceLabel:'Alibaba product 60702593500',
+    sourceSnapshot:'Alibaba listing link and publicly indexed product image reviewed 26 Aug 2026. Values below reproduce visible supplier-listing cues and require exact SKU confirmation before publication.',
+    supplierClaims:[
+      ['Listing title cue','10 in 1 Type-C Hub'],
+      ['Product format','USB-C multiport hub / docking adapter'],
+      ['Host interface','Type-C / USB-C host connector'],
+      ['Visible port map','PD, HDMI, RJ45, VGA, USB, SD, TF and 3.5 mm audio ports are shown in the supplier image'],
+      ['Video outputs','HDMI and VGA listed; exact resolution, refresh and mirror/extend behavior require confirmation'],
+      ['Network','RJ45 Ethernet port listed; 10/100/1000 Mbps support requires confirmation'],
+      ['Power delivery','PD charging port listed; wattage and pass-through conditions require confirmation'],
+      ['Card reader','SD and TF card reader slots shown'],
+      ['USB ports','Multiple USB-A data ports shown; USB version and transfer rate require confirmation'],
+      ['Audio','3.5 mm audio port shown'],
+      ['Color / housing','Silver metallic hub body shown'],
+      ['Source boundary','Original Alibaba page presented anti-bot protection during automated retrieval, so final attributes should be verified manually before public claim use']
+    ],
+    packagingClaims:[
+      ['Unit price','US$13 / piece'],
+      ['MOQ','50 pieces'],
+      ['Lead time','Not captured from accessible page snapshot; confirm by current quotation'],
+      ['Packaging','Retail or neutral packaging by project; confirm carton data before order']
+    ] },
   { model:'YBD-P150 USB-A + USB-C Dual-Port Wall Charger', slug:'/products/chargers/jl-p150-dual-port-wall-charger/', family:'Charger', interface:'USB-A + USB-C dual-port option; USB-C-only image also listed', power:'Supplier title/images state 20W while attributes state 65W; configuration conflict requires confirmation', dataRate:'Not applicable', video:'Not applicable', material:'PC fireproof-material and ABS descriptions listed; evidence pending', lengths:'US / EU plug options listed; no cable bundle confirmed', bestFor:'Mobile-phone, tablet and private-label wall-charger sourcing programs', customization:['White color','US / EU plug','USB-C or USB-A + USB-C listing options','Packaging customization from 500 pieces listed'], proofStatus:'Supplier listing captured; port version, output map, protocol, protection, safety and compliance require model-level evidence', detailReady:true, cardLabel:'USB-A + USB-C', cardFacts:[{label:'Power',value:'20W / 65W conflict'},{label:'Ports',value:'USB-A + USB-C'},{label:'Plug',value:'US / EU listed'}],
     images:[
       {src:'/images/products/jl-p150-dual-port-charger/01-main.webp',alt:'White wall charger with USB-A and USB-C output ports and EU plug',label:'Dual-port product view'},

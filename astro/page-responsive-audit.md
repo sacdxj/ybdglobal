@@ -86,6 +86,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-08-26 folding bracket braided cable addition: added `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` and the matching product card on `/products/usb-cables/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the USB collection shows the new product card, and the detail page exposes stock MOQ 50 pcs, custom lead time 7-10 days, custom packaging MOQ 1,000 pcs and logo support. Build, static links and page-quality checks passed.
 
+2026-08-26 10-in-1 Type-C hub addition: added `/products/hubs-docking/10-in-1-type-c-hub/` and the matching product card on `/products/hubs-docking/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the hub collection shows the new product card, and the detail page exposes the supplier-listed HDMI, VGA, RJ45, PD, USB, SD, TF and audio port cues. Build and static-link checks passed; page-quality still reports the previously requested long USB cable title length.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
@@ -95,6 +97,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/hdmi-cables/` | Product collection | Pass | Pass | Pass | Used as the visual reference standard for collection pages. |
 | `/products/displayport-cables/` | Product collection | Pass | Pass | Pass | Product card and display-workload modules checked. |
 | `/products/hubs-docking/` | Product collection | Pass | Pass | Pass | Port-matrix modules checked. |
+| `/products/hubs-docking/10-in-1-type-c-hub/` | Product detail | Pass | Pass | Pass | New 10-in-1 Type-C hub detail page checked across desktop, tablet and mobile. |
 | `/products/chargers/` | Product collection | Pass | Pass | Pass | Charger cards and action-flow modules checked. |
 | `/products/displayport-cables/displayport-2-1-cable/` | Product detail | Pass | Pass | Pass | Product data, packaging, final CTA and long model text checked. |
 | `/products/chargers/jl-p150-dual-port-wall-charger/` | Product detail | Pass | Pass | Pass | Purchase panel and final CTA checked. |
