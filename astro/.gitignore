@@ -52,3 +52,5 @@ hero-test.webp
 # Cache
 .cache/
 .parcel-cache/
+
+.vercel

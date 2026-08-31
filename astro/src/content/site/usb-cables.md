@@ -36,7 +36,7 @@ proofStatus: "Product range and performance require SKU evidence"
     <h2 id="usb-next-title">Choose one next action.</h2>
   </header>
   <div>
-    <a href="/products/usb-cables/usb4-140w-20gbps-full-function-cable/"><span>Compare</span><strong>Review a selected model</strong></a>
+    <a href="/products/usb-cables/usb-c-to-usb-c-pd-cable/"><span>Compare</span><strong>Review the PD60W USB-C cable</strong></a>
     <a href="/request-sample/"><span>Evaluate</span><strong>Request a physical sample</strong></a>
     <a href="/get-a-quote/?family=USB%20Cable"><span>Specify</span><strong>Prepare the USB cable RFQ</strong></a>
   </div>

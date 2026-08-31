@@ -8,6 +8,18 @@
     <div class="rfq-status"><span>Private review</span><strong>No data is transmitted</strong><small>Receiving email or CRM approval is still pending.</small></div>
   </header>
 
+  <section class="rfq-prefill" data-rfq-prefill hidden aria-live="polite">
+    <div>
+      <p class="section-label">Custom solution request</p>
+      <h3>OEM/ODM requirements generated from the factory poster.</h3>
+    </div>
+    <dl>
+      <div><dt>Program</dt><dd data-prefill-program></dd></div>
+      <div><dt>Product scope</dt><dd data-prefill-connection></dd></div>
+      <div><dt>Customization</dt><dd data-prefill-customization></dd></div>
+    </dl>
+  </section>
+
   <form class="rfq-form" novalidate>
     <input type="hidden" name="source" />
     <fieldset>
@@ -76,6 +88,7 @@
     if (!root) return;
     const form = root.querySelector('form');
     const review = root.querySelector('[data-rfq-review]');
+    const prefill = root.querySelector('[data-rfq-prefill]');
     const summary = root.querySelector('[data-rfq-summary]');
     const error = root.querySelector('[data-form-error]');
     const copyStatus = root.querySelector('[data-copy-status]');
@@ -88,6 +101,13 @@
     if (legacyProgram && !form.elements.program.value) form.elements.program.value=programAliases[legacyProgram]||legacyProgram;
     const request=params.get('request'); if(request && !form.elements.evidence.value) form.elements.evidence.value=request;
     const requirement=params.get('requirement'); if(requirement && !form.elements.performance.value) form.elements.performance.value=requirement;
+    const hasGeneratedNeed = params.get('program') || params.get('connection') || params.get('customization');
+    if (hasGeneratedNeed && prefill) {
+      prefill.hidden = false;
+      prefill.querySelector('[data-prefill-program]').textContent = form.elements.program.value || 'OEM / ODM';
+      prefill.querySelector('[data-prefill-connection]').textContent = form.elements.connection.value || 'USB cables / HD cables / DP cables / chargers / hubs';
+      prefill.querySelector('[data-prefill-customization]').textContent = form.elements.customization.value || 'Customized logo, packaging, color, connector configuration and assortment requirements';
+    }
     form.addEventListener('submit', event => {
       event.preventDefault();
       if (!form.checkValidity()) { error.hidden=false; form.reportValidity(); return; }

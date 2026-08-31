@@ -7,10 +7,19 @@ audience: "Procurement, quality, compliance and supplier-audit teams"
 intent: "Factory and certification evidence validation"
 buyerStage: "Mid to Bottom"
 status: "private-review"
-primaryCta: "Request Evidence Pack"
-primaryCtaHref: "/get-a-quote/?program=Evidence%20review&request=Evidence%20Pack"
 proofStatus: "Company name and address provided; factory role, test files and certificates require selected-model evidence"
 ---
+
+<section class="factory-poster-preview" aria-labelledby="factory-poster-preview-title">
+  <div>
+    <p class="section-label">Factory poster preview</p>
+    <h2 id="factory-poster-preview-title">Dongguan Youboda factory capability poster.</h2>
+    <p>This banner preview is prepared for factory, product range and OEM/ODM positioning review before it is used as a public-facing visual asset.</p>
+  </div>
+  <figure>
+    <img src="/images/editorial/youboda-factory-poster-preview-2x.png" alt="Dongguan Youboda factory and product range promotional poster preview" loading="eager" />
+  </figure>
+</section>
 
 <section class="evidence-map" aria-labelledby="evidence-map-title">
   <div class="evidence-map__product">

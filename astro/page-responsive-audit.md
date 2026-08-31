@@ -84,6 +84,32 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 ## Page-by-page record
 
+2026-08-31 `/quality-factory/` factory poster preview: added a full-width preview module for `youboda-factory-poster-preview.png` near the top of the evidence pillar page so the horizontal poster can be reviewed without hero-background cropping. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local preview served at `http://127.0.0.1:4321/quality-factory/` and the page response confirms the preview section and image reference are present.
+
+2026-08-31 `/quality-factory/` hero background poster preview: reused `youboda-factory-poster-preview.png` as the page hero background and added route-scoped overlay/background-position rules so the poster can sit behind the existing page title and trust panel. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local page response confirms the hero background variable and full poster preview are both present.
+
+2026-08-31 `/quality-factory/` hero text cleanup: hidden the route-scoped hero content block so the poster background is not obscured by duplicate `Trust pillar`, `Factory & Certification Evidence`, and description text. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; the full poster preview module remains below the hero.
+
+2026-08-31 `/quality-factory/` hero panel cleanup: hidden the route-scoped hero evidence panel so the poster background can display without the `Evidence gate` card covering the product area. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; the rest of the evidence page content remains unchanged.
+
+2026-08-31 `/quality-factory/` hero CTA cleanup: removed the route frontmatter `Request Evidence Pack` hero CTA so the poster background preview remains visually clean. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; lower-page evidence request CTAs remain available.
+
+2026-08-31 `/quality-factory/` hero poster brightness pass: reduced the route-scoped dark overlay on the poster hero background after review feedback that the banner text was too hard to read. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; the hidden hero content and panel remain hidden.
+
+2026-08-31 `/quality-factory/` poster sharpness pass: created `youboda-factory-poster-preview-2x.png` at 3344x1882 with light sharpening, switched both the hero background and full poster preview to the 2x asset, and adjusted the hero background sizing to reduce browser scaling blur. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local page response confirms only the 2x poster asset is referenced.
+
+2026-08-31 `/quality-factory/` hero poster readability pass: converted the route-scoped hero treatment into a clean full-poster display with no overlay, no gradient fade and no hidden layout content occupying the visual area. The hero now uses the poster's native 1672:941 aspect ratio with the 2x asset scaled to the viewport. Build passed with `ASTRO_TELEMETRY_DISABLED=1`.
+
+2026-08-31 `/quality-factory/` poster flag visibility pass: changed the route-scoped hero poster background from stretched fill to `contain` with a viewport-bounded height so the bottom country-flag row remains visible instead of being cropped by the hero frame. Build passed with `ASTRO_TELEMETRY_DISABLED=1`.
+
+2026-08-31 `/quality-factory/` poster inquiry hotspot: added an accessible transparent click target over the poster's `Send Inquiry Now For Exclusive Custom Solution` button. The hotspot routes to `/get-a-quote/` with prefilled OEM/ODM customization, connector family, performance and source parameters. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local page response confirms the hotspot link is present.
+
+2026-08-31 `/quality-factory/` poster-to-RFQ generated requirement: added a generated custom-solution summary block to the RFQ form when query parameters are present, so poster clicks show the prefilled OEM/ODM program, product scope and customization requirements before the buyer edits the detailed form. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local checks confirm both the poster hotspot and RFQ prefill module are present.
+
+2026-08-31 YBD 8-in-1 USB-C hub image update: replaced the generic hub reference image on `/products/hubs-docking/justlink-8-in-1-usb-c-hub/` with four user-supplied product images copied into `/images/products/ybd-8-in-1-usb-c-hub/` and referenced as WebP assets. The product title and display brand remain `YBD`, with `10-100 pcs` at `US$3.10 / piece`, `100-500 pcs` at `US$2.95 / piece`, `10 pcs` MOQ and logo support visible in product facts. Browser verification covered `/products/hubs-docking/` and the detail route at desktop 1440, tablet 768 and mobile 390. Result: no horizontal overflow, no stale old-price copy, and direct image URLs load at 1500 × 1500 or 800 × 800. Build and static-link checks passed; page-quality still reports only the pre-existing long USB cable title length.
+
+2026-08-26 dual-head 8-in-1 aluminium hub addition: added `/products/hubs-docking/dual-head-8-in-1-aluminium-hub/` and the matching product card on `/products/hubs-docking/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images after lazy-load scroll, the hub collection shows the new product card, and both routes expose `US$1.90 / piece` plus `100 pcs` / `100 pieces`. Build and static-link checks passed; page-quality still reports the pre-existing long USB cable title length.
+
 2026-08-26 folding bracket braided cable addition: added `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` and the matching product card on `/products/usb-cables/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the USB collection shows the new product card, and the detail page exposes stock MOQ 50 pcs, custom lead time 7-10 days, custom packaging MOQ 1,000 pcs and logo support. Build, static links and page-quality checks passed.
 
 2026-08-26 10-in-1 Type-C hub addition: added `/products/hubs-docking/10-in-1-type-c-hub/` and the matching product card on `/products/hubs-docking/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the hub collection shows the new product card, and the detail page exposes the supplier-listed HDMI, VGA, RJ45, PD, USB, SD, TF and audio port cues. Build and static-link checks passed; page-quality still reports the previously requested long USB cable title length.
@@ -97,6 +123,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/hdmi-cables/` | Product collection | Pass | Pass | Pass | Used as the visual reference standard for collection pages. |
 | `/products/displayport-cables/` | Product collection | Pass | Pass | Pass | Product card and display-workload modules checked. |
 | `/products/hubs-docking/` | Product collection | Pass | Pass | Pass | Port-matrix modules checked. |
+| `/products/hubs-docking/justlink-8-in-1-usb-c-hub/` | Product detail | Pass | Pass | Pass | YBD 8-in-1 USB-C hub updated with four product images, current tier pricing, 10 pcs MOQ and logo support. |
+| `/products/hubs-docking/dual-head-8-in-1-aluminium-hub/` | Product detail | Pass | Pass | Pass | New dual-head 8-in-1 aluminium hub detail page checked across desktop, tablet and mobile. |
 | `/products/hubs-docking/10-in-1-type-c-hub/` | Product detail | Pass | Pass | Pass | New 10-in-1 Type-C hub detail page checked across desktop, tablet and mobile. |
 | `/products/chargers/` | Product collection | Pass | Pass | Pass | Charger cards and action-flow modules checked. |
 | `/products/displayport-cables/displayport-2-1-cable/` | Product detail | Pass | Pass | Pass | Product data, packaging, final CTA and long model text checked. |

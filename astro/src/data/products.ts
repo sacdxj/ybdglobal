@@ -66,45 +66,47 @@ export const products: Product[] = [
       ['Lead time: 1–300 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 300 pieces','To be negotiated']
     ] },
-  { model:'60W / 100W Braided USB-C to USB-C Cable', slug:'/products/usb-cables/usb-c-to-usb-c-pd-cable/', family:'USB Cable', interface:'USB-C to USB-C', power:'Supplier lists 60W / 100W PD options; evidence pending', dataRate:'Supplier description lists charging + data transfer and 480 Mbps; test evidence pending', video:'Not positioned for display output', material:'ABS / PVC connector construction, tinned-copper conductor, nylon / PVC braided jacket listed', lengths:'1 m / 2 m listed', bestFor:'USB-C mobile-device, tablet, power-bank and private-label charging-cable programs', customization:['White 60W without color box','White 100W without color box','White color-box option','Logo, color and packaging require quotation'], proofStatus:'Supplier listing captured; power, protocol, data, durability, compliance and commercial claims require source documents', detailReady:true, cardFacts:[{label:'Power',value:'60W / 100W listed'},{label:'Data',value:'480 Mbps listed'},{label:'Length',value:'1 m / 2 m'}],
+  { model:'Super Fast PD60W Charging for iPhone 15 Type-C to Type-C Eco-Friendly Pure Copper TPE Cable with 1M/2M Options', slug:'/products/usb-cables/usb-c-to-usb-c-pd-cable/', family:'USB Cable', interface:'USB-C to USB-C', power:'Supplier lists PD60W charging; 100W option requires quotation confirmation', dataRate:'Supplier description lists charging + data transfer and 480 Mbps; test evidence pending', video:'Not positioned for display output', material:'ABS / PVC connector construction, tinned-copper conductor, nylon / PVC braided jacket listed', lengths:'1 m / 2 m listed', bestFor:'iPhone 15/16, USB-C mobile-device, tablet, power-bank and private-label charging-cable programs', customization:['MOQ 100 pieces for standard order','100-500 pieces: US$0.35/piece','500+ pieces: US$0.30/piece','Custom logo supported','Custom packaging supported from 1,000 pieces'], proofStatus:'Supplier listing captured; PD60W, data, durability, compliance, logo, packaging and current quotation claims require source documents or order confirmation', detailReady:true, cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-500 pcs',value:'US$0.35/pc'},{label:'500+ pcs',value:'US$0.30/pc'}],
     images:[
       {src:'/images/products/pd60w-100w-braided/01-main.webp',alt:'White braided USB-C to USB-C cable on a white background',label:'Product view'},
       {src:'/images/products/pd60w-100w-braided/02-feature.webp',alt:'Supplier image illustrating the listed 60W charging option',label:'Listed 60W option'},
       {src:'/images/products/pd60w-100w-braided/03-detail.webp',alt:'Supplier image illustrating charging and data transfer',label:'Listed data function'}
     ],
-    sourceUrl:'https://www.alibaba.com/product-detail/Best-Price-1m-2m-PD-60W_1601560186754.html',
-    sourceLabel:'Alibaba product 1601560186754',
-    sourceSnapshot:'Supplier listing reviewed 15 Aug 2026. Values below reproduce the supplied listing data and are not independent verification.',
+    sourceUrl:'https://www.alibaba.com/product-detail/Super-Fast-PD60W-Charging-for-iPhone_1601560283570.html',
+    sourceLabel:'Alibaba product 1601560283570',
+    sourceSnapshot:'Supplier listing and user-provided commercial terms reviewed 31 Aug 2026. Values below reproduce supplied listing/user terms and are not independent verification.',
     supplierClaims:[
-      ['Listing title','Best Price 1m 2m PD 60W 100W USB-C to USB-C Braided Fast Charging Data Cable'],
+      ['Listing title','Super Fast PD60W Charging for iPhone USB-C Cable'],
       ['Model number','Not stated in the supplied listing fields'],
       ['Brand name','YBD Global'],
-      ['Product name','PD60W/100W Fast Charging Cable'],
+      ['Product name','PD60W Fast Charging Cable'],
       ['USB type','type-c to type-c'],
       ['Interface','Type-C Interface'],
       ['Connectors','Nickel Plated; Type-C'],
       ['Type','type-c usb cable; Usb Cable; Fast charging cable'],
       ['Function','Charging + Data Transfer'],
-      ['Listed power options','PD 60W / 100W'],
+      ['Listed power options','PD 60W; 100W option requires quotation confirmation'],
       ['Listed data description','480 Mbps in supplier description — test evidence pending'],
       ['Material','ABS; Nylon; PVC'],
       ['Additional material entry','PVC + Copper Wire'],
       ['Conductor','Tinned Copper'],
       ['Jacket','Nylon; PVC'],
       ['Jacket material','PVC Weaving'],
-      ['Color options','White 60W without color box; White 100W without color box; White color box'],
+      ['Color options','White 60W option listed; final color-box and 100W options require quotation confirmation'],
       ['Cable length','1 m (3.28 ft) / 2 m (6.56 ft)'],
       ['Use','Smart Watch; Tablet; Power Bank; mobile phone'],
       ['Usage','Mobile phone'],
-      ['Keywords','Type-C to Type-C Fast Charging Cable'],
+      ['Keywords','Type-C to Type-C Fast Charging Cable; iPhone USB-C charging cable'],
       ['Place of origin','Guangdong, China'],
-      ['Package','Color Box'],
+      ['Package','Standard package; custom packaging supported from 1,000 pieces'],
       ['Warranty','12 months / 1 year — policy pending'],
       ['Certificate listings','FCC; RoHS; CE; EN 55032 — model scope and documents pending'],
-      ['Durability description','Supplier description mentions braided durability and bend testing — report pending']
+      ['Durability description','Supplier description mentions braided durability and bend testing — report pending'],
+      ['Custom logo','Supported; confirm artwork, placement and marking method before production'],
+      ['Custom packaging','Supported from 1,000 pieces; confirm artwork, box type, barcode and carton mark']
     ],
     packagingClaims:[
-      ['Listing price / MOQ snapshot','US$0.15–0.80; minimum order 200 pieces — reconfirm by quotation'],
+      ['Current order terms','MOQ 100 pieces. 100-500 pieces: US$0.35/piece. 500+ pieces: US$0.30/piece. Custom packaging from 1,000 pieces.'],
       ['Selling units','Single item'],
       ['Single package size','10 × 10 × 5 cm'],
       ['Single gross weight','0.1 kg'],
@@ -138,7 +140,7 @@ export const products: Product[] = [
       ['Connectors','USB 2.0 Connector; For Iphone listed in screenshot; connector wording requires cleanup by exact SKU'],
       ['Use','for android, mobile phone, IOS'],
       ['Private mold','Yes'],
-      ['Brand name','Just-Link listed in screenshot; publish brand positioning should be confirmed for YBD Global site'],
+      ['Brand name','YBD for site display; supplier screenshot brand wording requires internal source alignment'],
       ['Place of origin','China'],
       ['Length cue','1500MM shown in package artwork'],
       ['Feature cue','Foldable phone holder / 90 degree elbow design shown in supplied product images']
@@ -202,6 +204,62 @@ export const products: Product[] = [
       ['Lead time: over 500 pieces','To be negotiated']
     ] },
   { model:'Multiport USB-C Hub', slug:'/products/hubs-docking/multiport-usb-c-hub/', family:'Hub & Dock', interface:'Confirm host and port mix', power:'Confirm requested pass-through profile', dataRate:'Confirm by port matrix', video:'Confirm requested display outputs and compatibility', material:'Confirm enclosure by selected SKU', lengths:'Confirm host-cable configuration', bestFor:'Laptop accessory and private-label programs', customization:['Port mix','Housing','Logo','Packaging'], proofStatus:'Port matrix and OS compatibility confirmed during RFQ', cardLabel:'USB-C hub', cardFacts:[{label:'Ports',value:'Define port matrix'},{label:'Power',value:'Confirm pass-through'},{label:'Host',value:'Confirm compatibility'}], images:[{src:'/images/catalog/usb-c-hub-category.webp',alt:'Generic graphite multiport USB-C hub with HDMI, USB-A and USB-C ports',label:'Port-matrix configuration reference'}] },
+  { model:'Dual-Head 8-in-1 Aluminium USB-C Hub', slug:'/products/hubs-docking/dual-head-8-in-1-aluminium-hub/', family:'Hub & Dock', interface:'Dual-head host connection with supplier-listed 8-in-1 hub format', power:'Pass-through charging terms require exact SKU confirmation', dataRate:'USB data functions listed by product format; port version and transfer rate require confirmation', video:'Display-output behavior requires exact port map, host device and test evidence', material:'Aluminium / aluminium-alloy housing listed in supplier title', lengths:'Compact hub with integrated host connector; dimensions require confirmation', bestFor:'Laptop accessory, tablet productivity, ecommerce reseller and private-label hub programs that need a low-MOQ 8-in-1 aluminium hub', customization:['Logo by project','Packaging by project','Color and finish by quotation','Exact port matrix locked before sample approval'], proofStatus:'User-provided Alibaba listing URL and commercial terms captured; port matrix, charging, display behavior, OS compatibility, certification, packaging and lead time require source evidence', detailReady:true, cardLabel:'8-in-1 USB-C hub', cardFacts:[{label:'Price',value:'US$1.90 / piece'},{label:'MOQ',value:'100 pcs'},{label:'Build',value:'Aluminium listed'}],
+    images:[
+      {src:'/images/catalog/usb-c-hub-category.webp',alt:'Graphite USB-C hub with HDMI, USB-A and USB-C ports used as a hub configuration reference',label:'Hub configuration reference'}
+    ],
+    sourceUrl:'https://www.alibaba.com/product-detail/Dual-Head-8-in-1-Aluminium_1601608784151.html?selectedCarrierCode=SEMI_MANAGED_STANDARD%40%40STANDARD&priceId=383da2b7964e41268a8114778328cad5',
+    sourceLabel:'Alibaba product 1601608784151',
+    sourceSnapshot:'User-provided Alibaba listing reviewed 26 Aug 2026. Automated retrieval returned Alibaba anti-bot protection, so the record below is limited to the provided URL/title cues and user-specified quotation terms.',
+    supplierClaims:[
+      ['Listing title cue','Dual Head 8 in 1 Aluminium'],
+      ['Product format','8-in-1 USB-C hub / docking adapter'],
+      ['Host connection','Dual-head host connection listed in title cue; exact connector layout requires manual confirmation'],
+      ['Housing','Aluminium / aluminium-alloy wording appears in the listing title cue'],
+      ['Port matrix','Exact eight-port list not captured from the protected page; verify HDMI, USB, card-reader, PD, Ethernet or audio ports before publishing'],
+      ['Power delivery','Charging or pass-through behavior requires exact SKU and power-profile confirmation'],
+      ['Video output','Display capability requires the exact output port, host device, resolution and refresh evidence'],
+      ['Compatibility','Host OS and device compatibility require sample validation'],
+      ['Source boundary','Alibaba returned anti-bot protection during automated retrieval; final attributes should be verified manually before public claim use']
+    ],
+    packagingClaims:[
+      ['Unit price','US$1.90 / piece'],
+      ['MOQ','100 pieces'],
+      ['Lead time','Not captured from accessible page snapshot; confirm by current quotation'],
+      ['Packaging','Retail or neutral packaging by project; confirm package size, weight and carton data before order']
+    ] },
+  { model:'YBD 8-in-1 USB-C Hub', slug:'/products/hubs-docking/justlink-8-in-1-usb-c-hub/', family:'Hub & Dock', interface:'USB-C host hub with RJ45, SD/TF, USB2.0, USB3.0, HDMI, Type-C and PD cues shown', power:'Supplier image shows 100W input and 68W output cues; exact PD pass-through behavior requires confirmation', dataRate:'USB 3.0 and USB2.0 ports shown; transfer rate requires confirmation', video:'HDMI and 4K HDMI 1.4 cues shown; resolution, refresh and host compatibility require evidence', material:'Aluminium alloy housing shown', lengths:'15.5 cm / 6 in length and 3 cm / 1.18 in width shown; thickness cue around 1 cm / 0.39 in requires confirmation', bestFor:'Laptop accessory, computer-adapter, ecommerce reseller and private-label hub programs that need logo support and low sample MOQ', customization:['Logo supported','Packaging by project','Color and finish by quotation','Exact port matrix locked before sample approval'], proofStatus:'User-provided Alibaba listing URL, product images and buyer-specified commercial terms captured; exact port matrix, PD charging, USB data behavior, display output, OS compatibility, certification, packaging and lead time require source evidence', detailReady:true, cardLabel:'8-in-1 USB-C hub', cardFacts:[{label:'10-100 pcs',value:'US$3.10 / piece'},{label:'100-500 pcs',value:'US$2.95 / piece'},{label:'MOQ',value:'10 pcs'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/ybd-8-in-1-usb-c-hub/01-main.webp',alt:'YBD 8-in-1 USB-C hub showing RJ45, SD and TF card slots, USB2.0, USB3.0, HDMI, Type-C and PD port labels',label:'Port layout'},
+      {src:'/images/products/ybd-8-in-1-usb-c-hub/02-pd-data.webp',alt:'YBD 8-in-1 USB-C hub connected to laptop, phone and charger with PD charging and data transfer cues',label:'PD charging and data'},
+      {src:'/images/products/ybd-8-in-1-usb-c-hub/03-rj45.webp',alt:'YBD 8-in-1 USB-C hub connected to laptop with RJ45 Ethernet cable and card reader accessories',label:'RJ45 Ethernet'},
+      {src:'/images/products/ybd-8-in-1-usb-c-hub/04-aluminium-alloy.webp',alt:'YBD 8-in-1 USB-C hub aluminium alloy body with heat dissipation and portable size cues',label:'Aluminium alloy body'}
+    ],
+    sourceUrl:'https://www.alibaba.com/product-detail/Justlink-8-in-1-USB-C_1600464739154.html?spm=a2700.shop_plser.41413.41.372b1a9a3WEwZi',
+    sourceLabel:'Alibaba product 1600464739154',
+    sourceSnapshot:'User-provided Alibaba listing reviewed 31 Aug 2026. Public search/title cues identify an 8-in-1 USB-C hub with USB 3.0, smart aluminium metal wording, Type-C and PD charging for computer-adapter use. User-specified commercial terms are recorded below and require current quotation confirmation before final order.',
+    supplierClaims:[
+      ['Listing title cue','YBD 8 in 1 USB C for site display; original marketplace title requires internal source alignment'],
+      ['Product format','8-in-1 USB-C hub / computer adapter'],
+      ['Brand cue','YBD for site display'],
+      ['Host interface','Type-C / USB-C host connection listed in title cue'],
+      ['Data cue','USB 3.0 listed in public title/search cue; exact port version and transfer rate require confirmation'],
+      ['Power delivery','PD charging listed in public title/search cue; wattage and operating conditions require confirmation'],
+      ['Housing','Smart aluminium metal wording appears in public title/search cue'],
+      ['Visible port map','RJ45, SD/TF, USB2.0, USB3.0, HDMI, Type-C and PD cues are shown in the supplied product images'],
+      ['Video output','HDMI and 4K HDMI 1.4 cues shown; display capability requires exact source, display, resolution and refresh evidence'],
+      ['Size cues','15.5 cm / 6 in length and 3 cm / 1.18 in width shown; thickness cue around 1 cm / 0.39 in requires confirmation'],
+      ['Compatibility','Computer-adapter use appears in public title/search cue; host OS and model compatibility require sample validation'],
+      ['Source boundary','Final listing attributes should be verified manually against the Alibaba page, supplier SKU sheet or sample record before public claim use']
+    ],
+    packagingClaims:[
+      ['Price: 10-100 pieces','US$3.10 / piece'],
+      ['Price: 100-500 pieces','US$2.95 / piece'],
+      ['MOQ','10 pieces'],
+      ['Logo customization','Logo supported'],
+      ['Lead time','Not captured from accessible page snapshot; confirm by current quotation'],
+      ['Packaging','Retail or neutral packaging by project; confirm package size, weight and carton data before order']
+    ] },
   { model:'10-in-1 Type-C Hub Multiport Docking Adapter', slug:'/products/hubs-docking/10-in-1-type-c-hub/', family:'Hub & Dock', interface:'USB-C host input with supplier-listed HDMI, VGA, RJ45, USB, SD/TF, 3.5 mm and PD ports', power:'Supplier image lists PD charging; wattage requires exact SKU confirmation', dataRate:'USB data ports listed; USB version and transfer rate require confirmation', video:'HDMI and VGA outputs listed; resolution, refresh and single/dual display behavior require evidence', material:'Metallic hub enclosure shown; exact housing material requires confirmation', lengths:'Integrated short host cable shown; cable length requires confirmation', bestFor:'Laptop accessory, office workstation, reseller and private-label hub programs that need a compact 10-port USB-C adapter', customization:['Logo by project','Packaging by project','Port labeling / artwork by quotation','Exact port matrix locked before sample approval'], proofStatus:'Alibaba listing link and product image captured; exact port spec, PD rating, video mode, Ethernet speed, OS compatibility, compliance and current quotation require source evidence', detailReady:true, cardLabel:'10-in-1 USB-C hub', cardFacts:[{label:'Price',value:'US$13 / piece'},{label:'MOQ',value:'50 pcs'},{label:'Ports',value:'10-in-1 listed'}],
     images:[
       {src:'/images/products/10-in-1-type-c-hub/01-main.webp',alt:'Silver 10-in-1 Type-C hub with labeled HDMI, VGA, RJ45, USB, card reader, audio and PD ports',label:'Supplier product image'}
