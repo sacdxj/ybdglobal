@@ -3,7 +3,7 @@ const currentYear=new Date().getFullYear();
 const columns=[
  {title:'Products',links:[['/products/usb-cables/','USB Cables'],['/products/hdmi-cables/','HDMI Cables'],['/products/displayport-cables/','DisplayPort Cables'],['/products/hubs-docking/','Hubs & Docking'],['/products/chargers/','Chargers']]},
  {title:'Work With Us',links:[['/oem-odm/','Customization'],['/get-a-quote/','Request a Quote'],['/request-sample/','Request a Sample'],['/contact/','Contact']]},
- {title:'Company & Resources',links:[['/quality-factory/','Factory & Certification'],['/about-us/','About Us'],['/resources/','Buying Resources'],['/solutions/','Buyer Programs'],['/privacy/','Privacy'],['/terms-of-service/','Terms']]},
+ {title:'Company & Resources',links:[['/quality-factory/','Factory & Certification'],['/about-us/','FAQ'],['/resources/','Buying Resources'],['/solutions/','Buyer Programs'],['/privacy/','Privacy'],['/terms-of-service/','Terms']]},
 ];
 ---
 <footer class="site-footer"><div class="footer-ridge"></div><div class="footer-inner"><div class="footer-brand"><p class="footer-logo">YBD Global</p><p>A B2B sourcing system operated by Dongguan Youboda Technology Development Co., Ltd. for cables, hubs, docks and charging accessories.</p><p class="footer-note">Address: Room 201, No. 96 Longping West Road, Fenggang Town, Dongguan, Guangdong, China.</p></div>{columns.map(c=><nav aria-label={c.title}><h2>{c.title}</h2><ul>{c.links.map(l=><li><a href={l[0]}>{l[1]}</a></li>)}</ul></nav>)}</div><div class="footer-bottom"><span>&copy; {currentYear} Dongguan Youboda Technology Development Co., Ltd.</span><a href="/privacy/">Privacy</a><a href="/terms-of-service/">Terms</a></div></footer>

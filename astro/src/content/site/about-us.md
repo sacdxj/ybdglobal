@@ -1,73 +1,84 @@
 ---
-title: "About YBD Global Sourcing"
-description: "Learn how YBD Global supports B2B buyers with product selection, customization review, evidence checks and RFQ preparation."
+title: "FAQ"
+description: "Answers to common B2B sourcing questions about USB cables, Type-C cables, HDMI cables, DisplayPort cables, charging cables, hubs, docking stations, customization, certificates, samples and quotations."
 route: "/about-us/"
 pageType: "trust-pillar"
-audience: "Procurement teams, product managers and sourcing partners evaluating the company"
-intent: "Company profile and sourcing-model review"
+audience: "B2B buyers, importers, distributors, brands and sourcing teams comparing connectivity and charging accessories"
+intent: "Basic FAQ for product sourcing and RFQ preparation"
 buyerStage: "Mid"
 status: "private-review"
-primaryCta: "Review Products"
-primaryCtaHref: "/products/"
-proofStatus: "Company name and address provided; product and project claims remain evidence-gated"
+primaryCta: "Request a Quote"
+primaryCtaHref: "/get-a-quote/"
+proofStatus: "FAQ answers are general sourcing guidance; exact specifications, certificates, MOQ, price and lead time require selected-model and project confirmation."
 ---
 
-<section class="about-company-card" aria-label="Company profile">
-  <div>
-    <span>Company</span>
-    <strong>Dongguan Youboda Technology Development Co., Ltd.</strong>
-    <p>B2B sourcing support for connectivity and charging product projects.</p>
-  </div>
-  <div>
-    <span>Address</span>
-    <strong>Room 201, No. 96 Longping West Road</strong>
-    <p>Fenggang Town, Dongguan, Guangdong, China.</p>
-  </div>
-  <div>
-    <span>Product scope</span>
-    <strong>Connectivity and charging accessories</strong>
-    <p>USB cables, HDMI cables, DisplayPort cables, hubs, docking products and chargers.</p>
-  </div>
+<section class="support-faq-grid" aria-label="Frequently asked questions">
+  <details open>
+    <summary>What products do you manufacture?</summary>
+    <p>We specialize in USB cables, Type-C cables, HDMI cables, DisplayPort cables, charging cables, hubs and docking stations for B2B sourcing projects.</p>
+  </details>
+
+  <details>
+    <summary>Do you support OEM and ODM customization?</summary>
+    <p>Yes. OEM/ODM customization can be reviewed by project, including connector configuration, cable length, color, logo, packaging and product assortment requirements.</p>
+  </details>
+
+  <details>
+    <summary>Can I place a small trial order before bulk production?</summary>
+    <p>Yes. We can support small trial orders and bulk orders. Final MOQ depends on the selected product, customization requirements, packaging and current production plan.</p>
+  </details>
+
+  <details>
+    <summary>What certificates can you provide?</summary>
+    <p>Relevant certificates such as CE, RoHS, FCC and other documents may be provided according to the product type and destination market. Exact certificate scope should be confirmed against the selected model.</p>
+  </details>
+
+  <details>
+    <summary>Can you provide specifications and test reports?</summary>
+    <p>Product specifications, test reports and available certificate documents can be provided for reference when the exact model, configuration and market requirements are known.</p>
+  </details>
+
+  <details>
+    <summary>How do I get a quotation?</summary>
+    <p>Please send the required product type, quantity, target market, customization needs and any packaging or certificate requirements. We will review the details and provide a project-based quotation.</p>
+  </details>
+
+  <details>
+    <summary>Can I request samples?</summary>
+    <p>Sample requests can be arranged for selected products. Please confirm the product model, intended test purpose, quantity and any customization details before sample preparation.</p>
+  </details>
+
+  <details>
+    <summary>How are price and lead time confirmed?</summary>
+    <p>Price and lead time depend on the selected model, order quantity, material requirements, customization, packaging and production schedule. They should be reconfirmed before final order approval.</p>
+  </details>
 </section>
 
-<section class="about-model" aria-labelledby="about-model-title">
-  <header>
-    <p class="section-label">Company focus</p>
-    <h2 id="about-model-title">Products for each project.</h2>
-    <p>Start from the required product family, then define the configuration and evidence needed for the buyer's project.</p>
-  </header>
-  <div class="about-model__products">
-    <figure class="about-model__usb"><img src="/images/products/pd60w-100w-braided/01-main.webp" alt="USB-C cable product-family reference" loading="lazy" /><figcaption>USB &amp; charging</figcaption></figure>
-    <figure class="about-model__display"><img src="/images/products/dp21-16k-80gbps/01-main.webp" alt="DisplayPort cable product-family reference" loading="lazy" /><figcaption>Display connectivity</figcaption></figure>
-    <figure class="about-model__charging"><img src="/images/products/jl-s5-wireless-charger/01-main.webp" alt="Wireless charger product-family reference" loading="lazy" /><figcaption>Charging systems</figcaption></figure>
-  </div>
-</section>
-
-<section class="about-path" aria-labelledby="about-path-title">
+<section class="about-path" aria-labelledby="faq-path-title">
   <div>
-    <p class="section-label">Buyer path</p>
-    <h2 id="about-path-title">Requirement to RFQ.</h2>
+    <p class="section-label">RFQ path</p>
+    <h2 id="faq-path-title">Prepare the right details before quotation.</h2>
   </div>
-  <a href="/products/"><span>01</span><strong>Select</strong><small>Choose the family and product task.</small></a>
-  <a href="/oem-odm/"><span>02</span><strong>Define</strong><small>Add construction, branding and packaging.</small></a>
-  <a href="/quality-factory/"><span>03</span><strong>Review</strong><small>Map claims to the selected model and records.</small></a>
-  <a href="/get-a-quote/"><span>04</span><strong>Quote</strong><small>Send the configuration, quantity and market.</small></a>
+  <a href="/products/"><span>01</span><strong>Product</strong><small>Choose cable, hub, dock or charger.</small></a>
+  <a href="/oem-odm/"><span>02</span><strong>Custom</strong><small>Define logo, packaging, color or configuration.</small></a>
+  <a href="/quality-factory/"><span>03</span><strong>Evidence</strong><small>Review certificates, specifications and test reports.</small></a>
+  <a href="/get-a-quote/"><span>04</span><strong>Quote</strong><small>Send quantity, market and project requirements.</small></a>
 </section>
 
 <aside class="about-boundary">
   <div>
-    <span>Legal identity</span>
+    <span>Company</span>
     <strong>Dongguan Youboda Technology Development Co., Ltd.</strong>
-    <p>Company identity is shown in English for this international sourcing site.</p>
+    <p>Professional manufacturer for connectivity and charging accessory sourcing.</p>
   </div>
   <div>
-    <span>Operating address</span>
-    <strong>Room 201, No. 96 Longping West Road</strong>
-    <p>Fenggang Town, Dongguan, Guangdong, China.</p>
+    <span>Product scope</span>
+    <strong>USB, Type-C, HDMI, DP, charging, hubs and docks</strong>
+    <p>Exact product specifications are confirmed by selected model and RFQ review.</p>
   </div>
   <div>
-    <span>Evidence boundary</span>
-    <strong>Model-level review required</strong>
-    <p>Specifications, certificates, lead times, MOQ and customization terms are confirmed by selected model and project review.</p>
+    <span>Certificate scope</span>
+    <strong>CE, RoHS, FCC and market-specific documents</strong>
+    <p>Document availability depends on product category, model, scope and destination market.</p>
   </div>
 </aside>
