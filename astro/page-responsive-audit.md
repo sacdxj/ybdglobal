@@ -88,6 +88,10 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-08-31 `/quality-factory/` hero background poster preview: reused `youboda-factory-poster-preview.png` as the page hero background and added route-scoped overlay/background-position rules so the poster can sit behind the existing page title and trust panel. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local page response confirms the hero background variable and full poster preview are both present.
 
+2026-09-01 `/quality-factory/` visual summary copy replacement: replaced the route-scoped visual-summary story text with professional cable manufacturer positioning, USB/Type-C/HDMI/DP/charging cable plus hub and docking product scope, factory strengths, OEM/ODM support, trial/bulk order support, and CE/RoHS/FCC certificate availability. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local preview response confirms the new copy is present. Three-viewport status remains Pass based on unchanged responsive CSS.
+
+2026-09-01 `/quality-factory/` visual summary image replacement: replaced the route-scoped `PageVisualSummary` media with the user-provided standalone Production Process graphic at `/images/editorial/quality-factory-visual-summary.png`. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local preview response confirms the image URL returns the new 1,871,318-byte asset. Three-viewport status remains Pass based on the existing module dimensions and unchanged responsive CSS.
+
 2026-08-31 `/quality-factory/` hero text cleanup: hidden the route-scoped hero content block so the poster background is not obscured by duplicate `Trust pillar`, `Factory & Certification Evidence`, and description text. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; the full poster preview module remains below the hero.
 
 2026-08-31 `/quality-factory/` hero panel cleanup: hidden the route-scoped hero evidence panel so the poster background can display without the `Evidence gate` card covering the product area. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; the rest of the evidence page content remains unchanged.
