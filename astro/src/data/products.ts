@@ -151,6 +151,48 @@ export const products: Product[] = [
       ['Lead time','Not provided in supplied material; confirm by current quotation'],
       ['Packaging evidence','Confirm box type, artwork, barcode, label and carton data before order']
     ] },
+  { model:'YBD 1m 60W Dual Type-C PD Fast Charging Cable', slug:'/products/usb-cables/factory-direct-60w-dual-type-c-cable/', family:'USB Cable', interface:'Dual Type-C / USB-C to USB-C cable for cell phones', power:'60W PD listed in title; added supplier image states 20V 3A input, requiring exact SKU confirmation', dataRate:'USB 3.0, USB 3.1 and USB 3.2 connector wording listed; data behavior requires model confirmation', video:'Not positioned for display output', material:'TPE jacket, pure copper conductor and braid shielding listed', lengths:'1 m listed in title; image also shows 1 m / 1.5 m / 2 m options', bestFor:'Cell-phone, USB-C mobile-device, ecommerce, wholesale and private-label programs that need a factory-direct braided dual Type-C fast charging cable', customization:['MOQ 100 pcs','100-1000 pcs: US$0.30 / piece','1000+ pcs: US$0.28 / piece','Custom logo on product supported','Customization supported','Packaging by project','Length options by quotation'], proofStatus:'User-provided title, parameter screenshot and product images captured; exact 60W/3A profile, connector version, length options, logo artwork, packaging and compliance require selected-model evidence', detailReady:true, cardLabel:'60W dual Type-C cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-1000 pcs',value:'US$0.30 / piece'},{label:'1000+ pcs',value:'US$0.28 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/factory-direct-60w-dual-type-c-cable/01-product-pack.webp',alt:'White dual Type-C fast charging cable coiled in a simple retail holder on a wood surface',label:'Product and pack'},
+      {src:'/images/products/factory-direct-60w-dual-type-c-cable/02-dual-type-c-spec.webp',alt:'Dual Type-C cable supplier image showing TPE, 120 strands of copper, OD3.7 and 60W fast charging cues',label:'Dual Type-C spec cues'},
+      {src:'/images/products/factory-direct-60w-dual-type-c-cable/03-phone-charging.webp',alt:'White Type-C cable connected to a cell phone with low-temperature safe fast charging cue',label:'Phone charging use'},
+      {src:'/images/products/factory-direct-60w-dual-type-c-cable/04-3a-speed.webp',alt:'Dual Type-C cable charging speed image showing 55 percent in 30 minutes with 20V 3A input for 60W fast charging',label:'3A charging speed'}
+    ],
+    featureHighlights:[
+      {title:'Fast charging',value:'60W / 3A listed',note:'Title lists 60W PD, and the added supplier image states 20V 3A input; confirm exact charging profile before quotation.',image:'/images/products/factory-direct-60w-dual-type-c-cable/04-3a-speed.webp',alt:'Dual Type-C cable charging speed image with 20V 3A input cue'},
+      {title:'Construction',value:'TPE + copper',note:'TPE jacket, pure copper conductor and braid shielding are listed in the supplied parameter table.',image:'/images/products/factory-direct-60w-dual-type-c-cable/01-product-pack.webp',alt:'White dual Type-C cable product and packaging holder'},
+      {title:'OEM sourcing',value:'Factory direct',note:'Product logo, customization, packaging, brand and length options should be reviewed by project.',image:'/images/products/factory-direct-60w-dual-type-c-cable/03-phone-charging.webp',alt:'White Type-C cable connected to a cell phone'}
+    ],
+    sourceSnapshot:'User-provided product title, parameter screenshot and images reviewed 2 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Factory Direct 1m 60W Dual Type-C PD Fast Charging Cable with Braid Shielding TPE Jacket Pure Copper Conductor for Cell Phones'],
+      ['Product format','Dual Type-C / USB-C to USB-C fast charging cable'],
+      ['USB type','Standard'],
+      ['Function','3A Fast Charging'],
+      ['Power','60W PD listed in title and product image'],
+      ['Material','TPE'],
+      ['Conductor','Pure Copper'],
+      ['Shielding','Braid'],
+      ['Jacket','TPE'],
+      ['Connectors','USB 3.0 Connector, USB 3.2 connector, USB 3.1 connector, Type-C'],
+      ['Use','mobile phone'],
+      ['Private mold','Yes'],
+      ['Brand Name','OEM'],
+      ['Model number','NO'],
+      ['Type','Fast charging cable, Flat Cable, type-c usb cable'],
+      ['Length cue','1 m listed in title; 1 m / 1.5 m / 2 m shown in image'],
+      ['Place of origin','Guangdong, China']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['Price: 100-1000 pcs','US$0.30 / piece'],
+      ['Price: 1000+ pcs','US$0.28 / piece'],
+      ['Logo support','Custom logo on product supported'],
+      ['Customization','Customization supported'],
+      ['OEM support','Brand Name listed as OEM'],
+      ['Packaging','Packaging by project; confirm package style, artwork, barcode and carton data'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'240W 5A Fast Charging Cable & Phone Holder-Braided USB-C to C 2-in-1 Invisible Design Type C Cable for Smartphones', slug:'/products/usb-cables/folding-bracket-braided-fast-charging-cable/', family:'USB Cable', interface:'Type-C to Type-C listed; USB-A to Type-C image variant requires SKU confirmation', power:'Supplier images show 240W and 65W variants; attribute table lists 5A fast charging; final rating requires exact SKU evidence', dataRate:'Charging + mobile-device use listed; data rate not stated', video:'Built-in foldable phone stand for watching while charging; not positioned for display output', material:'Nylon / PVC jacket, pure copper conductor and braided shielding listed', lengths:'1.5 m shown in packaging artwork; other lengths require quotation confirmation', bestFor:'Retail-ready phone charging cable programs that need a foldable stand feature and optional logo branding', customization:['Stock goods available for non-custom orders from 50 pieces','Custom logo on product supported','Custom production lead time: 7-10 days after confirmation','Custom packaging MOQ: 1,000 pieces'], proofStatus:'User-supplied product images and attribute screenshot captured; exact power variant, connector SKU, packaging artwork, compliance and current quotation require confirmation', detailReady:true, cardLabel:'Foldable stand cable', cardFacts:[{label:'Stock MOQ',value:'50 pcs'},{label:'Custom lead time',value:'7-10 days'},{label:'Packaging MOQ',value:'1,000 pcs'}],
     images:[
       {src:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Braided fast charging cable with foldable phone stand and retail box packaging',label:'Product and packaging'},
