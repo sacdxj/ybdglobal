@@ -113,6 +113,44 @@ export const products: Product[] = [
       ['Lead time: 1–10,000 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 10,000 pieces','To be negotiated']
     ] },
+  { model:'YBD Transparent 65W Fast Charge Type-C Cable', slug:'/products/usb-cables/transparent-65w-fast-charge-type-c-cable/', family:'USB Cable', interface:'Type-C to Type-C cable for iPhone and USB-C mobile devices', power:'65W and PD 3A fast charging listed; exact profile requires selected-sample confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'PVC listed in key attributes; title mentions TPE and pure copper conductor', lengths:'1 m listed in title', bestFor:'iPhone 16, USB-C smartphone, mobile-phone accessory, ecommerce and private-label cable programs that need a transparent braided 65W Type-C cable', customization:['Customization supported','Custom packaging supported','Color and gradient finish by quotation','Exact connector and package artwork locked before sample approval'], proofStatus:'User-provided title, key-attribute screenshot, price terms and product images captured; exact material stack, charging profile, conductor, compatibility, packaging and compliance require source evidence', detailReady:true, cardLabel:'Transparent 65W Type-C', cardFacts:[{label:'100-1000 pcs',value:'US$0.60 / piece'},{label:'1000+ pcs',value:'US$0.56 / piece'},{label:'Length',value:'1 m listed'},{label:'Packaging',value:'Custom supported'}],
+    images:[
+      {src:'/images/products/transparent-65w-type-c-cable/02-65w-gradient.webp',alt:'Transparent 65W Type-C fast charging braided cable with gradient ice crystal connector shell',label:'65W gradient cable'},
+      {src:'/images/products/transparent-65w-type-c-cable/01-iphone16-fit.webp',alt:'Transparent Type-C cable connector shown with iPhone 16 USB-C compatibility cue',label:'iPhone 16 compatibility cue'},
+      {src:'/images/products/transparent-65w-type-c-cable/03-crystal-gradient.webp',alt:'Transparent gradient Type-C cable with ice crystal shell and braided cable options',label:'Crystal gradient options'},
+      {src:'/images/products/transparent-65w-type-c-cable/04-green-product.webp',alt:'Green transparent Type-C to Type-C braided cable product view on white background',label:'Green product view'},
+      {src:'/images/products/transparent-65w-type-c-cable/05-pink-product.webp',alt:'Pink transparent Type-C to Type-C braided cable product view on white background',label:'Pink product view'},
+      {src:'/images/products/transparent-65w-type-c-cable/06-durability.webp',alt:'Transparent ice crystal Type-C cable durability comparison image with bend detail',label:'Durability cue'}
+    ],
+    featureHighlights:[
+      {title:'Fast charging',value:'65W / 3A listed',note:'Confirm PD profile, current, device compatibility and cable construction before final order.',image:'/images/products/transparent-65w-type-c-cable/02-65w-gradient.webp',alt:'Transparent 65W Type-C cable supplier image'},
+      {title:'Transparent shell',value:'Ice crystal style',note:'Gradient color, transparent connector shell and braided jacket are shown in supplied product images.',image:'/images/products/transparent-65w-type-c-cable/03-crystal-gradient.webp',alt:'Transparent gradient Type-C cable with three color options'},
+      {title:'Packaging',value:'Custom supported',note:'Custom packaging is supported by project; confirm artwork, box type, barcode and carton mark before production.',image:'/images/products/transparent-65w-type-c-cable/01-iphone16-fit.webp',alt:'Type-C cable connector with mobile-phone compatibility cue'}
+    ],
+    sourceSnapshot:'User-provided product title, key-attribute screenshot, commercial terms and images reviewed 2 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Transparent 65W Fast Charge Type-C Cable 1m PD 3A Fast Charging Braid Shielding TPE Pure Copper Conductor for iPhone'],
+      ['Product format','Transparent Type-C fast charging cable'],
+      ['Connectors','For Iphone listed in key attributes; Type-C connector shown in images'],
+      ['Type','Usb Cable; Usb Cable for Iphone; Fast charging cable'],
+      ['Use','mobile phone, Camera, Computer and other listed uses shown truncated in screenshot'],
+      ['Function','3A Fast Charging'],
+      ['Power','65W listed in title and product images'],
+      ['Length','1 m listed in title'],
+      ['Material','PVC listed in key attributes; title mentions TPE'],
+      ['Conductor','Pure copper conductor listed in title'],
+      ['Shielding','Braid'],
+      ['Appearance','Transparent ice crystal gradient connector shell and braided jacket shown'],
+      ['Compatibility cue','iPhone 16 and USB-C smartphone compatibility shown in supplied image; exact device compatibility requires sample validation']
+    ],
+    packagingClaims:[
+      ['Price: 100-1000 pieces','US$0.60 / piece'],
+      ['Price: 1000+ pieces','US$0.56 / piece'],
+      ['Customization','Customization supported'],
+      ['Custom packaging','Packaging customization supported'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation'],
+      ['Packaging evidence','Confirm box type, artwork, barcode, label and carton data before order']
+    ] },
   { model:'240W 5A Fast Charging Cable & Phone Holder-Braided USB-C to C 2-in-1 Invisible Design Type C Cable for Smartphones', slug:'/products/usb-cables/folding-bracket-braided-fast-charging-cable/', family:'USB Cable', interface:'Type-C to Type-C listed; USB-A to Type-C image variant requires SKU confirmation', power:'Supplier images show 240W and 65W variants; attribute table lists 5A fast charging; final rating requires exact SKU evidence', dataRate:'Charging + mobile-device use listed; data rate not stated', video:'Built-in foldable phone stand for watching while charging; not positioned for display output', material:'Nylon / PVC jacket, pure copper conductor and braided shielding listed', lengths:'1.5 m shown in packaging artwork; other lengths require quotation confirmation', bestFor:'Retail-ready phone charging cable programs that need a foldable stand feature and optional logo branding', customization:['Stock goods available for non-custom orders from 50 pieces','Custom logo on product supported','Custom production lead time: 7-10 days after confirmation','Custom packaging MOQ: 1,000 pieces'], proofStatus:'User-supplied product images and attribute screenshot captured; exact power variant, connector SKU, packaging artwork, compliance and current quotation require confirmation', detailReady:true, cardLabel:'Foldable stand cable', cardFacts:[{label:'Stock MOQ',value:'50 pcs'},{label:'Custom lead time',value:'7-10 days'},{label:'Packaging MOQ',value:'1,000 pcs'}],
     images:[
       {src:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Braided fast charging cable with foldable phone stand and retail box packaging',label:'Product and packaging'},
