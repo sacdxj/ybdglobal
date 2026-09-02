@@ -263,6 +263,51 @@ export const products: Product[] = [
       ['Lead time','Not captured from accessible page snapshot; confirm by current quotation'],
       ['Packaging','Retail or neutral packaging by project; confirm package size, weight and carton data before order']
     ] },
+  { model:'YBD-CX11 11-in-1 USB-C Hub 3.0 Multiport Adapter', slug:'/products/hubs-docking/jl-cx11-11-in-1-usb-c-hub/', family:'Hub & Dock', interface:'USB-C host docking station with listed USB 3.0, USB 2.0, HDMI, VGA, RJ45, SD, TF, AUX and Type-C/PD functions', power:'100W PD listed; pass-through output and host conditions require exact SKU confirmation', dataRate:'USB 3.0 interface type listed; USB port map lists 3.0*1 + 2.0*3; transfer performance requires confirmation', video:'4K@30Hz HDMI listed and VGA shown; display behavior requires host, monitor and mode confirmation', material:'Aluminum alloy / ABS + aluminum alloy listed', lengths:'Integrated short host cable shown; cable length requires confirmation', bestFor:'Laptop docking, office workstation, tablet productivity, reseller and private-label programs that need an 11-port USB-C adapter with HDMI, VGA, Ethernet, card reader and PD functions', customization:['Custom logo supported','OEM/ODM customization by project','Color box packaging listed','Exact port matrix locked before sample approval'], proofStatus:'User-provided title, commercial terms, parameter screenshot and product images captured; exact port count, PD behavior, HDMI/VGA display mode, RJ45 speed, OS compatibility, compliance scope, packaging and lead time require source evidence', detailReady:true, cardLabel:'11-in-1 USB-C hub', cardFacts:[{label:'50-100 pcs',value:'US$5.80 / piece'},{label:'100-500 pcs',value:'US$5.60 / piece'},{label:'500+ pcs',value:'US$5.50 / piece'},{label:'1000+ pcs',value:'US$5.30 / piece'}],
+    images:[
+      {src:'/images/products/jl-cx11-11-in-1-usb-c-hub/01-main.webp',alt:'YBD-CX11 11-in-1 USB-C hub with HDMI, VGA, RJ45, SD, TF, USB, AUX and Type-C connection cues',label:'Port overview'},
+      {src:'/images/products/jl-cx11-11-in-1-usb-c-hub/02-port-layout.webp',alt:'11-in-1 USB-C hub connected to a laptop with labeled Ethernet, VGA, HDMI, SD, TF, AUX, USB-C, USB 3.0 and USB 2.0 ports',label:'11-in-1 port layout'},
+      {src:'/images/products/jl-cx11-11-in-1-usb-c-hub/03-tablet-use.webp',alt:'YBD-CX11 USB-C hub connected to an iPad with keyboard and mouse for office use',label:'Tablet workstation use'},
+      {src:'/images/products/jl-cx11-11-in-1-usb-c-hub/04-4k-hdmi.webp',alt:'YBD-CX11 USB-C hub connected from laptop to display with listed 4K UHD HDMI at 30Hz cue',label:'Listed 4K HDMI use'}
+    ],
+    featureHighlights:[
+      {title:'Port matrix',value:'11-in-1 listed',note:'Confirm exact port count, simultaneous-use behavior and host compatibility before order.',image:'/images/products/jl-cx11-11-in-1-usb-c-hub/02-port-layout.webp',alt:'11-in-1 USB-C hub port layout with Ethernet, VGA, HDMI, card reader, USB and Type-C labels'},
+      {title:'Display output',value:'4K@30Hz listed',note:'HDMI 4K@30Hz and VGA are listed or shown; source device, monitor and display mode require validation.',image:'/images/products/jl-cx11-11-in-1-usb-c-hub/04-4k-hdmi.webp',alt:'USB-C hub connected to a display with 4K UHD HDMI cue'},
+      {title:'Customization',value:'Logo supported',note:'Custom logo and OEM/ODM requirements should be reviewed with artwork, order quantity and packaging before production.',image:'/images/products/jl-cx11-11-in-1-usb-c-hub/03-tablet-use.webp',alt:'USB-C hub in tablet workstation use case'}
+    ],
+    sourceSnapshot:'User-provided product title, parameter screenshot, commercial terms and images reviewed 2 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','11 in 1 USB C Hub 3.0 Multiport Adapter 4K HDMI VGA Gigabit Ethernet 100W PD SD TF Card Reader Type-C Laptop Docking Station'],
+      ['Model number','YBD-CX11'],
+      ['Brand name','YBD'],
+      ['Product format','11-in-1 USB-C hub / laptop docking station'],
+      ['Ports','>= 10 listed in parameter screenshot; title states 11 in 1'],
+      ['Interface type','USB 3.0'],
+      ['USB port map','3.0*1 + 2.0*3'],
+      ['Function','Data Transfer + Charging'],
+      ['Power delivery','100W PD listed in title; exact pass-through behavior requires confirmation'],
+      ['HDMI version','4K@30Hz listed'],
+      ['Video ports','HDMI and VGA shown/listed'],
+      ['RJ45 Gigabit Speed','100Mbps listed in screenshot despite title saying Gigabit Ethernet; resolve before publishing a gigabit claim'],
+      ['Card reader','SD and TF card reader shown/listed'],
+      ['Material','Aluminum Alloy; ABS + Aluminum alloy'],
+      ['Color','Grey'],
+      ['Products status','Stock'],
+      ['Package','Color Box'],
+      ['Place of origin','Guangdong, China'],
+      ['Warranty','12 months'],
+      ['Certification','RoHS; CE; FCC — model scope and documents pending']
+    ],
+    packagingClaims:[
+      ['Price: 50-100 pieces','US$5.80 / piece'],
+      ['Price: 100-500 pieces','US$5.60 / piece'],
+      ['Price: 500+ pieces','US$5.50 / piece'],
+      ['Price: 1000+ pieces','US$5.30 / piece'],
+      ['Customization','Customization supported'],
+      ['Logo customization','Logo can be added'],
+      ['Packaging','Color box listed; confirm artwork, barcode and carton data before order'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'10-in-1 Type-C Hub Multiport Docking Adapter', slug:'/products/hubs-docking/10-in-1-type-c-hub/', family:'Hub & Dock', interface:'USB-C host input with supplier-listed HDMI, VGA, RJ45, USB, SD/TF, 3.5 mm and PD ports', power:'Supplier image lists PD charging; wattage requires exact SKU confirmation', dataRate:'USB data ports listed; USB version and transfer rate require confirmation', video:'HDMI and VGA outputs listed; resolution, refresh and single/dual display behavior require evidence', material:'Metallic hub enclosure shown; exact housing material requires confirmation', lengths:'Integrated short host cable shown; cable length requires confirmation', bestFor:'Laptop accessory, office workstation, reseller and private-label hub programs that need a compact 10-port USB-C adapter', customization:['Logo by project','Packaging by project','Port labeling / artwork by quotation','Exact port matrix locked before sample approval'], proofStatus:'Alibaba listing link and product image captured; exact port spec, PD rating, video mode, Ethernet speed, OS compatibility, compliance and current quotation require source evidence', detailReady:true, cardLabel:'10-in-1 USB-C hub', cardFacts:[{label:'Price',value:'US$13 / piece'},{label:'MOQ',value:'50 pcs'},{label:'Ports',value:'10-in-1 listed'}],
     images:[
       {src:'/images/products/10-in-1-type-c-hub/01-main.webp',alt:'Silver 10-in-1 Type-C hub with labeled HDMI, VGA, RJ45, USB, card reader, audio and PD ports',label:'Supplier product image'}
