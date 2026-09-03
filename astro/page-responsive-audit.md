@@ -142,12 +142,15 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-03 footer logo border match pass: merged the header and footer logo plate CSS so both use the same 248px by 70px white plate, 205px inner logo width, 8px radius, border opacity and shadow. This removes the footer-only visual difference that made the lower logo block read slightly different from the header.
 
+2026-09-03 USB to L 2A iPhone cable addition: added `/products/usb-cables/1m-usb-to-l-2a-fast-charging-iphone-cable/` and the matching product card on `/products/usb-cables/` with six user-supplied product images converted to WebP. Browser verification covered the USB collection and detail route with desktop, tablet and mobile viewport attempts. Result: no horizontal overflow, no broken images, the collection and detail page expose `100 pcs`, `US$0.29 / piece`, `US$0.27 / piece`, logo support and custom packaging review language. Build passed with `ASTRO_TELEMETRY_DISABLED=1`.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
 | `/products/` | Product-family directory | Pass | Pass | Pass | Product family cards, badges and directory heading checked. |
 | `/products/usb-cables/` | Product collection | Pass | Pass | Pass | Product cards, visual summary and action modules checked. |
 | `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` | Product detail | Pass | Pass | Pass | New folding bracket braided cable detail page checked across desktop, tablet and mobile. |
+| `/products/usb-cables/1m-usb-to-l-2a-fast-charging-iphone-cable/` | Product detail | Pass | Pass | Pass | New USB to L 2A iPhone cable detail page checked with supplied images, 100 pcs MOQ, US$0.29 / piece, 1000+ US$0.27 / piece, logo and custom packaging support. |
 | `/products/hdmi-cables/` | Product collection | Pass | Pass | Pass | Used as the visual reference standard for collection pages. |
 | `/products/displayport-cables/` | Product collection | Pass | Pass | Pass | Product card and display-workload modules checked. |
 | `/products/hubs-docking/` | Product collection | Pass | Pass | Pass | Port-matrix modules checked. |

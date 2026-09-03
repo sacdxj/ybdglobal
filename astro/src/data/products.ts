@@ -193,6 +193,51 @@ export const products: Product[] = [
       ['Packaging','Packaging by project; confirm package style, artwork, barcode and carton data'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'1M High Quality USB to L 2A Fast Charging USB Cable for iPhone 14 13 12 11 10 8 7 6 Pro Max XS XR', slug:'/products/usb-cables/1m-usb-to-l-2a-fast-charging-iphone-cable/', family:'USB Cable', interface:'USB-A to Lightning-style / L connector for iPhone models listed by user; exact connector authorization and compatibility require confirmation', power:'2A fast charging listed; supplier image also shows 20W cue requiring selected-SKU confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'TPE jacket, pure copper conductor and braid shielding listed', lengths:'1 m requested; images also show 1 m / 1.5 m / 2 m options', bestFor:'Wholesale iPhone charging-cable programs that need low MOQ, custom logo, custom packaging and bulk carton supply review', customization:['MOQ 100 pcs','100 pcs: US$0.29 / piece','1000+ pcs: US$0.27 / piece','Custom logo supported','Custom packaging supported','Length options by quotation'], proofStatus:'User-provided title, parameter screenshot, price terms and product images captured; exact connector, compatibility, 2A/20W profile, MFi/licensing status, logo, packaging and compliance require selected-model evidence', detailReady:true, cardLabel:'USB to L iPhone cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100 pcs',value:'US$0.29 / piece'},{label:'1000+ pcs',value:'US$0.27 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/01-main.webp',alt:'White USB-A to Lightning-style iPhone charging cable coiled on a white background',label:'Product view'},
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/02-spec.webp',alt:'Supplier image showing USB to L iPhone cable with 20W, OD2.9 and 1m 1.5m 2m cues',label:'Listed spec cues'},
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/03-packaged.webp',alt:'Packaged white USB fast charging cables with fully compatible no pop-ups supplier cue',label:'Packaged cable view'},
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/04-phone-use.webp',alt:'Close-up USB-A to Lightning-style cable near an iPhone with 20W TPE material cue',label:'Phone-use image'},
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/05-carton.webp',alt:'Bulk carton of individually bundled white iPhone charging cables in clear packaging',label:'Bulk carton'},
+      {src:'/images/products/1m-usb-to-l-2a-iphone-cable/06-parameters.webp',alt:'User-provided parameter table for USB to L 2A fast charging cable',label:'Parameter table'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ and price tiers are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/1m-usb-to-l-2a-iphone-cable/05-carton.webp',alt:'Bulk carton of bundled white charging cables'},
+      {title:'Charging',value:'2A listed',note:'The request lists 2A fast charging while one image shows a 20W cue; confirm the exact charging profile and device behavior by sample.',image:'/images/products/1m-usb-to-l-2a-iphone-cable/02-spec.webp',alt:'Supplier image with 20W and OD2.9 cues'},
+      {title:'OEM packaging',value:'Logo + packaging',note:'Custom logo and custom packaging are supported by project; artwork, placement, box style and carton mark need approval.',image:'/images/products/1m-usb-to-l-2a-iphone-cable/03-packaged.webp',alt:'Packaged white USB fast charging cables'}
+    ],
+    sourceSnapshot:'User-provided product title, parameter screenshot, commercial terms and images reviewed 3 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','1M High Quality USB to L 2A Fast Charging USB Cable for iPhone 14 13 12 11 10 8 7 6 Pro Max XS XR'],
+      ['Product format','USB-A to Lightning-style / L fast charging cable'],
+      ['USB type','Standard'],
+      ['Function','2A fast charging listed by user; 20W shown in supplied image'],
+      ['Material','TPE'],
+      ['Conductor','Pure Copper'],
+      ['Shielding','Braid'],
+      ['Jacket','TPE'],
+      ['Connectors','USB 3.0 Connector, USB 3.2 connector, USB 3.1 connector, Type C listed in screenshot; product images show USB-A to Lightning-style / L connector, requiring SKU confirmation'],
+      ['Use','mobile phone'],
+      ['Private mold','Yes'],
+      ['Brand Name','OEM'],
+      ['Model number','NO'],
+      ['Type','Fast charging cable, Flat Cable, type-c usb cable'],
+      ['Length cue','1 m requested; 1 m / 1.5 m / 2 m shown in supplied image'],
+      ['Outer diameter cue','OD2.9 shown in supplied image'],
+      ['Compatibility cue','iPhone 14 / 13 / 12 / 11 / 10 / 8 / 7 / 6 / Pro Max / XS / XR listed by user; sample validation and licensing status required'],
+      ['Place of origin','Guangdong, China']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['Price: 100 pcs','US$0.29 / piece'],
+      ['Price: 1000+ pcs','US$0.27 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Custom packaging supported'],
+      ['Customization','Customization supported'],
+      ['Packaging evidence','Bulk carton and bundled cable packaging shown in supplied images; confirm final bag, box, barcode and carton mark'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'240W 5A Fast Charging Cable & Phone Holder-Braided USB-C to C 2-in-1 Invisible Design Type C Cable for Smartphones', slug:'/products/usb-cables/folding-bracket-braided-fast-charging-cable/', family:'USB Cable', interface:'Type-C to Type-C listed; USB-A to Type-C image variant requires SKU confirmation', power:'Supplier images show 240W and 65W variants; attribute table lists 5A fast charging; final rating requires exact SKU evidence', dataRate:'Charging + mobile-device use listed; data rate not stated', video:'Built-in foldable phone stand for watching while charging; not positioned for display output', material:'Nylon / PVC jacket, pure copper conductor and braided shielding listed', lengths:'1.5 m shown in packaging artwork; other lengths require quotation confirmation', bestFor:'Retail-ready phone charging cable programs that need a foldable stand feature and optional logo branding', customization:['Stock goods available for non-custom orders from 50 pieces','Custom logo on product supported','Custom production lead time: 7-10 days after confirmation','Custom packaging MOQ: 1,000 pieces'], proofStatus:'User-supplied product images and attribute screenshot captured; exact power variant, connector SKU, packaging artwork, compliance and current quotation require confirmation', detailReady:true, cardLabel:'Foldable stand cable', cardFacts:[{label:'Stock MOQ',value:'50 pcs'},{label:'Custom lead time',value:'7-10 days'},{label:'Packaging MOQ',value:'1,000 pcs'}],
     images:[
       {src:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Braided fast charging cable with foldable phone stand and retail box packaging',label:'Product and packaging'},
