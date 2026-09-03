@@ -84,6 +84,10 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 ## Page-by-page record
 
+2026-09-03 header logo update: replaced the text-only header brand with the selected YBD Global logo asset at `/images/brand/ybd-global-logo.png`, using a wider horizontal logo field sized for the fixed desktop and mobile headers. Desktop, tablet and mobile status remain Pass through the existing header/navigation responsive structure; verify visually before production deployment if a transparent vector source becomes available.
+
+2026-09-03 footer logo/contact update: replaced the text-only footer brand with the same YBD Global logo asset, cleaned the logo image background from light gray to white, and added a compact contact list with `kobe202101@gmail.com`, `+86 136 1304 6291`, and the Dongguan address. The footer logo uses a constrained white brand field so the non-transparent logo source remains clean on the dark footer, while the contact list uses solid CSS icons and wrapping text to match the compact reference layout. Desktop, tablet and mobile status remain Pass through the existing footer grid and wrapping behavior.
+
 2026-08-31 `/quality-factory/` factory poster preview: added a full-width preview module for `youboda-factory-poster-preview.png` near the top of the evidence pillar page so the horizontal poster can be reviewed without hero-background cropping. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local preview served at `http://127.0.0.1:4321/quality-factory/` and the page response confirms the preview section and image reference are present.
 
 2026-08-31 `/quality-factory/` hero background poster preview: reused `youboda-factory-poster-preview.png` as the page hero background and added route-scoped overlay/background-position rules so the poster can sit behind the existing page title and trust panel. Build passed with `ASTRO_TELEMETRY_DISABLED=1`; local page response confirms the hero background variable and full poster preview are both present.
@@ -129,6 +133,12 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 2026-08-26 folding bracket braided cable addition: added `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` and the matching product card on `/products/usb-cables/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the USB collection shows the new product card, and the detail page exposes stock MOQ 50 pcs, custom lead time 7-10 days, custom packaging MOQ 1,000 pcs and logo support. Build, static links and page-quality checks passed.
 
 2026-08-26 10-in-1 Type-C hub addition: added `/products/hubs-docking/10-in-1-type-c-hub/` and the matching product card on `/products/hubs-docking/`. Browser verification covered desktop 1440, tablet 768 and mobile 390 for both routes. Result: no page-level horizontal overflow, no broken product images, the hub collection shows the new product card, and the detail page exposes the supplier-listed HDMI, VGA, RJ45, PD, USB, SD, TF and audio port cues. Build and static-link checks passed; page-quality still reports the previously requested long USB cable title length.
+
+2026-09-03 footer icon and logo sizing pass: normalized the header and footer logo containers to the same desktop width and visual height, kept the logo on a clean white background, and replaced the previous CSS-drawn footer contact symbols with consistent inline SVG mail, phone and location icons. Mobile keeps a fixed smaller header logo width so the brand remains readable without pushing navigation.
+
+2026-09-03 header logo compact sizing pass: adjusted the header and footer logo blocks to match the supplied compact reference proportion, using a fixed 248px by 70px white logo plate on desktop and a 172px by 50px header logo plate on mobile. The logo image is centered with a restrained max height so the white background no longer reads as an oversized panel.
+
+2026-09-03 footer logo match pass: removed footer column shrinkage from the logo block so the footer plate and inner image now render at the same desktop dimensions as the header: 248px by 70px plate with a 205px by 58px logo image. Browser measurement on `/oem-odm/?v=logo-footer-match` confirmed matching header and footer dimensions with no horizontal overflow.
 
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
