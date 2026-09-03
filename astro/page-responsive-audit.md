@@ -140,6 +140,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-03 footer logo match pass: removed footer column shrinkage from the logo block so the footer plate and inner image now render at the same desktop dimensions as the header: 248px by 70px plate with a 205px by 58px logo image. Browser measurement on `/oem-odm/?v=logo-footer-match` confirmed matching header and footer dimensions with no horizontal overflow.
 
+2026-09-03 footer logo border match pass: merged the header and footer logo plate CSS so both use the same 248px by 70px white plate, 205px inner logo width, 8px radius, border opacity and shadow. This removes the footer-only visual difference that made the lower logo block read slightly different from the header.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
