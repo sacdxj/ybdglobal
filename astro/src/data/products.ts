@@ -238,6 +238,42 @@ export const products: Product[] = [
       ['Packaging evidence','Bulk carton and bundled cable packaging shown in supplied images; confirm final bag, box, barcode and carton mark'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Fast Charge Type C to Type C Cable 1M 5A PD for Samsung for Galaxy S21 S22 Ultra Note 10 20 for Huawei Cameras', slug:'/products/usb-cables/1m-5a-pd-type-c-to-type-c-cable/', family:'USB Cable', interface:'Type-C to Type-C cable for Samsung Galaxy, Huawei and camera charging programs listed by user; exact device compatibility requires sample confirmation', power:'5A PD fast charging listed; exact wattage profile requires selected-SKU confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'Material not stated in supplied text; images show black and white molded Type-C cable variants with paper sleeve packaging', lengths:'1 m requested', bestFor:'Wholesale USB-C mobile-device and camera charging-cable programs that need 100-piece MOQ, low unit price, logo marking and custom packaging review', customization:['MOQ 100 pcs','100-1000 pcs: US$0.28 / piece','1000+ pcs: US$0.25 / piece','Custom logo supported','Custom packaging supported','Black and white image variants require quotation confirmation'], proofStatus:'User-provided title, price terms and product images captured; exact PD profile, 5A behavior, material, conductor, compatibility, color, logo, packaging and compliance require selected-model evidence', detailReady:true, cardLabel:'1m 5A PD Type-C cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-1000 pcs',value:'US$0.28 / piece'},{label:'1000+ pcs',value:'US$0.25 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/1m-5a-pd-type-c-to-type-c-cable/01-black-packaged.webp',alt:'Black Type-C to Type-C charging cables coiled with black paper sleeves in a carton',label:'Black packaged cables'},
+      {src:'/images/products/1m-5a-pd-type-c-to-type-c-cable/02-white-bulk-close.webp',alt:'White Type-C to Type-C charging cables packed in bulk with paper sleeves and clear bags',label:'White bulk close-up'},
+      {src:'/images/products/1m-5a-pd-type-c-to-type-c-cable/03-white-bulk-wide.webp',alt:'Wide view of white Type-C to Type-C charging cables in clear bags and paper sleeves',label:'White bulk carton'},
+      {src:'/images/products/1m-5a-pd-type-c-to-type-c-cable/04-connector-detail.webp',alt:'Close-up of black Type-C to Type-C cable connectors with carton packaging in the background',label:'Connector detail'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ and price tiers are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/1m-5a-pd-type-c-to-type-c-cable/03-white-bulk-wide.webp',alt:'White Type-C to Type-C cables packed in bulk'},
+      {title:'Charging',value:'5A PD listed',note:'The request lists 5A PD fast charging; confirm cable construction, charger/device pairing and actual charging profile by sample.',image:'/images/products/1m-5a-pd-type-c-to-type-c-cable/04-connector-detail.webp',alt:'Black Type-C connector detail'},
+      {title:'OEM packaging',value:'Logo + packaging',note:'Custom logo and custom packaging are supported by project; artwork, sleeve design, bag, barcode and carton mark need approval.',image:'/images/products/1m-5a-pd-type-c-to-type-c-cable/01-black-packaged.webp',alt:'Black Type-C cables with paper sleeve packaging'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 4 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Fast Charge Type C to Type C Cable 1M 5A PD for Samsung for Galaxy S21 S22 Ultra Note 10 20 for Huawei Cameras'],
+      ['Product format','Type-C to Type-C fast charging cable'],
+      ['Function','5A PD fast charging listed by user'],
+      ['Length','1 m requested'],
+      ['Compatibility cue','Samsung Galaxy S21 / S22 Ultra / Note 10 / Note 20, Huawei and cameras listed by user; exact device compatibility requires sample validation'],
+      ['Color cue','Black and white variants shown in supplied images'],
+      ['Packaging cue','Paper sleeve, clear bag and carton bulk packaging shown in supplied images'],
+      ['Connector cue','USB-C / Type-C male-to-male connector shown in supplied images'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Custom packaging supported'],
+      ['Material','Not provided in supplied text; confirm jacket, shell and conductor before quotation'],
+      ['Place of origin','Not provided in supplied material']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['Price: 100-1000 pcs','US$0.28 / piece'],
+      ['Price: 1000+ pcs','US$0.25 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Custom packaging supported'],
+      ['Packaging evidence','Paper sleeve, clear bag and carton packing shown in supplied images; confirm final artwork, label and carton data'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'240W 5A Fast Charging Cable & Phone Holder-Braided USB-C to C 2-in-1 Invisible Design Type C Cable for Smartphones', slug:'/products/usb-cables/folding-bracket-braided-fast-charging-cable/', family:'USB Cable', interface:'Type-C to Type-C listed; USB-A to Type-C image variant requires SKU confirmation', power:'Supplier images show 240W and 65W variants; attribute table lists 5A fast charging; final rating requires exact SKU evidence', dataRate:'Charging + mobile-device use listed; data rate not stated', video:'Built-in foldable phone stand for watching while charging; not positioned for display output', material:'Nylon / PVC jacket, pure copper conductor and braided shielding listed', lengths:'1.5 m shown in packaging artwork; other lengths require quotation confirmation', bestFor:'Retail-ready phone charging cable programs that need a foldable stand feature and optional logo branding', customization:['Stock goods available for non-custom orders from 50 pieces','Custom logo on product supported','Custom production lead time: 7-10 days after confirmation','Custom packaging MOQ: 1,000 pieces'], proofStatus:'User-supplied product images and attribute screenshot captured; exact power variant, connector SKU, packaging artwork, compliance and current quotation require confirmation', detailReady:true, cardLabel:'Foldable stand cable', cardFacts:[{label:'Stock MOQ',value:'50 pcs'},{label:'Custom lead time',value:'7-10 days'},{label:'Packaging MOQ',value:'1,000 pcs'}],
     images:[
       {src:'/images/products/folding-bracket-braided-cable/01-main.webp',alt:'Braided fast charging cable with foldable phone stand and retail box packaging',label:'Product and packaging'},
