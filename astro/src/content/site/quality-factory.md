@@ -26,7 +26,7 @@ proofStatus: "Company name and address provided; factory role, test files and ce
     <p class="section-label">Factory & certification</p>
     <h2 id="evidence-map-title">Evidence for the selected model.</h2>
     <p>Factory, quality and certificate records become useful only when the model, revision, scope, market and validity match the product under review.</p>
-    <figure><img src="/images/products/usb32-20gbps-100w/01-main.webp" alt="USB-C cable used as a model-level evidence reference" loading="lazy" /><figcaption>Selected-model reference</figcaption></figure>
+    <figure class="evidence-map__factory-photo"><img src="/images/editorial/youboda-factory-production-collage.webp" alt="Dongguan Youboda factory production collage showing cable manufacturing, assembly and inspection areas" loading="lazy" /><figcaption>Factory production reference</figcaption></figure>
   </div>
   <div class="evidence-map__records">
     <article><span>01</span><div><strong>Identity</strong><small>SKU, construction and revision</small></div><b>MODEL</b></article>

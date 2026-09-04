@@ -148,6 +148,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-04 PD60W USB-C to USB-C cable image update: added two user-supplied pastel braided cable photos to `/products/usb-cables/usb-c-to-usb-c-pd-cable/`, copied into `/images/products/pd60w-100w-braided/` and converted to WebP. The first image appears in the product thumbnail gallery and the second image appears in the final product CTA visual. Static Astro check and production-domain build to `dist-image-check` passed; generated HTML confirms both new image URLs are present. No CSS or layout structure changed from the previously recorded desktop, tablet and mobile pass.
 
+2026-09-04 `/quality-factory/` evidence image replacement: replaced the cable product placeholder inside the `Evidence for the selected model` block with a user-supplied Dongguan Youboda factory production collage, copied to `/images/editorial/youboda-factory-production-collage.png` and converted to WebP. Added a local `.evidence-map__factory-photo` layout so the wide factory collage crops cleanly in the evidence card, with a shorter mobile height, and constrained the quality-page poster hero to `max-width: 100%` to remove the measured horizontal overflow. Astro production-domain builds to `dist-quality-check` and `dist-quality-check-final` passed; browser DOM verification confirmed the new factory image loads at 1206 x 655 and the visible page has no horizontal overflow at the active preview width.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
@@ -177,7 +179,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/case-studies/private-label-usb-c-cable-packaging/` | Customization case study | Pass | Pass | Pass | Cable packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
 | `/case-studies/custom-logo-usb-c-hub-project/` | Customization case study | Pass | Pass | Pass | Hub logo case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
 | `/case-studies/pd-charger-private-label-packaging/` | Customization case study | Pass | Pass | Pass | Charger private-label packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
-| `/quality-factory/` | Evidence pillar | Pass | Pass | Pass | Hero H1 follows the global title scale; evidence modules and supporting headings checked. |
+| `/quality-factory/` | Evidence pillar | Pass | Pass | Pass | Hero H1 follows the global title scale; evidence modules and supporting headings checked. 2026-09-04 update replaces the cable placeholder with a factory production collage and removes measured horizontal overflow. |
 | `/about-us/` | Company page | Pass | Pass | Pass | Hero and visual-summary rhythm aligned with Contact and other pillar pages; sourcing modules checked. |
 | `/contact/` | Contact routing page | Pass | Pass | Pass | Contact title shortened and hero rhythm aligned with About and other pillar pages; inquiry modules checked. |
 | `/get-a-quote/` | RFQ conversion page | Pass | Pass | Pass | RFQ workbench, follow-up modules and form layout checked. |

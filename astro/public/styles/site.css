@@ -550,6 +550,16 @@
 .evidence-map__product > p:not(.section-label) { max-width:34rem; margin:26px 0 0; color:#595246; font-size:1.03rem; line-height:1.7; }
 .evidence-map__product figure { position:relative; flex:0 0 320px; min-height:0; margin:36px -58px 0; overflow:hidden; background:#fff; }
 .evidence-map__product img { width:100%; height:100%; object-fit:contain; }
+.evidence-map__product .evidence-map__factory-photo {
+  flex-basis:360px;
+  border-top:1px solid rgba(27,35,29,.12);
+  background:#dfe8e3;
+}
+.evidence-map__product .evidence-map__factory-photo img {
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+}
 .evidence-map__product figcaption { position:absolute; bottom:18px; left:58px; padding:11px 15px; border-radius:7px; background:var(--black); color:#fff; font-size:.7rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
 .evidence-map__records { display:flex; flex-direction:column; justify-content:center; gap:1px; padding:46px 48px; background:var(--black); }
 .evidence-map__records article { min-height:126px; display:grid; grid-template-columns:42px 1fr auto; gap:16px; align-items:center; padding:24px; background:#151a17; color:#fff; }
@@ -631,6 +641,7 @@
   .evidence-map { grid-template-columns:1fr; }
   .evidence-map__product { padding:40px 24px 0; }
   .evidence-map__product figure { margin:32px -24px 0; }
+  .evidence-map__product .evidence-map__factory-photo { flex-basis:300px; }
   .evidence-map__product figcaption { left:24px; }
   .evidence-map__records { padding:24px; }
   .evidence-map__records article { grid-template-columns:36px 1fr; }
@@ -10791,9 +10802,11 @@ body .content-body.case-studies-content > blockquote {
 
 /* Quality page poster hero: show the banner as a clean, readable visual. */
 body main > .page-hero:has(+ .intent-bar--quality) {
+  max-width: 100%;
   min-height: min(56.3vw, calc(100vh - 108px));
   aspect-ratio: 1672 / 941;
   display: block;
+  overflow: hidden;
   padding: 0;
   background-color: #050807;
   background-image: var(--hero-image, url('/images/editorial/youboda-factory-poster-preview-2x.png'));
