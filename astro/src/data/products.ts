@@ -70,7 +70,9 @@ export const products: Product[] = [
     images:[
       {src:'/images/products/pd60w-100w-braided/01-main.webp',alt:'White braided USB-C to USB-C cable on a white background',label:'Product view'},
       {src:'/images/products/pd60w-100w-braided/02-feature.webp',alt:'Supplier image illustrating the listed 60W charging option',label:'Listed 60W option'},
-      {src:'/images/products/pd60w-100w-braided/03-detail.webp',alt:'Supplier image illustrating charging and data transfer',label:'Listed data function'}
+      {src:'/images/products/pd60w-100w-braided/03-detail.webp',alt:'Supplier image illustrating charging and data transfer',label:'Listed data function'},
+      {src:'/images/products/pd60w-100w-braided/07-pastel-color-options.webp',alt:'Pastel braided USB-C to USB-C cable color options on a white background',label:'Pastel color options'},
+      {src:'/images/products/pd60w-100w-braided/08-coiled-color-set.webp',alt:'Coiled braided USB-C to USB-C cable color set arranged on a wood surface',label:'Coiled color set'}
     ],
     sourceUrl:'https://www.alibaba.com/product-detail/Super-Fast-PD60W-Charging-for-iPhone_1601560283570.html',
     sourceLabel:'Alibaba product 1601560283570',

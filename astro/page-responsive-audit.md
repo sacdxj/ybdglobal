@@ -146,6 +146,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-04 1m 5A PD Type-C to Type-C cable addition: added `/products/usb-cables/1m-5a-pd-type-c-to-type-c-cable/` and the matching product card on `/products/usb-cables/` with four user-supplied product images converted to WebP. Browser verification covered the USB collection and detail route in the local static preview. Result: no horizontal overflow, no broken images, the collection and detail page expose `100 pcs`, `US$0.28 / piece`, `US$0.25 / piece`, logo support and custom packaging review language. Build passed with `ASTRO_TELEMETRY_DISABLED=1`.
 
+2026-09-04 PD60W USB-C to USB-C cable image update: added two user-supplied pastel braided cable photos to `/products/usb-cables/usb-c-to-usb-c-pd-cable/`, copied into `/images/products/pd60w-100w-braided/` and converted to WebP. The first image appears in the product thumbnail gallery and the second image appears in the final product CTA visual. Static Astro check and production-domain build to `dist-image-check` passed; generated HTML confirms both new image URLs are present. No CSS or layout structure changed from the previously recorded desktop, tablet and mobile pass.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
@@ -165,7 +167,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/chargers/jl-p150-dual-port-wall-charger/` | Product detail | Pass | Pass | Pass | Purchase panel and final CTA checked. |
 | `/products/chargers/jl-s5-3-in-1-wireless-charger/` | Product detail | Pass | Pass | Pass | Purchase panel and final CTA checked. |
 | `/products/usb-cables/usb-c-fast-charging-cable/` | Product detail | Pass | Pass | Pass | Long cable model text checked. |
-| `/products/usb-cables/usb-c-to-usb-c-pd-cable/` | Product detail | Pass | Pass | Pass | Long wattage/title text checked. |
+| `/products/usb-cables/usb-c-to-usb-c-pd-cable/` | Product detail | Pass | Pass | Pass | Long wattage/title text checked; 2026-09-04 image update adds pastel color-options and coiled color-set WebP assets without layout/CSS changes. |
 | `/products/usb-cables/usb-3-2-20gbps-100w-cable/` | Product detail | Pass | Pass | Pass | Long USB 3.2 title checked. |
 | `/products/usb-cables/usb4-140w-20gbps-full-function-cable/` | Product detail | Pass | Pass | Pass | Variant selector and long product heading checked. |
 | `/products/hdmi-cables/hdmi-2-1-cable/` | Product detail / collection alias | Pass | Pass | Pass | Alias route renders without responsive issues. |
