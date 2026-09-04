@@ -158,6 +158,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-05 dark-navigation logo readability pass: regenerated `/images/brand/ybd-global-logo-dark-nav.png` with a stronger light wordmark and brighter green secondary details after the transparent logo still read too dim on the black navigation bar. Increased the shared desktop logo frame to 268 x 66 and rendered logo to 248 x 60; mobile uses a 188 x 48 frame with a 184 x 46 rendered logo. Astro check and production-domain build to `dist-logo-readable-check` passed; browser verification on `/` confirmed the logo loads, desktop navigation and CTA do not overlap, and no horizontal overflow is present.
 
+2026-09-05 desktop dropdown hover pass: fixed the desktop Products dropdown by adding an invisible hover bridge between the top navigation item and the submenu panel, preserving the visual gap while preventing hover loss when the cursor moves downward. Astro check and production-domain build to `dist-menu-check` passed; browser DOM verification on `/` confirmed the bridge covers the gap, the submenu remains 280px wide, and no horizontal overflow is present.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |

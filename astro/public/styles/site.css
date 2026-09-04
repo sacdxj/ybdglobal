@@ -840,7 +840,20 @@ main {
   gap: 3px;
 }
 
-.nav-item { position: relative; }
+.nav-item {
+  position: relative;
+}
+
+.nav-item:has(.submenu)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 29;
+  height: 18px;
+}
 
 .nav-link,
 .header-cta,
@@ -871,6 +884,7 @@ main {
   position: absolute;
   top: calc(100% + 12px);
   left: 0;
+  z-index: 30;
   width: 280px;
   padding: 8px;
   border-radius: var(--radius);
