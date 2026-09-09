@@ -308,6 +308,43 @@ export const products: Product[] = [
       ['Custom packaging','Packaging icon shown; confirm artwork, box type, barcode and carton mark by project'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'20Gbps PD 100W 20V 5A Fast Charging Type-C to Type C Cable USB3.2 Gen2 USB-C Cable Mobile Phone Available', slug:'/products/usb-cables/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/', family:'USB Cable', interface:'Type-C to Type-C / USB-C to USB-C full-feature cable for mobile phone, laptop, hub, storage and screen-projection review', power:'PD 100W, 20V and 5A fast charging listed; exact PD profile, E-marker, current and device pairing require selected-SKU confirmation', dataRate:'USB3.2 Gen2 and 20Gbps data transmission listed; exact USB version, cable length behavior and tested transfer rate require model evidence', video:'8K and screen projection cues shown in supplied images; exact display mode, source, monitor and cable length require test evidence', material:'High-density braided wire and 16-core copper wire wording shown in supplied image; exact jacket, conductor and shielding stack require source confirmation', lengths:'1 m / 2 m listed', bestFor:'Wholesale full-feature USB-C to USB-C cable programs needing 100W charging, high-speed data, possible screen projection and low-MOQ customization review', customization:['MOQ 50 pcs','1 m: US$1.70 / piece','2 m: US$2.30 / piece','Customization supported','Custom logo supported','Length, logo and packaging details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 100W/20V/5A profile, USB3.2 Gen2 / 20Gbps data behavior, 8K screen-projection behavior, conductor count, logo marking, customization and compliance scope require selected-model evidence', detailReady:true, cardLabel:'20Gbps 100W C-to-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'1 m',value:'US$1.70 / piece'},{label:'2 m',value:'US$2.30 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/01-main.webp',alt:'Black braided USB-C to USB-C cable with connector labels showing USB3.2, 20Gbps and 8K cues',label:'Product view'},
+      {src:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/02-full-feature.webp',alt:'Supplier image showing 100W, 8K and 20Gbps full-feature Type-C to Type-C data cable cues',label:'Full-feature cue'},
+      {src:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/03-20gbps-transmission.webp',alt:'Supplier image showing 20Gbps transmission rate cue for USB-C data cable connected to phone and computer',label:'20Gbps transfer cue'},
+      {src:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/04-braided-wire.webp',alt:'Supplier image showing high-density braided wire and 16-core copper wire construction cue',label:'Braided wire cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and 1 m / 2 m pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/01-main.webp',alt:'USB-C to USB-C 20Gbps braided cable product view'},
+      {title:'Full-feature cue',value:'100W / 8K / 20Gbps listed',note:'Supplied images list charging, data and screen-projection cues; confirm actual PD, USB and display behavior against the selected SKU.',image:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/02-full-feature.webp',alt:'100W 8K 20Gbps full-feature cable supplier image'},
+      {title:'Construction cue',value:'16-core copper listed',note:'The supplied image mentions high-density braided wire and 16-core copper wire; request construction evidence before publishing as a fixed specification.',image:'/images/products/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/04-braided-wire.webp',alt:'High-density braided wire supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 9 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','20Gbps PD 100W 20V 5A Fast Charging Type-C to Type C Cable USB3.2 Gen2 USB-C Cable Mobile Phone Available'],
+      ['Product format','Type-C to Type-C / USB-C to USB-C full-feature fast charging data cable'],
+      ['Function','Fast charging, data transmission and screen projection cues shown in supplied images'],
+      ['Power / current / voltage cue','PD 100W, 20V and 5A listed by user; 100W charging power shown in supplied image'],
+      ['Data cue','USB3.2 Gen2 and 20Gbps listed by user and supplied images; test evidence pending'],
+      ['Video cue','8K and screen projection shown in supplied images; display behavior requires source, monitor, mode and cable-length evidence'],
+      ['Connectors','Type-C to Type-C / USB-C to USB-C connector format shown in supplied images'],
+      ['Material cue','High-density braided wire and 16-core copper wire wording shown in supplied image'],
+      ['Compatibility cue','Mobile phone available and Apple 15 series / OTG / headphones / VR hard disk box / HUB cues shown in supplied images'],
+      ['Optional length','1 m / 2 m listed by user'],
+      ['Customization','Customization supported by user request; final scope by quotation'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Certification','Not provided in supplied material; document scope pending']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 1 m','US$1.70 / piece'],
+      ['Price: 2 m','US$2.30 / piece'],
+      ['Customization','Supported; confirm color, length, housing, logo, package and artwork scope by quotation'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Not specified in supplied material; confirm by project if required'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'PD 60W USB a to Type C USB3.2 10Gbps Fast Charging Cable Nylon Braided 0.2m-3m High Speed Data Cord Wholesale', slug:'/products/usb-cables/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/', family:'USB Cable', interface:'USB-A to Type-C / USB-C cable for phone, tablet, computer and high-speed accessory programs', power:'PD 60W, 3A safe charging and 56K resistor wording listed in supplied images; exact protocol, current and device pairing require selected-SKU confirmation', dataRate:'USB3.2 and 10Gbps high-speed data wording listed; exact USB version and tested transfer rate require model evidence', video:'Not positioned for display output', material:'Nylon braided cable jacket listed; black molded connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.2 m / 0.5 m / 1 m / 1.5 m / 2 m / 3 m listed', bestFor:'Wholesale USB-A to Type-C fast charging and high-speed data cable programs for phones, tablets, computers and private-label accessory ranges', customization:['MOQ 50 pcs','0.2 m: US$0.95 / piece','0.5 m: US$1.10 / piece','1 m: US$1.35 / piece','1.5 m: US$1.52 / piece','2 m: US$1.75 / piece','3 m: US$2.39 / piece','Logo and packaging requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact PD 60W behavior, 3A current, USB3.2 / 10Gbps data performance, 56K resistor implementation, material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'60W USB-A to Type-C 10Gbps', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.2 m',value:'US$0.95 / piece'},{label:'1 m',value:'US$1.35 / piece'},{label:'2 m',value:'US$1.75 / piece'},{label:'3 m',value:'US$2.39 / piece'}],
     images:[
       {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/01-main.webp',alt:'Black braided USB-A to Type-C fast charging data cable close-up with USB-A and USB-C connectors',label:'Product view'},
