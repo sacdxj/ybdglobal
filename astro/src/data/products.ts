@@ -234,6 +234,43 @@ export const products: Product[] = [
       ['Custom packaging','Not provided in supplied material; confirm by project if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'6A Fast Charging Cable USB Type-C Data Cable 100W 1m 2m 3m USB A to USB C Data Cable for Mobile Phones Macbooks and Tablets', slug:'/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/', family:'USB Cable', interface:'USB-A to USB-C / Type-C cable for mobile phone, MacBook and tablet accessory programs', power:'6A, 100W and Huawei/Honor super fast charging cues listed in supplied title and images; exact charger/device pairing and protocol behavior require selected-SKU confirmation', dataRate:'USB Type-C data cable wording listed; exact data rate requires model confirmation', video:'Not positioned for display output', material:'Nylon woven / braided cable jacket listed; aluminum-alloy woven data cable wording appears in supplied image; exact shell and cable material require source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Mobile-phone, tablet, MacBook, Huawei/Honor, Xiaomi and private-label USB-A to USB-C charging-cable programs needing low-MOQ logo review', customization:['MOQ 50 pcs','0.5 m: US$0.80 / piece','1 m: US$1.00 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','Custom logo supported','Length and logo details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 6A, 100W, Huawei/Honor fast charging behavior, data rate, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'6A 100W USB-A to USB-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$0.80 / piece'},{label:'1 m',value:'US$1.00 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'3 m',value:'US$1.70 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/03-usb-a-to-c-product.webp',alt:'USB-A to USB-C braided cable product image with 6A large-current and Huawei Xiaomi support cues',label:'Product view'},
+      {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/04-super-fast-charging.webp',alt:'Supplier image showing USB-A to USB-C cable with Huawei super fast charging and 100W feature cues',label:'100W super fast charging cue'},
+      {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/02-huawei-honor-100w.webp',alt:'Supplier image showing 100W Huawei Honor super fast charging with 20V 5A charger cue',label:'Huawei Honor charging cue'},
+      {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/01-nylon-durability.webp',alt:'Close-up of black nylon woven cable jacket with durability and wear-resistance text',label:'Nylon durability cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/03-usb-a-to-c-product.webp',alt:'USB-A to USB-C braided cable product view'},
+      {title:'Charging',value:'6A / 100W listed',note:'The supplied title and images list 6A, 100W and Huawei/Honor super fast charging cues; confirm protocol behavior by sample.',image:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/02-huawei-honor-100w.webp',alt:'Huawei Honor 100W charging supplier image'},
+      {title:'Construction',value:'Nylon braid listed',note:'Supplied images emphasize nylon weaving, wear resistance and durability; material and bend-test claims need source confirmation.',image:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/01-nylon-durability.webp',alt:'Nylon braided cable durability close-up'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 9 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','6A Fast Charging Cable USB Type-C Data Cable 100W 1m 2m 3m USB a to USB C Data Cable for Mobile Phones Macbooks and Tablets'],
+      ['Product format','USB-A to USB-C / Type-C fast charging data cable'],
+      ['Function','6A, 100W and Huawei/Honor super fast charging cues listed by user and supplied images'],
+      ['Charging condition cue','Supplied image states 20V/5A charger outputs 100W max high power; verify charger, device and cable combination before publication'],
+      ['Connectors','USB-A to USB-C connector format shown in supplied images'],
+      ['Material','Nylon woven / braided jacket listed in supplied images and title'],
+      ['Additional material cue','100W aluminum alloy woven data cable wording appears in supplied image; exact shell material requires confirmation'],
+      ['Durability cue','Wear-resistant, tear-resistant and tough/durable wording shown in supplied images; test evidence pending'],
+      ['Use','Mobile phones, MacBooks and tablets listed by user; Huawei/Honor and Xiaomi support cues shown in supplied images'],
+      ['Optional length','0.5 m / 1 m / 2 m / 3 m listed by user'],
+      ['Logo support','Custom logo supported'],
+      ['Certification','Not provided in supplied material; document scope pending']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 0.5 m','US$0.80 / piece'],
+      ['Price: 1 m','US$1.00 / piece'],
+      ['Price: 2 m','US$1.35 / piece'],
+      ['Price: 3 m','US$1.70 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Not provided in supplied material; confirm by project if required'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'High Quality 5A USB C PD 100W Straight Elbow Fast Charging Cable Nylon Braided 20V for Computer Charging', slug:'/products/usb-cables/100w-pd-straight-elbow-usb-c-cable/', family:'USB Cable', interface:'USB-C to USB-C straight + 90-degree elbow cable for computer, phone and tablet charging programs', power:'PD 100W, 5A and 20V wording listed; exact PD profile, E-marker, current and device pairing require selected-SKU confirmation', dataRate:'Fast charging cable wording listed; exact data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'Nylon braided cable jacket listed; purple metal-style connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Computer-charging, notebook, tablet, mobile phone and private-label USB-C cable programs that need one straight connector and one 90-degree elbow connector', customization:['MOQ 50 pcs','0.5 m: US$1.10 / piece','1 m: US$1.30 / piece','2 m: US$1.65 / piece','3 m: US$2.00 / piece','Custom logo supported'], proofStatus:'User-provided title, commercial terms and product images captured; exact 100W/5A/20V profile, E-marker implementation, data behavior, material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'Straight elbow 100W cable', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$1.10 / piece'},{label:'1 m',value:'US$1.30 / piece'},{label:'2 m',value:'US$1.65 / piece'},{label:'3 m',value:'US$2.00 / piece'},{label:'Logo',value:'Supported'}],
     images:[
       {src:'/images/products/100w-pd-straight-elbow-usb-c-cable/02-oem-odm-product.webp',alt:'USB-C cable with one straight connector and one 90-degree elbow connector shown with OEM and logo cues',label:'Product view'},
