@@ -198,6 +198,42 @@ export const products: Product[] = [
       ['Custom packaging','Not provided in supplied material; confirm by project if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'PD 100W USB C to C Fast Charging Cable 5A QC4.0 Braided Nylon Type C Data Cable for Laptop Phone Tablet', slug:'/products/usb-cables/pd-100w-usb-c-to-c-braided-cable/', family:'USB Cable', interface:'USB-C to USB-C / Type-C to Type-C cable for laptop, phone and tablet accessory programs', power:'PD 100W, 5A and QC4.0 listed in supplied title and images; exact PD profile, E-marker and charger/device pairing require selected-SKU confirmation', dataRate:'Type-C data cable wording listed; exact data rate requires model confirmation', video:'Not positioned for display output', material:'Braided nylon cable jacket listed; purple metal-look connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Laptop, tablet, phone, notebook, wholesale and private-label USB-C cable programs needing 100W charging cues and low-MOQ logo review', customization:['MOQ 50 pcs','0.5 m: US$1.10 / piece','1 m: US$1.35 / piece','2 m: US$1.75 / piece','3 m: US$2.10 / piece','Custom logo supported','Length and logo details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact PD 100W, 5A, QC4.0 behavior, data rate, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'PD 100W braided C-to-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$1.10 / piece'},{label:'1 m',value:'US$1.35 / piece'},{label:'2 m',value:'US$1.75 / piece'},{label:'3 m',value:'US$2.10 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/pd-100w-usb-c-to-c-braided-cable/01-main.webp',alt:'PD 100W USB-C to USB-C braided nylon cable with purple connector housings and QC4.0 feature text',label:'Product view'},
+      {src:'/images/products/pd-100w-usb-c-to-c-braided-cable/02-clean-product-view.webp',alt:'Clean product image of a black braided USB-C to USB-C fast charging cable with purple connector housings',label:'Clean product view'},
+      {src:'/images/products/pd-100w-usb-c-to-c-braided-cable/03-device-compatibility.webp',alt:'Supplier image showing PD 100W USB-C cable compatibility cues for phones, tablets and notebooks',label:'Device compatibility cue'},
+      {src:'/images/products/pd-100w-usb-c-to-c-braided-cable/04-100w-5a-feature.webp',alt:'Supplier image showing 100W fast charging data cable and 5A high current cues',label:'100W and 5A cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/pd-100w-usb-c-to-c-braided-cable/02-clean-product-view.webp',alt:'USB-C to USB-C braided cable product view'},
+      {title:'Charging',value:'100W / 5A listed',note:'The supplied title and images list PD 100W, 5A and QC4.0 cues; confirm E-marker, charging profile and device pairing by sample.',image:'/images/products/pd-100w-usb-c-to-c-braided-cable/04-100w-5a-feature.webp',alt:'100W fast charging and 5A high current supplier image'},
+      {title:'OEM logo',value:'Logo supported',note:'Custom logo can be reviewed by project; confirm artwork, placement and marking method before sample approval.',image:'/images/products/pd-100w-usb-c-to-c-braided-cable/03-device-compatibility.webp',alt:'PD 100W USB-C cable compatibility supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 8 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','PD 100W USB C to C Fast Charging Cable 5A QC4.0 Braided Nylon Type C Data Cable for Laptop Phone Tablet'],
+      ['Product format','USB-C to USB-C / Type-C to Type-C fast charging data cable'],
+      ['Function','PD 100W, 5A and QC4.0 fast charging cues listed by user and supplied images'],
+      ['Connectors','USB-C to USB-C / C-to-C connector format shown in supplied images'],
+      ['Material','Braided nylon cable jacket listed in title'],
+      ['Color cue','Purple connector housings with black braided cable shown in supplied images'],
+      ['Use','Laptop, phone and tablet listed; notebooks and mobile phones shown in supplied images'],
+      ['Optional length','0.5 m / 1 m / 2 m / 3 m listed by user'],
+      ['Logo support','Custom logo supported'],
+      ['Certification','Not provided in supplied material; document scope pending'],
+      ['Place of origin','Not provided in supplied material']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 0.5 m','US$1.10 / piece'],
+      ['Price: 1 m','US$1.35 / piece'],
+      ['Price: 2 m','US$1.75 / piece'],
+      ['Price: 3 m','US$2.10 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Not provided in supplied material; confirm by project if required'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'YBD Transparent 65W Fast Charge Type-C Cable', slug:'/products/usb-cables/transparent-65w-fast-charge-type-c-cable/', family:'USB Cable', interface:'Type-C to Type-C cable for iPhone and USB-C mobile devices', power:'65W and PD 3A fast charging listed; exact profile requires selected-sample confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'PVC listed in key attributes; title mentions TPE and pure copper conductor', lengths:'1 m listed in title', bestFor:'iPhone 16, USB-C smartphone, mobile-phone accessory, ecommerce and private-label cable programs that need a transparent braided 65W Type-C cable', customization:['Customization supported','Custom packaging supported','Color and gradient finish by quotation','Exact connector and package artwork locked before sample approval'], proofStatus:'User-provided title, key-attribute screenshot, price terms and product images captured; exact material stack, charging profile, conductor, compatibility, packaging and compliance require source evidence', detailReady:true, cardLabel:'Transparent 65W Type-C', cardFacts:[{label:'100-1000 pcs',value:'US$0.60 / piece'},{label:'1000+ pcs',value:'US$0.56 / piece'},{label:'Length',value:'1 m listed'},{label:'Packaging',value:'Custom supported'}],
     images:[
       {src:'/images/products/transparent-65w-type-c-cable/02-65w-gradient.webp',alt:'Transparent 65W Type-C fast charging braided cable with gradient ice crystal connector shell',label:'65W gradient cable'},
