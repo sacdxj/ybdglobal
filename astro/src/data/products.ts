@@ -588,6 +588,41 @@ export const products: Product[] = [
       ['Single package size','8 × 8 × 4 cm'],
       ['Single gross weight','0.1 kg']
     ] },
+  { model:'HDMI to VGA Video Adapter Converter Full HD 1080P Plug and Play for Laptop Computer Monitor Projector Wholesale Factory', slug:'/products/hdmi-cables/hdmi-to-vga-1080p-adapter/', family:'HDMI Cable', interface:'HDMI male input to VGA female output adapter for laptop, computer, monitor and projector sourcing programs', power:'Not positioned as a charging product; active conversion and any auxiliary power requirement require selected-SKU confirmation', dataRate:'HDMI-to-VGA video conversion listed; exact chipset, compatibility and signal behavior require sample evidence', video:'Full HD 1080P and 1080P@60Hz wording shown in supplied title/images; source, display, cable and resolution behavior require test evidence', material:'Black and white adapter color variants shown; supplied image lists ground wire, tinned copper, aluminum foil and aluminum-magnesium woven mesh shielding; exact internal construction requires source confirmation', lengths:'Short adapter pigtail shown; exact cable length requires selected-SKU confirmation', bestFor:'Wholesale HDMI-to-VGA adapter programs for laptops, computers, monitors, projectors, retail packs and custom-logo sourcing', customization:['MOQ 500 pcs','US$0.68 / piece','Customization supported','Custom logo supported','Black and white image variants require quotation confirmation','Packaging and artwork details by project'], proofStatus:'User-provided title, commercial terms and product images captured; exact 1080P/60Hz behavior, plug-and-play compatibility, conversion direction, shielding stack, color, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'HDMI to VGA 1080P', cardFacts:[{label:'MOQ',value:'500 pcs'},{label:'Price',value:'US$0.68 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/hdmi-to-vga-1080p-adapter/01-main.webp',alt:'Black HDMI to VGA adapter converter with HDMI male cable and VGA female port',label:'Product view'},
+      {src:'/images/products/hdmi-to-vga-1080p-adapter/03-packaging.webp',alt:'Black and white HDMI to VGA adapters in retail hanging bag packaging',label:'Packaging view'},
+      {src:'/images/products/hdmi-to-vga-1080p-adapter/04-1080p-vision.webp',alt:'Supplier image showing 1080P HD vision cue for HDMI to VGA video adapter',label:'1080P video cue'},
+      {src:'/images/products/hdmi-to-vga-1080p-adapter/02-shielding.webp',alt:'Supplier image showing multi-layer shielding structure for sharper image quality',label:'Shielding cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 500 pcs',note:'User supplied MOQ and unit price are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/hdmi-to-vga-1080p-adapter/03-packaging.webp',alt:'HDMI to VGA adapter retail packaging view'},
+      {title:'Video output',value:'1080P listed',note:'The supplied title and image list Full HD 1080P and 1080P@60Hz cues; confirm source device, monitor, projector and mode by sample.',image:'/images/products/hdmi-to-vga-1080p-adapter/04-1080p-vision.webp',alt:'1080P HD vision supplier image'},
+      {title:'Construction cue',value:'Multi-layer shielding listed',note:'Supplied image lists ground wire, tinned copper, aluminum foil and aluminum-magnesium woven mesh; construction evidence is required before publication.',image:'/images/products/hdmi-to-vga-1080p-adapter/02-shielding.webp',alt:'Multi-layer shielding supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 9 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','HDMI to VGA Video Adapter Converter Full HD 1080P Plug and Play for Laptop Computer Monitor Projector Wholesale Factory'],
+      ['Product format','HDMI to VGA video adapter converter'],
+      ['Connector format','HDMI male input cable to VGA female output port shown in supplied images'],
+      ['Video cue','Full HD 1080P listed by user; 1080P@60Hz HD video signal transmission shown in supplied image'],
+      ['Use','Laptop, computer, monitor and projector listed by user'],
+      ['Plug-and-play cue','Plug and Play wording listed by user; host/display compatibility requires sample confirmation'],
+      ['Color cue','Black adapter shown in main image; black and white packaged variants shown in supplied packaging image'],
+      ['Construction cue','Ground wire, tinned copper, aluminum foil and aluminum-magnesium woven mesh listed in supplied shielding image'],
+      ['Image quality cue','Multi-layer shielding for sharper image quality shown in supplied image; test evidence pending'],
+      ['Customization','Customization supported by user request; final scope by quotation'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Certification cue','CE/FCC-style marks visible on product image; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','500 pcs'],
+      ['Price','US$0.68 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Customization','Supported; confirm logo position, marking method, color, package artwork, barcode and carton mark by project'],
+      ['Packaging cue','Retail hanging bag packaging shown in supplied image; final packaging by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
