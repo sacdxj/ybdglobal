@@ -234,6 +234,43 @@ export const products: Product[] = [
       ['Custom packaging','Not provided in supplied material; confirm by project if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'High Quality 5A USB C PD 100W Straight Elbow Fast Charging Cable Nylon Braided 20V for Computer Charging', slug:'/products/usb-cables/100w-pd-straight-elbow-usb-c-cable/', family:'USB Cable', interface:'USB-C to USB-C straight + 90-degree elbow cable for computer, phone and tablet charging programs', power:'PD 100W, 5A and 20V wording listed; exact PD profile, E-marker, current and device pairing require selected-SKU confirmation', dataRate:'Fast charging cable wording listed; exact data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'Nylon braided cable jacket listed; purple metal-style connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Computer-charging, notebook, tablet, mobile phone and private-label USB-C cable programs that need one straight connector and one 90-degree elbow connector', customization:['MOQ 50 pcs','0.5 m: US$1.10 / piece','1 m: US$1.30 / piece','2 m: US$1.65 / piece','3 m: US$2.00 / piece','Custom logo supported'], proofStatus:'User-provided title, commercial terms and product images captured; exact 100W/5A/20V profile, E-marker implementation, data behavior, material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'Straight elbow 100W cable', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$1.10 / piece'},{label:'1 m',value:'US$1.30 / piece'},{label:'2 m',value:'US$1.65 / piece'},{label:'3 m',value:'US$2.00 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/100w-pd-straight-elbow-usb-c-cable/02-oem-odm-product.webp',alt:'USB-C cable with one straight connector and one 90-degree elbow connector shown with OEM and logo cues',label:'Product view'},
+      {src:'/images/products/100w-pd-straight-elbow-usb-c-cable/03-100w-5a-feature.webp',alt:'Supplier image showing 100W PD fast charging cable and 5A current cue',label:'100W 5A cue'},
+      {src:'/images/products/100w-pd-straight-elbow-usb-c-cable/01-emarker-phone.webp',alt:'USB-C cable connected to a phone with E-Marker smart chip voltage-stability cue',label:'E-Marker cue'},
+      {src:'/images/products/100w-pd-straight-elbow-usb-c-cable/04-elbow-charging.webp',alt:'Straight elbow USB-C cable supplier image showing 5A high current and PD100W support cues',label:'Elbow charging cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/100w-pd-straight-elbow-usb-c-cable/02-oem-odm-product.webp',alt:'Straight and elbow USB-C cable product view'},
+      {title:'Charging',value:'100W / 5A / 20V listed',note:'The request and supplier images list PD 100W, 5A and 20V; confirm E-marker, charging profile and device pairing by sample.',image:'/images/products/100w-pd-straight-elbow-usb-c-cable/03-100w-5a-feature.webp',alt:'100W 5A straight elbow USB-C cable supplier image'},
+      {title:'Connector format',value:'Straight + elbow',note:'The supplied images show one straight Type-C connector and one 90-degree elbow Type-C connector for computer and phone charging review.',image:'/images/products/100w-pd-straight-elbow-usb-c-cable/04-elbow-charging.webp',alt:'Straight elbow USB-C cable charging image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 9 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','High Quality 5A USB C PD 100W Straight Elbow Fast Charging Cable Nylon Braided 20V for Computer Charging'],
+      ['Product format','USB-C straight elbow fast charging cable'],
+      ['Connector format','One straight USB-C connector and one 90-degree elbow USB-C connector shown in supplied images'],
+      ['Function','PD 100W, 5A and 20V fast charging wording listed by user and supplier images'],
+      ['E-Marker cue','Built-in E-Marker smart chip shown in supplied image; implementation evidence pending'],
+      ['Material','Nylon braided cable listed in title'],
+      ['Color cue','Purple connector housings with black braided cable shown in supplied images'],
+      ['Use','Computer charging listed; mobile phone and tablet use shown in supplied images'],
+      ['Optional length','0.5 m / 1 m / 2 m / 3 m listed by user'],
+      ['Logo support','Custom logo supported'],
+      ['OEM/ODM cue','OEM/ODM, packaging, logo and color icons shown in supplied image; project scope requires quotation confirmation'],
+      ['Certification','CE/FCC/RoHS icons shown in supplied image; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 0.5 m','US$1.10 / piece'],
+      ['Price: 1 m','US$1.30 / piece'],
+      ['Price: 2 m','US$1.65 / piece'],
+      ['Price: 3 m','US$2.00 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Custom packaging','Packaging icon shown; confirm artwork, box type, barcode and carton mark by project'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'YBD Transparent 65W Fast Charge Type-C Cable', slug:'/products/usb-cables/transparent-65w-fast-charge-type-c-cable/', family:'USB Cable', interface:'Type-C to Type-C cable for iPhone and USB-C mobile devices', power:'65W and PD 3A fast charging listed; exact profile requires selected-sample confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'PVC listed in key attributes; title mentions TPE and pure copper conductor', lengths:'1 m listed in title', bestFor:'iPhone 16, USB-C smartphone, mobile-phone accessory, ecommerce and private-label cable programs that need a transparent braided 65W Type-C cable', customization:['Customization supported','Custom packaging supported','Color and gradient finish by quotation','Exact connector and package artwork locked before sample approval'], proofStatus:'User-provided title, key-attribute screenshot, price terms and product images captured; exact material stack, charging profile, conductor, compatibility, packaging and compliance require source evidence', detailReady:true, cardLabel:'Transparent 65W Type-C', cardFacts:[{label:'100-1000 pcs',value:'US$0.60 / piece'},{label:'1000+ pcs',value:'US$0.56 / piece'},{label:'Length',value:'1 m listed'},{label:'Packaging',value:'Custom supported'}],
     images:[
       {src:'/images/products/transparent-65w-type-c-cable/02-65w-gradient.webp',alt:'Transparent 65W Type-C fast charging braided cable with gradient ice crystal connector shell',label:'65W gradient cable'},
