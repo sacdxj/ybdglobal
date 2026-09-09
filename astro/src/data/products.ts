@@ -308,6 +308,45 @@ export const products: Product[] = [
       ['Custom packaging','Packaging icon shown; confirm artwork, box type, barcode and carton mark by project'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'PD 60W USB a to Type C USB3.2 10Gbps Fast Charging Cable Nylon Braided 0.2m-3m High Speed Data Cord Wholesale', slug:'/products/usb-cables/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/', family:'USB Cable', interface:'USB-A to Type-C / USB-C cable for phone, tablet, computer and high-speed accessory programs', power:'PD 60W, 3A safe charging and 56K resistor wording listed in supplied images; exact protocol, current and device pairing require selected-SKU confirmation', dataRate:'USB3.2 and 10Gbps high-speed data wording listed; exact USB version and tested transfer rate require model evidence', video:'Not positioned for display output', material:'Nylon braided cable jacket listed; black molded connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.2 m / 0.5 m / 1 m / 1.5 m / 2 m / 3 m listed', bestFor:'Wholesale USB-A to Type-C fast charging and high-speed data cable programs for phones, tablets, computers and private-label accessory ranges', customization:['MOQ 50 pcs','0.2 m: US$0.95 / piece','0.5 m: US$1.10 / piece','1 m: US$1.35 / piece','1.5 m: US$1.52 / piece','2 m: US$1.75 / piece','3 m: US$2.39 / piece','Logo and packaging requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact PD 60W behavior, 3A current, USB3.2 / 10Gbps data performance, 56K resistor implementation, material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'60W USB-A to Type-C 10Gbps', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.2 m',value:'US$0.95 / piece'},{label:'1 m',value:'US$1.35 / piece'},{label:'2 m',value:'US$1.75 / piece'},{label:'3 m',value:'US$2.39 / piece'}],
+    images:[
+      {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/01-main.webp',alt:'Black braided USB-A to Type-C fast charging data cable close-up with USB-A and USB-C connectors',label:'Product view'},
+      {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/03-10gbps-usb32.webp',alt:'Supplier image showing USB3.2 to Type-C data cable with 10Gbps high-speed transmission and 60W max cue',label:'10Gbps data cue'},
+      {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/02-60w-fast-charge.webp',alt:'Supplier image showing 60W safe fast charge cue for USB-A to Type-C braided cable',label:'60W charging cue'},
+      {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/04-56k-resistor.webp',alt:'Supplier image showing built-in 56K resistor and stable current protection cue for Type-C connector',label:'56K resistor cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/01-main.webp',alt:'USB-A to Type-C braided cable product view'},
+      {title:'Data transfer',value:'10Gbps listed',note:'The supplied title and image list USB3.2 and 10Gbps transmission; confirm tested speed, connector build and device compatibility by selected sample.',image:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/03-10gbps-usb32.webp',alt:'10Gbps USB3.2 supplier image'},
+      {title:'Charging protection',value:'60W / 3A / 56K listed',note:'Supplied images list 60W max, 3A safe charging and a built-in 56K resistor cue; confirm protocol behavior and protection design before publication.',image:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/04-56k-resistor.webp',alt:'56K resistor protection supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 9 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','PD 60W USB a to Type C USB3.2 10Gbps Fast Charging Cable Nylon Braided 0.2m-3m High Speed Data Cord Wholesale'],
+      ['Product format','USB-A to Type-C / USB-C fast charging data cable'],
+      ['Function','PD 60W fast charging and high-speed data cable wording listed by user and supplied images'],
+      ['Data cue','USB3.2 and 10Gbps high-speed transmission listed in supplied image; test evidence pending'],
+      ['Power / current cue','60W max and 3A safe charging shown in supplied image; verify charger, device and cable combination before publication'],
+      ['Protection cue','Built-in 56K resistor wording shown in supplied image; implementation evidence pending'],
+      ['Connectors','USB-A to Type-C connector format shown in supplied images'],
+      ['Material','Nylon braided cable jacket listed in title'],
+      ['Color cue','Black braided cable and black connector housings shown in supplied images'],
+      ['Use','Phones, tablets, computers and mainstream Type-C device cues shown in supplied title/images'],
+      ['Optional length','0.2 m / 0.5 m / 1 m / 1.5 m / 2 m / 3 m listed by user'],
+      ['Certification','Not provided in supplied material; document scope pending']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 0.2 m','US$0.95 / piece'],
+      ['Price: 0.5 m','US$1.10 / piece'],
+      ['Price: 1 m','US$1.35 / piece'],
+      ['Price: 1.5 m','US$1.52 / piece'],
+      ['Price: 2 m','US$1.75 / piece'],
+      ['Price: 3 m','US$2.39 / piece'],
+      ['Logo support','Not specified in supplied text; confirm logo requirements by quotation if needed'],
+      ['Custom packaging','Not specified in supplied material; confirm by project if required'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'YBD Transparent 65W Fast Charge Type-C Cable', slug:'/products/usb-cables/transparent-65w-fast-charge-type-c-cable/', family:'USB Cable', interface:'Type-C to Type-C cable for iPhone and USB-C mobile devices', power:'65W and PD 3A fast charging listed; exact profile requires selected-sample confirmation', dataRate:'Charging cable positioning; data-transfer rate not provided in supplied material', video:'Not positioned for display output', material:'PVC listed in key attributes; title mentions TPE and pure copper conductor', lengths:'1 m listed in title', bestFor:'iPhone 16, USB-C smartphone, mobile-phone accessory, ecommerce and private-label cable programs that need a transparent braided 65W Type-C cable', customization:['Customization supported','Custom packaging supported','Color and gradient finish by quotation','Exact connector and package artwork locked before sample approval'], proofStatus:'User-provided title, key-attribute screenshot, price terms and product images captured; exact material stack, charging profile, conductor, compatibility, packaging and compliance require source evidence', detailReady:true, cardLabel:'Transparent 65W Type-C', cardFacts:[{label:'100-1000 pcs',value:'US$0.60 / piece'},{label:'1000+ pcs',value:'US$0.56 / piece'},{label:'Length',value:'1 m listed'},{label:'Packaging',value:'Custom supported'}],
     images:[
       {src:'/images/products/transparent-65w-type-c-cable/02-65w-gradient.webp',alt:'Transparent 65W Type-C fast charging braided cable with gradient ice crystal connector shell',label:'65W gradient cable'},
