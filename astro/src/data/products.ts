@@ -658,6 +658,41 @@ export const products: Product[] = [
       ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Ultra Clear 8K hdmi Cable 48Gbps 4K 240Hz 8K 60Hz Audio Video Transfer V2.1 hdmi Cable for HDTV Projector Monitor 3D Visual', slug:'/products/hdmi-cables/ultra-clear-8k-hdmi-2-1-cable/', family:'HDMI Cable', interface:'HDMI male-to-male cable format shown for HDTV, projector, monitor and 3D visual display programs', power:'Not applicable', dataRate:'HDMI 2.1 / 48Gbps listed; exact bandwidth behavior requires selected-SKU and test evidence', video:'8K 60Hz, 4K 240Hz, 4K 120Hz and 3D visual cues listed; source, display, cable length and mode require test evidence', material:'Black cable with gray metal-look connector housings shown; exact conductor, jacket and shielding stack require confirmation', lengths:'1 m / 1.5 m / 2 m / 3 m / 5 m listed', bestFor:'HDTV, projector, monitor, gaming, 3D visual and private-label HDMI 2.1 cable sourcing programs', customization:['MOQ 100 pcs','1 m: US$0.90 / piece','1.5 m: US$1.15 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','5 m: US$2.30 / piece','Logo, length, packaging and label requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact HDMI 2.1, 48Gbps, 4K 240Hz, 8K 60Hz, 3D visual behavior, construction and compliance scope require selected-model evidence', detailReady:true, cardLabel:'8K HDMI 2.1 cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'1 m',value:'US$0.90 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'5 m',value:'US$2.30 / piece'}],
+    images:[
+      {src:'/images/products/ultra-clear-8k-hdmi-2-1-cable/01-main.webp',alt:'Ultra Clear 8K HDMI cable with gray connector housings and black cable',label:'Product view'},
+      {src:'/images/products/ultra-clear-8k-hdmi-2-1-cable/02-3d-vision.webp',alt:'Supplier image showing HDMI cable 3D vision display use',label:'3D vision cue'},
+      {src:'/images/products/ultra-clear-8k-hdmi-2-1-cable/03-large-screen.webp',alt:'Supplier image showing HDMI cable connected from laptop to a large TV screen',label:'Large screen use'},
+      {src:'/images/products/ultra-clear-8k-hdmi-2-1-cable/04-resolution-refresh.webp',alt:'Supplier image listing HDMI 2.1 48Gbps 8K 60Hz and 4K 120Hz cues',label:'Resolution and refresh cues'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied length pricing is recorded for RFQ preparation; final quotation should confirm active SKU, package and order date.',image:'/images/products/ultra-clear-8k-hdmi-2-1-cable/01-main.webp',alt:'Ultra Clear 8K HDMI cable product view'},
+      {title:'Display cues',value:'48Gbps / 8K60 listed',note:'Bandwidth, resolution and refresh wording is reproduced from supplied material; sample testing is required before public claim use.',image:'/images/products/ultra-clear-8k-hdmi-2-1-cable/04-resolution-refresh.webp',alt:'HDMI 2.1 resolution and refresh supplier image'},
+      {title:'Application',value:'HDTV / projector / monitor',note:'Supplied images show large-screen and 3D visual use cases; confirm source device, display mode and cable length in the RFQ.',image:'/images/products/ultra-clear-8k-hdmi-2-1-cable/03-large-screen.webp',alt:'HDMI cable connected to a large screen'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 10 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Ultra Clear 8K hdmi Cable 48Gbps 4K 240Hz 8K 60Hz Audio Video Transfer V2.1 hdmi Cable for HDTV Projector Monitor 3D Visual'],
+      ['Product format','HDMI male-to-male cable shown in supplied main image'],
+      ['Protocol / bandwidth cue','HDMI 2.1 and 48Gbps listed by user and shown in supplied image; test evidence pending'],
+      ['Resolution / refresh cue','8K 60Hz, 4K 240Hz and 4K 120Hz cues listed; selected length, source and display evidence pending'],
+      ['3D visual cue','3D stereoscopic imaging support shown in supplied image; display/source compatibility requires confirmation'],
+      ['Use','HDTV, projector and monitor listed by user; large-screen connection shown in supplied image'],
+      ['Length options','1 m, 1.5 m, 2 m, 3 m and 5 m listed by user'],
+      ['Color cue','Black cable with gray metal-look connector housings shown'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['1 m price','US$0.90 / piece'],
+      ['1.5 m price','US$1.15 / piece'],
+      ['2 m price','US$1.35 / piece'],
+      ['3 m price','US$1.70 / piece'],
+      ['5 m price','US$2.30 / piece'],
+      ['Customization','Not specified in the supplied request; confirm logo, label, color, package artwork, barcode and carton mark by quotation if required'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
