@@ -623,6 +623,41 @@ export const products: Product[] = [
       ['Packaging cue','Retail hanging bag packaging shown in supplied image; final packaging by quotation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'1080P Full HD Wii to HDMI-Compatible Adapter Converter Wii2 HDMI-Compatible Converter 3.5mm Audio for PC HDTV Monitor Display', slug:'/products/hdmi-cables/wii-to-hdmi-1080p-adapter/', family:'HDMI Cable', interface:'Wii AV output input to HDMI-compatible output adapter with 3.5 mm audio output shown in supplied images', power:'Not positioned as a charging product; any auxiliary power or chipset requirement requires selected-SKU confirmation', dataRate:'HDMI-compatible video conversion listed; exact chipset, compatibility and signal behavior require sample evidence', video:'1080P Full HD and HDMI-compatible output wording listed; source console, display mode and scaling behavior require test evidence', material:'White housing shown in main images; black and white color variants shown; exact shell material requires source confirmation', lengths:'Compact adapter format shown; cable not included unless confirmed by selected package', bestFor:'Wholesale Wii-to-HDMI adapter programs for PC, HDTV, monitor, display and retro console accessory sourcing', customization:['MOQ 100 pcs','1 piece/sample tier: US$1.60 / piece','100-100 pieces: US$1.50 / piece as supplied; tier wording requires confirmation','1000+ pcs: US$1.38 / piece','Color, packaging and marking requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 1080P behavior, HDMI-compatible output, 3.5 mm audio output, Wii compatibility, chip sourcing, packaging, price tiers and compliance scope require selected-model evidence', detailReady:true, cardLabel:'Wii to HDMI 1080P', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'Price',value:'US$1.60 / piece'},{label:'100-100 pcs',value:'US$1.50 / piece'},{label:'1000+ pcs',value:'US$1.38 / piece'}],
+    images:[
+      {src:'/images/products/wii-to-hdmi-1080p-adapter/01-main.webp',alt:'White Wii2HDMI 1080P adapter converter product view',label:'Product view'},
+      {src:'/images/products/wii-to-hdmi-1080p-adapter/02-connection-diagram.webp',alt:'Wii to HDMI adapter connection diagram with Wii input HDMI output and 3.5 mm audio',label:'Connection diagram'},
+      {src:'/images/products/wii-to-hdmi-1080p-adapter/03-port-detail.webp',alt:'Wii2HDMI adapter port detail showing audio out HDMI output and Wii input',label:'Port detail'},
+      {src:'/images/products/wii-to-hdmi-1080p-adapter/04-color-variants.webp',alt:'Black and white Wii2HDMI 1080P adapter color variants',label:'Color variants'},
+      {src:'/images/products/wii-to-hdmi-1080p-adapter/05-tv-audio-use.webp',alt:'Wii2HDMI adapter connected to TV and speakers with HDMI and 3.5 mm audio cables',label:'Use scenario'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ and tier prices are shown for RFQ preparation; the 100-100 pcs tier wording should be reconfirmed before quotation.',image:'/images/products/wii-to-hdmi-1080p-adapter/04-color-variants.webp',alt:'Black and white Wii2HDMI adapter color variants'},
+      {title:'Connection format',value:'Wii in / HDMI out / 3.5 mm audio',note:'Supplied images show Wii input plus HDMI-compatible output and audio output; confirm selected console, display and audio device compatibility by sample.',image:'/images/products/wii-to-hdmi-1080p-adapter/02-connection-diagram.webp',alt:'Wii to HDMI adapter connection diagram'},
+      {title:'Display cue',value:'1080P Full HD listed',note:'1080P wording is reproduced from the supplied title and images; real output depends on console source mode, display and adapter chipset.',image:'/images/products/wii-to-hdmi-1080p-adapter/05-tv-audio-use.webp',alt:'Wii2HDMI adapter use scenario with TV and audio devices'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 10 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','1080P Full HD Wii to HDMI-Compatible Adapter Converter Wii2 HDMI-Compatible Converter 3.5mm Audio for PC HDTV Monitor Display'],
+      ['Product format','Compact Wii-to-HDMI-compatible adapter converter'],
+      ['Input cue','Wii input shown in supplied connection and port-detail images'],
+      ['Output cue','HDMI-compatible output and 3.5 mm audio output shown in supplied images'],
+      ['Video cue','1080P Full HD listed by user and shown on supplied product images'],
+      ['Use','PC, HDTV, monitor and display listed by user; Wii, TV, monitor, speaker and headphone use shown in supplied images'],
+      ['Compatibility cue','Supplied image references Wii, Wii mini and original Wii compatibility; selected-model evidence pending'],
+      ['Color cue','White main unit shown; black and white variants shown in supplied image'],
+      ['Chip cue','Supplier image mentions chip compatibility; exact chipset and sourcing evidence pending'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['Price','US$1.60 / piece'],
+      ['Supplied tier','100-100 pieces: US$1.50 / piece - wording requires confirmation'],
+      ['1000+ tier','US$1.38 / piece'],
+      ['Customization','Not specified in the supplied request; confirm color, marking, packaging, barcode and carton mark by quotation if required'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
