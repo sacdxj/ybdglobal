@@ -733,6 +733,37 @@ export const products: Product[] = [
       ['Customization','Not specified in the supplied request; confirm logo, packaging, barcode and carton mark by quotation if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'OEM/ODM UHD 8K 60Hz 4K 144Hz Type-C USB-C to DP Cable Male to Male Cable with Aluminum Alloy Shell for Monitor Laptop', slug:'/products/hdmi-cables/usb-c-to-dp-8k-60hz-cable/', family:'HDMI Cable', interface:'USB-C male to DisplayPort male cable for monitor and laptop display programs', power:'Not positioned as a charging product', dataRate:'USB-C to DP screen-projection cable listed; exact DP Alt Mode, bandwidth and chipset behavior require selected-SKU evidence', video:'8K 60Hz, 4K 144Hz and 2K 165Hz cues are listed; source laptop, monitor, OS, GPU and cable length must be confirmed by sample evidence', material:'Aluminum-alloy shell listed by user; braided cable shown in supplied images; exact conductor and shielding stack require source confirmation', lengths:'Length not provided in supplied material; confirm selected length mix by quotation', bestFor:'OEM/ODM USB-C to DP cable sourcing programs for laptop-to-monitor screen projection, mirror mode and extend mode display setups', customization:['MOQ 100 pcs','100-500 pcs: US$2.48 / piece','500-1000 pcs: US$2.43 / piece','1000+ pcs: US$2.20 / piece','OEM/ODM listed; logo, packaging, length and artwork by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 8K60, 4K144, 2K165, DP Alt Mode, material, shell, cable construction, OEM/ODM scope, pricing and certification claims require selected-model evidence', detailReady:true, cardLabel:'USB-C to DP 8K cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-500 pcs',value:'US$2.48 / piece'},{label:'500-1000 pcs',value:'US$2.43 / piece'},{label:'1000+ pcs',value:'US$2.20 / piece'}],
+    images:[
+      {src:'/images/products/usb-c-to-dp-8k-60hz-cable/01-main.webp',alt:'USB-C to DisplayPort cable with braided cable and 8K 60Hz 4K 144Hz display cues',label:'Product view'},
+      {src:'/images/products/usb-c-to-dp-8k-60hz-cable/02-connector-closeup.webp',alt:'Close-up of USB-C to DisplayPort cable connector shells with 8K UltraHD cue',label:'Connector close-up'},
+      {src:'/images/products/usb-c-to-dp-8k-60hz-cable/03-display-use.webp',alt:'USB-C to DisplayPort cable connected from laptop to monitor with 8K 60Hz display cue',label:'Display use'},
+      {src:'/images/products/usb-c-to-dp-8k-60hz-cable/04-mirror-extend-mode.webp',alt:'Supplier image showing mirror mode and extend mode for USB-C to DP cable',label:'Mirror and extend mode'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ and tier prices are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/usb-c-to-dp-8k-60hz-cable/01-main.webp',alt:'USB-C to DP 8K cable product view'},
+      {title:'Display cue',value:'8K60 / 4K144 listed',note:'Resolution and refresh wording is reproduced from supplied material; confirm source laptop, monitor, OS, GPU and length before publication.',image:'/images/products/usb-c-to-dp-8k-60hz-cable/03-display-use.webp',alt:'USB-C to DP cable display use image'},
+      {title:'Work modes',value:'Mirror / extend shown',note:'Supplied image shows mirror and extend mode use cases; final behavior depends on host USB-C DP Alt Mode and display configuration.',image:'/images/products/usb-c-to-dp-8k-60hz-cable/04-mirror-extend-mode.webp',alt:'Mirror and extend mode supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 11 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','OEM/ODM UHD 8K 60Hz 4K 144Hz Type-C USB-C to DP Cable Male to Male Cable with Aluminum Alloy Shell for Monitor Laptop'],
+      ['Product format','USB-C male to DisplayPort male cable'],
+      ['Display cue','8K 60Hz, 4K 144Hz and 2K 165Hz shown/listed in supplied title and images'],
+      ['Use','Monitor and laptop listed by user; supplied images show laptop-to-monitor screen projection'],
+      ['Mode cue','Mirror mode and extend mode shown in supplied image'],
+      ['Material cue','Aluminum alloy shell listed by user; braided cable shown in supplied images'],
+      ['Customization cue','OEM/ODM listed in title; final logo, package, label and length scope require quotation'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['100-500 pcs','US$2.48 / piece'],
+      ['500-1000 pcs','US$2.43 / piece'],
+      ['1000+ pcs','US$2.20 / piece'],
+      ['Customization','OEM/ODM listed; confirm logo, packaging, barcode, length mix and carton mark by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
