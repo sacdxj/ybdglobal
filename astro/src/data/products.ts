@@ -693,6 +693,46 @@ export const products: Product[] = [
       ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'4k HDMI V2.0 Cable High Speed HDMI Cable Support 3D 4K High Quality Cable for Laptop Projector Monitor', slug:'/products/hdmi-cables/4k-hdmi-v2-0-cable/', family:'HDMI Cable', interface:'HDMI male-to-male cable for laptop, projector, monitor, PC host, set-top box and game console sourcing programs', power:'Not positioned as a charging product', dataRate:'High Speed HDMI and HDMI V2.0 wording listed; exact bandwidth and compliance require selected-SKU test evidence', video:'4K, 4K x 2K, 3840 x 2160 and 3D support are listed; resolution, refresh rate, cable length and source/display behavior require sample evidence', material:'Blue metal-style connector shell and black cable jacket shown; exact conductor, shielding and jacket construction require source confirmation', lengths:'1 m / 1.5 m / 2 m / 3 m / 5 m / 10 m / 15 m / 20 m / 25 m / 30 m listed', bestFor:'Wholesale HDMI V2.0 cable programs for laptops, projectors, monitors, PC hosts, set-top boxes and display accessory ranges', customization:['MOQ 100 pcs','1 m: US$0.60 / piece','1.5 m: US$0.70 / piece','2 m: US$0.80 / piece','3 m: US$1.00 / piece','5 m: US$1.20 / piece','10 m: US$2.30 / piece','15 m: US$3.50 / piece','20 m: US$4.50 / piece','25 m: US$5.60 / piece','30 m: US$6.80 / piece'], proofStatus:'User-provided title, commercial terms and product images captured; exact HDMI 2.0 compliance, 3D support, 4K behavior by length, audio/video sync, material, shielding, packaging, pricing and certification scope require selected-model evidence', detailReady:true, cardLabel:'4K HDMI V2.0 cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'1 m',value:'US$0.60 / piece'},{label:'5 m',value:'US$1.20 / piece'},{label:'30 m',value:'US$6.80 / piece'}],
+    images:[
+      {src:'/images/products/4k-hdmi-v2-0-cable/01-main.webp',alt:'Blue HDMI V2.0 4K cable with two male HDMI connectors',label:'Product view'},
+      {src:'/images/products/4k-hdmi-v2-0-cable/02-device-compatibility.webp',alt:'Supplier image showing HDMI interface device compatibility for PC laptop set-top box game console TV monitor and projector',label:'Device compatibility'},
+      {src:'/images/products/4k-hdmi-v2-0-cable/03-projector-use.webp',alt:'Supplier image showing HDMI cable linked from notebook to projector',label:'Projector use'},
+      {src:'/images/products/4k-hdmi-v2-0-cable/04-4k-picture-quality.webp',alt:'Supplier image showing 4K picture quality cue for HDMI V2.0 cable',label:'4K picture cue'},
+      {src:'/images/products/4k-hdmi-v2-0-cable/05-audio-video-sync.webp',alt:'Supplier image showing audio and video synchronous transmission cue for HDMI cable',label:'Audio video cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ and length-based price tiers are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/4k-hdmi-v2-0-cable/01-main.webp',alt:'Blue HDMI V2.0 4K cable product view'},
+      {title:'Display cue',value:'4K / 3D listed',note:'4K, 4K x 2K, 3840 x 2160 and 3D wording are reproduced from supplied material; exact mode support depends on source, display and cable length.',image:'/images/products/4k-hdmi-v2-0-cable/04-4k-picture-quality.webp',alt:'4K picture quality supplier image'},
+      {title:'Application cue',value:'Laptop / projector / monitor',note:'Supplied images show PC, laptop, projector, TV and monitor scenarios; confirm the final source-device and display target before quotation.',image:'/images/products/4k-hdmi-v2-0-cable/03-projector-use.webp',alt:'Notebook connected to projector through HDMI cable'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 10 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','4k HDMI V2.0 Cable High Speed HDMI Cable Support 3D 4K High Quality Cable for Laptop Projector Monitor'],
+      ['Product format','HDMI male-to-male cable'],
+      ['Version cue','HDMI V2.0 / 2.0V wording shown in supplied title and images'],
+      ['Video cue','4K, 4K x 2K, 3840 x 2160 and 3D support listed; selected-length evidence pending'],
+      ['Audio/video cue','Supplier image lists synchronous audio and video transmission; test evidence pending'],
+      ['Use','Laptop, projector and monitor listed by user; PC host, set-top box, game console, LCD TV and projector shown in supplied images'],
+      ['Color cue','Blue connector shells and black cable jacket shown'],
+      ['Length options','1 m, 1.5 m, 2 m, 3 m, 5 m, 10 m, 15 m, 20 m, 25 m and 30 m listed by user'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['1 m','US$0.60 / piece'],
+      ['1.5 m','US$0.70 / piece'],
+      ['2 m','US$0.80 / piece'],
+      ['3 m','US$1.00 / piece'],
+      ['5 m','US$1.20 / piece'],
+      ['10 m','US$2.30 / piece'],
+      ['15 m','US$3.50 / piece'],
+      ['20 m','US$4.50 / piece'],
+      ['25 m','US$5.60 / piece'],
+      ['30 m','US$6.80 / piece'],
+      ['Customization','Not specified in the supplied request; confirm logo, packaging, barcode and carton mark by quotation if required'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
