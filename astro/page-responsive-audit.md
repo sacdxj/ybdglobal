@@ -186,6 +186,8 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 
 2026-09-11 USB-C to DP 8K 60Hz cable addition: added `/products/hdmi-cables/usb-c-to-dp-8k-60hz-cable/` and the matching product card on `/products/hdmi-cables/` with four user-supplied images copied into `/images/products/usb-c-to-dp-8k-60hz-cable/` and converted to WebP. Static build and link checks passed; generated collection and detail HTML confirm the new product route, image paths, 100 pcs MOQ, tier pricing and evidence-gated 8K60 / 4K144 / 2K165 wording are present.
 
+2026-09-11 DP 2.1 to Type-C 16K bidirectional cable addition: added `/products/displayport-cables/dp21-type-c-to-dp-16k-bidirectional-cable/` and the matching product card on `/products/displayport-cables/` with four user-supplied images copied into `/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/` and converted to WebP. Static build and link checks passed; generated collection and detail HTML confirm the new product route, image paths, `50 pcs` MOQ, `2 m` length, `US$4.30 / piece`, `US$4.00 / piece` and evidence-gated DP 2.1 / 16K60 / 8K120 / bidirectional wording are present.
+
 | URL | Page type | Desktop | Tablet | Mobile | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Home | Pass | Pass | Pass | Hero H1 follows the global title scale; category directory and configurator checked after title-size fixes. |
@@ -208,6 +210,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/hdmi-cables/4k-hdmi-v2-0-cable/` | Product detail | Static checked | Static checked | Static checked | New 4K HDMI V2.0 cable detail page added with supplied images, 100 pcs MOQ, 1 m at US$0.60 / piece through 30 m at US$6.80 / piece and evidence-gated 4K / 3D / HDMI V2.0 wording. |
 | `/products/hdmi-cables/usb-c-to-dp-8k-60hz-cable/` | Product detail | Static checked | Static checked | Static checked | New USB-C to DP 8K 60Hz cable detail page added with supplied images, 100 pcs MOQ, 100-500 pcs at US$2.48 / piece, 500-1000 pcs at US$2.43 / piece, 1000+ pcs at US$2.20 / piece and evidence-gated 8K60 / 4K144 wording. |
 | `/products/displayport-cables/` | Product collection | Pass | Pass | Pass | Product card and display-workload modules checked. |
+| `/products/displayport-cables/dp21-type-c-to-dp-16k-bidirectional-cable/` | Product detail | Static checked | Static checked | Static checked | New DP 2.1 to Type-C 16K bidirectional cable detail page added with supplied images, 50 pcs MOQ, 2 m length, 1-1000 pcs at US$4.30 / piece, 1000+ pcs at US$4.00 / piece and evidence-gated DP 2.1 / 16K60 / 8K120 wording. |
 | `/products/hubs-docking/` | Product collection | Pass | Pass | Pass | Port-matrix modules checked. |
 | `/products/hubs-docking/justlink-8-in-1-usb-c-hub/` | Product detail | Pass | Pass | Pass | YBD 8-in-1 USB-C hub updated with four product images, current tier pricing, 10 pcs MOQ and logo support. |
 | `/products/hubs-docking/dual-head-8-in-1-aluminium-hub/` | Product detail | Pass | Pass | Pass | Dual-head 8-in-1 aluminium hub updated with four user-supplied product images replacing the generic hub reference. |

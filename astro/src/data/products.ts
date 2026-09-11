@@ -765,6 +765,39 @@ export const products: Product[] = [
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
+  { model:'DP 2.1 to Type C Cable 16K 60Hz 8K 120Hz Bidirectional USB C to DP Video Cable Braided Nylon Cable for Laptop Phone Monitor', slug:'/products/displayport-cables/dp21-type-c-to-dp-16k-bidirectional-cable/', family:'DisplayPort', interface:'USB-C male to DisplayPort male bidirectional cable shown for laptop, phone and monitor display programs', power:'Not positioned as a charging product', dataRate:'DP 2.1 listed; exact bandwidth, DP Alt Mode and host/device behavior require selected-SKU evidence', video:'16K 60Hz and 8K 120Hz listed; source, display, GPU, OS, cable length and mode require test evidence', material:'Braided nylon cable and aluminum-alloy shell cues shown; exact conductor, shielding and material stack require confirmation', lengths:'2 m listed', bestFor:'Laptop, phone and monitor sourcing programs that need USB-C to DisplayPort / DisplayPort to USB-C bidirectional display cable options', customization:['MOQ 50 pcs','2 m length listed','1-1000 pcs: US$4.30 / piece','1000+ pcs: US$4.00 / piece','Logo and packaging scope by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact DP 2.1, 16K60, 8K120, bidirectional transmission, material, packaging, certification and compatibility claims require selected-model evidence', detailReady:true, cardLabel:'USB-C to DP 16K', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'Length',value:'2 m'},{label:'1-1000 pcs',value:'US$4.30 / piece'},{label:'1000+ pcs',value:'US$4.00 / piece'}],
+    images:[
+      {src:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/01-main.webp',alt:'DP 2.1 to Type-C bidirectional braided cable with 16K Ultra HD cue',label:'Product view'},
+      {src:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/02-bidirectional.webp',alt:'Supplier image showing Type-C to DP and DP to Type-C bidirectional transmission cue',label:'Bidirectional cue'},
+      {src:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/03-craftsmanship.webp',alt:'Supplier image showing DisplayPort connector craftsmanship and braided cable material cues',label:'Construction cue'},
+      {src:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/04-packaging.webp',alt:'Retail packaging mockup for Type-C DisplayPort bidirectional conversion cable with logo area',label:'Packaging cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied 2 m length and tier prices are recorded for RFQ preparation; final quotation should confirm package and active SKU.',image:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/04-packaging.webp',alt:'Retail packaging mockup for Type-C DisplayPort bidirectional cable'},
+      {title:'Display cues',value:'16K60 / 8K120 listed',note:'Resolution and refresh wording is reproduced from supplied material; sample testing is required before public claim use.',image:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/01-main.webp',alt:'DP 2.1 to Type-C cable with 16K cue'},
+      {title:'Direction',value:'Two-way listed',note:'Supplied image says Type-C to DP and DP to Type-C bidirectional transmission; compatibility depends on host ports, display ports and supported modes.',image:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/02-bidirectional.webp',alt:'Bidirectional transmission supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 11 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','DP 2.1 to Type C Cable 16K 60Hz 8K 120Hz Bidirectional USB C to DP Video Cable Braided Nylon Cable for Laptop Phone Monitor'],
+      ['Product format','USB-C male to DisplayPort male cable shown in supplied images'],
+      ['Direction cue','Type-C to DP and DP to Type-C bidirectional transmission shown in supplied image'],
+      ['Protocol cue','DP 2.1 listed by user; selected-SKU evidence pending'],
+      ['Resolution / refresh cue','16K 60Hz and 8K 120Hz listed by user; supplied packaging image also shows 8K 60Hz / 4K / 2K compatibility cues that require confirmation'],
+      ['Use','Laptop, phone and monitor listed by user'],
+      ['Length option','2 m listed by user'],
+      ['Material cue','Braided nylon cable listed by user; aluminum-alloy shell and selected gold-plated plug shown in supplied image'],
+      ['Packaging cue','Retail box mockup with YOUR LOGO area shown in supplied image; final artwork and compliance marks require confirmation'],
+      ['Certification cue','CE, RoHS, UKCA, FCC-style and recycle marks appear on packaging image; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Length','2 m'],
+      ['1-1000 pcs','US$4.30 / piece'],
+      ['1000+ pcs','US$4.00 / piece'],
+      ['Customization','Logo and packaging appear supported by supplied packaging mockup; confirm logo, artwork, barcode and carton mark by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'DP 2.1 16K 80Gbps DisplayPort Cable', slug:'/products/displayport-cables/displayport-2-1-cable/', family:'DisplayPort', interface:'DisplayPort to DisplayPort, male to male', power:'Not applicable', dataRate:'Supplier lists DP 2.1 / 80 Gbps; protocol and test evidence pending', video:'Supplier lists 2K / 4K / 8K / 16K and HDR; exact timing support requires evidence', material:'Bare-copper conductor, gold-plated contact description, foil / combination shielding and nylon jacket listed', lengths:'1 m / 2 m / 3 m listed', bestFor:'Monitor, workstation, projector, home-theater and professional display sourcing programs', customization:['Black color listed','1 m / 2 m / 3 m','Polybag packing','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; DP version, bandwidth, resolution, refresh, HDR, durability and compliance claims require model-level evidence', detailReady:true, cardLabel:'DP to DP', cardFacts:[{label:'Bandwidth',value:'80 Gbps listed'},{label:'Display',value:'Up to 16K listed'},{label:'Length',value:'1 m / 2 m / 3 m'}],
     images:[
       {src:'/images/products/dp21-16k-80gbps/01-main.webp',alt:'Black braided DisplayPort to DisplayPort cable with male connectors',label:'Product view'},
