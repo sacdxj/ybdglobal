@@ -765,6 +765,42 @@ export const products: Product[] = [
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
   { model:'HDMI Cable Configuration', slug:'/products/hdmi-cables/hdmi-2-1-cable/', family:'HDMI Cable', interface:'Confirm connector by selected SKU', power:'Not applicable', dataRate:'Confirm by selected SKU', video:'Confirm requested display performance and evidence', material:'Confirm jacket by selected SKU', lengths:'Confirm construction and length', bestFor:'Display, projector and distribution programs', customization:['Logo','Color','Length','Packaging'], proofStatus:'Resolution and refresh claims require SKU test evidence', cardLabel:'HDMI configuration', cardFacts:[{label:'Connector',value:'Confirm selected SKU'},{label:'Display',value:'Define target mode'},{label:'Length',value:'Confirm installation'}], images:[{src:'/images/catalog/hdmi-cable-category.webp',alt:'Generic black braided HDMI male-to-male cable with both connector ends visible',label:'HDMI configuration reference'}] },
+  { model:'Ultra Clear 8K DP Cable 8K 60Hz 4K 240Hz Audio Video Transfer V1.4 DP Cable for HDTV Projector Monitor 3D Visual Game', slug:'/products/displayport-cables/ultra-clear-8k-dp-1-4-cable/', family:'DisplayPort', interface:'DisplayPort male-to-male cable shown for HDTV, projector, monitor, 3D visual and gaming display programs', power:'Not applicable', dataRate:'DP 1.4 listed; exact bandwidth and link mode require selected-SKU evidence', video:'8K 60Hz, 4K 240Hz, HDR and 3D visual cues listed; source, display, GPU, cable length and mode require test evidence', material:'Black cable with gray metal-look connector housings shown; exact conductor, jacket and shielding stack require confirmation', lengths:'1 m / 1.5 m / 2 m / 3 m / 5 m listed', bestFor:'HDTV, projector, monitor, game display, 3D visual and private-label DP 1.4 cable sourcing programs', customization:['MOQ 200 pcs','1 m: US$0.95 / piece','1.5 m: US$1.20 / piece','2 m: US$1.38 / piece','3 m: US$1.70 / piece','5 m: US$2.20 / piece','Logo, length, packaging and label requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact DP 1.4, 8K60, 4K240, HDR, 3D visual behavior, construction and compliance scope require selected-model evidence', detailReady:true, cardLabel:'8K DP 1.4 cable', cardFacts:[{label:'MOQ',value:'200 pcs'},{label:'1 m',value:'US$0.95 / piece'},{label:'2 m',value:'US$1.38 / piece'},{label:'5 m',value:'US$2.20 / piece'}],
+    images:[
+      {src:'/images/products/ultra-clear-8k-dp-1-4-cable/02-main.webp',alt:'Ultra Clear 8K DP 1.4 cable with gray connector housings and gold DisplayPort connectors',label:'Product view'},
+      {src:'/images/products/ultra-clear-8k-dp-1-4-cable/03-8k-4k.webp',alt:'Supplier image listing DP 1.4 8K 60Hz and 4K 240Hz display cues',label:'8K and 4K cues'},
+      {src:'/images/products/ultra-clear-8k-dp-1-4-cable/01-hdr.webp',alt:'Supplier image showing HDR high dynamic picture comparison cue',label:'HDR cue'},
+      {src:'/images/products/ultra-clear-8k-dp-1-4-cable/04-3d-visual.webp',alt:'Supplier image showing DP cable 3D visual effects immersive experience cue',label:'3D visual cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 200 pcs',note:'User supplied length pricing is recorded for RFQ preparation; final quotation should confirm active SKU, package and order date.',image:'/images/products/ultra-clear-8k-dp-1-4-cable/02-main.webp',alt:'Ultra Clear 8K DP 1.4 cable product view'},
+      {title:'Display cues',value:'8K60 / 4K240 listed',note:'Resolution, refresh and DP 1.4 wording is reproduced from supplied material; sample testing is required before public claim use.',image:'/images/products/ultra-clear-8k-dp-1-4-cable/03-8k-4k.webp',alt:'DP 1.4 8K 60Hz and 4K 240Hz supplier image'},
+      {title:'Visual modes',value:'HDR / 3D listed',note:'HDR and 3D visual effects are supplied-image cues; source, display and content compatibility must be confirmed.',image:'/images/products/ultra-clear-8k-dp-1-4-cable/04-3d-visual.webp',alt:'3D visual effects supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 12 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Ultra Clear 8K DP Cable 8K 60Hz 4K 240Hz Audio Video Transfer V1.4 DP Cable for HDTV Projector Monitor 3D Visual Game'],
+      ['Product format','DisplayPort male-to-male cable shown in supplied images'],
+      ['Protocol cue','DP 1.4 / V1.4 listed by user and shown in supplied images; selected-SKU evidence pending'],
+      ['Resolution / refresh cue','8K 60Hz and 4K 240Hz listed by user and shown in supplied image; source, display, cable length and mode evidence pending'],
+      ['HDR cue','HDR high dynamic picture cue shown in supplied image; display/content compatibility evidence pending'],
+      ['3D visual cue','3D stereoscopic imaging / immersive experience cue shown in supplied image; display/source compatibility requires confirmation'],
+      ['Use','HDTV, projector, monitor, 3D visual and game listed by user'],
+      ['Length options','1 m, 1.5 m, 2 m, 3 m and 5 m listed by user'],
+      ['Color cue','Black cable with gray metal-look connector housings shown'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','200 pcs'],
+      ['1 m price','US$0.95 / piece'],
+      ['1.5 m price','US$1.20 / piece'],
+      ['2 m price','US$1.38 / piece'],
+      ['3 m price','US$1.70 / piece'],
+      ['5 m price','US$2.20 / piece'],
+      ['Customization','Not specified in the supplied request; confirm logo, label, color, package artwork, barcode and carton mark by quotation if required'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'DP 2.1 to Type C Cable 16K 60Hz 8K 120Hz Bidirectional USB C to DP Video Cable Braided Nylon Cable for Laptop Phone Monitor', slug:'/products/displayport-cables/dp21-type-c-to-dp-16k-bidirectional-cable/', family:'DisplayPort', interface:'USB-C male to DisplayPort male bidirectional cable shown for laptop, phone and monitor display programs', power:'Not positioned as a charging product', dataRate:'DP 2.1 listed; exact bandwidth, DP Alt Mode and host/device behavior require selected-SKU evidence', video:'16K 60Hz and 8K 120Hz listed; source, display, GPU, OS, cable length and mode require test evidence', material:'Braided nylon cable and aluminum-alloy shell cues shown; exact conductor, shielding and material stack require confirmation', lengths:'2 m listed', bestFor:'Laptop, phone and monitor sourcing programs that need USB-C to DisplayPort / DisplayPort to USB-C bidirectional display cable options', customization:['MOQ 50 pcs','2 m length listed','1-1000 pcs: US$4.30 / piece','1000+ pcs: US$4.00 / piece','Logo and packaging scope by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact DP 2.1, 16K60, 8K120, bidirectional transmission, material, packaging, certification and compatibility claims require selected-model evidence', detailReady:true, cardLabel:'USB-C to DP 16K', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'Length',value:'2 m'},{label:'1-1000 pcs',value:'US$4.30 / piece'},{label:'1000+ pcs',value:'US$4.00 / piece'}],
     images:[
       {src:'/images/products/dp21-type-c-to-dp-16k-bidirectional-cable/01-main.webp',alt:'DP 2.1 to Type-C bidirectional braided cable with 16K Ultra HD cue',label:'Product view'},
