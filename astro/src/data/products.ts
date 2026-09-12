@@ -658,6 +658,43 @@ export const products: Product[] = [
       ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'High Quality 8K UHD HDMI V2.1 8K 60Hz 48Gbps hdmi Cable 4K 120Hz Cable for Home Theater Monitor Computer Projector', slug:'/products/hdmi-cables/high-quality-8k-uhd-hdmi-2-1-cable/', family:'HDMI Cable', interface:'HDMI male-to-male cable shown for home theater, monitor, computer and projector display programs', power:'Not applicable', dataRate:'HDMI V2.1 / 48Gbps listed; exact bandwidth behavior requires selected-SKU and test evidence', video:'8K 60Hz, 4K 120Hz, 144Hz, VRR/QFT and 3D visual cues listed; source, display, cable length and mode require test evidence', material:'Black cable with gold-tone connector collars shown; exact conductor, jacket and shielding stack require confirmation', lengths:'1 m / 1.5 m / 2 m / 3 m / 5 m listed', bestFor:'Home theater, monitor, computer, projector, videoconferencing, office projection and private-label HDMI 2.1 cable sourcing programs', customization:['MOQ 200 pcs','Logo supported','1 m: US$0.90 / piece','1.5 m: US$1.00 / piece','2 m: US$1.20 / piece','3 m: US$1.50 / piece','5 m: US$2.00 / piece','Packaging and label requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact HDMI 2.1, 48Gbps, 8K60, 4K120, 144Hz, VRR/QFT, 3D visual behavior, construction and compliance scope require selected-model evidence', detailReady:true, cardLabel:'8K HDMI 2.1 cable', cardFacts:[{label:'MOQ',value:'200 pcs'},{label:'1 m',value:'US$0.90 / piece'},{label:'2 m',value:'US$1.20 / piece'},{label:'5 m',value:'US$2.00 / piece'}],
+    images:[
+      {src:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/02-main.webp',alt:'High Quality 8K UHD HDMI V2.1 cable with black jacket and gold-tone HDMI connectors',label:'Product view'},
+      {src:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/03-8k-48gbps.webp',alt:'Supplier image listing 8K 60Hz 48Gbps bandwidth 144Hz refresh rate 12bit color depth and 3D visual effect cues',label:'8K and 48Gbps cues'},
+      {src:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/04-refresh-gaming.webp',alt:'Supplier image showing 48Gbps high bandwidth and 144Hz high refresh rate gaming cue',label:'Refresh and gaming cue'},
+      {src:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/01-application-scenarios.webp',alt:'Supplier image showing HDMI cable application scenarios for conference HDTV living room projection outdoor screen and videoconferencing',label:'Application scenarios'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 200 pcs',note:'User supplied length pricing and logo support are recorded for RFQ preparation; final quotation should confirm active SKU, package and order date.',image:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/02-main.webp',alt:'High Quality 8K UHD HDMI cable product view'},
+      {title:'Display cues',value:'48Gbps / 8K60 listed',note:'Bandwidth, resolution and refresh wording is reproduced from supplied material; sample testing is required before public claim use.',image:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/03-8k-48gbps.webp',alt:'8K 48Gbps HDMI 2.1 supplier image'},
+      {title:'Application',value:'Home theater / monitor / projector',note:'Supplied images show conference, HDTV, living room, projection, outdoor screen and videoconferencing scenarios; confirm source device and display mode in the RFQ.',image:'/images/products/high-quality-8k-uhd-hdmi-2-1-cable/01-application-scenarios.webp',alt:'HDMI application scenario supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 12 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','High Quality 8K UHD HDMI V2.1 8K 60Hz 48Gbps hdmi Cable 4K 120Hz Cable for Home Theater Monitor Computer Projector'],
+      ['Product format','HDMI male-to-male cable shown in supplied images'],
+      ['Protocol / bandwidth cue','HDMI V2.1 and 48Gbps listed by user and shown in supplied image; test evidence pending'],
+      ['Resolution / refresh cue','8K 60Hz and 4K 120Hz listed by user; supplied image also references 144Hz, VRR and QFT cues that require selected-SKU evidence'],
+      ['3D visual cue','3D visual effect shown in supplied image; display/source compatibility requires confirmation'],
+      ['Use','Home theater, monitor, computer and projector listed by user; conference, HDTV, living room, projection, outdoor screen and videoconferencing scenarios shown in supplied image'],
+      ['Length options','1 m, 1.5 m, 2 m, 3 m and 5 m listed by user'],
+      ['Color cue','Black cable with gold-tone connector collars shown'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','200 pcs'],
+      ['1 m price','US$0.90 / piece'],
+      ['1.5 m price','US$1.00 / piece'],
+      ['2 m price','US$1.20 / piece'],
+      ['3 m price','US$1.50 / piece'],
+      ['5 m price','US$2.00 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Customization','Confirm logo, label, color, package artwork, barcode and carton mark by quotation'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'Ultra Clear 8K hdmi Cable 48Gbps 4K 240Hz 8K 60Hz Audio Video Transfer V2.1 hdmi Cable for HDTV Projector Monitor 3D Visual', slug:'/products/hdmi-cables/ultra-clear-8k-hdmi-2-1-cable/', family:'HDMI Cable', interface:'HDMI male-to-male cable format shown for HDTV, projector, monitor and 3D visual display programs', power:'Not applicable', dataRate:'HDMI 2.1 / 48Gbps listed; exact bandwidth behavior requires selected-SKU and test evidence', video:'8K 60Hz, 4K 240Hz, 4K 120Hz and 3D visual cues listed; source, display, cable length and mode require test evidence', material:'Black cable with gray metal-look connector housings shown; exact conductor, jacket and shielding stack require confirmation', lengths:'1 m / 1.5 m / 2 m / 3 m / 5 m listed', bestFor:'HDTV, projector, monitor, gaming, 3D visual and private-label HDMI 2.1 cable sourcing programs', customization:['MOQ 100 pcs','1 m: US$0.90 / piece','1.5 m: US$1.15 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','5 m: US$2.30 / piece','Logo, length, packaging and label requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact HDMI 2.1, 48Gbps, 4K 240Hz, 8K 60Hz, 3D visual behavior, construction and compliance scope require selected-model evidence', detailReady:true, cardLabel:'8K HDMI 2.1 cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'1 m',value:'US$0.90 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'5 m',value:'US$2.30 / piece'}],
     images:[
       {src:'/images/products/ultra-clear-8k-hdmi-2-1-cable/01-main.webp',alt:'Ultra Clear 8K HDMI cable with gray connector housings and black cable',label:'Product view'},
