@@ -17,7 +17,7 @@ proofStatus: "Company name and address provided; factory role, test files and ce
     <p>This banner preview is prepared for factory, product range and OEM/ODM positioning review before it is used as a public-facing visual asset.</p>
   </div>
   <figure>
-    <img src="/images/editorial/youboda-factory-poster-preview-2x.png" alt="Dongguan Youboda factory and product range promotional poster preview" loading="eager" />
+    <img src="/images/editorial/youboda-factory-capability-poster-realistic.png" alt="YBD Global factory and custom manufacturing poster showing cable assembly, process inspection and product range" loading="eager" />
   </figure>
 </section>
 
@@ -58,10 +58,10 @@ proofStatus: "Company name and address provided; factory role, test files and ce
     <h2 id="evidence-playbook-title">Ask for factory and certificate records after the exact risk is known.</h2>
     <p>Factory and certification content is useful only when the record matches the selected model, market, claim and production scope.</p>
     <div class="evidence-risk-grid">
-      <article><strong>Identity</strong><small>Model, construction and revision.</small></article>
-      <article><strong>Performance</strong><small>Power, data, display or charging behavior.</small></article>
-      <article><strong>Certification</strong><small>Scope, issuer, validity and destination requirement.</small></article>
-      <article><strong>Factory</strong><small>Facility role, lot control and inspection record.</small></article>
+      <a href="/get-a-quote/?program=Evidence%20review&request=Identity%20evidence"><strong>Identity</strong><small>Model, construction and revision.</small></a>
+      <a href="/get-a-quote/?program=Evidence%20review&request=Performance%20evidence"><strong>Performance</strong><small>Power, data, display or charging behavior.</small></a>
+      <a href="/get-a-quote/?program=Evidence%20review&request=Certification%20evidence"><strong>Certification</strong><small>Scope, issuer, validity and destination requirement.</small></a>
+      <a href="/get-a-quote/?program=Evidence%20review&request=Factory%20evidence"><strong>Factory</strong><small>Facility role, lot control and inspection record.</small></a>
     </div>
     <a class="button button-primary" href="/get-a-quote/?program=Evidence%20review&request=Evidence%20Pack">Request the evidence pack</a>
   </div>
