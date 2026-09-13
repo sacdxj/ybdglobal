@@ -1,0 +1,7 @@
+# Keep GitHub language stats focused on the shipped Astro site.
+*.py linguist-vendored
+*.xlsx linguist-vendored
+archive/** linguist-vendored
+outputs/** linguist-generated
+tmp/** linguist-generated
+astro/dist*/** linguist-generated
