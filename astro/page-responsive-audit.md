@@ -26,6 +26,8 @@ Current result: passed. Final responsive scan returned `issues: []` across 29 ro
 
 2026-09-14 quality factory cache-bust poster replacement: replaced the large `/quality-factory/` poster with `/images/editorial/ybd-quality-factory-hero-20260914.png` so production does not reuse the previously cached poster URL. Recheck required after build and production preview.
 
+2026-09-14 OEM/ODM process poster replacement: replaced the large `/oem-odm/` process poster with `/images/editorial/ybd-oem-odm-process-hero-20260914.png` and extended the existing wide-poster CSS selectors to the new cache-busted filename. Recheck required after build and production preview.
+
 2026-08-25 homepage image replacement: replaced the first homepage visual-brief image with a practical smartphone-charging lifestyle photo (`/images/editorial/phone-charging-desk.webp`) so the buying-path module feels more product-usage-led and less like a paperwork scene. The image keeps a portrait composition and bottom dark area for the existing caption overlay.
 
 2026-08-25 homepage buyer-path update: replaced the hero Buyer Path card with a concise six-step buying process (`Tell us your needs`, `Choose your products`, `Get a quote`, `Confirm samples`, `Start bulk production`, `Quality check & delivery`). Added a home-scoped panel spacing/type override so the extra steps remain readable without turning the hero card into a dense text block across desktop, tablet and mobile.
