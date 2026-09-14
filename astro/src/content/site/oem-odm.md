@@ -28,7 +28,7 @@ proofStatus: "Project scope and commercial terms require configuration review"
       <figcaption><span>02</span><strong>Differences</strong><small>Specify construction, color and brand assets</small></figcaption>
     </figure>
     <figure class="oem-layer oem-layer--packaging">
-      <img src="/images/editorial/ybd-oem-odm-process-hero-20260914.png" alt="YBD Global OEM and ODM cable customization process infographic" loading="lazy" />
+      <img src="/images/editorial/ybd-global-oem-odm-cable-customization-process.png" alt="YBD Global OEM and ODM cable customization process infographic" loading="lazy" />
       <figcaption><span>03</span><strong>Approval</strong><small>Evaluate and lock the selected revision</small></figcaption>
     </figure>
   </div>
@@ -78,7 +78,7 @@ proofStatus: "Project scope and commercial terms require configuration review"
 
 <section class="decision-showcase decision-showcase--oem" aria-labelledby="oem-decision-title">
   <figure>
-    <img src="/images/editorial/ybd-oem-odm-process-hero-20260914.png" alt="YBD Global OEM and ODM cable customization process infographic" loading="lazy" />
+    <img src="/images/editorial/ybd-global-oem-odm-cable-customization-process.png" alt="YBD Global OEM and ODM cable customization process infographic" loading="lazy" />
     <figcaption>Controlled changes reduce sample and production drift.</figcaption>
   </figure>
   <div class="decision-showcase__copy">
