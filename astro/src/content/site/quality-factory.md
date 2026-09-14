@@ -17,7 +17,7 @@ proofStatus: "Company name and address provided; factory role, test files and ce
     <p>This banner preview is prepared for factory, product range and OEM/ODM positioning review before it is used as a public-facing visual asset.</p>
   </div>
   <figure>
-    <img src="/images/editorial/youboda-factory-capability-poster-realistic.png" alt="YBD Global factory and custom manufacturing poster showing cable assembly, process inspection and product range" loading="eager" />
+    <img src="/images/editorial/ybd-quality-factory-hero-20260914.png" alt="YBD Global factory and custom manufacturing poster showing cable assembly, process inspection and product range" loading="eager" />
   </figure>
 </section>
 
