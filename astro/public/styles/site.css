@@ -9220,19 +9220,22 @@ body .content-body.oem-customization-content > .decision-showcase--oem figure {
   background: #fff;
 }
 
-body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="oem-odm-five-grid"] {
+body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="oem-odm-five-grid"],
+body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="ybd-global-oem-odm-cable-customization-process"] {
   object-fit: contain;
   padding: 34px 24px 76px;
   background: #fff;
 }
 
-body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"])::after {
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"])::after,
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="ybd-global-oem-odm-cable-customization-process"])::after {
   inset: auto 0 0;
   height: 118px;
   background: linear-gradient(180deg, rgba(9, 11, 10, 0), rgba(9, 11, 10, .78));
 }
 
-body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"]) figcaption {
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="oem-odm-five-grid"]) figcaption,
+body .content-body.oem-customization-content > .decision-showcase--oem figure:has(img[src*="ybd-global-oem-odm-cable-customization-process"]) figcaption {
   bottom: 20px;
 }
 
@@ -9681,6 +9684,21 @@ body .content-body.home-content {
     min-height: 300px;
   }
 
+  body .content-body.oem-customization-content > .decision-showcase--oem {
+    grid-template-columns: 1fr;
+  }
+
+  body .content-body.oem-customization-content > .decision-showcase--oem figure {
+    min-height: 0;
+  }
+
+  body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="ybd-global-oem-odm-cable-customization-process"] {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1672 / 941;
+    padding: 22px 18px 68px;
+  }
+
   .oem-customization-content > .decision-showcase--oem .decision-showcase__copy {
     padding: 34px 28px;
   }
@@ -9715,6 +9733,10 @@ body .content-body.home-content {
 
   .oem-customization-content > .decision-showcase--oem figure {
     min-height: 200px;
+  }
+
+  body .content-body.oem-customization-content > .decision-showcase--oem figure img[src*="ybd-global-oem-odm-cable-customization-process"] {
+    padding: 14px 12px 58px;
   }
 
   .oem-customization-content > .decision-showcase--oem .decision-showcase__copy {
@@ -10467,7 +10489,8 @@ body .content-body.oem-customization-content .oem-layer--product img[src*="usb-c
   background: #fff;
 }
 
-body .content-body.oem-customization-content .oem-layer--packaging img[src*="oem-odm-five-grid"] {
+body .content-body.oem-customization-content .oem-layer--packaging img[src*="oem-odm-five-grid"],
+body .content-body.oem-customization-content .oem-layer--packaging img[src*="ybd-global-oem-odm-cable-customization-process"] {
   object-fit: contain;
   padding: 14px;
   background: #fff;
