@@ -1133,6 +1133,39 @@ export const products: Product[] = [
       ['Lead time: 1–100 pieces','7 days — current quotation confirmation required'],
       ['Lead time: over 100 pieces','To be negotiated']
     ] },
+  { model:'Wholesale Portable GaN 25W Power Adapter Type-C PD Charger Mobile Phone Travel Wall Charger for USB-C Samsung Iphone', slug:'/products/chargers/gan-25w-usb-c-wall-charger/', family:'Charger', interface:'Single USB-C / Type-C output wall charger format shown; EU-style plug shown in supplied images', power:'25W, PD3.0 and GaN fast-charge cues listed; exact output map, protocol behavior and destination plug require selected-SKU evidence', dataRate:'Not applicable', video:'Not applicable', material:'Compact wall-charger shell shown in black and white; GaN gallium nitride cue listed; exact housing material, chipset and safety design require source confirmation', lengths:'Travel wall charger; no cable bundle confirmed in supplied material', bestFor:'Wholesale mobile-phone charger, USB-C Samsung, iPhone and travel wall-charger programs needing low MOQ review and private-label quotation', customization:['MOQ 500 pcs','500-1000 pcs: US$3.00 / piece','1000+ pcs: US$2.90 / piece','OEM/ODM cue shown in supplied image','Logo, plug type, packaging and certification market by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact GaN architecture, 25W PD3.0 profile, output voltage/current map, fast-charge percentage, plug market, logo, packaging and certification claims require selected-model evidence', detailReady:true, cardLabel:'GaN 25W USB-C charger', cardFacts:[{label:'MOQ',value:'500 pcs'},{label:'500-1000 pcs',value:'US$3.00 / piece'},{label:'1000+ pcs',value:'US$2.90 / piece'},{label:'Port',value:'USB-C listed'}],
+    images:[
+      {src:'/images/products/gan-25w-usb-c-wall-charger/01-main.webp',alt:'Black and white portable GaN 25W USB-C wall charger with PD3.0 and OEM ODM cues',label:'Product view'},
+      {src:'/images/products/gan-25w-usb-c-wall-charger/02-gan-fast-charge.webp',alt:'GaN 25W fast-charge wall charger image showing black and white charger variants with Type-C single interface cue',label:'GaN fast-charge cue'},
+      {src:'/images/products/gan-25w-usb-c-wall-charger/03-laptop-use.webp',alt:'Single-port GaN 25W wall charger connected to a laptop charging setup',label:'Device charging use'},
+      {src:'/images/products/gan-25w-usb-c-wall-charger/04-gan-chip.webp',alt:'Illustration showing GaN chip technology cue for fast charge and upgrade',label:'GaN chip cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 500 pcs',note:'User-supplied quotation tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/gan-25w-usb-c-wall-charger/01-main.webp',alt:'Black and white GaN 25W USB-C wall charger variants'},
+      {title:'Power cue',value:'25W PD3.0 listed',note:'25W, PD3.0 and GaN cues are listed; exact charging profile and market approvals require selected-SKU evidence.',image:'/images/products/gan-25w-usb-c-wall-charger/02-gan-fast-charge.webp',alt:'GaN 25W fast-charge charger variants'},
+      {title:'Private label',value:'OEM/ODM shown',note:'Logo, packaging, plug standard and certification market should be locked before sample or mass production.',image:'/images/products/gan-25w-usb-c-wall-charger/04-gan-chip.webp',alt:'GaN chip technology illustration'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 14 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Wholesale Portable GaN 25W Power Adapter Type-C PD Charger Mobile Phone Travel Wall Charger for USB-C Samsung Iphone'],
+      ['Product format','Portable wall charger / travel power adapter'],
+      ['Power cue','25W listed in title and supplied images; output map requires source confirmation'],
+      ['Protocol cue','PD3.0 listed in supplied image; certification and protocol behavior require evidence'],
+      ['Technology cue','GaN / gallium nitride listed in supplied images; exact component architecture requires SKU evidence'],
+      ['Port cue','Type-C single interface and USB-C wording listed'],
+      ['Device use','Mobile phone, Samsung, iPhone and laptop-use image cues shown; exact compatibility requires sample confirmation'],
+      ['Color cue','Black and white charger variants shown'],
+      ['OEM/ODM cue','OEM/ODM shown in supplied image'],
+      ['Source boundary','Fast-charge percentage and GaN technology claims are treated as supplier/listing cues until model-level evidence is provided']
+    ],
+    packagingClaims:[
+      ['MOQ','500 pieces'],
+      ['Price: 500-1000 pieces','US$3.00 / piece'],
+      ['Price: 1000+ pieces','US$2.90 / piece'],
+      ['Customization','OEM/ODM cue shown; logo, plug, packaging and certification market by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation'],
+      ['Packaging','Retail or neutral packaging by project; confirm package size, weight, barcode and carton data before order']
+    ] },
   { model:'100W USB 3.2 20Gbps USB-C Full-Feature Cable', slug:'/products/usb-cables/usb-3-2-20gbps-100w-cable/', family:'USB Cable', interface:'USB-C to USB-C; supplier lists USB 3.2 connector', power:'Supplier lists PD 3.0, 100W, 20V/5A and 5A fast charging; E-marker and test evidence pending', dataRate:'Supplier lists USB 3.2 / 20 Gbps and Thunderbolt 3 support; compliance evidence pending', video:'Supplier lists up to 8K at 60Hz; source, display, mode and test evidence pending', material:'PVC jacket; conductor described as both tinned copper and pure copper; shielding details require confirmation', lengths:'0.25 m / 0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Laptop, dock, external-storage, display and high-performance USB-C accessory programs', customization:['Black color','Five listed lengths','Polybag','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; USB version, Thunderbolt compatibility, data rate, video, power and compliance require model-level evidence', detailReady:true, cardFacts:[{label:'Power',value:'100W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
     images:[
       {src:'/images/products/usb32-20gbps-100w/01-main.webp',alt:'Black USB-C to USB-C PVC cable with supplier performance labels on the connector housings',label:'Product view'},
