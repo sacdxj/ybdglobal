@@ -22,6 +22,8 @@ Automated checks used:
 
 Current result: passed. Final responsive scan returned `issues: []` across 29 routes and 3 viewport sizes.
 
+2026-09-14 quality factory hero visibility fix: changed `/quality-factory/` hero from CSS background-only rendering to a real eager `<img>` poster so the uploaded YBD Global factory banner is visible in the first viewport instead of showing a black hero area. Verified after build at desktop default width, 768x1024 and 390x844; poster visible and no horizontal overflow.
+
 2026-08-25 homepage image replacement: replaced the first homepage visual-brief image with a practical smartphone-charging lifestyle photo (`/images/editorial/phone-charging-desk.webp`) so the buying-path module feels more product-usage-led and less like a paperwork scene. The image keeps a portrait composition and bottom dark area for the existing caption overlay.
 
 2026-08-25 homepage buyer-path update: replaced the hero Buyer Path card with a concise six-step buying process (`Tell us your needs`, `Choose your products`, `Get a quote`, `Confirm samples`, `Start bulk production`, `Quality check & delivery`). Added a home-scoped panel spacing/type override so the extra steps remain readable without turning the hero card into a dense text block across desktop, tablet and mobile.

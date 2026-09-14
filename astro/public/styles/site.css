@@ -10857,16 +10857,21 @@ body .content-body.case-studies-content > blockquote {
 /* Quality page poster hero: show the banner as a clean, readable visual. */
 body main > .page-hero:has(+ .intent-bar--quality) {
   max-width: 100%;
-  min-height: min(56.3vw, calc(100vh - 108px));
+  min-height: 0;
   aspect-ratio: 1672 / 941;
   display: block;
   overflow: hidden;
   padding: 0;
   background-color: #050807;
-  background-image: var(--hero-image, url('/images/editorial/youboda-factory-poster-preview-2x.png'));
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: none;
+}
+
+.quality-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
 }
 
 .quality-hero-hotspot {
@@ -10906,8 +10911,7 @@ body main > .page-hero:has(+ .intent-bar--quality) .page-hero__panel {
 @media (max-width: 820px) {
   body main > .page-hero:has(+ .intent-bar--quality) {
     aspect-ratio: 1672 / 941;
-    min-height: min(56.3vw, calc(100vh - 84px));
-    background-size: contain;
+    min-height: 0;
   }
 
   .quality-hero-hotspot {
