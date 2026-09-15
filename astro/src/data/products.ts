@@ -1166,6 +1166,40 @@ export const products: Product[] = [
       ['Lead time','Not provided in supplied material; confirm by current quotation'],
       ['Packaging','Retail or neutral packaging by project; confirm package size, weight, barcode and carton data before order']
     ] },
+  { model:'High quality 20W Electric Power Charger Type-C Fast Wall Adapter Travel Charger for iPhone 17 18 Pro Max Camera EU US UK Plug', slug:'/products/chargers/20w-usb-c-fast-wall-adapter/', family:'Charger', interface:'Single USB-C output wall adapter shown; EU / US / UK plug options listed by user and require selected-plug confirmation', power:'20W listed; exact PD profile, voltage/current table and protection design require selected-SKU evidence', dataRate:'Not applicable', video:'Not applicable', material:'White compact wall-adapter housing shown; exact shell material and internal design require source confirmation', lengths:'Travel wall adapter; cable not included unless confirmed by selected package', bestFor:'Private-label 20W USB-C wall charger programs for phone, camera, travel and accessory bundles', customization:['MOQ 100 pcs','100-499 pcs: US$1.50 / piece','500-1000 pcs: US$1.45 / piece','1000+ pcs: US$1.20 / piece','Custom packaging supported','Logo supported','EU / US / UK plug options listed; confirm selected market and plug standard by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 20W output profile, FCC scope, EU/US/UK plug standards, iPhone 17/18 compatibility, dimensions, weight, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'20W USB-C charger', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-499 pcs',value:'US$1.50 / piece'},{label:'500-1000 pcs',value:'US$1.45 / piece'},{label:'1000+ pcs',value:'US$1.20 / piece'}],
+    images:[
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/01-main.webp',alt:'White 20W USB-C fast wall adapter with US plug pins and size and weight cues',label:'Product view'},
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/02-packaging.webp',alt:'20W USB-C power adapter with retail box and US FCC certified packaging cue',label:'Packaging cue'},
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/03-usb-c-port.webp',alt:'Close-up of single USB-C port on compact white 20W wall charger',label:'USB-C port'},
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/04-us-plug.webp',alt:'US standard plug view of white 20W USB-C charger with FCC certified cue',label:'US plug cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User-supplied price tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/20w-usb-c-fast-wall-adapter/01-main.webp',alt:'White 20W USB-C wall adapter on blue background'},
+      {title:'Charger format',value:'Single USB-C port',note:'Images show a compact single-port USB-C wall adapter; exact output table and protection design require selected-SKU evidence.',image:'/images/products/20w-usb-c-fast-wall-adapter/03-usb-c-port.webp',alt:'Single USB-C output port on white wall charger'},
+      {title:'Private label',value:'Packaging and logo supported',note:'Custom packaging, logo, plug standard and certification market should be locked before sample or mass production.',image:'/images/products/20w-usb-c-fast-wall-adapter/02-packaging.webp',alt:'20W USB-C power adapter with packaging box'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 15 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','High quality 20W Electric Power Charger Type-C Fast Wall Adapter Travel Charger for iPhone 17 18 Pro Max Camera EU US UK Plug'],
+      ['Product format','Compact travel wall adapter / USB-C fast charger'],
+      ['Power cue','20W listed in title and supplied images; exact output map requires source confirmation'],
+      ['Port cue','Single USB-C output shown in supplied image'],
+      ['Plug cue','US plug shown; EU / US / UK plug options listed by user and require selected-plug confirmation'],
+      ['Device use','iPhone 17, iPhone 18 Pro Max, camera and travel use listed; compatibility requires sample and device confirmation'],
+      ['Dimensions cue','41.5 × 42.7 × 27.5 mm shown in supplied image; confirm selected model before publishing as specification'],
+      ['Weight cue','45.8 g product image cue; packaged image also shows 60 g, requiring selected-package confirmation'],
+      ['Certification cue','US FCC Certified appears in supplied packaging/plug images; certificate scope and model number require documents'],
+      ['Source boundary','Output profile, plug standards, certification and compatibility remain supplier/listing cues until model-level evidence is provided']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pieces'],
+      ['Price: 100-499 pieces','US$1.50 / piece'],
+      ['Price: 500-1000 pieces','US$1.45 / piece'],
+      ['Price: 1000+ pieces','US$1.20 / piece'],
+      ['Customization','Custom packaging and logo supported; confirm artwork, box style, barcode and carton data by quotation'],
+      ['Packaging cue','Box size 96 × 67 × 30 mm shown in supplied image; confirm selected packaging before order'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'100W USB 3.2 20Gbps USB-C Full-Feature Cable', slug:'/products/usb-cables/usb-3-2-20gbps-100w-cable/', family:'USB Cable', interface:'USB-C to USB-C; supplier lists USB 3.2 connector', power:'Supplier lists PD 3.0, 100W, 20V/5A and 5A fast charging; E-marker and test evidence pending', dataRate:'Supplier lists USB 3.2 / 20 Gbps and Thunderbolt 3 support; compliance evidence pending', video:'Supplier lists up to 8K at 60Hz; source, display, mode and test evidence pending', material:'PVC jacket; conductor described as both tinned copper and pure copper; shielding details require confirmation', lengths:'0.25 m / 0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Laptop, dock, external-storage, display and high-performance USB-C accessory programs', customization:['Black color','Five listed lengths','Polybag','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; USB version, Thunderbolt compatibility, data rate, video, power and compliance require model-level evidence', detailReady:true, cardFacts:[{label:'Power',value:'100W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
     images:[
       {src:'/images/products/usb32-20gbps-100w/01-main.webp',alt:'Black USB-C to USB-C PVC cable with supplier performance labels on the connector housings',label:'Product view'},

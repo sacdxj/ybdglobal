@@ -240,6 +240,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/chargers/jl-p150-dual-port-wall-charger/` | Product detail | Pass | Pass | Pass | Purchase panel and final CTA checked. |
 | `/products/chargers/jl-s5-3-in-1-wireless-charger/` | Product detail | Pass | Pass | Pass | Purchase panel and final CTA checked. |
 | `/products/chargers/gan-25w-usb-c-wall-charger/` | Product detail | Static checked | Static checked | Static checked | New GaN 25W USB-C wall charger detail page added with supplied images, 500 pcs MOQ, 500-1000 pcs at US$3.00 / piece, 1000+ pcs at US$2.90 / piece and evidence-gated GaN / PD3.0 / 25W wording. |
+| `/products/chargers/20w-usb-c-fast-wall-adapter/` | Product detail | Static checked | Static checked | Static checked | New 20W USB-C fast wall adapter detail page added with supplied images, 100 pcs MOQ, 100-499 pcs at US$1.50 / piece, 500-1000 pcs at US$1.45 / piece, 1000+ pcs at US$1.20 / piece, custom packaging support, logo support and evidence-gated 20W / FCC / plug-standard wording. |
 | `/products/usb-cables/usb-c-fast-charging-cable/` | Product detail | Pass | Pass | Pass | Long cable model text checked. |
 | `/products/usb-cables/usb-c-to-usb-c-pd-cable/` | Product detail | Pass | Pass | Pass | Long wattage/title text checked; 2026-09-04 image update adds pastel color-options and coiled color-set WebP assets without layout/CSS changes. |
 | `/products/usb-cables/usb-3-2-20gbps-100w-cable/` | Product detail | Pass | Pass | Pass | Long USB 3.2 title checked. |
