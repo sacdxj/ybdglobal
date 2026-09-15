@@ -1274,6 +1274,40 @@ export const products: Product[] = [
       ['Video media','User-supplied MP4 product video included for review; not a certification or performance test'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Star Smart Car Charger 2 USB Port 3.1A Charging Station 15W Fast Charging Adapter Phone BT Wireless Car Charger', slug:'/products/chargers/star-smart-car-charger-15w-bt-wireless/', family:'Charger', interface:'Vehicle cigarette-lighter car charger format shown with 2 USB charging ports, Type-C port cue, LED display, microphone and phone/music control; exact port map requires selected-SKU evidence', power:'15W fast charging and 3.1A cues listed; image also shows Type-C: 5V3.1A and USB 5V3.1A cues; exact output map and current sharing require selected-SKU evidence', dataRate:'Bluetooth 5.3, U disk play, USB flash drive music and BT wireless car charger cues listed; exact Bluetooth chipset, profiles, storage support and audio behavior require selected-SKU evidence', video:'Not positioned for display output', material:'Black car-charger housing with blue starry-sky ambient light trim shown; exact shell material and heat design require source confirmation', lengths:'Vehicle plug-in charger / transmitter; no cable bundle confirmed in supplied material', bestFor:'Wholesale car accessory, starry ambient-light charger, phone BT wireless car charger and private-label in-car charging programs', customization:['MOQ 50 pcs','50-499 pcs: US$2.80 / piece','500+ pcs: US$2.70 / piece','Customization supported','Logo supported','Packaging, light trim, button artwork and function set by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact Bluetooth 5.3 chipset, 15W/3.1A output map, Type-C behavior, U-disk music, handsfree-call performance, ambient-light modes, logo, packaging and compliance require selected-model evidence', detailReady:true, cardLabel:'Star BT car charger', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'50-499 pcs',value:'US$2.80 / piece'},{label:'500+ pcs',value:'US$2.70 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/star-smart-car-charger-15w-bt-wireless/01-packaging.webp',alt:'Retail box for Star Smart Car Charger with blue ambient light packaging cue',label:'Packaging cue'},
+      {src:'/images/products/star-smart-car-charger-15w-bt-wireless/02-bluetooth-transmitter.webp',alt:'Star smart car Bluetooth transmitter charger with blue starry ambient light',label:'Bluetooth transmitter'},
+      {src:'/images/products/star-smart-car-charger-15w-bt-wireless/03-function-cues.webp',alt:'Star smart car charger image listing hands-free answering navigation report Bluetooth 5.3 and Type-C 5V 3.1A cues',label:'Function cues'},
+      {src:'/images/products/star-smart-car-charger-15w-bt-wireless/04-one-click-call.webp',alt:'Star smart car charger in a car showing one-click answer call cue',label:'Handsfree call cue'},
+      {src:'/images/products/star-smart-car-charger-15w-bt-wireless/05-parameters.webp',alt:'Star smart car charger parameter image showing USB 3.1A Type-C port LED display ambient light microphone and phone music labels',label:'Parameter cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User-supplied price tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/star-smart-car-charger-15w-bt-wireless/01-packaging.webp',alt:'Retail box for Star Smart Car Charger'},
+      {title:'Lighting and BT cues',value:'Bluetooth 5.3 + ambient light',note:'Bluetooth 5.3, one-click answer, U disk play and starry sky ambient-light cues are listed; chipset, audio behavior and lighting modes require selected-SKU evidence.',image:'/images/products/star-smart-car-charger-15w-bt-wireless/02-bluetooth-transmitter.webp',alt:'Star smart car Bluetooth transmitter with blue ambient light'},
+      {title:'Charging layout',value:'2 USB + Type-C cues',note:'Images show USB 3.1A and Type-C 5V3.1A cues; 15W output behavior and current sharing require selected-SKU test evidence.',image:'/images/products/star-smart-car-charger-15w-bt-wireless/05-parameters.webp',alt:'Parameter image showing USB, Type-C port and LED display'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 15 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Star Smart Car Charger 2 USB Port 3.1A Charging Station 15W Fast Charging Adapter Phone BT Wireless Car Charger'],
+      ['Product format','Vehicle cigarette-lighter car charger / Bluetooth transmitter'],
+      ['Bluetooth cue','Bluetooth 5.3 listed in supplied images; chipset, range and profiles require evidence'],
+      ['Charging cue','15W fast charging, 3.1A and Type-C 5V3.1A cues listed; exact output map requires selected-SKU confirmation'],
+      ['Port cue','2 USB port title cue plus Type-C port shown in supplied parameter image; exact port function matrix requires confirmation'],
+      ['Display cue','LED display and frequency-style numeric display shown'],
+      ['Lighting cue','Blue / starry sky ambient light shown; exact light modes require confirmation'],
+      ['Handsfree cue','Hands-free answering, one-click answer and navigation report cues shown'],
+      ['Music cue','U disk play and USB flash drive music cues shown; supported formats and storage limits require confirmation'],
+      ['Packaging cue','Retail box shows car USB charger, blue ambient light and USB 5V3.1A cues'],
+      ['Source boundary','BT, charging, ambient light, music playback and handsfree-call claims remain supplier/listing cues until model-level evidence is provided']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pieces'],
+      ['Price: 50-499 pieces','US$2.80 / piece'],
+      ['Price: 500+ pieces','US$2.70 / piece'],
+      ['Customization','Customization and logo supported; confirm artwork, packaging and carton data by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'100W USB 3.2 20Gbps USB-C Full-Feature Cable', slug:'/products/usb-cables/usb-3-2-20gbps-100w-cable/', family:'USB Cable', interface:'USB-C to USB-C; supplier lists USB 3.2 connector', power:'Supplier lists PD 3.0, 100W, 20V/5A and 5A fast charging; E-marker and test evidence pending', dataRate:'Supplier lists USB 3.2 / 20 Gbps and Thunderbolt 3 support; compliance evidence pending', video:'Supplier lists up to 8K at 60Hz; source, display, mode and test evidence pending', material:'PVC jacket; conductor described as both tinned copper and pure copper; shielding details require confirmation', lengths:'0.25 m / 0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Laptop, dock, external-storage, display and high-performance USB-C accessory programs', customization:['Black color','Five listed lengths','Polybag','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; USB version, Thunderbolt compatibility, data rate, video, power and compliance require model-level evidence', detailReady:true, cardFacts:[{label:'Power',value:'100W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
     images:[
       {src:'/images/products/usb32-20gbps-100w/01-main.webp',alt:'Black USB-C to USB-C PVC cable with supplier performance labels on the connector housings',label:'Product view'},
