@@ -15,6 +15,7 @@ export interface Product {
   cardLabel?: string;
   cardFacts?: Array<{label:string;value:string}>;
   images?: Array<{src:string;alt:string;label:string}>;
+  media?: {videoSrc:string;poster?:string;title:string;note:string};
   variantGroups?: Array<{model:string;format:string;connector:string;length:string;capability:string}>;
   featureHighlights?: Array<{title:string;value:string;note:string;image:string;alt:string}>;
   sourceUrl?: string;
@@ -1235,6 +1236,42 @@ export const products: Product[] = [
       ['Packaging cue','Box size 123 × 68 × 30 mm shown in supplied images; confirm selected packaging before order'],
       ['Package weight cue','Total weight 93.3 g shown in supplied packaging image; confirm selected package'],
       ['Cable bundle','Type-C cable option listed by user and package image; cable specification and length require confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
+  { model:'BT5.0 Car FM Transmitter 3.1A Dual USB PD Fast Charger RGB Light Handsfree Call MP3 Player for Truck Car Wholesale', slug:'/products/chargers/bt50-car-fm-transmitter-charger/', family:'Charger', interface:'12V/24V vehicle cigarette-lighter car charger format shown with two USB-A ports, one Type-C / USB-C port, FM display and call-control button; exact port protocol map requires selected-SKU evidence', power:'3.1A dual-USB fast-charge cue listed; PD fast charger wording listed; exact Type-C output, USB-A current sharing and vehicle input range require model evidence', dataRate:'BT5.0, FM transmitter and MP3 player cues listed; Bluetooth profile, supported audio formats, TF/U-disk behavior and firmware require selected-SKU evidence', video:'Not positioned for display output; product video supplied as media reference for appearance and function review', material:'Black car-charger housing with RGB light trim shown; exact shell material and heat design require source confirmation', lengths:'Vehicle plug-in transmitter; no cable bundle confirmed in supplied material', bestFor:'Wholesale car accessory, truck charger, handsfree-call, FM transmitter and private-label in-car charging programs', customization:['MOQ 100 pcs','100-500 pcs: US$2.20 / piece','500+ pcs: US$2.00 / piece','Customization supported','Logo supported','Packaging, button/trim artwork and function set by quotation'], proofStatus:'User-provided title, commercial terms, product images and video captured; exact BT5.0 chipset, FM range, PD/3.1A output map, RGB behavior, MP3 format support, handsfree-call performance, logo, packaging and compliance require selected-model evidence', detailReady:true, cardLabel:'BT5.0 FM car charger', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'100-500 pcs',value:'US$2.20 / piece'},{label:'500+ pcs',value:'US$2.00 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/bt50-car-fm-transmitter-charger/01-main.webp',alt:'BT5.0 car FM transmitter charger with RGB light trim, display, dual USB ports and Type-C port',label:'Product view'},
+      {src:'/images/products/bt50-car-fm-transmitter-charger/02-dimensions.webp',alt:'BT5.0 car FM transmitter charger dimension image showing side and face measurements',label:'Dimension cue'},
+      {src:'/images/products/bt50-car-fm-transmitter-charger/03-faceplate.webp',alt:'Close-up faceplate of BT5.0 car FM transmitter charger showing 1.0A USB, 3.1A USB, Type-C port, LED display and call button',label:'Port layout'},
+      {src:'/images/products/bt50-car-fm-transmitter-charger/04-handsfree-call.webp',alt:'BT-compatible handsfree call image showing one-button answer and redial cues for car FM transmitter',label:'Handsfree call cue'}
+    ],
+    media:{videoSrc:'/videos/products/bt50-car-fm-transmitter-charger/01-demo.mp4',poster:'/images/products/bt50-car-fm-transmitter-charger/01-main.webp',title:'BT5.0 car FM transmitter product video',note:'User-supplied product video is included for appearance and function review. Video content remains a media reference; technical claims still require selected-SKU evidence.'},
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User-supplied price tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/bt50-car-fm-transmitter-charger/01-main.webp',alt:'BT5.0 car FM transmitter charger product view'},
+      {title:'In-car functions',value:'FM + BT + MP3 cues',note:'BT5.0, FM transmitter, handsfree call and MP3 player wording are listed; chipset, frequency range, audio formats and phone compatibility require selected-SKU evidence.',image:'/images/products/bt50-car-fm-transmitter-charger/04-handsfree-call.webp',alt:'Handsfree call cue for car FM transmitter'},
+      {title:'Charging layout',value:'Dual USB + Type-C shown',note:'Images show 1.0A USB, 3.1A USB and Type-C port cues; PD behavior and shared output require test evidence.',image:'/images/products/bt50-car-fm-transmitter-charger/03-faceplate.webp',alt:'Port layout on BT5.0 car FM transmitter charger'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms, images and video reviewed 15 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','BT5.0 Car FM Transmitter 3.1A Dual USB PD Fast Charger RGB Light Handsfree Call MP3 Player for Truck Car Wholesale'],
+      ['Product format','Vehicle cigarette-lighter FM transmitter / car charger'],
+      ['Bluetooth cue','BT5.0 listed in title; chipset, range and profiles require evidence'],
+      ['Charging cue','3.1A dual USB and PD fast charger wording listed; exact output map requires selected-SKU confirmation'],
+      ['Port cue','Images show 1.0A USB, 3.1A USB and Type-C / USB-C port cues'],
+      ['Display cue','108.0 LED frequency display shown in supplied images'],
+      ['Lighting cue','RGB light trim shown; exact lighting modes require confirmation'],
+      ['Handsfree cue','One-button answer/hang up and double-click redial cues shown in supplied image'],
+      ['MP3 player cue','MP3 player listed in title; supported storage, formats and controls require confirmation'],
+      ['Dimensions cue','3.78 cm / 1.49 in width, 5 cm / 1.97 in face height, 8.7 cm / 3.43 in overall height and 1.3 cm / 0.51 in top thickness cues shown in supplied image'],
+      ['Vehicle use','Truck and car wholesale use listed; voltage range, fit and compatibility require sample confirmation'],
+      ['Source boundary','BT, FM, charging, RGB, MP3 and handsfree-call claims remain supplier/listing cues until model-level evidence is provided']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pieces'],
+      ['Price: 100-500 pieces','US$2.20 / piece'],
+      ['Price: 500+ pieces','US$2.00 / piece'],
+      ['Customization','Customization and logo supported; confirm artwork, button markings, packaging and carton data by quotation'],
+      ['Video media','User-supplied MP4 product video included for review; not a certification or performance test'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
   { model:'100W USB 3.2 20Gbps USB-C Full-Feature Cable', slug:'/products/usb-cables/usb-3-2-20gbps-100w-cable/', family:'USB Cable', interface:'USB-C to USB-C; supplier lists USB 3.2 connector', power:'Supplier lists PD 3.0, 100W, 20V/5A and 5A fast charging; E-marker and test evidence pending', dataRate:'Supplier lists USB 3.2 / 20 Gbps and Thunderbolt 3 support; compliance evidence pending', video:'Supplier lists up to 8K at 60Hz; source, display, mode and test evidence pending', material:'PVC jacket; conductor described as both tinned copper and pure copper; shielding details require confirmation', lengths:'0.25 m / 0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Laptop, dock, external-storage, display and high-performance USB-C accessory programs', customization:['Black color','Five listed lengths','Polybag','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; USB version, Thunderbolt compatibility, data rate, video, power and compliance require model-level evidence', detailReady:true, cardFacts:[{label:'Power',value:'100W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],

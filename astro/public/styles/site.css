@@ -4935,6 +4935,42 @@ dd {
 .performance-story__grid h3 { margin:6px 0 10px; font-size:clamp(2rem,4vw,3.7rem); line-height:.9; letter-spacing:-.04em; }
 .performance-story__grid p { margin:0; color:rgba(255,255,255,.65); line-height:1.55; }
 
+.product-video-panel {
+  width:min(1180px,calc(100% - 32px));
+  margin:0 auto 32px;
+  display:grid;
+  grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);
+  gap:22px;
+  padding:28px;
+  border-radius:var(--radius);
+  background:#101412;
+  color:#fff;
+}
+.product-video-panel__copy {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.product-video-panel__copy .section-label { color:var(--lime); }
+.product-video-panel__copy h2 {
+  margin:6px 0 12px;
+  font-size:clamp(2rem,4vw,4.2rem);
+  line-height:.92;
+  letter-spacing:-.04em;
+}
+.product-video-panel__copy p {
+  margin:0;
+  color:rgba(255,255,255,.66);
+  line-height:1.6;
+}
+.product-video-panel video {
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:calc(var(--radius) - 6px);
+  background:#050706;
+  object-fit:contain;
+}
+
 /* Home: visual family discovery with lower reading density */
 main > .page-hero:first-child { min-height:min(760px,calc(100vh - 30px)); }
 .category-directory--visual { padding-bottom:56px; }
@@ -5668,6 +5704,12 @@ main > .page-hero:first-child { min-height:min(760px,calc(100vh - 30px)); }
   .performance-story { padding:18px; }
   .performance-story__grid article { display:block; }
   .performance-story__image { aspect-ratio:1/1; }
+  .product-video-panel {
+    grid-template-columns:1fr;
+    padding:18px;
+    margin-bottom:24px;
+  }
+  .product-video-panel__copy h2 { font-size:2rem; }
   .source-spec-panel summary { align-items:flex-start; flex-wrap:wrap; }
   .source-spec-panel summary span { width:100%; margin-left:42px; }
   main > .page-hero:first-child { min-height:650px; }

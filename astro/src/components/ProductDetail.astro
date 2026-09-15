@@ -38,6 +38,12 @@ const finalVisual=product.images?.[product.images.length-1]??product.images?.[0]
   <header><p class="section-label">Supplier-listed performance</p><h2 id="performance-title">Three capabilities. Three evidence checks.</h2><p>Use these figures to shortlist the product—not as final compliance proof.</p></header>
   <div class="performance-story__grid">{product.featureHighlights.map(feature=><article><div class="performance-story__image"><img src={feature.image} alt={feature.alt} loading="lazy"/></div><div><span>{feature.title}</span><h3>{feature.value}</h3><p>{feature.note}</p></div></article>)}</div>
 </section>}
+{product.media&&<section class="product-video-panel" aria-labelledby="product-video-title">
+  <div class="product-video-panel__copy"><p class="section-label">Product media</p><h2 id="product-video-title">{product.media.title}</h2><p>{product.media.note}</p></div>
+  <video controls preload="metadata" poster={product.media.poster} aria-label={product.media.title}>
+    <source src={product.media.videoSrc} type="video/mp4" />
+  </video>
+</section>}
 {hasSource&&<section class="source-spec-panel" aria-labelledby="source-spec-title">
   <header><div><p class="section-label">Source-mapped product data</p><h2 id="source-spec-title">Supplier listing snapshot</h2></div><p>Four facts for initial review. Verify the selected SKU before quotation.</p></header>
   <div class="source-spec-panel__facts"><p class="source-spec-panel__hint">Key listing facts</p><dl>{primaryClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl>{secondaryClaims.length>0&&<details><summary>View complete supplier attribute record <span>{secondaryClaims.length} additional fields</span></summary><dl>{secondaryClaims.map(claim=><div><dt>{claim[0]}</dt><dd>{claim[1]}</dd></div>)}</dl></details>}</div>
