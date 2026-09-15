@@ -1201,6 +1201,42 @@ export const products: Product[] = [
       ['Packaging cue','Box size 96 × 67 × 30 mm shown in supplied image; confirm selected packaging before order'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'45W PD USB-C Wall Charger with OTP Protection for Phones Earphones Smart Watches & Cameras (US/EU/UK/AU)', slug:'/products/chargers/45w-pd-usb-c-wall-charger/', family:'Charger', interface:'Single USB-C output wall charger shown; US / EU / UK / AU plug options listed by user and require selected-plug confirmation', power:'45W and PD output cues listed; exact PDO/PPS output map, OTP behavior and protocol evidence require selected-SKU confirmation', dataRate:'Not applicable', video:'Not applicable', material:'Black compact wall-adapter housing shown; exact shell material, thermal design and internal safety components require source confirmation', lengths:'Wall charger with optional Type-C cable bundle; cable specification and length require selected-package confirmation', bestFor:'Private-label 45W USB-C PD wall charger programs for phones, earphones, smart watches, cameras and travel accessory bundles', customization:['MOQ 100 pcs','45W with Type-C cable: US$3.50 / piece','45W without Type-C cable: US$3.20 / piece','US / EU / UK / AU plug options listed; confirm selected market and plug standard by quotation','Retail packaging shown; artwork, barcode and carton data require confirmation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 45W output profile, OTP protection design, plug standards, cable bundle specification, CE scope, dimensions, weight, packaging and compatibility require selected-model evidence', detailReady:true, cardLabel:'45W PD USB-C charger', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'With cable',value:'US$3.50 / piece'},{label:'Without cable',value:'US$3.20 / piece'},{label:'Plug',value:'US/EU/UK/AU listed'}],
+    images:[
+      {src:'/images/products/45w-pd-usb-c-wall-charger/01-main.webp',alt:'Black 45W PD USB-C wall charger with single USB-C port and US plug pins',label:'Product view'},
+      {src:'/images/products/45w-pd-usb-c-wall-charger/02-size-weight.webp',alt:'45W US standard USB-C wall charger image showing 80 g weight and 52 by 53 by 30 mm size cue',label:'Size and weight cue'},
+      {src:'/images/products/45w-pd-usb-c-wall-charger/03-packaging.webp',alt:'45W PD adapter in retail tray with USB-C packaging and total weight and box size cues',label:'Packaging cue'},
+      {src:'/images/products/45w-pd-usb-c-wall-charger/04-box-spec.webp',alt:'45W PD USB-C travel adapter package front and back with input output and box size cues',label:'Box specification cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User-supplied quotation tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/45w-pd-usb-c-wall-charger/01-main.webp',alt:'Black 45W PD USB-C wall charger'},
+      {title:'Bundle option',value:'With or without Type-C cable',note:'The request lists two price options; cable length, e-marker, current rating and package contents require selected-package confirmation.',image:'/images/products/45w-pd-usb-c-wall-charger/04-box-spec.webp',alt:'45W PD adapter package with Type-C cable cue'},
+      {title:'Protection cue',value:'OTP listed',note:'OTP protection is treated as a title/listing cue until the internal design, test data and selected SKU evidence are provided.',image:'/images/products/45w-pd-usb-c-wall-charger/02-size-weight.webp',alt:'45W USB-C wall charger with size and weight cue'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 15 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','45W PD USB-C Wall Charger with OTP Protection for Phones Earphones Smart Watches & Cameras (US/EU/UK/AU)'],
+      ['Product format','Compact travel wall adapter / USB-C PD fast charger'],
+      ['Power cue','45W listed in title and supplied images; exact output map requires source confirmation'],
+      ['Protocol cue','PD listed; package image shows PD output and PPS-style voltage/current lines that require selected-SKU confirmation'],
+      ['Protection cue','OTP protection listed in title; test evidence and protection design require source confirmation'],
+      ['Port cue','Single USB-C output shown in supplied images'],
+      ['Plug cue','US plug shown; US / EU / UK / AU plug options listed by user and require selected-plug confirmation'],
+      ['Device use','Phones, earphones, smart watches and cameras listed; compatibility requires sample and device confirmation'],
+      ['Dimensions cue','52 × 53 × 30 mm shown in supplied image; confirm selected model before publishing as specification'],
+      ['Weight cue','80 g charger image cue; 93.3 g total weight shown in packaging image; confirm selected package'],
+      ['Certification cue','CE mark appears on supplied packaging image; certificate scope and model number require documents'],
+      ['Source boundary','Output profile, OTP, plug standards, certification, cable bundle and compatibility remain supplier/listing cues until model-level evidence is provided']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pieces'],
+      ['Price: 45W with Type-C cable','US$3.50 / piece'],
+      ['Price: 45W without Type-C cable','US$3.20 / piece'],
+      ['Packaging cue','Box size 123 × 68 × 30 mm shown in supplied images; confirm selected packaging before order'],
+      ['Package weight cue','Total weight 93.3 g shown in supplied packaging image; confirm selected package'],
+      ['Cable bundle','Type-C cable option listed by user and package image; cable specification and length require confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'100W USB 3.2 20Gbps USB-C Full-Feature Cable', slug:'/products/usb-cables/usb-3-2-20gbps-100w-cable/', family:'USB Cable', interface:'USB-C to USB-C; supplier lists USB 3.2 connector', power:'Supplier lists PD 3.0, 100W, 20V/5A and 5A fast charging; E-marker and test evidence pending', dataRate:'Supplier lists USB 3.2 / 20 Gbps and Thunderbolt 3 support; compliance evidence pending', video:'Supplier lists up to 8K at 60Hz; source, display, mode and test evidence pending', material:'PVC jacket; conductor described as both tinned copper and pure copper; shielding details require confirmation', lengths:'0.25 m / 0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Laptop, dock, external-storage, display and high-performance USB-C accessory programs', customization:['Black color','Five listed lengths','Polybag','Logo, construction and packaging require quotation'], proofStatus:'Supplier listing captured; USB version, Thunderbolt compatibility, data rate, video, power and compliance require model-level evidence', detailReady:true, cardFacts:[{label:'Power',value:'100W listed'},{label:'Data',value:'20 Gbps listed'},{label:'Display',value:'8K / 60Hz listed'}],
     images:[
       {src:'/images/products/usb32-20gbps-100w/01-main.webp',alt:'Black USB-C to USB-C PVC cable with supplier performance labels on the connector housings',label:'Product view'},
