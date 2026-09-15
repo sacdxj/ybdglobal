@@ -1171,7 +1171,8 @@ export const products: Product[] = [
       {src:'/images/products/20w-usb-c-fast-wall-adapter/01-main.webp',alt:'White 20W USB-C fast wall adapter with US plug pins and size and weight cues',label:'Product view'},
       {src:'/images/products/20w-usb-c-fast-wall-adapter/02-packaging.webp',alt:'20W USB-C power adapter with retail box and US FCC certified packaging cue',label:'Packaging cue'},
       {src:'/images/products/20w-usb-c-fast-wall-adapter/03-usb-c-port.webp',alt:'Close-up of single USB-C port on compact white 20W wall charger',label:'USB-C port'},
-      {src:'/images/products/20w-usb-c-fast-wall-adapter/04-us-plug.webp',alt:'US standard plug view of white 20W USB-C charger with FCC certified cue',label:'US plug cue'}
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/04-us-plug.webp',alt:'US standard plug view of white 20W USB-C charger with FCC certified cue',label:'US plug cue'},
+      {src:'/images/products/20w-usb-c-fast-wall-adapter/05-dimensions.webp',alt:'Dimension drawing for white 20W USB-C wall charger showing 27.4 mm, 42.7 mm and 41.5 mm measurements',label:'Dimension cue'}
     ],
     featureHighlights:[
       {title:'Order terms',value:'MOQ 100 pcs',note:'User-supplied price tiers are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/20w-usb-c-fast-wall-adapter/01-main.webp',alt:'White 20W USB-C wall adapter on blue background'},
