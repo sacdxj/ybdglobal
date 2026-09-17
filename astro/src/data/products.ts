@@ -346,6 +346,45 @@ export const products: Product[] = [
       ['Custom packaging','Not specified in supplied material; confirm by project if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Thunderbolt 5 USB C Cable 80Gbps 240W PD3.1 48V 5A 8K 120Hz Video Transfer Twisted Pair Braided Cord for Laptop Monitor PC', slug:'/products/usb-cables/thunderbolt-5-usb-c-80gbps-240w-cable/', family:'USB Cable', interface:'USB-C to USB-C braided cable for laptop, monitor and PC programs; Thunderbolt 5 wording listed and requires selected-SKU compliance evidence', power:'240W, PD3.1, 48V and 5A cues listed; exact E-marker, Extended Power Range profile and charger/device pairing require selected-SKU evidence', dataRate:'80Gbps cue listed; exact Thunderbolt 5 / USB data behavior, cable length limits and tested transfer rate require model evidence', video:'8K 120Hz video transfer cue listed; exact source, monitor, mode, refresh rate and cable length require validation evidence', material:'Black twisted-pair braided cord shown with black connector housings; exact conductor, shielding, E-marker and jacket stack require source confirmation', lengths:'0.5 m / 1 m / 1.5 m / 2 m listed', bestFor:'Wholesale Thunderbolt 5 USB-C cable, laptop, monitor, PC, dock, storage and private-label high-performance cable programs', customization:['MOQ 50 pcs','0.5 m: US$3.10 / piece','1 m: US$3.40 / piece','1.5 m: US$3.85 / piece','2 m: US$5.10 / piece','Customization supported','Logo supported','Length, logo, connector marking, packaging and compliance evidence by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact Thunderbolt 5 compliance, 80Gbps data, 240W PD3.1 48V/5A power profile, 8K120Hz display behavior, 10,000 plug-cycle durability, twisted-pair construction, logo marking and packaging require selected-model evidence', detailReady:true, cardLabel:'Thunderbolt 5 240W cable', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$3.10 / piece'},{label:'1 m',value:'US$3.40 / piece'},{label:'2 m',value:'US$5.10 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/01-main.webp',alt:'Black braided Thunderbolt 5 USB-C cable with 240W 8K 120Hz and 80Gbps connector markings',label:'Product view'},
+      {src:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/02-plug-test.webp',alt:'Supplier image showing Type-C connector 10000 plug and unplug test cue',label:'Plug-cycle cue'},
+      {src:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/03-fast-transmission.webp',alt:'Supplier image showing Thunderbolt 5 USB-C cable cues for PD240W, 8K 120Hz and 80Gbps',label:'Full-feature cue'},
+      {src:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/04-charging-transfer.webp',alt:'Supplier image showing transmission charging two-in-one cue for braided USB-C cable',label:'Charging and transfer cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/01-main.webp',alt:'Thunderbolt 5 USB-C braided cable product view'},
+      {title:'Performance cue',value:'80Gbps / 240W listed',note:'The supplied title and images list Thunderbolt 5, 80Gbps, 240W PD3.1 and 48V/5A cues; request compliance and E-marker evidence for the selected SKU.',image:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/03-fast-transmission.webp',alt:'Thunderbolt 5 80Gbps 240W feature image'},
+      {title:'Video cue',value:'8K 120Hz listed',note:'8K 120Hz video transfer is treated as a supplied claim until source device, monitor, mode, cable length and validation record are confirmed.',image:'/images/products/thunderbolt-5-usb-c-80gbps-240w-cable/04-charging-transfer.webp',alt:'USB-C charging and transfer supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 17 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Thunderbolt 5 USB C Cable 80Gbps 240W PD3.1 48V 5A 8K 120Hz Video Transfer Twisted Pair Braided Cord for Laptop Monitor PC'],
+      ['Product format','USB-C to USB-C / Thunderbolt 5 listed braided cable'],
+      ['Protocol cue','Thunderbolt 5 wording listed; compliance certificate and test evidence pending'],
+      ['Power cue','240W, PD3.1, 48V and 5A listed by user and supplied images; E-marker and EPR evidence required'],
+      ['Data cue','80Gbps listed by user and supplied images; cable length and tested transfer rate require confirmation'],
+      ['Video cue','8K 120Hz listed by user and supplied images; source, display, mode and cable length require validation'],
+      ['Construction cue','Twisted pair braided cord listed; exact conductor, shielding and jacket stack require source confirmation'],
+      ['Durability cue','10,000 plug and unplug tests shown in supplied image; report evidence pending'],
+      ['Connector format','USB-C male to USB-C male shown in supplied images'],
+      ['Optional length','0.5 m / 1 m / 1.5 m / 2 m listed by user'],
+      ['Use','Laptop, monitor and PC listed by user'],
+      ['Customization','Customization supported by user request; final scope by quotation'],
+      ['Logo support','Logo supported by user request'],
+      ['Certification','Not provided in supplied material; document scope pending']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pcs'],
+      ['Price: 0.5 m','US$3.10 / piece'],
+      ['Price: 1 m','US$3.40 / piece'],
+      ['Price: 1.5 m','US$3.85 / piece'],
+      ['Price: 2 m','US$5.10 / piece'],
+      ['Customization','Supported; confirm length, logo, connector marking, packaging, barcode and carton mark by quotation'],
+      ['Logo support','Logo supported'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'PD 60W USB a to Type C USB3.2 10Gbps Fast Charging Cable Nylon Braided 0.2m-3m High Speed Data Cord Wholesale', slug:'/products/usb-cables/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/', family:'USB Cable', interface:'USB-A to Type-C / USB-C cable for phone, tablet, computer and high-speed accessory programs', power:'PD 60W, 3A safe charging and 56K resistor wording listed in supplied images; exact protocol, current and device pairing require selected-SKU confirmation', dataRate:'USB3.2 and 10Gbps high-speed data wording listed; exact USB version and tested transfer rate require model evidence', video:'Not positioned for display output', material:'Nylon braided cable jacket listed; black molded connector housing shown in supplied images; exact shell material requires source confirmation', lengths:'0.2 m / 0.5 m / 1 m / 1.5 m / 2 m / 3 m listed', bestFor:'Wholesale USB-A to Type-C fast charging and high-speed data cable programs for phones, tablets, computers and private-label accessory ranges', customization:['MOQ 50 pcs','0.2 m: US$0.95 / piece','0.5 m: US$1.10 / piece','1 m: US$1.35 / piece','1.5 m: US$1.52 / piece','2 m: US$1.75 / piece','3 m: US$2.39 / piece','Logo and packaging requirements by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact PD 60W behavior, 3A current, USB3.2 / 10Gbps data performance, 56K resistor implementation, material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'60W USB-A to Type-C 10Gbps', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.2 m',value:'US$0.95 / piece'},{label:'1 m',value:'US$1.35 / piece'},{label:'2 m',value:'US$1.75 / piece'},{label:'3 m',value:'US$2.39 / piece'}],
     images:[
       {src:'/images/products/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/01-main.webp',alt:'Black braided USB-A to Type-C fast charging data cable close-up with USB-A and USB-C connectors',label:'Product view'},
