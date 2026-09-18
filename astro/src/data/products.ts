@@ -628,6 +628,42 @@ export const products: Product[] = [
       ['Single package size','8 × 8 × 4 cm'],
       ['Single gross weight','0.1 kg']
     ] },
+  { model:'4K 30HZ USB C to HDMI Adapter 1080P 60HZ Type c Maeto HDMI Female Adapter Cable for Macbook HDTV Projector USB C HDMI', slug:'/products/hdmi-cables/4k-30hz-usb-c-to-hdmi-adapter/', family:'HDMI Cable', interface:'USB-C male to HDMI female adapter cable for MacBook, HDTV, projector and USB-C display accessory programs', power:'Not positioned as a charging product; adapter chipset and any auxiliary power behavior require selected-SKU confirmation', dataRate:'USB-C to HDMI video conversion listed; exact DP Alt Mode, chipset, compatibility and signal behavior require sample evidence', video:'4K 30Hz and 1080P 60Hz cues listed in supplied title/images; source, display, OS, cable and mode require test evidence', material:'Gray aluminum-style adapter housings and black 0.15 m cable shown in supplied images; exact shell, cable jacket and internal construction require source confirmation', lengths:'0.15 m supplied by user', bestFor:'Wholesale USB-C to HDMI female adapter programs for MacBook, HDTV, projector, laptop, tablet, mobile phone and custom-logo accessory ranges', customization:['MOQ 100 pcs','Length: 0.15 m','Logo supported','100-499 pcs: US$1.80 / piece','500-999 pcs: US$1.75 / piece','1000+ pcs: US$1.70 / piece','Packaging and artwork details by project'], proofStatus:'User-provided title, commercial terms and product images captured; exact 4K30, 1080P60, DP Alt Mode, plug-and-play compatibility, device support, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'USB-C to HDMI adapter', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'Length',value:'0.15 m'},{label:'100-499 pcs',value:'US$1.80 / piece'},{label:'1000+ pcs',value:'US$1.70 / piece'}],
+    images:[
+      {src:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/01-main.webp',alt:'Gray USB-C to HDMI female adapter cable with black 0.15 meter cable on a white background',label:'Product view'},
+      {src:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/02-4k30-feature.webp',alt:'Supplier image showing Type-C to HDMI converter with 4K 30Hz cue',label:'4K 30Hz cue'},
+      {src:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/03-plug-and-play.webp',alt:'USB-C to HDMI adapter connected near a laptop with plug and play wording',label:'Plug and play cue'},
+      {src:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/04-compatibility.webp',alt:'Supplier image showing USB-C source devices and HDMI display devices for USB-C to HDMI adapter compatibility',label:'Compatibility cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User supplied MOQ, 0.15 m length and tier pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/01-main.webp',alt:'USB-C to HDMI adapter product view'},
+      {title:'Display cue',value:'4K30 / 1080P60 listed',note:'Resolution and refresh wording is reproduced from supplied material; confirm source device, display, OS and mode by sample.',image:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/02-4k30-feature.webp',alt:'4K 30Hz supplier image'},
+      {title:'Compatibility cue',value:'USB-C source to HDMI display',note:'Supplied images show laptop, tablet, mobile phone, TV, desktop and projector cues; final compatibility depends on USB-C display output support.',image:'/images/products/4k-30hz-usb-c-to-hdmi-adapter/04-compatibility.webp',alt:'USB-C to HDMI compatibility supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 17 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','4K 30HZ USB C to HDMI Adapter 1080P 60HZ Type c Maeto HDMI Female Adapter Cable for Macbook HDTV Projector USB C HDMI'],
+      ['Product format','USB-C male to HDMI female adapter cable'],
+      ['Length','0.15 m supplied by user'],
+      ['Display cue','4K 30Hz and 1080P 60Hz listed by user and shown in supplied images'],
+      ['Use','MacBook, HDTV and projector listed by user; laptop, tablet, mobile phone, TV, desktop and projector compatibility cues shown in supplied images'],
+      ['Plug-and-play cue','Plug and play wording shown in supplied image; host/display compatibility requires sample confirmation'],
+      ['Direction cue','USB-C source to HDMI display direction shown in supplied connection image; reverse HDMI-to-USB-C use is not supported unless separately confirmed'],
+      ['Color cue','Gray aluminum-style housings with black cable shown in supplied images'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['100-499 pcs','US$1.80 / piece'],
+      ['500-999 pcs','US$1.75 / piece'],
+      ['1000+ pcs','US$1.70 / piece'],
+      ['Length','0.15 m'],
+      ['Logo support','Custom logo supported'],
+      ['Customization','Confirm logo position, marking method, package artwork, barcode and carton mark by quotation'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'HDMI to VGA Video Adapter Converter Full HD 1080P Plug and Play for Laptop Computer Monitor Projector Wholesale Factory', slug:'/products/hdmi-cables/hdmi-to-vga-1080p-adapter/', family:'HDMI Cable', interface:'HDMI male input to VGA female output adapter for laptop, computer, monitor and projector sourcing programs', power:'Not positioned as a charging product; active conversion and any auxiliary power requirement require selected-SKU confirmation', dataRate:'HDMI-to-VGA video conversion listed; exact chipset, compatibility and signal behavior require sample evidence', video:'Full HD 1080P and 1080P@60Hz wording shown in supplied title/images; source, display, cable and resolution behavior require test evidence', material:'Black and white adapter color variants shown; supplied image lists ground wire, tinned copper, aluminum foil and aluminum-magnesium woven mesh shielding; exact internal construction requires source confirmation', lengths:'Short adapter pigtail shown; exact cable length requires selected-SKU confirmation', bestFor:'Wholesale HDMI-to-VGA adapter programs for laptops, computers, monitors, projectors, retail packs and custom-logo sourcing', customization:['MOQ 500 pcs','US$0.68 / piece','Customization supported','Custom logo supported','Black and white image variants require quotation confirmation','Packaging and artwork details by project'], proofStatus:'User-provided title, commercial terms and product images captured; exact 1080P/60Hz behavior, plug-and-play compatibility, conversion direction, shielding stack, color, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'HDMI to VGA 1080P', cardFacts:[{label:'MOQ',value:'500 pcs'},{label:'Price',value:'US$0.68 / piece'},{label:'Logo',value:'Supported'}],
     images:[
       {src:'/images/products/hdmi-to-vga-1080p-adapter/01-main.webp',alt:'Black HDMI to VGA adapter converter with HDMI male cable and VGA female port',label:'Product view'},
