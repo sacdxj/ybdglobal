@@ -235,6 +235,42 @@ export const products: Product[] = [
       ['Custom packaging','Not provided in supplied material; confirm by project if required'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Durable PD 100W Nylon Braided USB-C to USB-C Fast Charging Cable with Data Transmission for Mobile Phones & Tablets', slug:'/products/usb-cables/durable-pd-100w-nylon-braided-usb-c-cable/', family:'USB Cable', interface:'USB-C to USB-C / Type-C to Type-C cable for mobile-phone, tablet and private-label charging programs', power:'PD 100W fast charging cues listed in supplied title/images; exact PD profile, E-marker and charger/device pairing require selected-SKU confirmation', dataRate:'Data transmission wording supplied by user; exact USB version and data rate require selected-model confirmation', video:'Not positioned for display output; product video supplied as media reference for appearance and use review', material:'Nylon braided cable jacket shown and listed; white connector housings shown; exact conductor, shell and jacket stack require source confirmation', lengths:'1 m / 2 m supplied by user', bestFor:'Mobile-phone, tablet, laptop accessory and private-label USB-C to USB-C cable programs needing 100W charging cues, braided construction and custom-logo review', customization:['MOQ 500 pcs','1 m: US$0.67 / piece','2 m: US$0.98 / piece','Custom logo supported','Packaging and artwork details by project'], proofStatus:'User-provided title, commercial terms, product images and video captured; exact PD 100W behavior, data transmission, braided material stack, logo marking, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'Durable 100W C-to-C', cardFacts:[{label:'MOQ',value:'500 pcs'},{label:'1 m',value:'US$0.67 / piece'},{label:'2 m',value:'US$0.98 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/01-main.webp',alt:'Supplier image for 100W dual USB-C braided cable with white connector and blue braided cable cue',label:'Product feature view'},
+      {src:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/02-clean-product.webp',alt:'White nylon braided USB-C to USB-C cable with 100W label and two USB-C connectors',label:'Clean product view'},
+      {src:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/03-100w-fast-charge.webp',alt:'Supplier image showing 100W super fast charging cue for Type-C to Type-C braided cable',label:'100W charging cue'},
+      {src:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/04-device-use.webp',alt:'USB-C to USB-C braided cable connected between laptop and power bank with 100W fast charging cue',label:'Device use cue'}
+    ],
+    media:{videoSrc:'/videos/products/durable-pd-100w-nylon-braided-usb-c-cable/01-demo.mp4',poster:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/02-clean-product.webp',title:'Durable PD 100W USB-C braided cable product video',note:'User-supplied product video is included for appearance and use review. Video content remains a media reference; power, data and durability claims still require selected-SKU evidence.'},
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 500 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/02-clean-product.webp',alt:'White USB-C to USB-C braided cable product view'},
+      {title:'Charging cue',value:'PD 100W listed',note:'100W wording is reproduced from supplied title and images; confirm E-marker, PD profile and charger/device pairing by sample.',image:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/03-100w-fast-charge.webp',alt:'100W fast charging supplier image'},
+      {title:'OEM logo',value:'Logo supported',note:'Custom logo can be reviewed by project; confirm artwork, placement, marking method, packaging and carton mark before production.',image:'/images/products/durable-pd-100w-nylon-braided-usb-c-cable/04-device-use.webp',alt:'USB-C cable connected to laptop and power bank'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms, images and video reviewed 22 Sep 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Durable PD 100W Nylon Braided USB-C to USB-C Fast Charging Cable with Data Transmission for Mobile Phones & Tablets'],
+      ['Product format','USB-C to USB-C / Type-C to Type-C braided fast charging cable'],
+      ['Power cue','PD 100W listed by user and shown in supplied images'],
+      ['Data cue','Data transmission listed by user; exact USB version and data rate not provided'],
+      ['Material cue','Nylon braided cable listed by user and shown in supplied images'],
+      ['Use','Mobile phones and tablets listed by user; laptop and power-bank use shown in supplied image'],
+      ['Length options','1 m and 2 m supplied by user'],
+      ['Color cue','White connector housings and light braided cable shown in supplied images'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Video media','User-supplied MP4 product video included for review; not a certification or performance test'],
+      ['Certification','Not provided in supplied material; document scope pending before publication']
+    ],
+    packagingClaims:[
+      ['MOQ','500 pcs'],
+      ['1 m price','US$0.67 / piece'],
+      ['2 m price','US$0.98 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Customization','Confirm logo position, marking method, package artwork, barcode and carton mark by quotation'],
+      ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'6A Fast Charging Cable USB Type-C Data Cable 100W 1m 2m 3m USB A to USB C Data Cable for Mobile Phones Macbooks and Tablets', slug:'/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/', family:'USB Cable', interface:'USB-A to USB-C / Type-C cable for mobile phone, MacBook and tablet accessory programs', power:'6A, 100W and Huawei/Honor super fast charging cues listed in supplied title and images; exact charger/device pairing and protocol behavior require selected-SKU confirmation', dataRate:'USB Type-C data cable wording listed; exact data rate requires model confirmation', video:'Not positioned for display output', material:'Nylon woven / braided cable jacket listed; aluminum-alloy woven data cable wording appears in supplied image; exact shell and cable material require source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Mobile-phone, tablet, MacBook, Huawei/Honor, Xiaomi and private-label USB-A to USB-C charging-cable programs needing low-MOQ logo review', customization:['MOQ 50 pcs','0.5 m: US$0.80 / piece','1 m: US$1.00 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','Custom logo supported','Length and logo details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 6A, 100W, Huawei/Honor fast charging behavior, data rate, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'6A 100W USB-A to USB-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$0.80 / piece'},{label:'1 m',value:'US$1.00 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'3 m',value:'US$1.70 / piece'},{label:'Logo',value:'Supported'}],
     images:[
       {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/03-usb-a-to-c-product.webp',alt:'USB-A to USB-C braided cable product image with 6A large-current and Huawei Xiaomi support cues',label:'Product view'},
