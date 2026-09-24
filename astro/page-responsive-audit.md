@@ -22,6 +22,8 @@ Automated checks used:
 
 Current result: passed. Final responsive scan returned `issues: []` across 29 routes and 3 viewport sizes.
 
+2026-09-24 USB4 short cable product addition: added `/products/usb-cables/usb4-40gbps-fpc-short-data-cable-13cm/` using user-supplied title, four product images, MOQ 100 pcs, US$2.00 / piece, custom packaging and logo support. Claims are evidence-gated in product data and product page frontmatter. Recheck required after build and production preview.
+
 2026-09-14 quality factory hero visibility fix: changed `/quality-factory/` hero from CSS background-only rendering to a real eager `<img>` poster so the uploaded YBD Global factory banner is visible in the first viewport instead of showing a black hero area. Verified after build at desktop default width, 768x1024 and 390x844; poster visible and no horizontal overflow.
 
 2026-09-14 quality factory cache-bust poster replacement: replaced the large `/quality-factory/` poster with `/images/editorial/ybd-quality-factory-hero-20260914.png` so production does not reuse the previously cached poster URL. Recheck required after build and production preview.

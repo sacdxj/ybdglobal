@@ -26,6 +26,36 @@ export interface Product {
 }
 
 export const products: Product[] = [
+  { model:'USB4 40Gbps FPC Short Data Cable 13cm 100W PD E-Marker Fast Charging Type-C Cord for Laptop Power Bank Phone', slug:'/products/usb-cables/usb4-40gbps-fpc-short-data-cable-13cm/', family:'USB Cable', interface:'USB-C to USB-C short FPC cable for laptop, power bank and phone accessory programs', power:'100W PD and E-Marker cues supplied by user; exact PD profile, E-Marker implementation and charger/device pairing require selected-SKU confirmation', dataRate:'USB4 40Gbps cue supplied by user and product images; exact USB4 compliance, cable length behavior and tested transfer rate require model evidence', video:'Not positioned for display output in supplied material', material:'FPC short cable format shown; exact conductor, shielding, housing and flexible-circuit stack require source confirmation', lengths:'13 cm supplied by user', bestFor:'Laptop, power-bank, phone, portable-device and private-label accessory programs needing a compact short USB-C cable with 40Gbps and 100W cues', customization:['MOQ 100 pcs','US$2.00 / piece supplied by user','Custom packaging supported','Custom logo supported','Packaging artwork, logo method and carton details by quotation'], proofStatus:'User-provided title, product images, MOQ and unit price captured; exact USB4 40Gbps behavior, 100W PD profile, E-Marker, FPC construction, logo, packaging and compliance scope require selected-model evidence', detailReady:true, cardLabel:'USB4 40Gbps short cable', cardFacts:[{label:'MOQ',value:'100 pcs'},{label:'Price',value:'US$2.00 / piece'},{label:'Length',value:'13 cm'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/01-main.webp',alt:'USB4 40Gbps Type-C short FPC cable product image with black flexible cable body and purple connector housings',label:'Product view'},
+      {src:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/02-40gbps-transfer.webp',alt:'Short USB-C cable shown transferring data to a laptop with 40Gbps speed cue',label:'Data transfer cue'},
+      {src:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/03-short-cable.webp',alt:'Type-C to Type-C short cable image with 40Gbps marking and compact loop shape',label:'Short cable cue'},
+      {src:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/04-phone-qc-charge.webp',alt:'Short USB-C cable connected to a phone with Type-C QC charge cue',label:'Phone charging cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 100 pcs',note:'User-supplied MOQ and unit price are recorded for RFQ review and should be reconfirmed before order.',image:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/01-main.webp',alt:'USB4 40Gbps short FPC cable product view'},
+      {title:'Data cue',value:'USB4 40Gbps listed',note:'40Gbps wording is reproduced from supplied title and images; exact USB4 compliance and tested transfer behavior require selected-SKU evidence.',image:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/02-40gbps-transfer.webp',alt:'40Gbps transfer cue shown with laptop'},
+      {title:'Power cue',value:'100W PD E-Marker listed',note:'100W PD and E-Marker cues are listed in the supplied title; confirm E-Marker implementation, PD profile and device pairing by sample.',image:'/images/products/usb4-40gbps-fpc-short-data-cable-13cm/04-phone-qc-charge.webp',alt:'Phone charging cue for short USB-C cable'}
+    ],
+    sourceSnapshot:'User-provided product title, images and commercial terms reviewed 24 Sep 2026. Values below reproduce supplied terms and require final quotation or model-level evidence before public claim approval.',
+    supplierClaims:[
+      ['Product title','USB4 40Gbps FPC Short Data Cable 13cm 100W PD E-Marker Fast Charging Type-C Cord for Laptop Power Bank Phone'],
+      ['Connector','USB-C to USB-C / Type-C to Type-C short cable'],
+      ['Cable format','FPC short data cable'],
+      ['Length','13 cm'],
+      ['Listed data cue','USB4 40Gbps'],
+      ['Listed power cue','100W PD'],
+      ['E-Marker cue','E-Marker listed in supplied title'],
+      ['Use cases','Laptop, power bank and phone'],
+      ['Custom logo','Supported by user-provided terms'],
+      ['Custom packaging','Supported by user-provided terms']
+    ],
+    packagingClaims:[
+      ['MOQ','100 pcs'],
+      ['Unit price','US$2.00 / piece'],
+      ['Commercial note','MOQ, price, logo and packaging terms should be reconfirmed before order approval']
+    ] },
   { model:'YBD-L421D USB-A to USB-C Cable', slug:'/products/usb-cables/usb-c-fast-charging-cable/', family:'USB Cable', interface:'USB-A to USB-C', power:'Supplier lists 6A / 66W; evidence pending', dataRate:'Charging + data transmission listed; data rate not stated', video:'Not positioned for display output', material:'PVC jacket, pure copper conductor, braided shielding listed', lengths:'1 m / 2 m listed', bestFor:'Mobile-device charging cable ranges, wholesale programs and private-label evaluation', customization:['White color listed','1 m / 2 m','Packaging by project','Logo / shell options require confirmation'], proofStatus:'Supplier listing captured; electrical, protocol, compliance and commercial claims require source documents', detailReady:true, cardFacts:[{label:'Power',value:'6A / 66W listed'},{label:'Build',value:'PVC · copper · braid'},{label:'Length',value:'1 m / 2 m'}],
     images:[
       {src:'/images/products/jl-l421d/01-main.webp',alt:'White USB-A to USB-C cable YBD-L421D shown on a white background',label:'Product view'},
