@@ -22,6 +22,8 @@ Automated checks used:
 
 Current result: passed. Final responsive scan returned `issues: []` across 29 routes and 3 viewport sizes.
 
+2026-09-29 case study preview addition: added `/case-studies/wholesale-cable-delivery-tested-good-quality/` with two user-supplied customer chat screenshots, keywords Wholesale, OEM/ODM, Cable and Phone accessories, and a fourth entry on `/case-studies/`. Verified with `npm.cmd run build`, `npm.cmd run check:links`, and local browser preview for the detail route plus `/case-studies/` entry.
+
 2026-09-24 USB4 short cable product addition: added `/products/usb-cables/usb4-40gbps-fpc-short-data-cable-13cm/` using user-supplied title, four product images, MOQ 100 pcs, US$2.00 / piece, custom packaging and logo support. Claims are evidence-gated in product data and product page frontmatter. Recheck required after build and production preview.
 
 2026-09-14 quality factory hero visibility fix: changed `/quality-factory/` hero from CSS background-only rendering to a real eager `<img>` poster so the uploaded YBD Global factory banner is visible in the first viewport instead of showing a black hero area. Verified after build at desktop default width, 768x1024 and 390x844; poster visible and no horizontal overflow.

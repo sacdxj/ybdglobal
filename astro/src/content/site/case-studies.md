@@ -1,6 +1,6 @@
 ---
 title: "B2B Customization Case Studies"
-description: "Anonymous project examples for custom USB cables, USB-C hubs, chargers, logo application and retail packaging workflows."
+description: "Anonymous project examples for custom USB cables, USB-C hubs, chargers, logo application, retail packaging and customer delivery feedback workflows."
 route: "/case-studies/"
 pageType: "commercial-pillar"
 audience: "Brand teams, importers, distributors and ecommerce operators evaluating private-label connectivity projects"
@@ -9,14 +9,14 @@ buyerStage: "Mid"
 status: "private-review"
 primaryCta: "Request a Similar Project"
 primaryCtaHref: "/get-a-quote/?program=Custom%20project"
-proofStatus: "Anonymous examples; final claims require project evidence and customer approval"
+proofStatus: "Anonymous examples and customer feedback references; final claims require project evidence and customer approval"
 ---
 
 <section class="case-study-board" aria-labelledby="case-study-board-title">
   <header>
     <p class="section-label">Project examples</p>
-    <h2 id="case-study-board-title">Three anonymous projects. One approval logic.</h2>
-    <p>Start with a product reference, define the requested change, then lock product, logo, packaging and evidence records before final terms are treated as fixed.</p>
+    <h2 id="case-study-board-title">Four anonymous projects. One approval logic.</h2>
+    <p>Start with a product reference, define the requested change, then lock product, logo, packaging, delivery feedback and evidence records before final terms are treated as fixed.</p>
   </header>
   <div class="case-study-board__gallery">
     <a class="case-study-tile case-study-tile--primary" href="/case-studies/private-label-usb-c-cable-packaging/">
@@ -30,6 +30,10 @@ proofStatus: "Anonymous examples; final claims require project evidence and cust
     <a class="case-study-tile" href="/case-studies/pd-charger-private-label-packaging/">
       <img src="/images/editorial/blank-case-study.svg" alt="Blank placeholder for PD charger private-label case study" loading="lazy" />
       <span><b>Case 03</b><strong>PD charger private label</strong><small>Plug market and package evidence.</small></span>
+    </a>
+    <a class="case-study-tile" href="/case-studies/wholesale-cable-delivery-tested-good-quality/">
+      <img src="/images/case-studies/customer-tested-cable-feedback.png" alt="Customer chat screenshot for wholesale cable delivery and testing feedback case study" loading="lazy" />
+      <span><b>Case 04</b><strong>Wholesale cable feedback</strong><small>Received goods, tested products and quality comment.</small></span>
     </a>
   </div>
 </section>
