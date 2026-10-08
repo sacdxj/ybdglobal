@@ -1,5 +1,14 @@
 # Page Responsive Audit
 
+## 2026-10-09 RFQ maintenance regression
+
+- Scope: JavaScript behavior in `/get-a-quote/` only; no markup, styles, routes, content approval states, robots or sitemap changes.
+- Browser checks at 1440x900, 768x900 and 390x900 passed: Hub/DisplayPort family prefill, legacy buying-program prefill, invalid input, failed submission recovery, successful submission, edit and resubmit.
+- Browser transport served local built files through request interception. Formspree responses and external requests were mocked; no real inquiry or analytics event was sent. This does not prove mailbox delivery.
+- Repeatable isolated-script regression: `node scripts/test-rfq-regressions.mjs` (all requests mocked).
+- Build, static links, decision-engine, React and existing public-launch checks passed. Page-quality check still reports nine pre-existing title/description length findings; this maintenance does not resolve them or approve content for publication.
+- Other routes were not visually re-audited in this behavior-only change; historical route results below are not a new all-route visual sign-off.
+
 Last checked: 2026-08-25
 
 Audit scope: all active generated routes in the Astro site, excluding only the automatic 404 fallback from the business-page count.

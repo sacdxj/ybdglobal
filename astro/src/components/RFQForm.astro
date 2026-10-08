@@ -86,10 +86,12 @@
     const valueOf = name => String(field(name)?.value || '').trim();
     const setValue = (name, value) => { const item = field(name); if (item && value) item.value = value; };
     Object.keys(labels).forEach(name => { if (name === 'buyer') return; const field = form.elements.namedItem(name); const value = params.get(name); if (field && value) field.value = value; });
+    const familyAliases = {'Hub & Dock':'Hub / Dock','DisplayPort':'DisplayPort Cable'};
+    if (familyAliases[params.get('family')]) setValue('family',familyAliases[params.get('family')]);
     if (params.get('family') && !valueOf('program')) setValue('program','Direct product sourcing');
     const programAliases={'Wholesaler':'Wholesale assortment','Importer Distributor':'Import / distribution','Private Label':'Private label','Amazon Seller':'Private label','OEM ODM':'OEM / ODM','Evidence Pack':'Evidence review','Specification Support':'Specification support'};
     const legacyProgram=params.get('buyer')||params.get('project')||params.get('request');
-    if (legacyProgram && !valueOf('program')) setValue('program',programAliases[legacyProgram]||legacyProgram);
+    if (legacyProgram && !params.get('program')) setValue('program',programAliases[legacyProgram]||legacyProgram);
     const request=params.get('request'); if(request && !valueOf('evidence')) setValue('evidence',request);
     const requirement=params.get('requirement'); if(requirement && !valueOf('performance')) setValue('performance',requirement);
     const generatedDetails = [valueOf('connection'), valueOf('performance'), valueOf('customization'), valueOf('evidence')].filter(Boolean).join(' / ');
@@ -123,7 +125,7 @@
         submitButton.disabled=false;
       }
     });
-    root.querySelector('[data-edit-rfq]').addEventListener('click',()=>{review.hidden=true;form.hidden=false;form.scrollIntoView({behavior:'smooth'});});
+    root.querySelector('[data-edit-rfq]').addEventListener('click',()=>{review.hidden=true;form.hidden=false;form.querySelector('button[type="submit"]').disabled=false;status.hidden=true;status.textContent='';form.scrollIntoView({behavior:'smooth'});});
     root.querySelector('[data-copy-rfq]').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.textContent);copyStatus.textContent='RFQ summary copied.';}catch{copyStatus.textContent='Copy was blocked. Select the summary and copy it manually.';}});
   })();
 </script>
