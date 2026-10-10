@@ -342,6 +342,40 @@ export const products: Product[] = [
       ['Logo support','Customized logo listed; confirm logo position, marking method and artwork by quotation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'100W Smart Auto-Cutoff Data Cable – Compatible with 17/18, Huawei, and Android Super Fast Charging', slug:'/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/', family:'USB Cable', interface:'USB-A to Type-C / USB-A to USB-C smart auto-cutoff cable for Huawei, Android and fast-charging accessory programs', power:'100W super fast charging, smart power-off / auto-cutoff, temperature protection and device-safe cues listed in supplied title/images; exact protocol behavior, cut-off logic and charger/device pairing require selected-SKU confirmation', dataRate:'Data cable and data transfer wording supplied; exact USB version and data rate require selected-model confirmation', video:'Not positioned for display output in supplied material', material:'Aluminum-alloy body cue shown in supplied image; exact shell grade, conductor, shielding and jacket material require source confirmation', lengths:'1 m / 2 m supplied by user', bestFor:'Huawei, Android, Type-C mobile-device, retail accessory and private-label cable programs needing 100W charging cues, smart auto-cutoff review and logo customization', customization:['MOQ 50 pcs','1 m: US$0.70 / piece','2 m: US$0.88 / piece','Custom logo supported','Packaging and artwork details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 100W behavior, auto-cutoff logic, Huawei/Android fast charging compatibility, temperature protection, data behavior, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'100W auto-cutoff USB-A to C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'1 m',value:'US$0.70 / piece'},{label:'2 m',value:'US$0.88 / piece'},{label:'Logo',value:'Supported'}],
+    images:[
+      {src:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/01-main.webp',alt:'100W smart power-off USB-A to Type-C cable with fast charging and device-safe cues',label:'Product view'},
+      {src:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/02-auto-cutoff-phone.webp',alt:'Supplier image showing smart auto-cutoff cable charging a phone with charging stages and auto top-up cues',label:'Auto-cutoff cue'},
+      {src:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/03-aluminum-cooling.webp',alt:'Supplier image showing aluminum alloy body cooling cue for 100W smart power-off cable',label:'Cooling body cue'},
+      {src:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/04-fast-charging-data.webp',alt:'Supplier image showing USB to Type-C universal interface with 100W charging and data transfer cue',label:'Charging + data cue'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/01-main.webp',alt:'100W smart auto-cutoff USB-A to Type-C cable product view'},
+      {title:'Auto-cutoff cue',value:'Smart power-off listed',note:'Auto-cutoff, top-up and charging-stage wording is reproduced from supplied images; confirm the actual charging logic by selected sample.',image:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/02-auto-cutoff-phone.webp',alt:'Auto-cutoff phone charging supplier image'},
+      {title:'Compatibility cue',value:'Huawei / Android listed',note:'Huawei, Android and 17/18 compatibility are treated as listing cues until charger, device and protocol behavior are tested.',image:'/images/products/100w-smart-auto-cutoff-usb-a-to-type-c-cable/04-fast-charging-data.webp',alt:'100W charging and data transfer supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms and images reviewed 10 Oct 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','100W Smart Auto-Cutoff Data Cable – Compatible with 17/18, Huawei, and Android Super Fast Charging'],
+      ['Product format','USB-A to Type-C / USB-A to USB-C fast charging data cable'],
+      ['Connector cue','USB-A connector and Type-C connector shown in supplied images'],
+      ['Power cue','100W super fast charging listed by user and supplied images'],
+      ['Function cue','Smart power-off / auto-cutoff, device-safe charging, temperature protection and auto top-up shown in supplied images'],
+      ['Compatibility cue','17/18, Huawei and Android listed by user; iPhone/Android wording also appears in supplied image and requires selected-device validation'],
+      ['Charging stage cue','0-80 fast charge, 80-100 trickle charge, fully charged light off and auto top-up cues shown in supplied image'],
+      ['Material cue','Aerospace-grade aluminum alloy body and rapid heat dissipation wording shown in supplied image; material evidence pending'],
+      ['Use cue','USB to Type-C universal interface, fast charging and data transfer 2-in-1 wording shown in supplied image'],
+      ['Logo support','Custom logo supported by user request'],
+      ['Source boundary','100W, auto-cutoff, temperature protection, compatibility, aluminum-alloy and data-transfer claims require selected-model evidence']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pieces'],
+      ['Price: 1 m','US$0.70 / piece'],
+      ['Price: 2 m','US$0.88 / piece'],
+      ['Logo support','Custom logo supported'],
+      ['Customization','Confirm logo position, marking method, package artwork, barcode and carton mark by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'6A Fast Charging Cable USB Type-C Data Cable 100W 1m 2m 3m USB A to USB C Data Cable for Mobile Phones Macbooks and Tablets', slug:'/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/', family:'USB Cable', interface:'USB-A to USB-C / Type-C cable for mobile phone, MacBook and tablet accessory programs', power:'6A, 100W and Huawei/Honor super fast charging cues listed in supplied title and images; exact charger/device pairing and protocol behavior require selected-SKU confirmation', dataRate:'USB Type-C data cable wording listed; exact data rate requires model confirmation', video:'Not positioned for display output', material:'Nylon woven / braided cable jacket listed; aluminum-alloy woven data cable wording appears in supplied image; exact shell and cable material require source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Mobile-phone, tablet, MacBook, Huawei/Honor, Xiaomi and private-label USB-A to USB-C charging-cable programs needing low-MOQ logo review', customization:['MOQ 50 pcs','0.5 m: US$0.80 / piece','1 m: US$1.00 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','Custom logo supported','Length and logo details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 6A, 100W, Huawei/Honor fast charging behavior, data rate, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'6A 100W USB-A to USB-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$0.80 / piece'},{label:'1 m',value:'US$1.00 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'3 m',value:'US$1.70 / piece'},{label:'Logo',value:'Supported'}],
     images:[
       {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/03-usb-a-to-c-product.webp',alt:'USB-A to USB-C braided cable product image with 6A large-current and Huawei Xiaomi support cues',label:'Product view'},
