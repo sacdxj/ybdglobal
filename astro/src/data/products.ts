@@ -301,6 +301,47 @@ export const products: Product[] = [
       ['Packaging cue','Retail package not provided in supplied material; final packing method requires quotation confirmation'],
       ['Lead time','Not provided in supplied material; confirm by current quotation']
     ] },
+  { model:'Smart Power-Off 100W Super-Fast Charging Nylon Braided Type-C Data Cable with Breathing Light for 16/17 Android Tablets Laptops', slug:'/products/usb-cables/smart-power-off-100w-breathing-light-usb-c-cable/', family:'USB Cable', interface:'USB-C to USB-C / Type-C to Type-C smart power-off cable for Android tablet, laptop and mobile-device accessory programs', power:'100W super-fast charging, smart power-off and breathing light cues listed in supplied title/images; exact PD profile, E-marker behavior, cut-off logic and charger/device pairing require selected-SKU confirmation', dataRate:'Type-C data cable wording supplied; exact USB version and data rate require selected-model confirmation', video:'Not positioned for display output in supplied material', material:'Nylon braided jacket, alloy-look connector shell, pure copper conductor and braid shielding listed in supplied screenshot; exact construction stack requires source confirmation', lengths:'1 m / 1.5 m / 2 m supplied by user; customized length shown in parameter screenshot requires quotation confirmation', bestFor:'Tablet, laptop, Android Type-C device and private-label USB-C cable programs needing 100W charging cues, breathing-light appearance and smart power-off review', customization:['MOQ 50 pcs','1 m: US$1.28 / piece','1.5 m: US$1.50 / piece','2 m: US$1.60 / piece','Customized logo listed in supplied screenshot; confirm artwork and placement by quotation','OPP polybag shown in supplied screenshot; final packaging by project'], proofStatus:'User-provided title, commercial terms, product images and parameter screenshot captured; exact 100W PD behavior, smart power-off function, breathing light behavior, E-marker chipset, data behavior, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'Smart power-off 100W C-to-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'1 m',value:'US$1.28 / piece'},{label:'1.5 m',value:'US$1.50 / piece'},{label:'2 m',value:'US$1.60 / piece'}],
+    images:[
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/01-main.webp',alt:'Blue connector nylon braided USB-C to USB-C 100W cable with breathing light cue',label:'Product view'},
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/02-triple-reinforcement.webp',alt:'Supplier image showing triple structure reinforcement and high-density weave cues for the 100W cable',label:'Reinforcement cue'},
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/03-smart-power-off.webp',alt:'Supplier image showing smart power-off and 100W super fast charging cable color options',label:'Smart power-off cue'},
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/04-type-c-device-use.webp',alt:'USB-C cable connected to a Type-C device with breathing light and current battery level cue',label:'Type-C device use'},
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/05-fast-charging-cue.webp',alt:'Close-up of 100W breathing light USB-C connector with smart fast charging mountain visual cue',label:'Fast charging cue'},
+      {src:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/06-parameter-table.webp',alt:'Parameter table for smart power-off fast charging cable listing Type-C, nylon braiding, pure copper and OPP polybag cues',label:'Parameter table'}
+    ],
+    featureHighlights:[
+      {title:'Order terms',value:'MOQ 50 pcs',note:'User supplied MOQ and length-based pricing are shown for RFQ preparation and should be reconfirmed before order.',image:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/01-main.webp',alt:'Smart power-off 100W USB-C cable product view'},
+      {title:'Function cues',value:'Power-off + breathing light',note:'Smart power-off, breathing light and E-marker chipset wording is reproduced from supplied material; confirm behavior by selected sample.',image:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/03-smart-power-off.webp',alt:'Smart power-off supplier image'},
+      {title:'Construction cue',value:'Nylon braid listed',note:'Supplied images emphasize high-density weave, 10,000+ bends and nylon braiding; durability claims need test evidence before publication.',image:'/images/products/smart-power-off-100w-breathing-light-usb-c-cable/02-triple-reinforcement.webp',alt:'Triple reinforcement supplier image'}
+    ],
+    sourceSnapshot:'User-provided product title, commercial terms, images and parameter screenshot reviewed 10 Oct 2026. Values below reproduce supplied material and are not independent certification evidence.',
+    supplierClaims:[
+      ['Listing title','Smart Power-Off 100W Super-Fast Charging Nylon Braided Type-C Data Cable with Breathing Light for 16/17 Android Tablets Laptops'],
+      ['Product name','Smart Power-off Fast Charging Cable'],
+      ['Product format','Dual Type-C / USB-C to USB-C data cable'],
+      ['USB type','Type-C'],
+      ['Function','Fast charging, smart power-off and breathing light listed in supplied parameter screenshot'],
+      ['Power cue','100W shown in supplied title/images; one image appears to contain a 1100w typo and is not used as a verified claim'],
+      ['E-marker cue','E-marker chipset listed in supplied parameter screenshot'],
+      ['Material','Nylon braiding; pure copper conductor; braid shielding; nylon braiding jacket listed in supplied screenshot'],
+      ['Color options','Blue / black / purple / white listed in supplied screenshot'],
+      ['Length options','1 m / 1.5 m / 2 m / customized listed in supplied screenshot'],
+      ['Compatibility cue','Type-C port, Android tablets and laptops listed; exact device compatibility requires sample validation'],
+      ['Private mold','Yes listed in supplied screenshot'],
+      ['Logo','Customized logo listed in supplied screenshot'],
+      ['Brand name','YBD listed in supplied screenshot'],
+      ['Source boundary','100W, smart power-off, breathing-light behavior, E-marker implementation, durability and compatibility claims require selected-model evidence']
+    ],
+    packagingClaims:[
+      ['MOQ','50 pieces supplied by user for current quotation; screenshot also shows 10 pcs and should be treated as older/source-sheet cue until reconfirmed'],
+      ['Price: 1 m','US$1.28 / piece'],
+      ['Price: 1.5 m','US$1.50 / piece'],
+      ['Price: 2 m','US$1.60 / piece'],
+      ['Packing cue','OPP polybag listed in supplied screenshot'],
+      ['Logo support','Customized logo listed; confirm logo position, marking method and artwork by quotation'],
+      ['Lead time','Not provided in supplied material; confirm by current quotation']
+    ] },
   { model:'6A Fast Charging Cable USB Type-C Data Cable 100W 1m 2m 3m USB A to USB C Data Cable for Mobile Phones Macbooks and Tablets', slug:'/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/', family:'USB Cable', interface:'USB-A to USB-C / Type-C cable for mobile phone, MacBook and tablet accessory programs', power:'6A, 100W and Huawei/Honor super fast charging cues listed in supplied title and images; exact charger/device pairing and protocol behavior require selected-SKU confirmation', dataRate:'USB Type-C data cable wording listed; exact data rate requires model confirmation', video:'Not positioned for display output', material:'Nylon woven / braided cable jacket listed; aluminum-alloy woven data cable wording appears in supplied image; exact shell and cable material require source confirmation', lengths:'0.5 m / 1 m / 2 m / 3 m listed', bestFor:'Mobile-phone, tablet, MacBook, Huawei/Honor, Xiaomi and private-label USB-A to USB-C charging-cable programs needing low-MOQ logo review', customization:['MOQ 50 pcs','0.5 m: US$0.80 / piece','1 m: US$1.00 / piece','2 m: US$1.35 / piece','3 m: US$1.70 / piece','Custom logo supported','Length and logo details by quotation'], proofStatus:'User-provided title, commercial terms and product images captured; exact 6A, 100W, Huawei/Honor fast charging behavior, data rate, material stack, logo marking and compliance scope require selected-model evidence', detailReady:true, cardLabel:'6A 100W USB-A to USB-C', cardFacts:[{label:'MOQ',value:'50 pcs'},{label:'0.5 m',value:'US$0.80 / piece'},{label:'1 m',value:'US$1.00 / piece'},{label:'2 m',value:'US$1.35 / piece'},{label:'3 m',value:'US$1.70 / piece'},{label:'Logo',value:'Supported'}],
     images:[
       {src:'/images/products/6a-100w-usb-a-to-usb-c-braided-cable/03-usb-a-to-c-product.webp',alt:'USB-A to USB-C braided cable product image with 6A large-current and Huawei Xiaomi support cues',label:'Product view'},
