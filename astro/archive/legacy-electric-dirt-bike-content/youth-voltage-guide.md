@@ -1,4 +1,4 @@
-﻿---
+---
 title: "24V vs 36V vs 48V Electric Dirt Bikes"
 description: "A parent-first guide to comparing 24V, 36V, and 48V youth electric dirt bikes without treating voltage as an age or safety rating."
 route: "/buying-guides/24v-36v-48v/"

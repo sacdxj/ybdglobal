@@ -1,4 +1,4 @@
-﻿---
+---
 title: "72V Electric Dirt Bikes"
 description: "Compare 72V electric dirt bikes by complete drive system, rider fit, terrain, battery capacity, charging, chassis, and support."
 route: "/adult-dirt-bikes/72v/"

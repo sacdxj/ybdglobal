@@ -1,4 +1,4 @@
-﻿---
+---
 title: "X1-48-MY-1417 48V Electric Dirt Bike"
 description: "Compare the X1-48-MY-1417 48V electric dirt bike with 14/17 tires, 770 mm seat height, 1000W rated motor, 35 km range, charging, and fit."
 route: "/products/x1-48-my-1417-electric-dirt-bike/"

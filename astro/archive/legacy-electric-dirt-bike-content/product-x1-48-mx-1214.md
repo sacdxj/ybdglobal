@@ -1,4 +1,4 @@
-﻿---
+---
 title: "X1-48-MX-1214 48V Compact Electric Dirt Bike"
 description: "Review the X1-48-MX-1214 compact 48V electric dirt bike with 12/14 tires, 730 mm seat height, 1000W rated motor, 35 km range, charging, fit, and support."
 route: "/products/x1-48-mx-1214-electric-dirt-bike/"

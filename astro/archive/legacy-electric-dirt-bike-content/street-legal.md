@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Are Electric Dirt Bikes Street Legal in the US?"
 description: "Learn how vehicle classification, manufacturer certification, VIN and title documents, equipment, registration, insurance, licensing, and state rules affect street use."
 route: "/street-legal/"

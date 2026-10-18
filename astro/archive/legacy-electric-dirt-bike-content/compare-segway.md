@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Segway Dirt eBike Alternatives"
 description: "Compare Segway Dirt eBike models with electric dirt bike alternatives by rider fit, drive system, chassis, range evidence, parts, support, and availability."
 route: "/blog/compare/segway-alternatives/"

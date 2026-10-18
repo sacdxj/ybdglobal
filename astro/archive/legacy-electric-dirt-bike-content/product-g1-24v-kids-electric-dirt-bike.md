@@ -1,4 +1,4 @@
-﻿---
+---
 title: "G1 24V Kids Electric Dirt Bike"
 description: "Review the G1 24V kids electric dirt bike with 420 mm seat height, 180W hub motor, 9.94 mph top speed, 13 km range, 10-inch tires, fit, charging, and parent safety checks."
 route: "/products/g1-24v-kids-electric-dirt-bike/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "K2-72-MY-1417 72V Electric Dirt Bike"
 description: "Compare the K2-72-MY-1417 72V 14/17 electric dirt bike with 25Ah battery, 2000W rated motor, 6000W maximum power, speed modes, fit, and range."
 route: "/products/k2-72-my-1417-electric-dirt-bike/"

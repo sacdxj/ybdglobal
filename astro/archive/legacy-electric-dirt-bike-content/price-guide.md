@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Price & Budget Guide"
 description: "Plan an electric dirt bike budget by rider class, live price bands, delivery, gear, charging, maintenance, parts, warranty, and support."
 route: "/buying-guides/price/"

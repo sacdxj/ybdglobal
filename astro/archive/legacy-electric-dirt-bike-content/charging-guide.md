@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Charging Guide"
 description: "Charge an electric dirt bike by confirming charger compatibility, battery condition, location, temperature, storage routine, and support escalation."
 route: "/buying-guides/charging/"

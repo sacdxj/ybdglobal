@@ -1,4 +1,4 @@
-﻿---
+---
 title: "FAQs"
 description: "Get direct answers about electric dirt bike fit, ordering, shipping, returns, warranty, charging, street-use limits, and support."
 route: "/support/faqs/"

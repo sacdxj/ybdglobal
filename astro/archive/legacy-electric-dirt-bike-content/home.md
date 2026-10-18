@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Ovkara: Electric Dirt Bikes Built Around the Rider"
 description: "Buy with confidence by comparing electric dirt bikes through rider fit, terrain, power needs, safety requirements, support, and budget."
 route: "/"

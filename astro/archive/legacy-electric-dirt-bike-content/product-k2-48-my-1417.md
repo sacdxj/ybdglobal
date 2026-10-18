@@ -1,4 +1,4 @@
-﻿---
+---
 title: "K2-48-MY-1417 48V Electric Dirt Bike"
 description: "Compare the K2-48-MY-1417 48V 14/17 electric dirt bike by fit, 780 mm seat height, 1200W rated motor, 60 km range, charging, tires, and support."
 route: "/products/k2-48-my-1417-electric-dirt-bike/"

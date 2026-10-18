@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CAKE Electric Off-Road Alternatives"
 description: "Compare CAKE off-road electric motorcycles with available alternatives by product class, rider fit, weight, chassis, terrain, road status, support, and price."
 route: "/blog/compare/cake-alternatives/"

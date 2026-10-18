@@ -1,4 +1,4 @@
-﻿---
+---
 title: "60V Electric Dirt Bikes"
 description: "Compare 60V electric dirt bikes by complete system performance, rider fit, terrain, range, charging, chassis, and ownership support."
 route: "/adult-dirt-bikes/60v/"

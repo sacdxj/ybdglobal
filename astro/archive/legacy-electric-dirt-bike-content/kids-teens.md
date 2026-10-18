@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bikes for Teens & Youth"
 description: "Compare electric dirt bikes for teens using rider fit, experience, controls, terrain, performance progression, and ownership readiness."
 route: "/kids-youth/teens/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Buying Guides"
 description: "Choose the right electric dirt bike guide for rider fit, price, range, charging, voltage, safety, legal use, and ownership support."
 route: "/buying-guides/"

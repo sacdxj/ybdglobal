@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Register an Electric Dirt Bike for Road Use"
 description: "A verification workflow for electric dirt bike classification, VIN, certification, ownership documents, equipment, DMV registration, license, and insurance."
 route: "/street-legal/registration-license/"

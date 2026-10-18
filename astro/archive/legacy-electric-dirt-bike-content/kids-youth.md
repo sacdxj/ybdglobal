@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bikes for Kids & Youth"
 description: "Help parents compare youth electric dirt bikes by rider size, experience, controls, brakes, terrain, supervision, and support."
 route: "/kids-youth/"

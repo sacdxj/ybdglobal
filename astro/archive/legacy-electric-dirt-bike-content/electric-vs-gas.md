@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric vs Gas Dirt Bikes: Which Fits Your Ride?"
 description: "Compare electric and gas dirt bikes by riding location, power delivery, ride-session planning, charging or fueling, maintenance, chassis, noise, and ownership cost."
 route: "/buying-guides/electric-vs-gas-dirt-bike/"

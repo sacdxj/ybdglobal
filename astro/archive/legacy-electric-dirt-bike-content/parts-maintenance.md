@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Parts & Maintenance"
 description: "Find model-compatible electric dirt bike parts and follow a documented inspection and maintenance process."
 route: "/support/parts-maintenance/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Range: Plan a Real Ride"
 description: "Estimate electric dirt bike range using route length, rider load, speed, terrain, elevation, temperature, tires, battery condition, and reserve."
 route: "/buying-guides/range/"

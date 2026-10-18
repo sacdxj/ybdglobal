@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Talaria Alternatives: Electric Dirt Bike Comparison Guide"
 description: "Compare Talaria-class electric bikes with Ovkara adult models using product class, rider fit, drive system, chassis, range evidence, support, and ownership."
 route: "/blog/compare/talaria-alternatives/"

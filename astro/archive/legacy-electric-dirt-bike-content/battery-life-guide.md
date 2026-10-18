@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How Long Does an Electric Dirt Bike Battery Last?"
 description: "Separate ride time, charging time, cycle life, calendar aging, and battery care when evaluating an electric dirt bike battery."
 route: "/buying-guides/battery-life/"

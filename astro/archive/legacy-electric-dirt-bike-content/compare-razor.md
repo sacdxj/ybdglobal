@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Razor Dirt Rocket Alternatives for Kids & Youth"
 description: "Compare Razor Dirt Rocket and Ovkara youth electric dirt bikes by rider fit, controls, brakes, terrain, battery, supervision, support, and budget."
 route: "/blog/compare/razor-alternatives/"

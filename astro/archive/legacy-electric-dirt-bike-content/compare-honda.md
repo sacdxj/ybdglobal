@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Does Honda Make an Electric Dirt Bike?"
 description: "Separate Honda gas dirt bikes with electric start from true electric motorcycles, verify current products, and compare available electric dirt bike alternatives."
 route: "/blog/compare/honda-electric-dirt-bike/"

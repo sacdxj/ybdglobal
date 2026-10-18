@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bikes for Adults"
 description: "Compare adult electric dirt bikes by rider fit, terrain, control, voltage, range, chassis, and ownership support."
 route: "/adult-dirt-bikes/"

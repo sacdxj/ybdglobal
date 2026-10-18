@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Financing"
 description: "Review available electric dirt bike payment options, eligibility, costs, disclosures, returns, and support."
 route: "/support/financing/"

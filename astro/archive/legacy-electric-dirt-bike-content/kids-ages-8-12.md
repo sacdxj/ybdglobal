@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bikes for Ages 8-12: Parent Fit Guide"
 description: "A parent-first guide to choosing an electric dirt bike for riders ages 8-12 using measurements, experience, controls, supervision, and terrain."
 route: "/kids-youth/ages-8-12/"

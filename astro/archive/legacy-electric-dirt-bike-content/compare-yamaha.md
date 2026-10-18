@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Does Yamaha Make an Electric Dirt Bike?"
 description: "Check Yamaha's current electric motocross and motorcycle activity, distinguish concepts from products, and compare available electric dirt bike alternatives."
 route: "/blog/compare/yamaha-electric-dirt-bike/"

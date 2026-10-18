@@ -1,4 +1,4 @@
-﻿---
+---
 title: "K2-48-MX-1214 Compact Electric Dirt Bike"
 description: "Review the K2-48-MX-1214 compact 48V electric dirt bike with 12/14 wheels, 730 mm seat height, 1200W rated motor, range, charging, fit, and support requirements."
 route: "/products/k2-48-mx-1214-electric-dirt-bike/"

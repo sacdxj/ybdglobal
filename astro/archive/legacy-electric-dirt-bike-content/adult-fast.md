@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fast Electric Dirt Bikes: Compare Performance With Control"
 description: "Compare fast electric dirt bikes using verified speed methods, rider readiness, brakes, suspension, tires, terrain, and range tradeoffs."
 route: "/adult-dirt-bikes/fast/"

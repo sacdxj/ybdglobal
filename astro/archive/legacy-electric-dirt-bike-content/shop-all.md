@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Compare Ovkara Electric Dirt Bikes"
 description: "Build an electric dirt bike shortlist by rider, terrain, voltage, fit, price, and verified product specifications."
 route: "/shop/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "KTM Electric Dirt Bike Alternatives"
 description: "Compare KTM electric off-road models with Ovkara alternatives by rider class, terrain, chassis, battery, charging, dealer support, and price."
 route: "/blog/compare/ktm-electric-alternatives/"

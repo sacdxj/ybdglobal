@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Kuberg Electric Dirt Bike Alternatives"
 description: "Compare Kuberg youth and adult electric motorcycles with alternatives using rider fit, product class, controls, chassis, battery, support, and price."
 route: "/blog/compare/kuberg-alternatives/"

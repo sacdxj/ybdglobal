@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Repair & Service"
 description: "Identify safe next steps for electric dirt bike repair using the exact model, symptom, warranty status, and approved support path."
 route: "/support/repair/"

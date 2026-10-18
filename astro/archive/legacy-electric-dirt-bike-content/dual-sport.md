@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Street-Legal Dual-Sport Electric Dirt Bikes"
 description: "Understand the product, documentation, equipment, terrain, range, and registration tradeoffs of a dual-sport electric dirt bike."
 route: "/street-legal/dual-sport/"

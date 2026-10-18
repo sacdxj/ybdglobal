@@ -1,4 +1,4 @@
-﻿---
+---
 title: "K2-60-MY-1417 60V Electric Dirt Bike"
 description: "Review the K2-60-MY-1417 60V electric dirt bike with 22.5Ah battery, 1500W rated motor, 4000W maximum power, 14/17 tires, range, and fit."
 route: "/products/k2-60-my-1417-electric-dirt-bike/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Stark VARG Alternatives: Match the Performance Class"
 description: "Compare the Stark VARG with electric dirt bike alternatives by motocross use, rider skill, chassis, power system, battery, support, and price class."
 route: "/blog/compare/stark-varg-alternatives/"

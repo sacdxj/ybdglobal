@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Motor & Power Guide"
 description: "Compare electric dirt bike motors by rating definitions, controller, battery, gearing, thermal behavior, rider load, terrain, and chassis."
 route: "/buying-guides/motor-power/"

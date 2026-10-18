@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric Dirt Bike Comparisons & Alternatives"
 description: "Compare electric dirt bike brands by rider fit, product class, terrain, complete specifications, support, legal status, and ownership cost."
 route: "/blog/compare/"

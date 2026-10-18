@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best Electric Dirt Bikes: Choose by Rider and Use"
 description: "Build an electric dirt bike shortlist by rider type, terrain, control needs, product evidence, ownership support, and budget."
 route: "/buying-guides/best/"

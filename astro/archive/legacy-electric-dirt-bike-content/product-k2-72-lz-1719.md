@@ -1,4 +1,4 @@
-﻿---
+---
 title: "K2-72-LZ-1719 72V Full-Size Electric Dirt Bike"
 description: "Review the K2-72-LZ-1719 72V 17/19 electric dirt bike with 25Ah battery, 860-870 mm seat, 370 mm clearance, 6000W maximum power, range, and fit."
 route: "/products/k2-72-lz-1719-electric-dirt-bike/"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "X1-60-MY-1417 60V Electric Dirt Bike"
 description: "Review the X1-60-MY-1417 60V electric dirt bike with 25Ah battery, 1500Wh capacity, 1500W rated motor, 4500W maximum power, 45 km range, and 14/17 tires."
 route: "/products/x1-60-my-1417-electric-dirt-bike/"

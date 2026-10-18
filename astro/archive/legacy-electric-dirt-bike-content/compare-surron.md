@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Surron Alternatives: How to Compare Electric Dirt Bikes"
 description: "Compare a Surron with other electric dirt bikes by product class, rider fit, terrain, drive system, chassis, range evidence, parts, support, and price."
 route: "/blog/compare/surron-alternatives/"
