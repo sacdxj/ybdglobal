@@ -1,6 +1,6 @@
 ---
 title: "Request a Connectivity Product Quote"
-description: "Prepare a structured sourcing requirement for cables, hubs, docking stations, or chargers before handing it to an approved sales channel."
+description: "Send a structured sourcing requirement for cables, hubs, docking stations, or chargers to the YBD Global RFQ inbox."
 route: "/get-a-quote/"
 pageType: "conversion"
 audience: "B2B buyers with a selected or partially defined product requirement"
@@ -9,18 +9,33 @@ buyerStage: "Bottom"
 status: "private-review"
 primaryCta: "Build Your RFQ"
 primaryCtaHref: "#rfq-title"
-proofStatus: "Live RFQ destination pending"
+proofStatus: "RFQ form routes through Formspree to the approved receiving email"
 ---
 
 <section class="quote-followup" aria-label="RFQ review guidance">
   <article>
-    <span>After review</span>
-    <h2>Your brief stays in your browser.</h2>
-    <p>The form prepares a structured summary without transmitting personal or commercial data. Copy it only to an approved sales channel.</p>
+    <div class="quote-followup__header">
+      <span class="quote-followup__badge">Step 01 · Verification</span>
+      <span class="quote-followup__eta">Within 24 Hours</span>
+    </div>
+    <h2>Specification & Feasibility Review</h2>
+    <p>Your structured RFQ is routed directly to our engineering & sourcing desk. We cross-examine pinouts, protocol versions, power profiles and mold feasibility before pricing.</p>
+    <ul class="quote-followup__points">
+      <li><strong>Pinout & Protocols:</strong> Match data bandwidth, fast-charging profiles & display standards</li>
+      <li><strong>Customization Feasibility:</strong> Tooling, laser marking, braided jacket & bespoke packaging review</li>
+    </ul>
   </article>
+
   <article>
-    <span>Useful inputs</span>
-    <h2>Known facts first. Open items visible.</h2>
-    <p>Include the product, connection, task, quantity and market. Leave uncertain values open for configuration review.</p>
+    <div class="quote-followup__header">
+      <span class="quote-followup__badge">Step 02 · Commercial Proof</span>
+      <span class="quote-followup__eta">Formal PDF Quotation</span>
+    </div>
+    <h2>Clear Tiered Pricing & Sample Roadmaps</h2>
+    <p>Receive comprehensive commercial terms tailored to your shipment volume, destination customs requirements and target delivery window.</p>
+    <ul class="quote-followup__points">
+      <li><strong>Volume Price Bands:</strong> Transparent MOQ breaks for trial runs up to full-container shipments</li>
+      <li><strong>Evidence & Samples:</strong> Golden sample scheduling, test fixture logs & certificate copies upon request</li>
+    </ul>
   </article>
 </section>

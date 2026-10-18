@@ -1,17 +1,29 @@
 <section class="rfq-workbench" aria-labelledby="rfq-title" data-rfq-form>
   <header class="rfq-workbench__intro">
-    <div>
-      <p class="section-label">Specification intake</p>
-      <h2 id="rfq-title">Build a quote-ready requirement</h2>
-      <p>Complete what you know. Unknown technical values can remain open for configuration review.</p>
+    <div class="rfq-workbench__headline">
+      <div class="rfq-pill-badge">
+        <span class="rfq-pill-badge__dot"></span>
+        <span>Direct Sourcing Gateway</span>
+      </div>
+      <h2 id="rfq-title">Build a Quote-Ready Requirement</h2>
+      <p>Configure known project parameters below. Technical tolerances, certification scopes and custom packaging can remain open for review.</p>
     </div>
-    <div class="rfq-status"><span>Formspree intake</span><strong>RFQs are sent to email</strong><small>Submissions route through the approved Formspree endpoint.</small></div>
+    <div class="rfq-status">
+      <div class="rfq-status__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div class="rfq-status__body">
+        <span class="rfq-status__tag">Direct Intake</span>
+        <strong>Engineering & Pricing Review</strong>
+        <small>Encrypted via Formspree · Reviewed within 24 business hours · See <a href="/privacy/">Privacy Notice</a></small>
+      </div>
+    </div>
   </header>
 
   <section class="rfq-prefill" data-rfq-prefill hidden aria-live="polite">
     <div>
       <p class="section-label">Custom solution request</p>
-      <h3>OEM/ODM requirements generated from the factory poster.</h3>
+      <h3>Requirements carried over from your selected sourcing path.</h3>
     </div>
     <dl>
       <div><dt>Program</dt><dd data-prefill-program></dd></div>
@@ -32,37 +44,92 @@
     <input type="hidden" name="sample" value="Not specified" />
     <textarea name="message" hidden></textarea>
     <fieldset>
-      <legend><span>01</span> Project basics</legend>
+      <legend>
+        <span class="legend-badge">01</span>
+        <div class="legend-text">
+          <strong>Project & Product Specifications</strong>
+          <small>Connector configurations, electrical targets and order volumes</small>
+        </div>
+      </legend>
       <div class="rfq-grid">
-        <label>Product family <strong aria-hidden="true">*</strong><select name="family" required><option value="">Select a family</option><option>USB Cable</option><option>HDMI Cable</option><option>DisplayPort Cable</option><option>Hub / Dock</option><option>Charger</option></select></label>
-        <label>Reference product<input name="product" autocomplete="off" placeholder="Model, link, photo name, or open recommendation" /></label>
-        <label class="rfq-span-2">What do you need? <strong aria-hidden="true">*</strong><textarea name="notes" rows="4" required placeholder="Example: USB-C cable, 1 m, 100W, black, logo packaging, need samples before bulk order"></textarea></label>
-        <label>Initial quantity <strong aria-hidden="true">*</strong><input name="quantity" required inputmode="numeric" placeholder="Trial or first-order quantity" /></label>
-        <label>Destination country <strong aria-hidden="true">*</strong><input name="destination" required autocomplete="country-name" /></label>
-        <label class="rfq-span-2">Optional details<textarea name="details" rows="3" placeholder="Certification, target date, packaging, forecast, sample or evidence requests"></textarea></label>
+        <label>
+          <span class="label-title">Product family <strong class="req-star" aria-hidden="true">*</strong></span>
+          <select name="family" required>
+            <option value="">Select a product family</option>
+            <option>USB Cable</option>
+            <option>HDMI Cable</option>
+            <option>DisplayPort Cable</option>
+            <option>Hub / Dock</option>
+            <option>Charger</option>
+          </select>
+        </label>
+        <label>
+          <span class="label-title">Reference SKU / Link / Model</span>
+          <input name="product" autocomplete="off" placeholder="e.g. Model, reference link, photo name, or open recommendation" />
+        </label>
+        <label class="rfq-span-2">
+          <span class="label-title">Requirements & Technical Scope <strong class="req-star" aria-hidden="true">*</strong></span>
+          <textarea name="notes" rows="4" required placeholder="Example: USB-C to USB-C cable, 1.2m, PD 100W, 20Gbps data, braided nylon jacket, black, custom logo laser engraving, need 5 golden samples before trial production."></textarea>
+        </label>
+        <label>
+          <span class="label-title">Initial Order / Trial Quantity <strong class="req-star" aria-hidden="true">*</strong></span>
+          <input name="quantity" required inputmode="numeric" placeholder="e.g. 500 pcs trial / 5,000 pcs bulk" />
+        </label>
+        <label>
+          <span class="label-title">Destination Market / Country <strong class="req-star" aria-hidden="true">*</strong></span>
+          <input name="destination" required autocomplete="country-name" placeholder="e.g. United States, Germany, Japan" />
+        </label>
+        <label class="rfq-span-2">
+          <span class="label-title">Customization & Certification Details</span>
+          <textarea name="details" rows="3" placeholder="Target delivery window, destination certifications (CE/RoHS/FCC), retail gift box / polybag packaging, or target unit price expectations"></textarea>
+        </label>
       </div>
     </fieldset>
 
     <fieldset>
-      <legend><span>02</span> Contact</legend>
+      <legend>
+        <span class="legend-badge">02</span>
+        <div class="legend-text">
+          <strong>Procurement Contact Information</strong>
+          <small>Direct coordinates for sending formal quotes and spec sheets</small>
+        </div>
+      </legend>
       <div class="rfq-grid">
-        <label>Company<input name="company" autocomplete="organization" /></label>
-        <label>Buyer name <strong aria-hidden="true">*</strong><input name="buyer" required autocomplete="name" /></label>
-        <label>Email <strong aria-hidden="true">*</strong><input name="email" type="email" required autocomplete="email" /></label>
-        <label>Phone / messaging<input name="phone" autocomplete="tel" /></label>
+        <label>
+          <span class="label-title">Company / Organization</span>
+          <input name="company" autocomplete="organization" placeholder="e.g. Apex Tech Brands Ltd." />
+        </label>
+        <label>
+          <span class="label-title">Contact Name <strong class="req-star" aria-hidden="true">*</strong></span>
+          <input name="buyer" required autocomplete="name" placeholder="Full name or sourcing officer" />
+        </label>
+        <label>
+          <span class="label-title">Corporate Email <strong class="req-star" aria-hidden="true">*</strong></span>
+          <input name="email" type="email" required autocomplete="email" placeholder="name@company.com" />
+        </label>
+        <label>
+          <span class="label-title">Direct Phone / WhatsApp / WeChat</span>
+          <input name="phone" autocomplete="tel" placeholder="+1 (555) 019-2834 or WeChat ID" />
+        </label>
       </div>
     </fieldset>
 
     <div class="rfq-consent">
-      <label><input name="acknowledgement" type="checkbox" required /> I understand that specifications, certification, price, MOQ, sample timing, and lead time require project confirmation.</label>
-      <p data-form-error role="alert" hidden>Please complete the required fields before preparing the RFQ.</p>
+      <label class="consent-checkbox-wrapper">
+        <input name="acknowledgement" type="checkbox" required />
+        <span class="consent-text">I understand that specifications, certification standards, FOB/EXW pricing, MOQ, and sample delivery timelines require formal project-based engineering confirmation.</span>
+      </label>
+      <p data-form-error role="alert" hidden>Please complete all required fields (*) before submitting your inquiry.</p>
       <p data-form-status role="status" hidden></p>
-      <button class="button button-primary" type="submit">Send RFQ</button>
+      <button class="button button-primary rfq-submit-btn" type="submit">
+        <span>Submit RFQ for Review</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
     </div>
   </form>
 
   <section class="rfq-review" data-rfq-review hidden aria-live="polite">
-    <div><p class="section-label">Submitted requirement</p><h3>RFQ sent for review</h3><p>Your structured requirement was submitted to the approved Formspree endpoint. Keep this copy for your sourcing record.</p></div>
+    <div><p class="section-label">Submitted requirement</p><h3>RFQ received by the submission service</h3><p>Formspree accepted your inquiry. Keep this copy for your sourcing record. This confirmation does not confirm a quotation, order or delivery date.</p></div>
     <pre data-rfq-summary tabindex="0"></pre>
     <div class="rfq-review__actions"><button class="button button-primary" type="button" data-copy-rfq>Copy RFQ Summary</button><button class="button button-secondary" type="button" data-edit-rfq>Edit Details</button></div>
     <p class="rfq-copy-status" data-copy-status role="status"></p>
@@ -86,12 +153,12 @@
     const valueOf = name => String(field(name)?.value || '').trim();
     const setValue = (name, value) => { const item = field(name); if (item && value) item.value = value; };
     Object.keys(labels).forEach(name => { if (name === 'buyer') return; const field = form.elements.namedItem(name); const value = params.get(name); if (field && value) field.value = value; });
-    const familyAliases = {'Hub & Dock':'Hub / Dock','DisplayPort':'DisplayPort Cable'};
-    if (familyAliases[params.get('family')]) setValue('family',familyAliases[params.get('family')]);
     if (params.get('family') && !valueOf('program')) setValue('program','Direct product sourcing');
     const programAliases={'Wholesaler':'Wholesale assortment','Importer Distributor':'Import / distribution','Private Label':'Private label','Amazon Seller':'Private label','OEM ODM':'OEM / ODM','Evidence Pack':'Evidence review','Specification Support':'Specification support'};
     const legacyProgram=params.get('buyer')||params.get('project')||params.get('request');
     if (legacyProgram && !params.get('program')) setValue('program',programAliases[legacyProgram]||legacyProgram);
+    const familyAliases={'Hub & Dock':'Hub / Dock','DisplayPort':'DisplayPort Cable'};
+    if (familyAliases[params.get('family')]) setValue('family',familyAliases[params.get('family')]);
     const request=params.get('request'); if(request && !valueOf('evidence')) setValue('evidence',request);
     const requirement=params.get('requirement'); if(requirement && !valueOf('performance')) setValue('performance',requirement);
     const generatedDetails = [valueOf('connection'), valueOf('performance'), valueOf('customization'), valueOf('evidence')].filter(Boolean).join(' / ');

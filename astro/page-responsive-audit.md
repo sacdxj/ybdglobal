@@ -1,15 +1,114 @@
 # Page Responsive Audit
 
-## 2026-10-09 RFQ maintenance regression
+Last checked: 2026-10-18 (local built output)
 
-- Scope: JavaScript behavior in `/get-a-quote/` only; no markup, styles, routes, content approval states, robots or sitemap changes.
-- Browser checks at 1440x900, 768x900 and 390x900 passed: Hub/DisplayPort family prefill, legacy buying-program prefill, invalid input, failed submission recovery, successful submission, edit and resubmit.
-- Browser transport served local built files through request interception. Formspree responses and external requests were mocked; no real inquiry or analytics event was sent. This does not prove mailbox delivery.
-- Repeatable isolated-script regression: `node scripts/test-rfq-regressions.mjs` (all requests mocked).
-- Build, static links, decision-engine, React and existing public-launch checks passed. Page-quality check still reports nine pre-existing title/description length findings; this maintenance does not resolve them or approve content for publication.
-- Other routes were not visually re-audited in this behavior-only change; historical route results below are not a new all-route visual sign-off.
+## 2026-10-18 — `/get-a-quote/` RFQ Workbench & Sourcing Guidance Layout Upgrade
 
-Last checked: 2026-08-25
+- Enhanced `/get-a-quote/` visual hierarchy, breathing room and form card architecture.
+- Added modern direct sourcing status badge, pill-badged section headers, refined input styling with custom dropdown arrows, high-contrast focus rings, and explicit required field indicators (`*`).
+- Upgraded submit action bar with directional icon and responsive full-width alignment on mobile.
+- Revamped the post-intake guidance section (`.quote-followup`) with two structured cards (`Verification` within 24h & `Commercial Proof` quotation roadmap).
+- Audited across Desktop (1440×900), Tablet (768×1024), and Mobile (390×844) viewports: verified zero horizontal overflow, visible H1, responsive inputs, and compliant font hierarchies.
+
+## 2026-10-09 — Ruofan audit corrections
+
+This section supersedes the historical viewport results below. It covers all **67 current content routes**, not the old 29/30-route inventory.
+
+- Browser: headless installed Chrome; desktop 1440 × 900, tablet 768 × 1024, mobile 390 × 844.
+- Transport: generated dist files fulfilled through browser request interception because the local HTTP port could not be reached. This validates browser rendering and client behavior, not live hosting or third-party services.
+- External network requests were intercepted; no test RFQ or analytics data was sent.
+- **201 route/viewport checks passed**: visible H1, no page-level horizontal overflow, no unintentionally clipped off-screen content, no broken images, intrinsic image width/height present, no page script exceptions. Intentional horizontally scrollable card strips are excluded from the clipped-content failure rule.
+- RFQ mocks passed: required-field validation, Hub/DisplayPort prefill aliases, legacy program, failed submission recovery, success-only event, editing and resubmitting.
+- Screenshots captured for homepage, RFQ, Resources, DisplayPort category, workflows hub and quality page at all three viewports. Representative screenshots were visually reviewed. Automated coverage of every route does not mean every full page received a manual visual review.
+- Fixes discovered during visual QA: quality-page H1 hidden by the poster layout; dark text on a dark factory overview; mobile case-proof grid expanding beyond its container. Corrected without replacing the site design.
+- Build-time image metadata reserves intrinsic ratios for **582 previously unsized image occurrences**. This is not a measured Core Web Vitals or loading-speed result.
+- Evidence: `../outputs/ruofan-audit-2026-10-09/browser-validation.json` and `../outputs/ruofan-audit-2026-10-09/screenshots/`.
+
+### Current active route matrix
+
+| Route | Desktop 1440×900 | Tablet 768×1024 | Mobile 390×844 |
+|---|---|---|---|
+| `/` | Pass | Pass | Pass |
+| `/about-us/` | Pass | Pass | Pass |
+| `/case-studies/` | Pass | Pass | Pass |
+| `/case-studies/custom-logo-usb-c-hub-project/` | Pass | Pass | Pass |
+| `/case-studies/pd-charger-private-label-packaging/` | Pass | Pass | Pass |
+| `/case-studies/private-label-usb-c-cable-packaging/` | Pass | Pass | Pass |
+| `/case-studies/wholesale-cable-delivery-tested-good-quality/` | Pass | Pass | Pass |
+| `/contact/` | Pass | Pass | Pass |
+| `/get-a-quote/` | Pass | Pass | Pass |
+| `/oem-odm/` | Pass | Pass | Pass |
+| `/privacy/` | Pass | Pass | Pass |
+| `/products/` | Pass | Pass | Pass |
+| `/products/chargers/` | Pass | Pass | Pass |
+| `/products/chargers/20w-usb-c-fast-wall-adapter/` | Pass | Pass | Pass |
+| `/products/chargers/45w-pd-usb-c-wall-charger/` | Pass | Pass | Pass |
+| `/products/chargers/bt50-car-fm-transmitter-charger/` | Pass | Pass | Pass |
+| `/products/chargers/dual-usb-31a-bt53-fm-transmitter-car-charger/` | Pass | Pass | Pass |
+| `/products/chargers/gan-25w-usb-c-wall-charger/` | Pass | Pass | Pass |
+| `/products/chargers/jl-p150-dual-port-wall-charger/` | Pass | Pass | Pass |
+| `/products/chargers/jl-s5-3-in-1-wireless-charger/` | Pass | Pass | Pass |
+| `/products/chargers/star-smart-car-charger-15w-bt-wireless/` | Pass | Pass | Pass |
+| `/products/displayport-cables/` | Pass | Pass | Pass |
+| `/products/displayport-cables/displayport-2-1-cable/` | Pass | Pass | Pass |
+| `/products/displayport-cables/dp21-type-c-to-dp-16k-bidirectional-cable/` | Pass | Pass | Pass |
+| `/products/displayport-cables/ultra-clear-8k-dp-1-4-cable/` | Pass | Pass | Pass |
+| `/products/displayport-cables/usb-c-to-dp-8k-60hz-cable/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/4k-30hz-usb-c-to-hdmi-adapter/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/4k-hdmi-v2-0-cable/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/hdmi-to-vga-1080p-adapter/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/high-quality-8k-uhd-hdmi-2-1-cable/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/rj45-1080p-hdmi-extender-cat5e-cat6-30m/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/ultra-clear-8k-hdmi-2-1-cable/` | Pass | Pass | Pass |
+| `/products/hdmi-cables/wii-to-hdmi-1080p-adapter/` | Pass | Pass | Pass |
+| `/products/hubs-docking/` | Pass | Pass | Pass |
+| `/products/hubs-docking/10-in-1-type-c-hub/` | Pass | Pass | Pass |
+| `/products/hubs-docking/dual-head-8-in-1-aluminium-hub/` | Pass | Pass | Pass |
+| `/products/hubs-docking/jl-cx11-11-in-1-usb-c-hub/` | Pass | Pass | Pass |
+| `/products/hubs-docking/justlink-8-in-1-usb-c-hub/` | Pass | Pass | Pass |
+| `/products/usb-cables/` | Pass | Pass | Pass |
+| `/products/usb-cables/100w-pd-double-elbow-usb-c-to-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/100w-pd-straight-elbow-usb-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/1m-5a-pd-type-c-to-type-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/1m-usb-to-l-2a-fast-charging-iphone-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/durable-pd-100w-nylon-braided-usb-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/factory-direct-60w-dual-type-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/folding-bracket-braided-fast-charging-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/pd-100w-usb-c-to-c-braided-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/premium-100w-type-c-to-type-c-fast-data-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/smart-power-off-100w-breathing-light-usb-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/thunderbolt-5-usb-c-80gbps-240w-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/transparent-65w-fast-charge-type-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/usb-3-2-20gbps-100w-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/usb-c-fast-charging-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/usb-c-to-usb-c-pd-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/usb4-140w-20gbps-full-function-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/usb4-40gbps-fpc-short-data-cable-13cm/` | Pass | Pass | Pass |
+| `/quality-factory/` | Pass | Pass | Pass |
+| `/request-sample/` | Pass | Pass | Pass |
+| `/resources/` | Pass | Pass | Pass |
+| `/solutions/` | Pass | Pass | Pass |
+| `/solutions/brands-private-label/` | Pass | Pass | Pass |
+| `/solutions/retail-ecommerce/` | Pass | Pass | Pass |
+| `/solutions/wholesalers-distributors/` | Pass | Pass | Pass |
+| `/terms-of-service/` | Pass | Pass | Pass |
+
+### Redirect-only routes
+
+The two historical product aliases and the former HDMI-path USB-C-to-DP URL have static meta-refresh fallbacks and Vercel permanent redirect configurations for slash/no-slash forms. They are excluded from the content viewport count; live HTTP redirects remain unverified until an approved deployment.
+
+### Publication boundary
+
+All 67 content records still have `private-review` status. The local build now respects this with noindex and an empty content sitemap. `check:public-launch` deliberately fails while the homepage is unapproved. This review build must not replace the existing public deployment until page approvals are reconciled.
+
+## Historical audit entries (superseded by the dated matrix above)
+
+Historical baseline date: 2026-08-25
 
 Audit scope: all active generated routes in the Astro site, excluding only the automatic 404 fallback from the business-page count.
 
@@ -30,6 +129,10 @@ Automated checks used:
 - Page remains left-led with readable line length and basic breathing room.
 
 Current result: passed. Final responsive scan returned `issues: []` across 29 routes and 3 viewport sizes.
+
+2026-10-10 smart power-off 100W breathing light USB-C cable addition: added `/products/usb-cables/smart-power-off-100w-breathing-light-usb-c-cable/` using user-supplied title, six product/parameter images, MOQ 50 pcs, 1 m at US$1.28 / piece, 1.5 m at US$1.50 / piece, 2 m at US$1.60 / piece, and evidence-gated 100W / smart power-off / breathing light / E-marker wording. Recheck required after build and production preview.
+
+2026-10-10 100W smart auto-cutoff USB-A to Type-C cable addition: added `/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/` using user-supplied title, four product images, MOQ 50 pcs, 1 m at US$0.70 / piece, 2 m at US$0.88 / piece, custom logo support and evidence-gated 100W / auto-cutoff / Huawei-Android compatibility wording. Recheck required after build and production preview.
 
 2026-09-29 case study preview addition: added `/case-studies/wholesale-cable-delivery-tested-good-quality/` with two user-supplied customer chat screenshots, keywords Wholesale, OEM/ODM, Cable and Phone accessories, and a fourth entry on `/case-studies/`. Verified with `npm.cmd run build`, `npm.cmd run check:links`, and local browser preview for the detail route plus `/case-studies/` entry.
 

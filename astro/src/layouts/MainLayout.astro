@@ -11,10 +11,12 @@ interface Props {
   type?: string;
   noindex?: boolean;
   keywords?: string;
+  publicationStatus?: string;
 }
 
 const isPrivateReview = import.meta.env.PUBLIC_NOINDEX === 'true';
-const { title, description, image, canonical, type, noindex = isPrivateReview, keywords } = Astro.props;
+const { title, description, image, canonical, type, keywords } = Astro.props;
+const noindex = isPrivateReview || Astro.props.noindex === true || Astro.props.publicationStatus !== 'published';
 ---
 
 <!doctype html>
@@ -38,7 +40,7 @@ const { title, description, image, canonical, type, noindex = isPrivateReview, k
       noindex={noindex}
       keywords={keywords}
     />
-  <link rel="stylesheet" href="/styles/site.css?v=126" />
+  <link rel="stylesheet" href="/styles/site.css?v=128" />
     <slot name="head" />
   </head>
   <body>
