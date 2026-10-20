@@ -430,5 +430,124 @@ curl.exe -s --max-time 30 --proxy http://127.0.0.1:7897 $u
 ### 11.6 已知待决策项
 
 1. **优化目标与事件不匹配**：Ad Set `optimization_goal=CONVERSATIONS`（Meta 自带 WhatsApp 对话统计），像素上报的是 `Lead` 事件。目前 `Lead` 数据只能观察，不能用于优化。如需用上，须将 Ad Set 改为 `OFFSITE_CONVERSIONS` 并绑定该事件。
-2. **事件命名**：`Lead` 与将来可能出现的表单线索会混淆，建议早期改为自定义事件名（如 `WhatsAppClick`）。改名会丢失历史数据，越早越好。
+2. **事件命名**：已决定**保持 `Lead`**（2026-10-20），不再改为 `WhatsAppClick`。CAPI 白名单同时接受 `PageView`、`Lead`、`WhatsAppClick`，将来如要切换无需改服务端。
 3. **广告仍全部 PAUSED**：三层均未激活，激活需人工明确确认。
+
+## 12. 服务器端事件回传（CAPI）
+
+### 12.1 为什么单独一个 Vercel 项目
+
+站点从 `astro/` 根目录部署（Root Directory = `astro`），且 `astro/vercel.json` 固定 `outputDirectory: dist`。Vercel 因此把它当纯静态站点，**不会扫描 `api/` 目录**。为不动线上构建配置，CAPI 端点独立成第二个 Vercel 项目，共用同一仓库 `sacdxj/ybdglobal`，Root Directory 指向 `capi-service`。
+
+| 项目 | Root Directory | 用途 | 域名 |
+|---|---|---|---|
+| `ybdglobal` | `astro` | 网站 | `ybdglobal.com` |
+| `ybdglobal-capi-service` | `capi-service` | CAPI 端点 | `ybdglobal-capi-service.vercel.app` |
+
+### 12.2 端点
+
+```text
+POST https://ybdglobal-capi-service.vercel.app/api/capi
+```
+
+请求体：
+
+```json
+{
+  "event_name": "Lead",
+  "event_id": "与浏览器像素共用的唯一 ID",
+  "event_time": 1792500000,
+  "event_source_url": "https://ybdglobal.com/products/...",
+  "custom_data": {"content_name": "WhatsApp Click"}
+}
+```
+
+服务端行为：
+
+- 白名单事件：`PageView`、`Lead`、`WhatsAppClick`，其他一律 400。
+- `event_id` 必填，用于与浏览器像素去重。
+- `event_time` 缺失或超过 7 天自动纠正为当前时间。
+- 来源白名单：仅 `https://ybdglobal.com` 与 `https://www.ybdglobal.com`；无 `Origin` 头的请求（服务端 curl 测试）放行。
+- 失败时返回 **HTTP 200 + `ok:false`**，避免追踪故障阻断页面交互。
+
+### 12.3 环境变量（配置在 `ybdglobal-capi-service` 项目）
+
+| 变量 | 必需 | 说明 |
+|---|---|---|
+| `META_CAPI_TOKEN` | 是 | System User Token，需 `ads_management`，必须存为 Secret |
+| `META_CAPI_PIXEL_ID` | 否 | 默认 `2073977616567222` |
+| `META_CAPI_TEST_EVENT` | 否 | `1` 时把事件送入 Test Events |
+| `META_CAPI_TEST_CODE` | 否 | Events Manager 里形如 `TESTxxxxx` 的测试代码 |
+| `META_GRAPH_API_VERSION` | 否 | 默认 `v26.0` |
+
+Token 只存在于 Vercel 面板，不进入仓库、日志或聊天。
+
+### 12.4 GTM 标签（`Meta Pixel - WhatsApp Lead`，tagId 11）
+
+同一个 `event_id` 同时供浏览器像素和 CAPI 使用，Meta 据其去重：
+
+```javascript
+var eid = (window.crypto && crypto.randomUUID)
+  ? crypto.randomUUID()
+  : String(Date.now()) + '-' + Math.random().toString(16).slice(2);
+
+if (window.fbq) {
+  fbq('track', 'Lead', {content_name: 'WhatsApp Click'}, {eventID: eid});
+}
+
+fetch('https://ybdglobal-capi-service.vercel.app/api/capi', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  keepalive: true,
+  body: JSON.stringify({
+    event_name: 'Lead',
+    event_id: eid,
+    event_time: Math.floor(Date.now() / 1000),
+    event_source_url: location.href,
+    custom_data: {content_name: 'WhatsApp Click'}
+  })
+}).catch(function () {});
+```
+
+容器版本 **7**（`CAPI relay for WhatsApp Lead`）已发布，线上 `gtm.js` 实测包含 `capi-service` 调用与 `eventID` 参数。
+
+### 12.5 验证记录（2026-10-20）
+
+端点自测：
+
+| 用例 | 结果 |
+|---|---|
+| 合法 POST | `{"ok":true,"events_received":1}` |
+| `Origin: https://evil.example` | `{"ok":false,"error":"origin_not_allowed"}` |
+| `Origin: https://ybdglobal.com` | `{"ok":true,...}` |
+| `event_name: Purchase` | `{"ok":false,"error":"event_not_allowed"}` |
+| 缺 `event_id` | `{"ok":false,"error":"event_id_required"}` |
+
+浏览器侧验证：产品页点击 WhatsApp 后，Network 中应同时出现 `tr?id=2073977616567222&ev=Lead`（200）与 `capi-service.vercel.app/api/capi`（`ok:true`）两条请求。
+
+### 12.6 GTM 工作区注意事项
+
+发布容器版本后，GTM 会重建默认工作区，**workspaceId 会变化**（本次从 `6` 变为 `7`）。继续用旧 ID 操作会返回 `Workspace is already submitted`。每次发布后应重新查询：
+
+```text
+GET /tagmanager/v2/accounts/6373694362/containers/262417631/workspaces
+```
+
+### 12.7 CAPI 覆盖边界
+
+CAPI 只能捕获发生在 `ybdglobal.com` 上的转化。**帖子版广告**（`object_story_id` 指向主页帖子，按钮直接跳 `api.whatsapp.com`）完全不经过本站服务器，因此既无像素事件也无 CAPI 事件，只能依赖 Meta 自身的 `CONVERSATIONS` 归因。这是平台限制，不是配置缺陷。
+
+## 13. 广告素材：帖子版 vs 站内版
+
+2026-10-20 在同一 Ad Set（`120250081630700760`）下并存两个广告，均 `PAUSED`：
+
+| Ad ID | 素材形式 | Creative | 转化路径 | 追踪方式 |
+|---|---|---|---|---|
+| `120250081940030760` | 产品图文 → 站内页 | `3323920341144239` | 落站后点 WhatsApp | 像素 + CAPI |
+| `120250098986220760` | 主页帖子原生按钮 | `1051997141224100` | 直接进 WhatsApp | Meta `CONVERSATIONS` |
+
+帖子 ID `1353929984467874_122122938123463557`，`is_eligible_for_promotion=true`，CTA 由 Meta 自动改写为 `api.whatsapp.com/send?phone=8613613046291`。
+
+已知瑕疵：该帖子 `full_picture` 抓取的是首页通用横幅 `connectivity-range-hero.webp`，非具体产品图。因 Creative 通过 `object_story_id` 引用帖子，在 Facebook 后台编辑帖子图片后广告会自动同步，无需重建 Creative。
+
+**两个广告均未激活，激活需人工明确确认。**
