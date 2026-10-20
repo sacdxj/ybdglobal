@@ -11460,6 +11460,18 @@ body main > .page-hero:has(+ .intent-bar--quality) .page-hero__panel {
   }
 }
 
+/* Very wide screens: the shell gutter is deep enough that parking against the
+   shell would strand the button mid-screen (e.g. 156px of dead space at
+   1887px). Beyond this width snap to the viewport edge instead, while still
+   leaving the pill clear of the shell.
+   Threshold: shell 1240 + pill clearance means the shell ends at 50vw-620px,
+   so at 1800px there is 280px of gutter -- more than the 32px inset needs. */
+@media (min-width: 1800px) {
+  .whatsapp-float {
+    right: 32px;
+  }
+}
+
 /* Phones: slightly smaller target, tighter corner inset. */
 @media (max-width: 768px) {
   .whatsapp-float {

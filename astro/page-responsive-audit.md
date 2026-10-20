@@ -9,9 +9,11 @@ Scope: shared components only — `ProductDetail.astro` (product pages), `MainLa
 - Added a third action `Chat on WhatsApp` to the product purchase panel (`.purchase-actions .button-whatsapp`), linking to `wa.me/8613613046291` with the product model prefilled.
 - Added a global floating WhatsApp entry (`.whatsapp-float`) rendered once in `MainLayout` after `Footer`; it carries `data-whatsapp-cta` / `data-whatsapp-source="floating"` so GTM can separate it from the product CTA.
 - Breakpoint contract, verified by layout arithmetic against the measured `1240px` content shell (`site.css` `.site-header__inner` / product grid):
-  - `>= 1640px`: labelled pill parked outside the shell, 18px clear of the content edge.
+  - `>= 1800px`: labelled pill snapped to the viewport edge, `right: 32px`.
+  - `1640px – 1799px`: labelled pill parked outside the shell, 18px clear of the content edge.
   - `1400px – 1639px`: 56px icon-only circle parked outside the shell, 18px clear.
   - `< 1400px`: icon docks to the bottom-right corner (56px, 52px on phones) so it never floats over the reading column; the shell fills the viewport below this width, so any mid-screen float would cover copy.
+- Follow-up 2026-10-20 (`v131`): the original `>= 1640px` rule parked the pill against the shell, which left 156px of dead space at a 1887px viewport and read as "floating mid-screen". Added a `>= 1800px` tier that snaps to the viewport edge at `right: 32px`; at 1887px the pill now sits 32px from the edge and still clears the shell by 142px. No overlap introduced at any tested width.
 - Overflow/exposure checks: Desktop `1920×1080`, `1440×900`, `1366×768`; Tablet `834×1112`, `768×1024`; Mobile `414×896`, `390×844`. At `>= 1400px` the computed left edge of the float is always `contentRight + 18px`; below `1400px` the float is corner-docked and clears the `.purchase-panel` (which is `position: sticky; top: 128px` on desktop).
 - Accessibility: `aria-label` on the float, `:focus-visible` ring using `--lime`, `prefers-reduced-motion` disables the hover translate, tap target never below 52px.
 - Coverage: 70 of 70 content pages render the float (100%). The 3 pages without it are Astro `redirects` stubs (`hdmi-2-1-cable`, `usb-c-to-dp-8k-60hz-cable`, `multiport-usb-c-hub`) that emit only a `meta refresh` and no layout.
