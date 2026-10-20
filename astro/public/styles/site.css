@@ -11330,3 +11330,151 @@ body main > .page-hero:has(+ .intent-bar--quality) .page-hero__panel {
     height: 9.5%;
   }
 }
+
+/* WhatsApp CTA on product purchase panel */
+.button-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: #fff;
+  box-shadow: none;
+}
+
+.button-whatsapp::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5l-.8-1.8c-.1-.3-.3-.3-.5-.3h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 8 9.5c0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.2-.3-.4-.4Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5l-.8-1.8c-.1-.3-.3-.3-.5-.3h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 8 9.5c0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.2-.3-.4-.4Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.button-whatsapp:hover,
+.button-whatsapp:focus-visible {
+  background: #1f6f4a;
+  border-color: #1f6f4a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .purchase-actions .button-whatsapp {
+    grid-column: 1 / -1;
+    min-height: 44px;
+  }
+}
+
+/* Floating WhatsApp entry point
+   Space budget: the content shell is 1240px wide. From 1400px up there is real
+   gutter beside the shell, so the button parks outside the reading column.
+   Below that the shell fills the viewport and any mid-screen float would cover
+   copy, so the button docks bottom-right instead. */
+.whatsapp-float {
+  --wa-size: 56px;
+  --wa-shell: 1240px;
+  --wa-gap: 18px;
+  position: fixed;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  top: auto;
+  bottom: 22px;
+  right: 18px;
+  width: var(--wa-size);
+  height: var(--wa-size);
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: #fff;
+  font-weight: 900;
+  font-size: .82rem;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.whatsapp-float__label {
+  display: none;
+  white-space: nowrap;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  background: #1f6f4a;
+  border-color: #1f6f4a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.whatsapp-float__icon {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5l-.8-1.8c-.1-.3-.3-.3-.5-.3h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 8 9.5c0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.2-.3-.4-.4Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5l-.8-1.8c-.1-.3-.3-.3-.5-.3h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 8 9.5c0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.2-.3-.4-.4Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Desktop with real gutter beside the shell: float outside the content column.
+   Threshold: shell 1240 + button 56 + gap 18 on both sides of the viewport. */
+@media (min-width: 1400px) {
+  .whatsapp-float {
+    top: 55%;
+    bottom: auto;
+    right: calc(50vw - (var(--wa-shell) / 2) - var(--wa-size) - var(--wa-gap));
+  }
+}
+
+/* Roomy screens: expand to a labelled pill (wider, so a higher threshold). */
+@media (min-width: 1640px) {
+  .whatsapp-float {
+    right: calc(50vw - (var(--wa-shell) / 2) - 150px - var(--wa-gap));
+    width: auto;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .whatsapp-float__label {
+    display: inline;
+  }
+}
+
+/* Phones: slightly smaller target, tighter corner inset. */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    --wa-size: 52px;
+    bottom: 18px;
+    right: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    transition: none;
+  }
+  .whatsapp-float:hover,
+  .whatsapp-float:focus-visible {
+    transform: none;
+  }
+}
