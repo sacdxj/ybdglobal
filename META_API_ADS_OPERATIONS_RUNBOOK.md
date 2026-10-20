@@ -4,6 +4,16 @@
 >
 > 安全规则：本文不记录 Token、App Secret、密码或 Cookie。任何人不得把完整凭证放入聊天、截图、日志、Git 或工单。
 
+## 0.1 最容易搞混的三件事（先看这里）
+
+| 问题 | 答案 | 详见 |
+|---|---|---|
+| 帖子版广告的 WhatsApp 点击能用像素/CAPI 追踪吗？ | **不能。** 用户不经过 ybdglobal.com，像素代码没有被执行的机会。 | 第 14 节 |
+| 帖子版广告怎么统计转化？ | **Meta 平台自身归因**，靠 Ad Set 的 `optimization_goal=CONVERSATIONS`，不需要像素。 | 14.2 |
+| CAPI 装上后是不是所有转化都更全？ | **只对站内转化成立。** 帖子版没有服务端事件可回传。 | 14.3 |
+
+一句话记忆：**像素和 CAPI 只看得见“经过我们网站”的转化；帖子版直接跳 WhatsApp，由 Meta 自己数。**
+
 ## 0. 下次更换 Token 速查卡
 
 遇到 Token 失效时，先判断报错：
@@ -551,3 +561,64 @@ CAPI 只能捕获发生在 `ybdglobal.com` 上的转化。**帖子版广告**（
 已知瑕疵：该帖子 `full_picture` 抓取的是首页通用横幅 `connectivity-range-hero.webp`，非具体产品图。因 Creative 通过 `object_story_id` 引用帖子，在 Facebook 后台编辑帖子图片后广告会自动同步，无需重建 Creative。
 
 **两个广告均未激活，激活需人工明确确认。**
+
+## 14. 概念澄清：为什么帖子版的 WhatsApp 点击追踪不到
+
+这一节记录 2026-10-20 讨论中反复被混淆的点，避免以后误判为配置遗漏。
+
+### 14.1 核心事实：事件代码只在站内生效
+
+像素 `Lead` 事件由**用户浏览器执行 `fbq()`** 发出，前提是页面加载了 GTM 与像素脚本。该脚本只存在于 `ybdglobal.com`。
+
+```text
+站内版：点击广告 → 打开 ybdglobal.com → GTM 加载 → 点 WhatsApp → fbq('Lead') 发出
+帖子版：点击帖子按钮 → api.whatsapp.com → 从不经过 ybdglobal.com → 无代码可执行
+```
+
+帖子版追踪不到**不是漏配**，而是那条路径上没有我们的代码。
+
+### 14.2 两种广告的追踪归属（不要混用）
+
+| 广告形式 | 转化由谁记录 | 需要像素 | 需要 CAPI | 需要的优化目标 |
+|---|---|---|---|---|
+| 站内版（产品图文 → 站内页） | 我们的像素 + CAPI | 是 | 是 | `OFFSITE_CONVERSIONS`（绑 pixel + LEAD） |
+| 帖子版（主页帖子原生按钮） | Meta 平台自身 | 否 | 否 | `CONVERSATIONS` |
+
+### 14.3 四条常见误判（逐条纠正）
+
+1. **“已经装了 WhatsApp 转化事件，所以任何 WhatsApp 点击都能追踪”** — 错。事件只在站内页面生效。帖子版用户从未到站，事件无从触发。
+2. **“帖子版也需要配像素/CAPI 才能统计”** — 错。Meta 在“广告点击 → 跳转 WhatsApp”链路上自己就能归因，`CONVERSATIONS` 不依赖像素。
+3. **“CAPI 装上后所有转化都会更全”** — 只在**站内转化**上成立。帖子版没有任何服务端事件可回传，CAPI 帮不上。
+4. **“优化目标一旦设成 CONVERSATIONS 就改不了”** — 错。`optimization_goal` 是普通可写字段，随时可改。真正约束不是“改不了”，而是**改了之后帖子版广告就失去优化信号**，因为帖子版产生不了 `Lead` 事件。
+
+### 14.4 优化目标与事件的对应关系
+
+```text
+optimization_goal = CONVERSATIONS
+  → Meta 用平台内 WhatsApp 对话优化
+  → 像素/CAPI 的 Lead 仅进报表，不参与优化
+  → 帖子版可用
+
+optimization_goal = OFFSITE_CONVERSIONS
+  + promoted_object = {pixel_id: 2073977616567222, custom_event_type: LEAD}
+  → Meta 用像素/CAPI 上报的 Lead 优化
+  → 需要广告路径经过 ybdglobal.com
+  → 帖子版不可用（产生不了 Lead 事件）
+```
+
+### 14.5 决策记录（2026-10-21）
+
+- 当前 Ad Set `120250081630700760` 保持 `optimization_goal=CONVERSATIONS`，`destination_type=WHATSAPP`，`promoted_object.page_id=1353929984467874`。此配置**正好匹配帖子版广告**，无需修改即可激活。
+- 倾向使用**帖子版**投放；站内版广告 `120250081940030760` 保留但暂停，不消耗预算。
+- 若要改走站内版 + CAPI 优化，需将 Ad Set 改为 `OFFSITE_CONVERSIONS` 并绑定像素 `2073977616567222` 的 `LEAD` 事件；帖子版届时会失去优化信号。
+- 两种形式若需并行对比，必须拆成两个 Ad Set（优化目标不同，无法共用）。
+- **三层广告仍全部 `PAUSED`，激活需人工明确确认。**
+
+### 14.6 激活前必须人工确认的门禁
+
+API 无法验证以下事项，激活前必须由负责人确认：
+
+1. WhatsApp 号码 `+86 136 1304 6291` 有人实时接待，且能覆盖美国买家活跃时段（北京时间深夜）。
+2. 帖子图片是否替换为具体产品图（当前为首页通用横幅）。
+3. 预算与结束时间：`$15/day`，`end_time=2026-11-03T23:59:59+0800`。
+4. 明确激活范围（Campaign / Ad Set / 哪个 Ad），且保持未选中的广告为 `PAUSED`。
