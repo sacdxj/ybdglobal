@@ -1,0 +1,9 @@
+{
+  "name": "ybdglobal-capi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meta Conversions API relay for ybdglobal.com",
+  "engines": {
+    "node": ">=18"
+  }
+}
