@@ -99,6 +99,7 @@ This section supersedes the historical viewport results below. It covers all **6
 | `/products/usb-cables/pd-60w-usb-a-to-type-c-usb3-2-10gbps-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/premium-100w-type-c-to-type-c-fast-data-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/smart-power-off-100w-nylon-braided-usb-a-to-type-c-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/smart-power-off-100w-breathing-light-usb-c-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/thunderbolt-5-usb-c-80gbps-240w-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/transparent-65w-fast-charge-type-c-cable/` | Pass | Pass | Pass |
@@ -151,6 +152,8 @@ Current result: passed. Final responsive scan returned `issues: []` across 29 ro
 2026-10-10 smart power-off 100W breathing light USB-C cable addition: added `/products/usb-cables/smart-power-off-100w-breathing-light-usb-c-cable/` using user-supplied title, six product/parameter images, MOQ 50 pcs, 1 m at US$1.28 / piece, 1.5 m at US$1.50 / piece, 2 m at US$1.60 / piece, and evidence-gated 100W / smart power-off / breathing light / E-marker wording. Recheck required after build and production preview.
 
 2026-10-10 100W smart auto-cutoff USB-A to Type-C cable addition: added `/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/` using user-supplied title, four product images, MOQ 50 pcs, 1 m at US$0.70 / piece, 2 m at US$0.88 / piece, custom logo support and evidence-gated 100W / auto-cutoff / Huawei-Android compatibility wording. Recheck required after build and production preview.
+
+2026-10-30 smart power-off 100W nylon braided USB-A to Type-C cable addition: added `/products/usb-cables/smart-power-off-100w-nylon-braided-usb-a-to-type-c-cable/` using user-supplied title, five product images, MOQ 100 pcs, 1 m at US$1.10 / piece, 1.5 m at US$1.20 / piece, 2 m at US$1.30 / piece, and evidence-gated 100W / QC3.0 / smart power-off / in-stock wording. Recheck required after build and production preview.
 
 2026-09-29 case study preview addition: added `/case-studies/wholesale-cable-delivery-tested-good-quality/` with two user-supplied customer chat screenshots, keywords Wholesale, OEM/ODM, Cable and Phone accessories, and a fourth entry on `/case-studies/`. Verified with `npm.cmd run build`, `npm.cmd run check:links`, and local browser preview for the detail route plus `/case-studies/` entry.
 
