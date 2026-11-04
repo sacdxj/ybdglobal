@@ -91,6 +91,7 @@ This section supersedes the historical viewport results below. It covers all **6
 | `/products/usb-cables/1m-5a-pd-type-c-to-type-c-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/1m-usb-to-l-2a-fast-charging-iphone-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/20gbps-pd-100w-type-c-to-type-c-usb3-2-cable/` | Pass | Pass | Pass |
+| `/products/usb-cables/240w-retractable-usb-c-to-usb-c-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/6a-100w-usb-a-to-usb-c-braided-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/durable-pd-100w-nylon-braided-usb-c-cable/` | Pass | Pass | Pass |
 | `/products/usb-cables/factory-direct-60w-dual-type-c-cable/` | Pass | Pass | Pass |
@@ -154,6 +155,8 @@ Current result: passed. Final responsive scan returned `issues: []` across 29 ro
 2026-10-10 100W smart auto-cutoff USB-A to Type-C cable addition: added `/products/usb-cables/100w-smart-auto-cutoff-usb-a-to-type-c-cable/` using user-supplied title, four product images, MOQ 50 pcs, 1 m at US$0.70 / piece, 2 m at US$0.88 / piece, custom logo support and evidence-gated 100W / auto-cutoff / Huawei-Android compatibility wording. Recheck required after build and production preview.
 
 2026-10-30 smart power-off 100W nylon braided USB-A to Type-C cable addition: added `/products/usb-cables/smart-power-off-100w-nylon-braided-usb-a-to-type-c-cable/` using user-supplied title, five product images, MOQ 100 pcs, 1 m at US$1.10 / piece, 1.5 m at US$1.20 / piece, 2 m at US$1.30 / piece, and evidence-gated 100W / QC3.0 / smart power-off / in-stock wording. Recheck required after build and production preview.
+
+2026-11-04 240W retractable USB-C to USB-C cable addition: added `/products/usb-cables/240w-retractable-usb-c-to-usb-c-cable/` using user-supplied title, four product images, MOQ 50 pcs, 50-499 pcs at US$1.85 / piece, 500-999 pcs at US$1.75 / piece, 1000-5000 pcs at US$1.70 / piece, and evidence-gated 240W PD / four-position retraction / compatibility / logo wording. Recheck required after build and production preview.
 
 2026-09-29 case study preview addition: added `/case-studies/wholesale-cable-delivery-tested-good-quality/` with two user-supplied customer chat screenshots, keywords Wholesale, OEM/ODM, Cable and Phone accessories, and a fourth entry on `/case-studies/`. Verified with `npm.cmd run build`, `npm.cmd run check:links`, and local browser preview for the detail route plus `/case-studies/` entry.
 
