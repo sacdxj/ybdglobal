@@ -35,6 +35,10 @@ proofStatus: "Anonymous examples and customer feedback references; final claims 
       <img src="/images/case-studies/customer-tested-cable-feedback.png" alt="Customer chat screenshot for wholesale cable delivery and testing feedback case study" loading="lazy" />
       <span><b>Case 04</b><strong>Wholesale cable feedback</strong><small>Received goods, tested products and quality comment.</small></span>
     </a>
+    <a class="case-study-tile" href="/case-studies/oem-data-cable-logo-packaging-shipment/">
+      <img src="/images/case-studies/oem-data-cable-packaging-shipment.png" alt="Finished OEM data cables in customized retail packaging before shipment" loading="lazy" />
+      <span><b>OEM project</b><strong>Logo, packaging and shipment</strong><small>Artwork approval and pre-shipment photo workflow.</small></span>
+    </a>
   </div>
 </section>
 
