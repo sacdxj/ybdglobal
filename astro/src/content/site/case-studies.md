@@ -36,7 +36,7 @@ proofStatus: "Anonymous examples and customer feedback references; final claims 
       <span><b>Case 04</b><strong>Wholesale cable feedback</strong><small>Received goods, tested products and quality comment.</small></span>
     </a>
     <a class="case-study-tile" href="/case-studies/oem-data-cable-logo-packaging-shipment/">
-      <img src="/images/case-studies/oem-data-cable-packaging-shipment.png" alt="Finished OEM data cables in customized retail packaging before shipment" loading="lazy" />
+      <img src="/images/editorial/oem-customization-review.webp" alt="Illustrative OEM customization review desk, not a customer project photograph" loading="lazy" />
       <span><b>OEM project</b><strong>Logo, packaging and shipment</strong><small>Artwork approval and pre-shipment photo workflow.</small></span>
     </a>
   </div>

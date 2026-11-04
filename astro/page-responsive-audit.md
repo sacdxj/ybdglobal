@@ -394,7 +394,7 @@ Update note: company identity updated to Dongguan Youboda Technology Development
 | `/products/hubs-docking/multiport-usb-c-hub/` | Product detail / collection alias | Pass | Pass | Pass | Alias route renders without responsive issues. |
 | `/oem-odm/` | Customization pillar | Pass | Pass | Pass | Visual summary, approval stages and CTA checked. |
 | `/case-studies/` | Customization case-study hub | Pass | Pass | Pass | Anonymous case-study index, RFQ CTA and internal links checked by static build, links and page-quality scripts. |
-| `/case-studies/oem-data-cable-logo-packaging-shipment/` | OEM data cable case study | Pass | Pass | Pass | 2026-11-04: 1440×900, 768×1024 and 390×844 checked; no horizontal overflow, both project images loaded, and private-review noindex remained active. |
+| `/case-studies/oem-data-cable-logo-packaging-shipment/` | OEM data cable case study | Pass | Pass | Pass | 2026-11-04: customer chat and shipment photos removed; the hub uses an illustrative OEM image. Private-review noindex remains active. |
 | `/case-studies/private-label-usb-c-cable-packaging/` | Customization case study | Pass | Pass | Pass | Cable packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
 | `/case-studies/custom-logo-usb-c-hub-project/` | Customization case study | Pass | Pass | Pass | Hub logo case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |
 | `/case-studies/pd-charger-private-label-packaging/` | Customization case study | Pass | Pass | Pass | Charger private-label packaging case content, tables and RFQ CTA checked by static build, links and page-quality scripts. |

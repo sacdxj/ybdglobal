@@ -10,7 +10,7 @@ buyerStage: "Mid to Bottom"
 status: "private-review"
 primaryCta: "Request an OEM Data Cable Project"
 primaryCtaHref: "/get-a-quote/?program=OEM%20Data%20Cable%20Project"
-proofStatus: "Customer communication and packed-product photos support the workflow shown; customer identity, payment details, product specifications and commercial terms are not published."
+proofStatus: "Project workflow is described without publishing customer chat or shipment photos; customer identity, payment details, product specifications and commercial terms are not published."
 ---
 
 ## From inquiry to shipment: a controlled OEM data cable project
@@ -18,11 +18,6 @@ proofStatus: "Customer communication and packed-product photos support the workf
 On October 10, an overseas customer contacted us about an **OEM data cable** project. The buyer needed more than a standard cable order: the project included packaging confirmation, a custom logo, an artwork preview, delivery coordination and photos of the finished goods before shipment.
 
 For importers, distributors and private-label brands, these details are essential. A cable may be suitable for the intended sales program, but unclear artwork or packaging instructions can still delay an order. We therefore treated each approval as a separate step and kept the communication traceable.
-
-<figure class="case-evidence-figure">
-  <img src="/images/case-studies/oem-data-cable-project-communication.png" alt="Anonymized customer communication record from the OEM data cable project" loading="lazy" />
-  <figcaption>Communication reference: customer identity is obscured, and payment information is not reproduced in the article.</figcaption>
-</figure>
 
 ## Confirming the packaging and custom logo
 
@@ -41,11 +36,6 @@ We do not treat lead time as a universal promise. It is confirmed for each proje
 ## Sending finished-goods photos before shipment
 
 When the products were packed, photos of the finished order were sent to the customer for another check. The images showed the actual data cables inside their individual branded packages and the packed goods prepared for dispatch.
-
-<figure class="case-evidence-figure">
-  <img src="/images/case-studies/oem-data-cable-packaging-shipment.png" alt="Finished OEM data cables in custom retail packaging before shipment" loading="lazy" />
-  <figcaption>Pre-shipment reference: finished cables and customized retail packages were photographed for customer review.</figcaption>
-</figure>
 
 This step helps an overseas buyer verify the visible result remotely before shipment. It also creates a useful project record for repeat orders, packaging updates and future **ODM cable** requirements.
 
